@@ -1,0 +1,16 @@
+[project]
+name = "rnpdno-population-bands"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "esda>=2.8.2",
+    "geopandas>=1.1.2",
+    "libpysal>=4.14.1",
+    "matplotlib>=3.10.8",
+    "pandas>=3.0.1",
+    "scipy>=1.17.1",
+    "seaborn>=0.13.2",
+    "statsmodels>=0.14.6",
+]
