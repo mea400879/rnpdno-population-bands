@@ -1,0 +1,196 @@
+cvegeo,nom_mun,cve_estado
+01001,Aguascalientes,1
+01002,Asientos,1
+01003,Calvillo,1
+01004,Cosío,1
+01005,Jesús María,1
+01006,Pabellón de Arteaga,1
+01007,Rincón de Romos,1
+01008,San José de Gracia,1
+01009,Tepezalá,1
+01010,El Llano,1
+01011,San Francisco de los Romo,1
+11001,Abasolo,11
+11002,Acámbaro,11
+11003,San Miguel de Allende,11
+11004,Apaseo el Alto,11
+11005,Apaseo el Grande,11
+11006,Atarjea,11
+11007,Celaya,11
+11008,Manuel Doblado,11
+11009,Comonfort,11
+11010,Coroneo,11
+11011,Cortazar,11
+11012,Cuerámaro,11
+11013,Doctor Mora,11
+11014,Dolores Hidalgo Cuna de la Independencia Nacional,11
+11015,Guanajuato,11
+11016,Huanímaro,11
+11017,Irapuato,11
+11018,Jaral del Progreso,11
+11019,Jerécuaro,11
+11020,León,11
+11021,Moroleón,11
+11022,Ocampo,11
+11023,Pénjamo,11
+11024,Pueblo Nuevo,11
+11025,Purísima del Rincón,11
+11026,Romita,11
+11027,Salamanca,11
+11028,Salvatierra,11
+11029,San Diego de la Unión,11
+11030,San Felipe,11
+11031,San Francisco del Rincón,11
+11032,San José de Iturbide,11
+11033,San Luis de la Paz,11
+11034,Santa Catarina,11
+11035,Santa Cruz de Juventino Rosas,11
+11036,Santiago Maravatío,11
+11037,Silao de la Victoria,11
+11038,Tarandacuao,11
+11039,Tarimoro,11
+11040,Tierra Blanca,11
+11041,Uriangato,11
+11042,Valle de Santiago,11
+11043,Victoria,11
+11044,Villagrán,11
+11045,Xichú,11
+11046,Yuriria,11
+14001,Acatic,14
+14003,Ahualulco de Mercado,14
+14005,Amatitán,14
+14006,Ameca,14
+14007,San Juanito de Escobedo,14
+14008,Arandas,14
+14009,El Arenal,14
+14013,Atotonilco el Alto,14
+14016,Ayotlán,14
+14018,La Barca,14
+14024,Cocula,14
+14029,Cuquío,14
+14033,Degollado,14
+14035,Encarnación de Díaz,14
+14036,Etzatlán,14
+14039,Guadalajara,14
+14040,Hostotipaquillo,14
+14044,Ixtlahuacán de los Membrillos,14
+14046,Jalostotitlán,14
+14047,Jamay,14
+14048,Jesús María,14
+14051,Juanacatlán,14
+14053,Lagos de Moreno,14
+14055,Magdalena,14
+14060,Mexticacán,14
+14063,Ocotlán,14
+14064,Ojuelos de Jalisco,14
+14066,Poncitlán,14
+14070,El Salto,14
+14072,San Diego de Alejandría,14
+14073,San Juan de los Lagos,14
+14074,San Julián,14
+14075,San Marcos,14
+14078,San Miguel el Alto,14
+14083,Tala,14
+14091,Teocaltiche,14
+14093,Tepatitlán de Morelos,14
+14094,Tequila,14
+14095,Teuchitlán,14
+14097,Tlajomulco de Zúñiga,14
+14101,Tonalá,14
+14105,Tototlán,14
+14109,Unión de San Antonio,14
+14111,Valle de Guadalupe,14
+14116,Villa Hidalgo,14
+14117,Cañadas de Obregón,14
+14120,Zapopan,14
+14123,Zapotlán del Rey,14
+14124,Zapotlanejo,14
+16003,Álvaro Obregón,16
+16004,Angamacutiro,16
+16005,Angangueo,16
+16020,Cuitzeo,16
+16028,Churintzio,16
+16030,Ecuandureo,16
+16037,Huaniqueo,16
+16040,Indaparapeo,16
+16041,Irimbo,16
+16044,Jiménez,16
+16048,Lagunillas,16
+16050,Maravatío,16
+16053,Morelia,16
+16054,Morelos,16
+16063,Panindícuaro,16
+16067,Penjamillo,16
+16069,La Piedad,16
+16070,Purépero,16
+16071,Puruándiro,16
+16072,Queréndaro,16
+16078,Santa Ana Maya,16
+16080,Senguio,16
+16085,Tangancícuaro,16
+16086,Tanhuato,16
+16088,Tarímbaro,16
+16093,Tlalpujahua,16
+16094,Tlazazalca,16
+16098,Tuxpan,16
+16106,Yurécuaro,16
+16107,Zacapu,16
+16109,Zináparo,16
+16113,José Sixto Verduzco,16
+22001,Amealco de Bonfil,22
+22002,Pinal de Amoles,22
+22003,Arroyo Seco,22
+22004,Cadereyta de Montes,22
+22005,Colón,22
+22006,Corregidora,22
+22007,Ezequiel Montes,22
+22008,Huimilpan,22
+22009,Jalpan de Serra,22
+22010,Landa de Matamoros,22
+22011,El Marqués,22
+22012,Pedro Escobedo,22
+22013,Peñamiller,22
+22014,Querétaro,22
+22015,San Joaquín,22
+22016,San Juan del Río,22
+22017,Tequisquiapan,22
+22018,Tolimán,22
+24004,Armadillo de los Infante,24
+24009,Cerro de San Pedro,24
+24017,Guadalcázar,24
+24021,Mexquitic de Carmona,24
+24022,Moctezuma,24
+24028,San Luis Potosí,24
+24032,Santa María del Río,24
+24035,Soledad de Graciano Sánchez,24
+24046,Villa de Arriaga,24
+24050,Villa de Reyes,24
+24051,Villa Hidalgo,24
+24052,Villa Juárez,24
+32001,Apozol,32
+32002,Apulco,32
+32003,Atolinga,32
+32004,Benito Juárez,32
+32005,Calera,32
+32006,Cañitas de Felipe Pescador,32
+32008,Cuauhtémoc,32
+32009,Chalchihuites,32
+32010,Fresnillo,32
+32012,Genaro Codina,32
+32013,General Enrique Estrada,32
+32015,El Plateado de Joaquín Amaro,32
+32016,General Pánfilo Natera,32
+32017,Guadalupe,32
+32018,Huanusco,32
+32019,Jalpa,32
+32020,Jerez,32
+32023,Juchipila,32
+32025,Luis Moya,32
+32030,Momax,32
+32035,Noria de Ángeles,32
+32036,Ojocaliente,32
+32044,Tabasco,32
+32045,Tepechitlán,32
+32047,Teúl de González Ortega,32
+32056,Zacatecas,32
+32057,Trancoso,32

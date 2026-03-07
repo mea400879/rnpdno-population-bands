@@ -1,0 +1,65 @@
+year,status,metric,cluster_id,n_munis,region,pct_bajio,is_bajio_cluster,dominant_band,band_label,centroid_x,centroid_y
+2015,located_dead,cases,2015_located_dead_cases_001,5,Centro,1.0,True,2,Band 2: Small Town,-100.717154,20.68031
+2015,located_dead,cases,2015_located_dead_cases_002,8,Centro,1.0,True,3,Band 3: Mid-Size,-101.599832,20.959933
+2015,located_dead,cases,2015_located_dead_cases_003,9,Centro,0.0,False,3,Band 3: Mid-Size,-98.947783,19.44816
+2016,located_dead,cases,2016_located_dead_cases_001,4,Centro,1.0,True,2,Band 2: Small Town,-100.763813,20.937156
+2016,located_dead,cases,2016_located_dead_cases_002,3,Centro-Norte,0.0,False,3,Band 3: Mid-Size,-103.692103,19.249874
+2016,located_dead,cases,2016_located_dead_cases_003,4,Centro,0.0,False,3,Band 3: Mid-Size,-98.887625,19.381484
+2016,located_dead,cases,2016_located_dead_cases_004,5,Centro,0.0,False,3,Band 3: Mid-Size,-99.482829,19.420223
+2016,located_dead,cases,2016_located_dead_cases_005,3,Norte-Occidente,0.0,False,2,Band 2: Small Town,-107.873383,25.167044
+2016,located_dead,cases,2016_located_dead_cases_006,4,Norte-Occidente,0.0,False,3,Band 3: Mid-Size,-108.624729,25.921037
+2017,located_dead,cases,2017_located_dead_cases_001,6,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.282598,20.564456
+2017,located_dead,cases,2017_located_dead_cases_002,3,Centro-Norte,0.0,False,3,Band 3: Mid-Size,-103.785353,19.273576
+2017,located_dead,cases,2017_located_dead_cases_003,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.452165,19.332383
+2017,located_dead,cases,2017_located_dead_cases_004,10,Centro,0.0,False,3,Band 3: Mid-Size,-98.98653,19.527135
+2017,located_dead,cases,2017_located_dead_cases_005,3,Sur,0.0,False,2,Band 2: Small Town,-99.387432,17.716776
+2017,located_dead,cases,2017_located_dead_cases_006,3,Norte-Occidente,0.0,False,3,Band 3: Mid-Size,-108.64992,26.055351
+2018,located_dead,cases,2018_located_dead_cases_001,3,Norte,0.0,False,2,Band 2: Small Town,-112.913445,31.358043
+2018,located_dead,cases,2018_located_dead_cases_002,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
+2018,located_dead,cases,2018_located_dead_cases_003,3,Centro,1.0,True,3,Band 3: Mid-Size,-101.431352,21.196939
+2019,located_dead,cases,2019_located_dead_cases_001,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
+2019,located_dead,cases,2019_located_dead_cases_002,8,Centro,1.0,True,2,Band 2: Small Town,-101.495502,20.768428
+2019,located_dead,cases,2019_located_dead_cases_003,16,Centro,0.0,False,3,Band 3: Mid-Size,-99.11797,19.391849
+2019,located_dead,cases,2019_located_dead_cases_004,3,Centro-Norte,0.6667,True,1,Band 1: Rural,-103.666141,21.00339
+2019,located_dead,cases,2019_located_dead_cases_005,3,Centro,0.0,False,3,Band 3: Mid-Size,-98.296328,19.071271
+2019,located_dead,cases,2019_located_dead_cases_006,3,Norte,0.0,False,2,Band 2: Small Town,-100.489949,25.903055
+2019,located_dead,cases,2019_located_dead_cases_007,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
+2020,located_dead,cases,2020_located_dead_cases_001,6,Centro,1.0,True,2,Band 2: Small Town,-100.774669,20.283949
+2020,located_dead,cases,2020_located_dead_cases_002,10,Norte-Occidente,0.4,False,2,Band 2: Small Town,-102.596049,23.044562
+2020,located_dead,cases,2020_located_dead_cases_003,24,Centro,0.0,False,3,Band 3: Mid-Size,-99.139248,19.424971
+2020,located_dead,cases,2020_located_dead_cases_004,4,Centro,0.0,False,3,Band 3: Mid-Size,-99.153947,19.742654
+2020,located_dead,cases,2020_located_dead_cases_005,5,Centro,0.0,False,3,Band 3: Mid-Size,-99.208285,18.847785
+2020,located_dead,cases,2020_located_dead_cases_006,8,Centro,1.0,True,3,Band 3: Mid-Size,-101.660611,21.114791
+2020,located_dead,cases,2020_located_dead_cases_007,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
+2020,located_dead,cases,2020_located_dead_cases_008,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
+2021,located_dead,cases,2021_located_dead_cases_001,5,Norte,0.0,False,3,Band 3: Mid-Size,-100.428855,25.802226
+2021,located_dead,cases,2021_located_dead_cases_002,17,Norte-Occidente,0.5882,True,2,Band 2: Small Town,-102.762017,23.073851
+2021,located_dead,cases,2021_located_dead_cases_003,7,Centro,0.0,False,3,Band 3: Mid-Size,-99.18264,18.831331
+2021,located_dead,cases,2021_located_dead_cases_004,36,Centro,0.0,False,3,Band 3: Mid-Size,-99.217125,19.391028
+2021,located_dead,cases,2021_located_dead_cases_005,4,Centro-Norte,0.0,False,3,Band 3: Mid-Size,-103.710706,19.286534
+2021,located_dead,cases,2021_located_dead_cases_006,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
+2021,located_dead,cases,2021_located_dead_cases_007,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
+2022,located_dead,cases,2022_located_dead_cases_001,14,Norte,0.0,False,3,Band 3: Mid-Size,-100.204937,25.751434
+2022,located_dead,cases,2022_located_dead_cases_002,12,Norte-Occidente,0.4167,False,2,Band 2: Small Town,-102.809422,22.991852
+2022,located_dead,cases,2022_located_dead_cases_003,26,Centro,0.0,False,3,Band 3: Mid-Size,-99.162199,19.391384
+2022,located_dead,cases,2022_located_dead_cases_004,5,Centro,0.0,False,3,Band 3: Mid-Size,-99.186997,18.8705
+2022,located_dead,cases,2022_located_dead_cases_005,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
+2023,located_dead,cases,2023_located_dead_cases_001,3,Centro-Norte,0.3333,False,1,Band 1: Rural,-101.130736,19.80055
+2023,located_dead,cases,2023_located_dead_cases_002,7,Norte-Occidente,0.7143,True,1,Band 1: Rural,-102.613171,22.807762
+2023,located_dead,cases,2023_located_dead_cases_003,28,Centro,0.0,False,3,Band 3: Mid-Size,-99.162113,19.419312
+2023,located_dead,cases,2023_located_dead_cases_004,5,Centro,0.0,False,3,Band 3: Mid-Size,-98.244355,19.103989
+2023,located_dead,cases,2023_located_dead_cases_005,4,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.190836,22.004264
+2023,located_dead,cases,2023_located_dead_cases_006,3,Norte,0.0,False,1,Band 1: Rural,-100.388544,25.907341
+2023,located_dead,cases,2023_located_dead_cases_007,4,Centro,0.0,False,3,Band 3: Mid-Size,-99.220654,18.870067
+2023,located_dead,cases,2023_located_dead_cases_008,5,Norte,0.0,False,3,Band 3: Mid-Size,-100.022442,25.732267
+2023,located_dead,cases,2023_located_dead_cases_009,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
+2024,located_dead,cases,2024_located_dead_cases_001,26,Centro,0.0,False,3,Band 3: Mid-Size,-99.181136,19.393373
+2024,located_dead,cases,2024_located_dead_cases_002,14,Norte,0.0,False,3,Band 3: Mid-Size,-100.150383,25.618115
+2024,located_dead,cases,2024_located_dead_cases_003,3,Norte,0.0,False,1,Band 1: Rural,-110.812611,28.175533
+2024,located_dead,cases,2024_located_dead_cases_004,4,Centro,0.0,False,3,Band 3: Mid-Size,-98.757516,20.019122
+2024,located_dead,cases,2024_located_dead_cases_005,4,Centro,0.0,False,3,Band 3: Mid-Size,-98.302029,19.036367
+2024,located_dead,cases,2024_located_dead_cases_006,5,Norte-Occidente,0.8,True,1,Band 1: Rural,-102.649541,22.835473
+2024,located_dead,cases,2024_located_dead_cases_007,4,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.357597,21.999684
+2024,located_dead,cases,2024_located_dead_cases_008,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.206529,18.847133
+2024,located_dead,cases,2024_located_dead_cases_009,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
+2024,located_dead,cases,2024_located_dead_cases_010,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.180456,19.7469

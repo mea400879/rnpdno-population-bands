@@ -7,7 +7,8 @@ def build_master():
     print("🚀 Starting Master Panel Construction...")
 
     # Paths
-    pop_path = Path("/home/marco/pCloudDrive/Datasets/socioeconomic/conapo_proyecciones/raw/poblacion_1990_2070_municipal.parquet")
+    pop_path = Path("data/external/conapo_poblacion_1990_2070.parquet")
+
     local_csv = Path("data/raw/rnpdno_total.csv")
     output_path = Path("data/processed/master_panel.parquet")
 

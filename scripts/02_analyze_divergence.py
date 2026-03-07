@@ -14,11 +14,12 @@ def analyze():
     print(summary)
     
     # 2. The Jaccard Gap (Top 100 for a specific year, e.g., 2023)
+# REPLACE lines 17-21 with:
     latest = df[df['date'].dt.year == 2023].groupby('cvegeo').agg({
-        'total': 'sum',
-        'risk_rate': 'mean'
+	    'total': 'sum',
+	    'pop_dynamic': 'mean'  # Use mean annual population
     })
-    
+    latest['risk_rate'] = (latest['total'] / latest['pop_dynamic']) * 100_000
     top_burden = set(latest.nlargest(100, 'total').index)
     top_risk = set(latest.nlargest(100, 'risk_rate').index)
     
