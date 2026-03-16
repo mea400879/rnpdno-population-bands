@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+
+% ---- Packages ----------------------------------------------------------------
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[font=small,labelfont=bf]{caption}
+
+\doublespacing
+
+% ---- Metadata ----------------------------------------------------------------
+\title{Spatial Dynamics of Disappearances in Mexico, 2015--2024:\\
+       A Municipal-Level Analysis by Outcome Status}
+
+\author{[Author(s)]}
+\date{\today}
+
+% ==============================================================================
+\begin{document}
+\maketitle
+
+% ---- Abstract ----------------------------------------------------------------
+\begin{abstract}
+[Abstract placeholder.]
+\end{abstract}
+
+\textbf{Keywords:} enforced disappearances; spatial autocorrelation; Mexico;
+LISA; population bands; Norte; Baj\'io
+
+% ---- 1. Introduction ---------------------------------------------------------
+\section{Introduction}
+
+[Introduction placeholder.]
+
+% ---- 2. Data and Methods -----------------------------------------------------
+\section{Data and Methods}
+
+\subsection{Data}
+
+[Data description placeholder.]
+
+\subsection{Spatial Clustering Method}
+
+We compute annual Local Moran's~$I$ (LISA) statistics for each of four RNPDNO
+outcome statuses (Total, Not Located, Located Alive, Located Dead) using both
+case counts and per-capita rates (per 100,000 inhabitants). Weights are based
+on Queen contiguity; significance is assessed at $\alpha = 0.05$ using 999
+conditional permutations. High-High (HH) clusters are defined as connected
+components of statistically significant HH municipalities with a minimum size
+of three municipalities.
+
+% ---- 3. Results --------------------------------------------------------------
+\section{Results}
+
+\subsection{Regional Composition of HH Clusters, 2015 vs.\ 2024}
+
+Table~\ref{tab:regional_shift} presents the regional distribution of
+HH-cluster municipalities at the beginning and end of the study period.
+
+\input{tables/table1_regional_shift.tex}
+
+\subsection{Trend Slopes by Geography and Status}
+
+Table~\ref{tab:trend_slopes} reports OLS trend slopes (municipalities per year)
+for Norte and Baj\'io under each status--metric combination.
+
+\input{tables/table2_trend_slopes.tex}
+
+\subsection{Temporal Trends in HH Cluster Size}
+
+Figure~\ref{fig:hh_trend} plots the annual number of municipalities in HH
+clusters for Norte and Baj\'io across all four outcome statuses.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figures/fig1_hh_trend_by_status.pdf}
+  \caption{High-High disappearance cluster municipalities in Norte and Baj\'io
+           by outcome status, 2015--2024. Solid lines = case-based LISA;
+           dashed lines = rate-based LISA.}
+  \label{fig:hh_trend}
+\end{figure}
+
+\subsection{Divergence Between Case-Based and Rate-Based Hotspots}
+
+Figure~\ref{fig:jaccard} shows annual Jaccard similarity between case-based
+and rate-based HH municipality sets.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/fig2_cases_vs_rates_jaccard.pdf}
+  \caption{Annual Jaccard similarity between case-based and rate-based
+           HH municipalities by outcome status, 2015--2024.}
+  \label{fig:jaccard}
+\end{figure}
+
+\subsection{Spatial Distribution, 2015 vs.\ 2024}
+
+Figure~\ref{fig:maps} maps HH municipalities for Located Alive and Located Dead
+at the start and end of the study period.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figures/fig3_hh_maps_2015_2024.pdf}
+  \caption{Spatial distribution of High-High disappearance municipalities
+           for Located Alive (green) and Located Dead (red), 2015 and 2024.
+           Dashed border: Baj\'io region. Projection: EPSG:6372.}
+  \label{fig:maps}
+\end{figure}
+
+% ---- 4. Discussion -----------------------------------------------------------
+\section{Discussion}
+
+[Discussion placeholder.]
+
+% ---- 5. Conclusion -----------------------------------------------------------
+\section{Conclusion}
+
+[Conclusion placeholder.]
+
+% ---- References --------------------------------------------------------------
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
