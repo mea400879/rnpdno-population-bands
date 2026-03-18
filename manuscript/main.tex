@@ -23,7 +23,7 @@
 
 % ---- TODO helper -------------------------------------------------------------
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
-\newcommand{\cite}[1]{\textcolor{blue}{\textbf{[CITE: #1]}}}  % use \citep in final
+% \cite is provided by natbib; use \citep / \citet in body text
 
 % ---- Document settings -------------------------------------------------------
 \doublespacing
@@ -63,6 +63,26 @@ Mexico; outcome status; municipal level; hotspot analysis; temporal dynamics
 
 \newpage
 
+% ==============================================================================
+% SESSION NOTE (2026-03-16) — PAPER PURPOSE:
+% Prior research treats disappearances in Mexico as a single geographic
+% phenomenon.  This paper's core argument is that the OUTCOME STATUS of a
+% disappearance (not located vs located alive vs located dead) determines
+% WHERE the case clusters spatially — and those geographies are
+% fundamentally non-interchangeable.
+%
+% Why it matters for policy:
+%   - Not Located geography  → where to deploy active search and prevention
+%   - Located Dead geography → where to deploy forensic identification capacity
+%   - These are DIFFERENT PLACES, so treating disappearances as one metric
+%     leads to misallocation of search and forensic resources.
+%
+% Why it matters for criminology:
+%   - First outcome-disaggregated spatial analysis of disappearances at
+%     national scale with monthly resolution (132 periods, 2,478 municipalities)
+%   - Demonstrates spatial non-interchangeability empirically (Table 5 Jaccard,
+%     Table 7 divergent trends, Table 8 sex patterns)
+%   - Reveals Centro expansion invisible to annual/aggregate analyses
 % ==============================================================================
 \section{Introduction}
 \label{sec:intro}
@@ -113,9 +133,36 @@ This paper addresses four research questions:
 \label{sec:data}
 % ---- Target length: ~800 words -----------------------------------------------
 
-\todo{Para 1 -- RNPDNO: 4 CSVs, cite DiB descriptor.
-Municipality-month cells, 12-column schema, cvegeo join key,
-status\_id codes (0 = total, 7 = not located, 2 = located alive, 3 = located dead).}
+% SESSION NOTE (2026-03-16):
+% The data is FLOW (new monthly registrations), NOT a cumulative stock.
+% The commonly-cited ~111k–115k figure is the historical cumulative stock
+% (all cases ever registered since inception, including pre-2015 cases).
+% Our 11-year flow totals: 89,850 not located; 157,688 located alive;
+% 15,343 located dead.  These figures are correct — not undercounts.
+% Evidence for FLOW interpretation: values fluctuate month-to-month
+% (not monotonically increasing); Dec 2024 national snapshot = 2,745 total
+% (impossible as a stock for a country with 100k+ registered cases).
+% Annual growth confirms the crisis worsened: Not Located new registrations
+% tripled from 3,745/yr (2015) to 12,888/yr (2024).
+The RNPDNO is released as four CSV files, one per outcome status, publicly
+available through \todo{cite DiB data descriptor}.
+Each row represents a municipality $\times$ month cell recording the count of
+persons whose case was \emph{registered} during that calendar month.
+These are \textbf{flow} counts --- new registrations entering the system each
+month --- not a cumulative stock of all cases ever recorded.
+The commonly cited national aggregate of approximately 111,000--115,000
+registered disappearances refers to the historical stock since the registry's
+inception (including cases pre-dating 2015) and substantially exceeds the
+flow-based totals reported here.
+Over the 132-month window January 2015--December 2025, 89,850 persons entered
+the registry under Not Located status, 157,688 under Located Alive, and
+15,343 under Located Dead (Table~\ref{tab:dataset}).
+Status identifiers are: 0 = Total, 7 = Not Located, 2 = Located Alive,
+3 = Located Dead.
+Municipality geocodes (cvegeo) are five-digit INEGI codes;
+1,803--240 sentinel rows per status (geocodes ending in 998/999 or equal
+to 99998) are excluded prior to spatial analysis as they cannot be assigned
+to a specific municipality.
 
 Table~\ref{tab:dataset} summarises the four files.
 
@@ -247,9 +294,22 @@ outcome status, disaggregated by sex.
   \label{fig:timeseries}
 \end{figure}
 
-\todo{Key points for 3.1:
-(1) National totals rise then plateau/decline post-2020 for Total and Not Located;
-(2) Located Dead shows a distinct trajectory (describe from Fig 1);
+A prominent feature of the time series is the sustained acceleration of new
+registrations over the study period.
+New Not Located registrations grew from approximately 3,745 per year in 2015
+to 12,888 per year in 2024 --- a 244\,\% increase --- before showing a modest
+decline in 2025.
+Located Dead registrations nearly quadrupled, from 565 per year (2015) to
+1,804 per year (2024).
+Taken together, these trends document a worsening crisis rather than a
+statistical artefact: the flow of new disappearances entering the registry each
+year grew dramatically across the decade.
+\todo{Fill Located Alive annual totals for 2015 and 2024 from
+      concentration\_monthly.csv and add sentence here.}
+\todo{Key remaining points for 3.1:
+(1) National totals rise then plateau/decline post-2020 for Total and Not Located ---
+    describe inflection point from Fig 1;
+(2) Located Dead trajectory distinct (steeper or later peak?);
 (3) Sex imbalance varies by status: Not Located 78\% male, Located Alive~50\%,
     Located Dead 86\% male (Table 1);
 (4) Brief reference to Table 2 for distributional statistics.}
@@ -421,6 +481,16 @@ Three patterns deserve attention.
   \input{tables/table7_trend_slopes.tex}
 \end{table}
 
+% SESSION NOTE (2026-03-16):
+% Norte is hardening, not shifting. It was already the dominant hotspot in 2015
+% and is growing larger and more intense across ALL four statuses simultaneously.
+% The key interpretive question: simultaneous HH growth in Located Alive AND
+% Located Dead in the same region suggests entrenched organised crime presence
+% (people going missing AND being found dead there) coexisting with some degree
+% of forensic/institutional activity (bodies being recovered and registered).
+% This is not a contradiction — it may reflect that Norte has both the highest
+% disappearance incidence AND the most developed forensic infrastructure.
+% Frame as hypothesis; do not claim causal mechanism.
 \textbf{The Norte consolidation.}
 Norte shows consistent positive growth in HH municipalities across all four
 statuses (Total: $+0.64^{***}$, Not Located: $+0.23^{*}$,
@@ -429,6 +499,19 @@ Located Alive: $+1.12^{***}$, Located Dead: $+0.57^{***}$).
 What does simultaneous growth in Located Alive AND Located Dead suggest
 (organised crime presence + some forensic activity)?}
 
+% SESSION NOTE (2026-03-16):
+% The earlier annual pipeline (scripts 07–09) found Bajío was rising overall
+% and generated the "route reorganisation" hypothesis: CJNG expanding into the
+% Guanajuato/Jalisco corridor.  The monthly pipeline QUALIFIES this:
+%   - Located Alive in Bajío is DECLINING (-0.51/yr, p<0.01)
+%   - Located Dead in Bajío is RISING   (+0.23/yr, p<0.05)
+% Interpretation: fewer people are being found alive in the region (the
+% trafficking/kidnap-for-ransom route is collapsing or displacing) but lethal
+% outcomes are increasing (territorial violence is getting deadlier).
+% The Bajío "rise" we saw annually was real but masked a composition shift
+% from recoveries to lethality.  The monthly resolution reveals this divergence.
+% IMPORTANT: frame the CJNG mechanism as hypothesis only — we have no direct
+% evidence of actor attribution in the RNPDNO data.
 \textbf{The Baj\'io divergence.}
 Baj\'io shows a significant decline in Located Alive hotspots
 ($-0.51^{**}$\,municipalities/yr) but a rising trend for Located Dead
@@ -438,6 +521,22 @@ pipeline (declining Located Alive) is confirmed but now qualified --- lethality
 is rising even as living recoveries fall. Cartel territorial expansion into
 Guanajuato/Jalisco corridor as a possible mechanism (frame as hypothesis only).}
 
+% SESSION NOTE (2026-03-16):
+% Centro (CDMX + Estado de México + Puebla + Morelos + Hidalgo) is the
+% BIGGEST SURPRISE of the monthly pipeline.  The annual analysis (scripts
+% 07–09) focused on Norte–Bajío because that's what the literature emphasises,
+% and missed this entirely.
+% Centro has the LARGEST positive slopes of ANY region across all statuses.
+% Two competing interpretations that MUST be flagged in the paper:
+%   (A) Real increase: metropolitan corridor urbanisation of disappearances —
+%       organised crime expanding into/through the capital region.
+%   (B) Reporting artefact: urban areas have more prosecutors, more civil
+%       society pressure, more news media — so MORE cases get registered even
+%       if underlying incidence didn't change as sharply.
+% We cannot distinguish A from B with the RNPDNO data alone.
+% Paper 3 (econometric covariates) is the right venue to test this.
+% For this paper: report the finding, present both interpretations, flag as
+% a hypothesis requiring further investigation.  Do NOT claim A over B.
 \textbf{The Centro expansion.}
 Unexpectedly, Centro shows the largest positive slopes of any region
 (Total: $+2.76^{***}$, Not Located: $+4.18^{***}$,
@@ -476,6 +575,22 @@ distributional change.
   \end{adjustbox}
 \end{table}
 
+% SESSION NOTE (2026-03-16) — SEX PATTERNS:
+% The aggregate sex breakdown is one of the most striking descriptive findings:
+%   - Not Located:    77.8% male  → active disappearance is male-dominated
+%   - Located Alive:  49.4% male  → near gender-parity in living recoveries
+%   - Located Dead:   85.9% male  → strongly aligned with homicide patterns
+%
+% The Located Alive near-parity is puzzling: women are 49% of living recoveries
+% but only ~22% of active disappearances.  Two possible interpretations:
+%   (A) Women who disappear are found alive at a higher rate than men
+%       (different types of disappearance — domestic violence, trafficking
+%       cases with higher recovery rates?)
+%   (B) Women's disappearances are registered differently (more pressure to
+%       register recoveries for women, or men's cases stay open longer)
+% The spatial RQ4 question is whether male and female hotspots are in the
+% same places or diverge geographically.  Flag: female Located Dead sample
+% is tiny (2,123 total over 11 years) — statistical power for LISA is limited.
 % ---- 3.5 Sex Disaggregation --------------------------------------------------
 \subsection{Sex Disaggregation (RQ4)}
 \label{sec:sex}

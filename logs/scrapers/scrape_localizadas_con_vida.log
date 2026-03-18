@@ -1,0 +1,36 @@
+2026-03-11 20:04:52,401 [localizadas_con_vida] ==================================================
+2026-03-11 20:04:52,401 [localizadas_con_vida] SCRAPING: localizadas_con_vida (id=2)
+2026-03-11 20:04:52,401 [localizadas_con_vida] Single month: 2015-12
+2026-03-11 20:04:52,401 [localizadas_con_vida] ==================================================
+2026-03-11 20:04:52,401 [localizadas_con_vida] 
+Downloading 2015-12 ...
+2026-03-11 20:04:56,539 [localizadas_con_vida]   Estado 01 (Aguascalientes      ):   40 persons
+2026-03-11 20:05:04,381 [localizadas_con_vida]   Estado 02 (Baja California     ):    1 persons
+2026-03-11 20:05:10,777 [localizadas_con_vida]   Estado 04 (Campeche            ):    7 persons
+2026-03-11 20:05:22,214 [localizadas_con_vida]   Estado 05 (Coahuila            ):    2 persons
+2026-03-11 20:05:43,341 [localizadas_con_vida]   Estado 07 (Chiapas             ):   11 persons
+2026-03-11 20:05:53,781 [localizadas_con_vida]   Estado 08 (Chihuahua           ):   92 persons
+2026-03-11 20:05:58,100 [localizadas_con_vida]   Estado 09 (Ciudad de México    ):    1 persons
+2026-03-11 20:06:02,450 [localizadas_con_vida]   Estado 10 (Durango             ):   12 persons
+2026-03-11 20:06:06,266 [localizadas_con_vida]   Estado 11 (Guanajuato          ):   13 persons
+2026-03-11 20:06:12,635 [localizadas_con_vida]   Estado 12 (Guerrero            ):    6 persons
+2026-03-11 20:06:17,460 [localizadas_con_vida]   Estado 13 (Hidalgo             ):   10 persons
+2026-03-11 20:06:27,395 [localizadas_con_vida]   Estado 14 (Jalisco             ):   10 persons
+2026-03-11 20:06:34,148 [localizadas_con_vida]   Estado 15 (México              ):  118 persons
+2026-03-11 20:06:47,739 [localizadas_con_vida]   Estado 16 (Michoacán           ):    1 persons
+2026-03-11 20:06:51,569 [localizadas_con_vida]   Estado 17 (Morelos             ):    5 persons
+2026-03-11 20:07:01,011 [localizadas_con_vida]   Estado 19 (Nuevo León          ):   15 persons
+2026-03-11 20:07:06,924 [localizadas_con_vida]   Estado 20 (Oaxaca              ):   22 persons
+2026-03-11 20:07:11,228 [localizadas_con_vida]   Estado 21 (Puebla              ):   50 persons
+2026-03-11 20:07:20,141 [localizadas_con_vida]   Estado 22 (Querétaro           ):   15 persons
+2026-03-11 20:07:28,583 [localizadas_con_vida]   Estado 23 (Quintana Roo        ):    3 persons
+2026-03-11 20:07:39,462 [localizadas_con_vida]   Estado 24 (San Luis Potosí     ):    3 persons
+2026-03-11 20:07:43,764 [localizadas_con_vida]   Estado 25 (Sinaloa             ):   27 persons
+2026-03-11 20:07:47,166 [localizadas_con_vida]   Estado 26 (Sonora              ):    7 persons
+2026-03-11 20:07:54,030 [localizadas_con_vida]   Estado 27 (Tabasco             ):    5 persons
+2026-03-11 20:07:58,982 [localizadas_con_vida]   Estado 28 (Tamaulipas          ):   13 persons
+2026-03-11 20:08:07,960 [localizadas_con_vida]   Estado 30 (Veracruz            ):    7 persons
+2026-03-11 20:08:10,461 [localizadas_con_vida]   Estado 31 (Yucatán             ):   47 persons
+2026-03-11 20:08:12,719 [localizadas_con_vida]   Estado 32 (Zacatecas           ):    1 persons
+2026-03-11 20:08:13,804 [localizadas_con_vida] Saved: rnpdno_localizadas_con_vida_2015_12.csv  (153 municipality rows, 544 persons)
+2026-03-11 20:08:14,806 [localizadas_con_vida] DONE

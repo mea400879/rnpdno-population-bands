@@ -1,0 +1,39 @@
+2026-03-11 20:04:33,649 [total] ==================================================
+2026-03-11 20:04:33,649 [total] SCRAPING: total (id=0)
+2026-03-11 20:04:33,650 [total] Single month: 2015-12
+2026-03-11 20:04:33,650 [total] ==================================================
+2026-03-11 20:04:33,650 [total] 
+Downloading 2015-12 ...
+2026-03-11 20:04:35,799 [total]   Estado 01 (Aguascalientes      ):   41 persons
+2026-03-11 20:04:38,098 [total]   Estado 02 (Baja California     ):    3 persons
+2026-03-11 20:04:40,394 [total]   Estado 03 (Baja California Sur ):    3 persons
+2026-03-11 20:04:42,684 [total]   Estado 04 (Campeche            ):    8 persons
+2026-03-11 20:04:44,971 [total]   Estado 05 (Coahuila            ):    9 persons
+2026-03-11 20:04:47,772 [total]   Estado 06 (Colima              ):    4 persons
+2026-03-11 20:04:52,108 [total]   Estado 07 (Chiapas             ):   13 persons
+2026-03-11 20:04:58,460 [total]   Estado 08 (Chihuahua           ):  114 persons
+2026-03-11 20:05:06,299 [total]   Estado 09 (Ciudad de México    ):    8 persons
+2026-03-11 20:05:12,656 [total]   Estado 10 (Durango             ):   12 persons
+2026-03-11 20:05:17,469 [total]   Estado 11 (Guanajuato          ):   20 persons
+2026-03-11 20:05:26,349 [total]   Estado 12 (Guerrero            ):   24 persons
+2026-03-11 20:05:30,675 [total]   Estado 13 (Hidalgo             ):   14 persons
+2026-03-11 20:05:37,044 [total]   Estado 14 (Jalisco             ):   77 persons
+2026-03-11 20:05:41,352 [total]   Estado 15 (México              ):  151 persons
+2026-03-11 20:05:45,170 [total]   Estado 16 (Michoacán           ):   19 persons
+2026-03-11 20:05:49,468 [total]   Estado 17 (Morelos             ):   17 persons
+2026-03-11 20:06:00,505 [total]   Estado 19 (Nuevo León          ):   21 persons
+2026-03-11 20:06:04,316 [total]   Estado 20 (Oaxaca              ):   22 persons
+2026-03-11 20:06:19,288 [total]   Estado 21 (Puebla              ):   57 persons
+2026-03-11 20:06:23,126 [total]   Estado 22 (Querétaro           ):   17 persons
+2026-03-11 20:06:31,505 [total]   Estado 23 (Quintana Roo        ):    7 persons
+2026-03-11 20:06:36,835 [total]   Estado 24 (San Luis Potosí     ):    3 persons
+2026-03-11 20:06:43,358 [total]   Estado 25 (Sinaloa             ):   58 persons
+2026-03-11 20:06:45,781 [total]   Estado 26 (Sonora              ):   37 persons
+2026-03-11 20:06:49,739 [total]   Estado 27 (Tabasco             ):    9 persons
+2026-03-11 20:06:53,567 [total]   Estado 28 (Tamaulipas          ):   37 persons
+2026-03-11 20:07:03,193 [total]   Estado 30 (Veracruz            ):   56 persons
+2026-03-11 20:07:09,075 [total]   Estado 31 (Yucatán             ):   50 persons
+2026-03-11 20:07:15,947 [total]   Estado 32 (Zacatecas           ):   13 persons
+2026-03-11 20:07:22,410 [total]   Estado 33 (Se desconoce        ):    2 persons
+2026-03-11 20:07:22,918 [total] Saved: rnpdno_total_2015_12.csv  (260 municipality rows, 926 persons)
+2026-03-11 20:07:23,919 [total] DONE

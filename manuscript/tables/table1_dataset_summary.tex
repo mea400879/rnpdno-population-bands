@@ -1,15 +1,12 @@
-\begin{tabular}{lrrrrrrrr}
+\begin{tabular}{lrrrrrr}
   \toprule
-  & & & & \multicolumn{4}{c}{\textbf{Valid persons (by sex)}} \\
-  \cmidrule(lr){5-8}
-  \textbf{Status} & \textbf{Valid rows} & \textbf{Sentinel rows} & \textbf{Valid persons} & \textbf{Male} & \textbf{Female} & \textbf{Undef.} & \textbf{\%Male} \\
+  \textbf{Status} & \textbf{CSV rows} & \textbf{Valid rows} & \textbf{Sentinel rows} & \textbf{Total persons} & \textbf{Valid persons} & \textbf{Sentinel persons} \\
   \midrule
-  Total          & 55,524 & 1,803 & 262,814 & 160,857 & 101,630 & 327 & 61.2\% \\
-  Not Located    & 33,384 & 1,256 &  89,850 &  69,871 &  19,843 & 136 & 77.8\% \\
-  Located Alive  & 36,521 &   837 & 157,688 &  77,856 &  79,686 & 146 & 49.4\% \\
-  Located Dead   &  9,643 &   240 &  15,343 &  13,175 &   2,123 &  45 & 85.9\% \\
+  Total & 57,327 & 55,524 & 1,803 & 268,900 & 262,814 & 6,086 \\
+  Not Located & 34,640 & 33,384 & 1,256 & 92,693 & 89,850 & 2,843 \\
+  Located Alive & 37,358 & 36,521 & 837 & 160,598 & 157,688 & 2,910 \\
+  Located Dead & 9,883 & 9,643 & 240 & 15,682 & 15,343 & 339 \\
   \bottomrule
-  \multicolumn{8}{l}{\footnotesize Temporal coverage: January 2015 -- December 2025. Spatial analysis covers 2,478 municipalities (INEGI 2024).} \\
-  \multicolumn{8}{l}{\footnotesize Sentinel geocodes (cvegeo ending 998/999 or = 99998) excluded. \%Male computed over valid persons.} \\
-  \multicolumn{8}{l}{\footnotesize Located Alive is the only status with near-equal sex distribution (49.4\% male). Located Dead is the most male-skewed (85.9\%).} \\
+  \multicolumn{7}{l}{\footnotesize Temporal coverage: January 2015 -- December 2025.} \\
+  \multicolumn{7}{l}{\footnotesize Sentinel geocodes (cvegeo ending 998/999 or equal to 99998) excluded from all spatial analyses.} \\
 \end{tabular}

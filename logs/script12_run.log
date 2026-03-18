@@ -1,0 +1,105 @@
+2026-03-16 13:48:12,880 INFO Loading spatial weights...
+('WARNING: ', '02003', ' is an island (no neighbors)')
+('WARNING: ', '02005', ' is an island (no neighbors)')
+('WARNING: ', '04002', ' is an island (no neighbors)')
+('WARNING: ', '05035', ' is an island (no neighbors)')
+('WARNING: ', '06007', ' is an island (no neighbors)')
+('WARNING: ', '06009', ' is an island (no neighbors)')
+('WARNING: ', '07078', ' is an island (no neighbors)')
+('WARNING: ', '12038', ' is an island (no neighbors)')
+('WARNING: ', '12001', ' is an island (no neighbors)')
+('WARNING: ', '12084', ' is an island (no neighbors)')
+('WARNING: ', '13035', ' is an island (no neighbors)')
+('WARNING: ', '14043', ' is an island (no neighbors)')
+('WARNING: ', '14022', ' is an island (no neighbors)')
+('WARNING: ', '14067', ' is an island (no neighbors)')
+('WARNING: ', '15004', ' is an island (no neighbors)')
+('WARNING: ', '15056', ' is an island (no neighbors)')
+('WARNING: ', '15044', ' is an island (no neighbors)')
+('WARNING: ', '15077', ' is an island (no neighbors)')
+('WARNING: ', '16108', ' is an island (no neighbors)')
+('WARNING: ', '18004', ' is an island (no neighbors)')
+('WARNING: ', '18020', ' is an island (no neighbors)')
+('WARNING: ', '20334', ' is an island (no neighbors)')
+('WARNING: ', '20551', ' is an island (no neighbors)')
+('WARNING: ', '20036', ' is an island (no neighbors)')
+('WARNING: ', '20570', ' is an island (no neighbors)')
+('WARNING: ', '20537', ' is an island (no neighbors)')
+('WARNING: ', '20460', ' is an island (no neighbors)')
+('WARNING: ', '20044', ' is an island (no neighbors)')
+('WARNING: ', '20115', ' is an island (no neighbors)')
+('WARNING: ', '20413', ' is an island (no neighbors)')
+('WARNING: ', '20006', ' is an island (no neighbors)')
+('WARNING: ', '20039', ' is an island (no neighbors)')
+('WARNING: ', '20064', ' is an island (no neighbors)')
+('WARNING: ', '21117', ' is an island (no neighbors)')
+('WARNING: ', '21027', ' is an island (no neighbors)')
+('WARNING: ', '23001', ' is an island (no neighbors)')
+('WARNING: ', '23002', ' is an island (no neighbors)')
+('WARNING: ', '23004', ' is an island (no neighbors)')
+('WARNING: ', '23010', ' is an island (no neighbors)')
+('WARNING: ', '25002', ' is an island (no neighbors)')
+('WARNING: ', '25012', ' is an island (no neighbors)')
+('WARNING: ', '26025', ' is an island (no neighbors)')
+('WARNING: ', '29053', ' is an island (no neighbors)')
+('WARNING: ', '29020', ' is an island (no neighbors)')
+('WARNING: ', '29022', ' is an island (no neighbors)')
+('WARNING: ', '29001', ' is an island (no neighbors)')
+('WARNING: ', '30025', ' is an island (no neighbors)')
+('WARNING: ', '30104', ' is an island (no neighbors)')
+('WARNING: ', '30193', ' is an island (no neighbors)')
+('WARNING: ', '31065', ' is an island (no neighbors)')
+('WARNING: ', '31020', ' is an island (no neighbors)')
+('WARNING: ', '31059', ' is an island (no neighbors)')
+2026-03-16 13:48:12,889 INFO Weights: 2478 obs, 5.07 mean neighbors, 52 islands
+2026-03-16 13:48:12,889 INFO Loading panel and building value lookup array...
+2026-03-16 13:48:13,075 INFO Value lookup array ready.
+2026-03-16 13:48:13,076 INFO Total LISA runs: 1584 → ~3,925,152 output rows
+2026-03-16 13:48:23,823 INFO   Run  100/1584 (  6.3%) — status=0 2017-10 total
+2026-03-16 13:48:34,500 INFO   Run  200/1584 ( 12.6%) — status=0 2020-07 male
+2026-03-16 13:48:45,140 INFO   Run  300/1584 ( 18.9%) — status=0 2023-04 female
+2026-03-16 13:48:55,824 INFO   Run  400/1584 ( 25.3%) — status=2 2015-02 total
+2026-03-16 13:49:06,366 INFO   Run  500/1584 ( 31.6%) — status=2 2017-11 male
+2026-03-16 13:49:16,974 INFO   Run  600/1584 ( 37.9%) — status=2 2020-08 female
+2026-03-16 13:49:27,591 INFO   Run  700/1584 ( 44.2%) — status=2 2023-06 total
+2026-03-16 13:49:38,123 INFO   Run  800/1584 ( 50.5%) — status=3 2015-03 male
+2026-03-16 13:49:48,692 INFO   Run  900/1584 ( 56.8%) — status=3 2017-12 female
+2026-03-16 13:49:59,328 INFO   Run 1000/1584 ( 63.1%) — status=3 2020-10 total
+2026-03-16 13:50:09,901 INFO   Run 1100/1584 ( 69.4%) — status=3 2023-07 male
+2026-03-16 13:50:20,440 INFO   Run 1200/1584 ( 75.8%) — status=7 2015-04 female
+2026-03-16 13:50:31,074 INFO   Run 1300/1584 ( 82.1%) — status=7 2018-02 total
+2026-03-16 13:50:41,666 INFO   Run 1400/1584 ( 88.4%) — status=7 2020-11 male
+2026-03-16 13:50:52,182 INFO   Run 1500/1584 ( 94.7%) — status=7 2023-08 female
+2026-03-16 13:51:01,117 INFO   Run 1584/1584 (100.0%) — status=7 2025-12 female
+2026-03-16 13:51:01,117 INFO All LISA runs complete. Building output DataFrames...
+2026-03-16 13:51:01,117 INFO Writing lisa_monthly_results.parquet...
+2026-03-16 13:51:01,688 INFO   lisa_monthly_results.parquet: 3,925,152 rows
+2026-03-16 13:51:01,688 INFO Writing morans_i_monthly.csv...
+2026-03-16 13:51:01,698 INFO   morans_i_monthly.csv: 528 rows (expected 528)
+2026-03-16 13:51:01,698 INFO Writing hh_clusters_monthly.parquet...
+2026-03-16 13:51:01,708 INFO   hh_clusters_monthly.parquet: 18,006 rows
+2026-03-16 13:51:01,708 INFO --- Sanity checks ---
+2026-03-16 13:51:01,732 INFO   Cluster labels present: ['HH', 'HL', 'LH', 'LL', 'NS']
+2026-03-16 13:51:01,769 INFO   HH counts by status/sex:
+shape: (12, 3)
+┌───────────┬────────┬──────┐
+│ status_id ┆ sex    ┆ n    │
+│ ---       ┆ ---    ┆ ---  │
+│ i32       ┆ str    ┆ u32  │
+╞═══════════╪════════╪══════╡
+│ 2         ┆ female ┆ 6997 │
+│ 0         ┆ female ┆ 7799 │
+│ 2         ┆ male   ┆ 6471 │
+│ 2         ┆ total  ┆ 8622 │
+│ 7         ┆ total  ┆ 6798 │
+│ …         ┆ …      ┆ …    │
+│ 3         ┆ female ┆ 198  │
+│ 3         ┆ total  ┆ 2025 │
+│ 7         ┆ male   ┆ 5898 │
+│ 0         ┆ total  ┆ 9730 │
+│ 0         ┆ male   ┆ 8658 │
+└───────────┴────────┴──────┘
+2026-03-16 13:51:01,769 INFO   Moran's I range: -0.0118 – 0.4242
+2026-03-16 13:51:01,771 INFO   All global Moran's I significant (p<0.05): False
+2026-03-16 13:51:01,771 INFO Script 12 complete.
+

@@ -233,7 +233,7 @@ def make_fig2(conc: pl.DataFrame):
 def make_fig3(panel: pl.DataFrame):
     log.info("Fig 3: Lorenz curves...")
 
-    TIME_POINTS = [(2015, 1, "Jan 2015"), (2020, 1, "Jan 2020"), (2024, 12, "Dec 2024")]
+    TIME_POINTS = [(2015, 1, "Jan 2015"), (2020, 1, "Jan 2020"), (2025, 12, "Dec 2025")]
     TP_COLORS   = ["#2c3e50", "#8e44ad", "#e67e22"]
     TP_STYLES   = ["-", "--", ":"]
 
@@ -423,7 +423,7 @@ def make_fig6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
 def make_fig7(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
     log.info("Fig 7: LISA maps 2015-12 vs 2024-12...")
 
-    PERIODS  = [(2015, 12, "Dec 2015"), (2024, 12, "Dec 2024")]
+    PERIODS  = [(2015, 12, "Dec 2015"), (2025, 12, "Dec 2025")]
     STATUSES = [2, 3]   # located_alive, located_dead
     # Layout: rows = status, cols = year
 
@@ -450,7 +450,7 @@ def make_fig7(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
 
     make_lisa_legend(axes[1][1], loc="lower left")
 
-    fig.suptitle("LISA Cluster Maps: Located Alive vs. Located Dead\nDecember 2015 vs. December 2024 (total sex, α = 0.05)",
+    fig.suptitle("LISA Cluster Maps: Located Alive vs. Located Dead\nDecember 2015 vs. December 2025 (total sex, α = 0.05)",
                  fontsize=13, y=1.00)
     plt.tight_layout()
     save_fig(fig, "fig7_lisa_maps_2015_vs_2024", is_map=True)

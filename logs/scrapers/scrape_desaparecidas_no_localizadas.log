@@ -1,0 +1,34 @@
+2026-03-11 20:04:44,544 [desaparecidas_no_localizadas] ==================================================
+2026-03-11 20:04:44,544 [desaparecidas_no_localizadas] SCRAPING: desaparecidas_no_localizadas (id=7)
+2026-03-11 20:04:44,544 [desaparecidas_no_localizadas] Single month: 2015-12
+2026-03-11 20:04:44,544 [desaparecidas_no_localizadas] ==================================================
+2026-03-11 20:04:44,544 [desaparecidas_no_localizadas] 
+Downloading 2015-12 ...
+2026-03-11 20:04:50,149 [desaparecidas_no_localizadas]   Estado 02 (Baja California     ):    2 persons
+2026-03-11 20:04:54,384 [desaparecidas_no_localizadas]   Estado 03 (Baja California Sur ):    3 persons
+2026-03-11 20:05:00,683 [desaparecidas_no_localizadas]   Estado 04 (Campeche            ):    1 persons
+2026-03-11 20:05:09,022 [desaparecidas_no_localizadas]   Estado 05 (Coahuila            ):    6 persons
+2026-03-11 20:05:15,306 [desaparecidas_no_localizadas]   Estado 06 (Colima              ):    4 persons
+2026-03-11 20:05:20,042 [desaparecidas_no_localizadas]   Estado 07 (Chiapas             ):    1 persons
+2026-03-11 20:05:28,875 [desaparecidas_no_localizadas]   Estado 08 (Chihuahua           ):   18 persons
+2026-03-11 20:05:35,155 [desaparecidas_no_localizadas]   Estado 09 (Ciudad de México    ):    7 persons
+2026-03-11 20:05:47,545 [desaparecidas_no_localizadas]   Estado 11 (Guanajuato          ):    7 persons
+2026-03-11 20:05:51,828 [desaparecidas_no_localizadas]   Estado 12 (Guerrero            ):   15 persons
+2026-03-11 20:05:56,070 [desaparecidas_no_localizadas]   Estado 13 (Hidalgo             ):    4 persons
+2026-03-11 20:06:10,641 [desaparecidas_no_localizadas]   Estado 14 (Jalisco             ):   63 persons
+2026-03-11 20:06:15,543 [desaparecidas_no_localizadas]   Estado 15 (México              ):   24 persons
+2026-03-11 20:06:25,382 [desaparecidas_no_localizadas]   Estado 16 (Michoacán           ):   18 persons
+2026-03-11 20:06:29,724 [desaparecidas_no_localizadas]   Estado 17 (Morelos             ):   11 persons
+2026-03-11 20:06:39,534 [desaparecidas_no_localizadas]   Estado 19 (Nuevo León          ):    6 persons
+2026-03-11 20:06:56,830 [desaparecidas_no_localizadas]   Estado 21 (Puebla              ):    7 persons
+2026-03-11 20:07:13,881 [desaparecidas_no_localizadas]   Estado 23 (Quintana Roo        ):    4 persons
+2026-03-11 20:07:26,480 [desaparecidas_no_localizadas]   Estado 25 (Sinaloa             ):   22 persons
+2026-03-11 20:07:31,845 [desaparecidas_no_localizadas]   Estado 26 (Sonora              ):   30 persons
+2026-03-11 20:07:37,609 [desaparecidas_no_localizadas]   Estado 27 (Tabasco             ):    4 persons
+2026-03-11 20:07:42,006 [desaparecidas_no_localizadas]   Estado 28 (Tamaulipas          ):   22 persons
+2026-03-11 20:07:49,804 [desaparecidas_no_localizadas]   Estado 30 (Veracruz            ):   49 persons
+2026-03-11 20:07:56,620 [desaparecidas_no_localizadas]   Estado 31 (Yucatán             ):    3 persons
+2026-03-11 20:08:01,446 [desaparecidas_no_localizadas]   Estado 32 (Zacatecas           ):   11 persons
+2026-03-11 20:08:03,802 [desaparecidas_no_localizadas]   Estado 33 (Se desconoce        ):    2 persons
+2026-03-11 20:08:04,309 [desaparecidas_no_localizadas] Saved: rnpdno_desaparecidas_no_localizadas_2015_12.csv  (151 municipality rows, 344 persons)
+2026-03-11 20:08:05,310 [desaparecidas_no_localizadas] DONE

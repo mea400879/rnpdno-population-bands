@@ -38,6 +38,8 @@ from rnpdno_eda.models.spatial import load_municipios, build_queen_weights, run_
 # ---------------------------------------------------------------------------
 Path("reports/figures").mkdir(parents=True, exist_ok=True)
 Path("reports/tables").mkdir(parents=True, exist_ok=True)
+Path("manuscript/figures").mkdir(parents=True, exist_ok=True)
+Path("manuscript/tables").mkdir(parents=True, exist_ok=True)
 
 YEARS = list(range(2015, 2025))
 STATUSES = ["total", "disappeared", "located_alive", "located_dead"]
@@ -299,24 +301,25 @@ def make_fig3(d: dict):
         hh_set = combos[(st, yr)]
 
         # Background: all municipalities
-        geo.plot(ax=ax, color=BG_COLOR, edgecolor="#C0C0C0", linewidth=0.15, zorder=1)
+        geo.plot(ax=ax, color=BG_COLOR, edgecolor="#C0C0C0", linewidth=0.15,
+                 zorder=1, rasterized=True)
 
         # HH municipalities (filled)
         hh_gdf = geo[geo["cvegeo"].isin(hh_set)]
         if not hh_gdf.empty:
             hh_gdf.plot(ax=ax, color=hh_color, edgecolor="#333333",
-                        linewidth=0.25, alpha=0.85, zorder=3)
+                        linewidth=0.25, alpha=0.85, zorder=3, rasterized=True)
 
         # Bajío border (thin dashed, no fill change)
         bajio_gdf = geo[geo["cvegeo"].isin(bajio_cvegeos)]
         bajio_gdf.boundary.plot(
             ax=ax, color=BAJIO_BORDER, linewidth=0.65,
-            linestyle="--", zorder=4
+            linestyle="--", zorder=4, rasterized=True
         )
 
         # State borders on top
         states.boundary.plot(
-            ax=ax, color="#666666", linewidth=0.45, zorder=2
+            ax=ax, color="#666666", linewidth=0.45, zorder=2, rasterized=True
         )
 
         ax.set_title(title, fontsize=10, fontweight="bold", loc="left", pad=4)
@@ -374,6 +377,7 @@ def make_table1(d: dict):
         r"2015 vs 2024 (cases-based LISA, minimum cluster size = 3)}"
     )
     rows_tex.append(r"\label{tab:regional_shift}")
+    rows_tex.append(r"\resizebox{\textwidth}{!}{%")
 
     # Column spec: region | (2015, 2024, Δ) × 3 statuses
     cols = "l" + "rrr" * len(show_statuses)
@@ -413,7 +417,10 @@ def make_table1(d: dict):
         c2024 = np.array([all_counts[(st, r, 2024)] for r in REGIONS])
         contingency = np.vstack([c2015, c2024])
         try:
-            chi2, p, dof, _ = stats.chi2_contingency(contingency)
+            # Drop zero-sum columns (e.g. Norte-Occidente = [0,0]) which
+            # cause chi2_contingency to raise ValueError on zero expected freq.
+            col_mask = contingency.sum(axis=0) > 0
+            chi2, p, dof, _ = stats.chi2_contingency(contingency[:, col_mask])
         except Exception:
             p = np.nan
         chi2_pvals[st] = p
@@ -473,20 +480,23 @@ def make_table1(d: dict):
         row_chi += rf" & \multicolumn{{3}}{{c}}{{{p_str}}}"
     rows_tex.append(row_chi + r" \\")
     rows_tex.append(r"\bottomrule")
-    rows_tex.append(r"\end{tabular}")
+    rows_tex.append(r"\end{tabular}}")  # closes resizebox
+    rows_tex.append(r"\par\vspace{4pt}")
     rows_tex.append(
-        r"\begin{tablenotes}\small"
-        r"\item \textit{Note}: Counts are municipalities belonging to High-High spatial clusters "
+        r"\begin{minipage}{\textwidth}\footnotesize"
+        r"\textit{Note}: Counts are municipalities in High-High spatial clusters "
         r"($\alpha = 0.05$, 999 permutations, Queen contiguity, min.\ size = 3). "
-        r"``of which Bajío'' counts HH municipalities flagged as Bajío, expressed as \% of "
+        r"``of which Baj\'io'' = HH municipalities flagged as Baj\'io, as \% of "
         r"Centro-Norte + Centro HH municipalities. "
-        r"$\chi^2$ tests the null that regional composition is identical in 2015 and 2024 (df = 4)."
-        r"\end{tablenotes}"
+        r"$\chi^2$ tests that regional composition is identical in 2015 and 2024 "
+        r"(zero-sum columns excluded)."
+        r"\end{minipage}"
     )
     rows_tex.append(r"\end{table}")
 
     tex = "\n".join(rows_tex)
     Path("reports/tables/table1_regional_shift.tex").write_text(tex)
+    Path("manuscript/tables/table1_regional_shift.tex").write_text(tex)
     print("  Saved: reports/tables/table1_regional_shift.tex")
 
 
@@ -540,20 +550,21 @@ def make_table2(d: dict):
 
     rows_tex.append(r"\bottomrule")
     rows_tex.append(r"\end{tabular}")
+    rows_tex.append(r"\par\vspace{4pt}")
     rows_tex.append(
-        r"\begin{tablenotes}\small"
-        r"\item \textit{Note}: Coefficients from OLS linear regression of annual municipality count "
-        r"in HH clusters on year (slope = municipalities/year). "
+        r"\begin{minipage}{\textwidth}\footnotesize"
+        r"\textit{Note}: OLS slope = municipalities/year. "
         r"$^{*}p<0.05$, $^{**}p<0.01$, $^{***}p<0.001$. "
-        r"Bajío row includes all HH cluster municipalities where $\geq$50\% of cluster members "
-        r"are Bajío-flagged. Norte excludes Bajío-flagged municipalities."
-        r"\end{tablenotes}"
+        r"Baj\'io row includes HH cluster municipalities where $\geq$50\% of cluster members "
+        r"are Baj\'io-flagged; Norte excludes Baj\'io-flagged municipalities."
+        r"\end{minipage}"
     )
     rows_tex.append(r"\end{table}")
 
     # Remove blank lines caused by empty midrule logic
-    tex = "\n".join(r for r in rows_tex if r is not None)
+    tex = "\n".join(r for r in rows_tex if r is not None and r != "")
     Path("reports/tables/table2_trend_slopes.tex").write_text(tex)
+    Path("manuscript/tables/table2_trend_slopes.tex").write_text(tex)
     print("  Saved: reports/tables/table2_trend_slopes.tex")
 
 
@@ -647,6 +658,9 @@ def _save(fig: plt.Figure, stem: str):
     for ext in ["pdf", "png"]:
         path = f"{stem}.{ext}"
         fig.savefig(path, dpi=DPI, bbox_inches="tight", facecolor="white")
+        # Mirror to manuscript/figures/
+        fname = Path(path).name
+        fig.savefig(f"manuscript/figures/{fname}", dpi=DPI, bbox_inches="tight", facecolor="white")
     plt.close(fig)
     print(f"  Saved: {stem}.pdf / .png")
 

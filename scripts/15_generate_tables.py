@@ -45,7 +45,7 @@ STATUS_LABELS = {0: "Total", 7: "Not Located", 2: "Located Alive", 3: "Located D
 
 REGIONS = ["Norte", "Norte-Occidente", "Centro-Norte", "Centro", "Sur", "Bajío"]
 
-XSEC_LATEST = (2024, 12)   # Dec 2024 for all cross-sectional tables (T4, T5, T8)
+XSEC_LATEST = (2025, 12)   # Dec 2025 for all cross-sectional tables (T4, T5, T8)
 XSEC_EARLY  = (2015, 12)   # Dec 2015 for temporal comparison (T6, T7)
 
 # ---------------------------------------------------------------------------
@@ -291,7 +291,7 @@ def make_table4(lisa: pl.DataFrame):
 
     lines += [
         r"  \bottomrule",
-        r"  \multicolumn{7}{l}{\footnotesize LISA classification: Queen contiguity, 999 permutations, $\alpha=0.05$. Reference period: December 2024.} \\",
+        r"  \multicolumn{7}{l}{\footnotesize LISA classification: Queen contiguity, 999 permutations, $\alpha=0.05$. Reference period: December 2025.} \\",
         r"  \multicolumn{7}{l}{\footnotesize HH = High-High, LL = Low-Low, HL = High-Low, LH = Low-High, NS = Not Significant.} \\",
         r"\end{tabular}",
     ]
@@ -345,7 +345,7 @@ def make_table5(lisa: pl.DataFrame):
     lines += [
         r"  \bottomrule",
         r"  \multicolumn{5}{l}{\footnotesize Diagonal = total HH municipalities per status. Off-diagonal = pairwise intersection count.} \\",
-        r"  \multicolumn{5}{l}{\footnotesize Reference period: December 2024. All counts use total sex LISA ($\alpha=0.05$).} \\",
+        r"  \multicolumn{5}{l}{\footnotesize Reference period: December 2025. All counts use total sex LISA ($\alpha=0.05$).} \\",
         r"\end{tabular}",
     ]
     write_tex(OUT_DIR / "table5_hh_cross_tabulation.tex", "\n".join(lines))
@@ -418,7 +418,7 @@ def make_table6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
             *[fi(lookup(c2015, reg, sid)) for sid in STATUS_IDS]
         ))
         lines.append(tex_row(
-            "", "Dec 2024",
+            "", "Dec 2025",
             *[fi(lookup(c2024, reg, sid)) for sid in STATUS_IDS]
         ))
         lines.append(r"  \addlinespace[2pt]")
@@ -433,7 +433,7 @@ def make_table6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
 
     lines += [
         r"  \bottomrule",
-        r"  \multicolumn{6}{l}{\footnotesize $\chi^2$ tests compare regional distribution of HH municipalities (5 standard regions) between Dec 2015 and Dec 2024.} \\",
+        r"  \multicolumn{6}{l}{\footnotesize $\chi^2$ tests compare regional distribution of HH municipalities (5 standard regions) between Dec 2015 and Dec 2025.} \\",
         r"  \multicolumn{6}{l}{\footnotesize Baj\'{i}o municipalities (sub-flag) shown separately; not included in $\chi^2$ test.} \\",
         r"  \multicolumn{6}{l}{\footnotesize $^{***}p<0.001$, $^{**}p<0.01$, $^{*}p<0.05$.} \\",
         r"\end{tabular}",
@@ -577,7 +577,7 @@ def make_table8(lisa: pl.DataFrame):
 
     lines += [
         r"  \bottomrule",
-        r"  \multicolumn{7}{l}{\footnotesize Reference period: December 2024. $\alpha=0.05$, Queen contiguity, 999 permutations.} \\",
+        r"  \multicolumn{7}{l}{\footnotesize Reference period: December 2025. $\alpha=0.05$, Queen contiguity, 999 permutations.} \\",
         r"  \multicolumn{7}{l}{\footnotesize M $\cap$ F = municipalities HH under both male and female LISA. M/F only = sex-exclusive hotspots.} \\",
         r"\end{tabular}",
     ]

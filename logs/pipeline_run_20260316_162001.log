@@ -1,0 +1,14 @@
+2026-03-16 16:20:01,482 INFO ============================================================
+2026-03-16 16:20:01,482 INFO RNPDNO Monthly Pipeline
+2026-03-16 16:20:01,482 INFO Log: /home/marco/workspace/work/rnpdno-population-bands/logs/pipeline_run_20260316_162001.log
+2026-03-16 16:20:01,482 INFO ============================================================
+2026-03-16 16:20:01,482 INFO [SKIP] Phase 1 — Panel construction — outputs already exist
+2026-03-16 16:20:01,483 INFO [SKIP] Phase 1 — Spatial weights — outputs already exist
+2026-03-16 16:20:01,483 INFO [SKIP] Phase 2 — Monthly LISA — outputs already exist
+2026-03-16 16:20:01,483 INFO [SKIP] Phase 2 — Concentration metrics — outputs already exist
+2026-03-16 16:20:01,483 INFO [SKIP] Phase 3 — Figures — outputs already exist
+2026-03-16 16:20:01,483 INFO [SKIP] Phase 4 — Tables — outputs already exist
+2026-03-16 16:20:01,483 INFO ============================================================
+2026-03-16 16:20:01,483 INFO Done. Ran 0 steps, skipped 6.
+2026-03-16 16:20:01,483 INFO All outputs up to date.
+2026-03-16 16:20:01,483 INFO ============================================================
