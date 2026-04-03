@@ -1,14 +1,15 @@
-"""Phase 3 — Publication figures (8 figures).
+"""Phase 3 — Publication figures (9 figures).
 
 Outputs (PDF + PNG) in manuscript/figures/:
   fig1_time_series_by_status   — monthly national counts, 4-panel by status, sex-disaggregated
   fig2_gini_time_series        — Gini coefficient over time, 4 statuses
-  fig3_lorenz_curves           — Lorenz curves, 4 statuses × 3 time points
+  fig3_lorenz_curves           — Lorenz curves, 4 statuses × 3 time points (Jun 2015/2019/2025)
   fig4_morans_i_time_series    — Global Moran's I over time, 4 statuses
-  fig5_lisa_maps_latest        — LISA maps 2025-12, 2×2 grid by status
+  fig5_lisa_maps_latest        — LISA maps Jun 2025, 2×2 grid by status
   fig6_hh_trend_norte_bajio    — HH municipalities over time, Norte vs Bajío, 4-panel
-  fig7_lisa_maps_2015_vs_2024  — LISA maps 2015-12 vs 2024-12, Located Alive + Dead
-  fig8_sex_disaggregation_maps — Male vs female LISA maps 2025-12, Not Located + Located Dead
+  fig7_lisa_maps_2015_vs_2025  — LISA maps Jun 2015 vs Jun 2025, Located Alive + Dead
+  fig8_sex_disaggregation_maps — Male vs female LISA maps Jun 2025, Not Located + Located Dead
+  fig9_regional_hh_heatmap     — Regional HH heatmap, 11 June snapshots × 4 statuses
 
 Map PNG outputs: 150 DPI (file-size conscious).
 Non-map PNG outputs: 300 DPI.
@@ -233,7 +234,7 @@ def make_fig2(conc: pl.DataFrame):
 def make_fig3(panel: pl.DataFrame):
     log.info("Fig 3: Lorenz curves...")
 
-    TIME_POINTS = [(2015, 1, "Jan 2015"), (2020, 1, "Jan 2020"), (2025, 12, "Dec 2025")]
+    TIME_POINTS = [(2015, 6, "Jun 2015"), (2019, 6, "Jun 2019"), (2025, 6, "Jun 2025")]
     TP_COLORS   = ["#2c3e50", "#8e44ad", "#e67e22"]
     TP_STYLES   = ["-", "--", ":"]
 
@@ -316,10 +317,10 @@ def make_fig4(moran: pl.DataFrame):
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 5: LISA maps — latest period (2025-12), 4 statuses
+# FIGURE 5: LISA maps — latest period (Jun 2025), 4 statuses
 # ---------------------------------------------------------------------------
 def make_fig5(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
-    log.info("Fig 5: LISA maps 2025-12...")
+    log.info("Fig 5: LISA maps Jun 2025...")
 
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
     axes = axes.flatten()
@@ -329,7 +330,7 @@ def make_fig5(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
             lisa.filter(
                 (pl.col("status_id") == sid) &
                 (pl.col("year") == 2025) &
-                (pl.col("month") == 12) &
+                (pl.col("month") == 6) &
                 (pl.col("sex") == "total")
             )
             .select(["cvegeo", "cluster_label"])
@@ -342,7 +343,7 @@ def make_fig5(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
         if i == 3:
             make_lisa_legend(axes[i])
 
-    fig.suptitle("Local Spatial Autocorrelation (LISA) by Outcome Status\nDecember 2025 (total sex, α = 0.05)",
+    fig.suptitle("Local Spatial Autocorrelation (LISA) by Outcome Status\nJune 2025 (total sex, α = 0.05)",
                  fontsize=13, y=1.00)
     plt.tight_layout()
     save_fig(fig, "fig5_lisa_maps_latest", is_map=True)
@@ -418,12 +419,12 @@ def make_fig6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 7: LISA maps 2015-12 vs 2024-12 — Located Alive + Located Dead
+# FIGURE 7: LISA maps Jun 2015 vs Jun 2025 — Located Alive + Located Dead
 # ---------------------------------------------------------------------------
 def make_fig7(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
-    log.info("Fig 7: LISA maps 2015-12 vs 2024-12...")
+    log.info("Fig 7: LISA maps Jun 2015 vs Jun 2025...")
 
-    PERIODS  = [(2015, 12, "Dec 2015"), (2025, 12, "Dec 2025")]
+    PERIODS  = [(2015, 6, "Jun 2015"), (2025, 6, "Jun 2025")]
     STATUSES = [2, 3]   # located_alive, located_dead
     # Layout: rows = status, cols = year
 
@@ -450,17 +451,17 @@ def make_fig7(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
 
     make_lisa_legend(axes[1][1], loc="lower left")
 
-    fig.suptitle("LISA Cluster Maps: Located Alive vs. Located Dead\nDecember 2015 vs. December 2025 (total sex, α = 0.05)",
+    fig.suptitle("LISA Cluster Maps: Located Alive vs. Located Dead\nJune 2015 vs. June 2025 (total sex, α = 0.05)",
                  fontsize=13, y=1.00)
     plt.tight_layout()
-    save_fig(fig, "fig7_lisa_maps_2015_vs_2024", is_map=True)
+    save_fig(fig, "fig7_lisa_maps_2015_vs_2025", is_map=True)
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 8: Male vs female LISA maps — Not Located + Located Dead (2025-12)
+# FIGURE 8: Male vs female LISA maps — Not Located + Located Dead (Jun 2025)
 # ---------------------------------------------------------------------------
 def make_fig8(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
-    log.info("Fig 8: Male vs female LISA maps 2025-12...")
+    log.info("Fig 8: Male vs female LISA maps Jun 2025...")
 
     SEX_CATS = ["male", "female"]
     STATUSES = [7, 3]   # not_located, located_dead
@@ -475,7 +476,7 @@ def make_fig8(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
                 lisa.filter(
                     (pl.col("status_id") == sid) &
                     (pl.col("year") == 2025) &
-                    (pl.col("month") == 12) &
+                    (pl.col("month") == 6) &
                     (pl.col("sex") == sx)
                 )
                 .select(["cvegeo", "cluster_label"])
@@ -489,10 +490,87 @@ def make_fig8(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
 
     make_lisa_legend(axes[1][1], loc="lower left")
 
-    fig.suptitle("LISA Cluster Maps by Sex: Not Located vs. Located Dead\nDecember 2025 (α = 0.05)",
+    fig.suptitle("LISA Cluster Maps by Sex: Not Located vs. Located Dead\nJune 2025 (α = 0.05)",
                  fontsize=13, y=1.00)
     plt.tight_layout()
     save_fig(fig, "fig8_sex_disaggregation_maps", is_map=True)
+
+
+# ---------------------------------------------------------------------------
+# FIGURE 9: Regional HH heatmap — 11 June snapshots × 4 statuses
+# ---------------------------------------------------------------------------
+def make_fig9(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
+    log.info("Fig 9: Regional HH heatmap...")
+
+    REGIONS_ORDER = ["Norte", "Norte-Occidente", "Centro-Norte", "Centro", "Sur", "Bajío"]
+    YEARS = list(range(2015, 2026))
+
+    # Get HH municipalities per (year, region, status), June only
+    hh_june = (
+        lisa.filter(
+            (pl.col("sex") == "total") &
+            (pl.col("cluster_label") == "HH") &
+            (pl.col("month") == 6)
+        )
+        .select(["status_id", "year", "cvegeo"])
+        .join(muni_meta, on="cvegeo", how="left")
+    )
+
+    def count_hh(sub, region):
+        if region == "Bajío":
+            return sub.filter(pl.col("is_bajio") == True)
+        return sub.filter(pl.col("region") == region)
+
+    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+    axes = axes.flatten()
+
+    for i, sid in enumerate(STATUS_IDS):
+        ax = axes[i]
+        sub_sid = hh_june.filter(pl.col("status_id") == sid)
+
+        # Build matrix: rows=regions, cols=years
+        matrix = np.zeros((len(REGIONS_ORDER), len(YEARS)), dtype=int)
+        for ri, reg in enumerate(REGIONS_ORDER):
+            for ci, yr in enumerate(YEARS):
+                sub_yr = sub_sid.filter(pl.col("year") == yr)
+                matrix[ri, ci] = len(count_hh(sub_yr, reg))
+
+        im = ax.imshow(matrix, aspect="auto", cmap="YlOrRd", interpolation="nearest")
+
+        # Annotate cells
+        for ri in range(len(REGIONS_ORDER)):
+            for ci in range(len(YEARS)):
+                val = matrix[ri, ci]
+                color = "white" if val > matrix.max() * 0.6 else "black"
+                ax.text(ci, ri, str(val), ha="center", va="center",
+                        fontsize=7, color=color, fontweight="bold")
+
+        ax.set_xticks(range(len(YEARS)))
+        ax.set_xticklabels(YEARS, rotation=45, fontsize=8)
+        ax.set_yticks(range(len(REGIONS_ORDER)))
+        ax.set_yticklabels(REGIONS_ORDER, fontsize=9)
+        ax.set_title(STATUS_LABELS[sid], color=STATUS_COLORS[sid], fontweight="bold")
+
+        # Chi-squared bookend test (Jun 2015 vs Jun 2025, 5 standard regions)
+        regs_std = ["Norte", "Norte-Occidente", "Centro-Norte", "Centro", "Sur"]
+        obs_2015 = [matrix[REGIONS_ORDER.index(r), 0] for r in regs_std]
+        obs_2025 = [matrix[REGIONS_ORDER.index(r), -1] for r in regs_std]
+        contingency = np.array([obs_2015, obs_2025])
+        if contingency.sum() >= 10 and (contingency > 0).sum() >= 4:
+            try:
+                chi2, p, _, _ = stats.chi2_contingency(contingency)
+                p_str = f"p<0.001" if p < 0.001 else f"p={p:.3f}"
+                ax.set_xlabel(f"χ² 2015 vs 2025: {chi2:.1f}, {p_str}", fontsize=8)
+            except Exception:
+                pass
+
+    fig.suptitle(
+        "High-High Municipalities by Region: June Snapshots 2015–2025\n"
+        "(cell value = number of HH municipalities)",
+        fontsize=13
+    )
+    plt.tight_layout()
+    save_fig(fig, "fig9_regional_hh_heatmap", is_map=False)
 
 
 # ---------------------------------------------------------------------------
@@ -549,8 +627,9 @@ def main():
     make_fig6(lisa, muni_meta)
     make_fig7(lisa, gdf_map)
     make_fig8(lisa, gdf_map)
+    make_fig9(lisa, muni_meta)
 
-    log.info("=== Phase 3 complete. All 8 figures saved to manuscript/figures/ ===")
+    log.info("=== Phase 3 complete. All 9 figures saved to manuscript/figures/ ===")
 
     # List outputs
     for f in sorted(OUT_DIR.glob("fig*.pdf")):

@@ -1,4 +1,4 @@
-"""Phase 4 — LaTeX table generation (8 tables).
+"""Phase 4 — LaTeX table generation (7 tables).
 
 Each output is a standalone tabular environment (.tex) compilable via
 \\input{} inside a document that loads the booktabs package.
@@ -7,11 +7,10 @@ Outputs in manuscript/tables/:
   table1_dataset_summary.tex       — rows, persons, temporal coverage by status
   table2_summary_statistics.tex    — distribution of monthly case counts per status
   table3_concentration_metrics.tex — Gini + HHI ranges and trends by status
-  table4_lisa_classification.tex   — LISA cluster label counts, Dec 2024
-  table5_hh_cross_tabulation.tex   — pairwise HH overlap across statuses, Dec 2024
-  table6_regional_composition.tex  — HH municipalities by region, Dec 2015 vs Dec 2024
-  table7_trend_slopes.tex          — OLS trend slopes by region × status
-  table8_sex_hh_counts.tex         — HH counts by sex × status, Dec 2024
+  table4_lisa_classification.tex   — LISA cluster label counts, Jun 2025
+  table5_hh_cross_tabulation.tex   — pairwise HH overlap across statuses, Jun 2025
+  table6_trend_slopes.tex          — OLS trend slopes by region × status
+  table7_sex_hh_counts.tex         — HH counts by sex × status, Jun 2025
 """
 
 import sys
@@ -45,8 +44,8 @@ STATUS_LABELS = {0: "Total", 7: "Not Located", 2: "Located Alive", 3: "Located D
 
 REGIONS = ["Norte", "Norte-Occidente", "Centro-Norte", "Centro", "Sur", "Bajío"]
 
-XSEC_LATEST = (2025, 12)   # Dec 2025 for all cross-sectional tables (T4, T5, T8)
-XSEC_EARLY  = (2015, 12)   # Dec 2015 for temporal comparison (T6, T7)
+XSEC_LATEST = (2025, 6)    # Jun 2025 for cross-sectional tables (T4, T5, T7)
+XSEC_EARLY  = (2015, 6)    # Jun 2015 for bookend comparison
 
 # ---------------------------------------------------------------------------
 # LOGGING
@@ -254,10 +253,10 @@ def make_table3(conc: pl.DataFrame):
 
 
 # ---------------------------------------------------------------------------
-# TABLE 4: LISA classification counts by status (Dec 2024)
+# TABLE 4: LISA classification counts by status (Jun 2025)
 # ---------------------------------------------------------------------------
 def make_table4(lisa: pl.DataFrame):
-    log.info("Table 4: LISA classification counts (Dec 2024)...")
+    log.info("Table 4: LISA classification counts (Jun 2025)...")
 
     y, mo = XSEC_LATEST
     sub = lisa.filter(
@@ -291,7 +290,7 @@ def make_table4(lisa: pl.DataFrame):
 
     lines += [
         r"  \bottomrule",
-        r"  \multicolumn{7}{l}{\footnotesize LISA classification: Queen contiguity, 999 permutations, $\alpha=0.05$. Reference period: December 2025.} \\",
+        r"  \multicolumn{7}{l}{\footnotesize LISA classification: Queen contiguity, 999 permutations, $\alpha=0.05$. Reference period: June 2025.} \\",
         r"  \multicolumn{7}{l}{\footnotesize HH = High-High, LL = Low-Low, HL = High-Low, LH = Low-High, NS = Not Significant.} \\",
         r"\end{tabular}",
     ]
@@ -299,10 +298,10 @@ def make_table4(lisa: pl.DataFrame):
 
 
 # ---------------------------------------------------------------------------
-# TABLE 5: Pairwise HH overlap across statuses (Dec 2024)
+# TABLE 5: Pairwise HH overlap across statuses (Jun 2025)
 # ---------------------------------------------------------------------------
 def make_table5(lisa: pl.DataFrame):
-    log.info("Table 5: HH cross-tabulation (Dec 2024)...")
+    log.info("Table 5: HH cross-tabulation (Jun 2025)...")
 
     y, mo = XSEC_LATEST
     sub = lisa.filter(
@@ -345,107 +344,17 @@ def make_table5(lisa: pl.DataFrame):
     lines += [
         r"  \bottomrule",
         r"  \multicolumn{5}{l}{\footnotesize Diagonal = total HH municipalities per status. Off-diagonal = pairwise intersection count.} \\",
-        r"  \multicolumn{5}{l}{\footnotesize Reference period: December 2025. All counts use total sex LISA ($\alpha=0.05$).} \\",
+        r"  \multicolumn{5}{l}{\footnotesize Reference period: June 2025. All counts use total sex LISA ($\alpha=0.05$).} \\",
         r"\end{tabular}",
     ]
     write_tex(OUT_DIR / "table5_hh_cross_tabulation.tex", "\n".join(lines))
 
 
 # ---------------------------------------------------------------------------
-# TABLE 6: Regional composition of HH clusters, Dec 2015 vs Dec 2024
+# TABLE 6: OLS trend slopes by region × status
 # ---------------------------------------------------------------------------
 def make_table6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
-    log.info("Table 6: regional composition (Dec 2015 vs Dec 2024)...")
-
-    def get_hh_regional(y, mo):
-        sub = lisa.filter(
-            (pl.col("year")  == y) &
-            (pl.col("month") == mo) &
-            (pl.col("sex")   == "total") &
-            (pl.col("cluster_label") == "HH")
-        ).join(muni_meta, on="cvegeo", how="left")
-
-        counts = {}
-        for reg in ["Norte", "Norte-Occidente", "Centro-Norte", "Centro", "Sur"]:
-            counts[reg] = sub.filter(pl.col("region") == reg).group_by("status_id").agg(
-                pl.len().alias("n")
-            )
-        counts["Bajío"] = sub.filter(pl.col("is_bajio") == True).group_by("status_id").agg(
-            pl.len().alias("n")
-        )
-        return counts
-
-    c2015 = get_hh_regional(*XSEC_EARLY)
-    c2024 = get_hh_regional(*XSEC_LATEST)
-
-    def lookup(counts_dict, region, sid):
-        df = counts_dict.get(region, pl.DataFrame({"status_id": [], "n": []}))
-        row = df.filter(pl.col("status_id") == sid)
-        return int(row["n"][0]) if len(row) > 0 else 0
-
-    # χ² test: compare distribution across regions for each status (2015 vs 2024)
-    def chi2_test(sid):
-        regs = ["Norte", "Norte-Occidente", "Centro-Norte", "Centro", "Sur"]
-        obs_2015 = [lookup(c2015, r, sid) for r in regs]
-        obs_2024 = [lookup(c2024, r, sid) for r in regs]
-        contingency = np.array([obs_2015, obs_2024])
-        # Only run if enough counts
-        if contingency.sum() < 10 or (contingency > 0).sum() < 4:
-            return None, None
-        try:
-            chi2, p, dof, _ = ss.chi2_contingency(contingency)
-            return chi2, p
-        except Exception:
-            return None, None
-
-    short_sid = {0: "Total", 7: "Not Loc.", 2: "Loc. Alive", 3: "Loc. Dead"}
-
-    lines = [
-        r"\begin{tabular}{llrrrr}",
-        r"  \toprule",
-        r"  & & \multicolumn{4}{c}{\textbf{HH Municipalities}} \\",
-        r"  \cmidrule(lr){3-6}",
-        tex_row(
-            r"\textbf{Region}", r"\textbf{Period}",
-            *[f"\\textbf{{{short_sid[s]}}}" for s in STATUS_IDS]
-        ),
-        r"  \midrule",
-    ]
-
-    for reg in REGIONS:
-        lines.append(tex_row(
-            reg, "Dec 2015",
-            *[fi(lookup(c2015, reg, sid)) for sid in STATUS_IDS]
-        ))
-        lines.append(tex_row(
-            "", "Dec 2025",
-            *[fi(lookup(c2024, reg, sid)) for sid in STATUS_IDS]
-        ))
-        lines.append(r"  \addlinespace[2pt]")
-
-    # Add χ² row per status
-    lines.append(r"  \midrule")
-    chi2_row = [r"$\chi^2$ $p$-value", ""]
-    for sid in STATUS_IDS:
-        chi2_val, pval = chi2_test(sid)
-        chi2_row.append(fp(pval) + stars(pval) if pval is not None else "---")
-    lines.append(tex_row(*chi2_row))
-
-    lines += [
-        r"  \bottomrule",
-        r"  \multicolumn{6}{l}{\footnotesize $\chi^2$ tests compare regional distribution of HH municipalities (5 standard regions) between Dec 2015 and Dec 2025.} \\",
-        r"  \multicolumn{6}{l}{\footnotesize Baj\'{i}o municipalities (sub-flag) shown separately; not included in $\chi^2$ test.} \\",
-        r"  \multicolumn{6}{l}{\footnotesize $^{***}p<0.001$, $^{**}p<0.01$, $^{*}p<0.05$.} \\",
-        r"\end{tabular}",
-    ]
-    write_tex(OUT_DIR / "table6_regional_composition.tex", "\n".join(lines))
-
-
-# ---------------------------------------------------------------------------
-# TABLE 7: OLS trend slopes by region × status
-# ---------------------------------------------------------------------------
-def make_table7(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
-    log.info("Table 7: OLS trend slopes by region × status...")
+    log.info("Table 6: OLS trend slopes by region × status...")
 
     hh_all = (
         lisa.filter(
@@ -519,14 +428,14 @@ def make_table7(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
         r"  \multicolumn{5}{l}{\footnotesize $^{***}p<0.001$, $^{**}p<0.01$, $^{*}p<0.05$. Sign: positive $=$ growing hotspot region.} \\",
         r"\end{tabular}",
     ]
-    write_tex(OUT_DIR / "table7_trend_slopes.tex", "\n".join(lines))
+    write_tex(OUT_DIR / "table6_trend_slopes.tex", "\n".join(lines))
 
 
 # ---------------------------------------------------------------------------
-# TABLE 8: HH counts by sex × status (Dec 2024)
+# TABLE 7: HH counts by sex × status (Jun 2025)
 # ---------------------------------------------------------------------------
-def make_table8(lisa: pl.DataFrame):
-    log.info("Table 8: HH counts by sex × status (Dec 2024)...")
+def make_table7(lisa: pl.DataFrame):
+    log.info("Table 7: HH counts by sex × status (Jun 2025)...")
 
     y, mo = XSEC_LATEST
     sub = lisa.filter(
@@ -577,11 +486,11 @@ def make_table8(lisa: pl.DataFrame):
 
     lines += [
         r"  \bottomrule",
-        r"  \multicolumn{7}{l}{\footnotesize Reference period: December 2025. $\alpha=0.05$, Queen contiguity, 999 permutations.} \\",
+        r"  \multicolumn{7}{l}{\footnotesize Reference period: June 2025. $\alpha=0.05$, Queen contiguity, 999 permutations.} \\",
         r"  \multicolumn{7}{l}{\footnotesize M $\cap$ F = municipalities HH under both male and female LISA. M/F only = sex-exclusive hotspots.} \\",
         r"\end{tabular}",
     ]
-    write_tex(OUT_DIR / "table8_sex_hh_counts.tex", "\n".join(lines))
+    write_tex(OUT_DIR / "table7_sex_hh_counts.tex", "\n".join(lines))
 
 
 # ---------------------------------------------------------------------------
@@ -605,8 +514,7 @@ def main():
     make_table4(lisa)
     make_table5(lisa)
     make_table6(lisa, muni_meta)
-    make_table7(lisa, muni_meta)
-    make_table8(lisa)
+    make_table7(lisa)
 
     log.info("=== Phase 4 complete. Tables written to manuscript/tables/ ===")
     for f in sorted(OUT_DIR.glob("table*.tex")):

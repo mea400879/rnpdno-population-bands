@@ -1,0 +1,674 @@
+%% ============================================================
+%%  Data in Brief – Article Outline
+%%  Dataset: RNPDNO (Mexico, 2015–Oct 2025)
+%%  Template: elsarticle, 3p option
+%% ============================================================
+\documentclass[3p]{elsarticle}
+
+\usepackage{booktabs}
+\usepackage{lineno}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{placeins}
+
+\journal{Data in Brief}
+\hypersetup{
+  pdfauthor={Marco A. Escobar, Gerardo Reyes-Guzman, Abraham Sanchez Ruiz},
+  pdftitle={A municipality-level, monthly dataset of disappearance cases and outcomes in Mexico from the National Registry of Disappeared Persons, 2015-2025},
+  pdfkeywords={missing persons, personas desaparecidas, RNPDNO, administrative records, spatiotemporal analysis, human rights, open data},
+  pdfsubject={Data in Brief submission}
+}
+%% ============================================================
+\begin{document}
+
+%\linenumbers
+\begin{frontmatter}
+
+\title{A municipality-level, monthly dataset of disappearance cases and outcomes
+in Mexico from the National Registry of Disappeared Persons, 2015--2025}
+
+\author[inst1]{Marco A. Escobar}
+\author[inst2]{Gerardo Reyes-Guzman}
+\author[inst3]{Abraham Sanchez Ruiz\corref{cor1}}
+\cortext[cor1]{Corresponding author.}
+\ead{asanchezr@lasallebajio.edu.mx}
+
+\address[inst1]{Facultad de Ingenierías y Tecnologías, Universidad La Salle Bajío,
+  León, Guanajuato 37150, Mexico}
+\address[inst2]{Facultad de Economía, Benemérita Universidad Autónoma de Puebla,
+  Puebla, Puebla 72570, Mexico}
+\address[inst3]{Facultad de Estudios Superiores, Universidad La Salle Bajío,
+  Salamanca, Guanajuato 37000, Mexico}
+
+
+%% ----------------------------------------------------------
+%%  ABSTRACT  (248 words; DIB limit = 250)
+%% ----------------------------------------------------------
+\begin{abstract}
+
+Data were obtained from the publicly accessible sociodemographic
+dashboard of Mexico's National Search Commission
+(Comisi\'{o}n Nacional de B\'{u}squeda, CNB) through a Python-based
+web scraper that systematically queried the National Registry of
+Disappeared and Unlocated Persons (Registro Nacional de Personas
+Desaparecidas y No Localizadas, RNPDNO) portal.
+The scraper iterated over all combinations of state,
+victim-status category, and monthly date ranges, retrieving
+sex-disaggregated counts from HTML tables embedded in JSON API
+responses.
+Raw records were processed through a reproducible cleaning pipeline
+to normalize administrative and geographic identifiers and to assign
+standardized municipal geo-codes from Mexico's National Institute of
+Statistics and Geography (Instituto Nacional de Estad\'{i}stica y
+Geograf\'{i}a, INEGI).
+
+The dataset is organized into four comma-separated value (CSV) files
+corresponding to distinct victim-status categories:
+(i)~all registered persons regardless of location outcome
+(\texttt{status\_id}~=~0; 57{,}327 rows);
+(ii)~persons disappeared and not yet located
+(\texttt{status\_id}~=~7; 34{,}640 rows);
+(iii)~persons located alive
+(\texttt{status\_id}~=~2; 37{,}358 rows);
+and
+(iv)~persons located deceased
+(\texttt{status\_id}~=~3; 9{,}883 rows).
+Each row represents a unique municipality--year--month cell.
+All files share a twelve-column schema comprising composite and
+disaggregated INEGI geo-codes, normalized state and municipal names,
+sex-disaggregated counts, total persons, calendar year, calendar
+month, and victim-status identifier.
+Three sentinel geocodes flag records with unresolvable geographic information, accounting for 4{,}136 rows (12{,}178 persons), retained for transparency.
+The complete processing pipeline, including web scraping, text normalization and manual override files, is released alongside the dataset in an open-source code repository.
+\end{abstract}
+\begin{keyword}
+missing persons \sep
+RNPDNO \sep administrative records \sep
+spatiotemporal analysis \sep human rights \sep open data
+\end{keyword}
+
+
+\end{frontmatter}
+
+%% ============================================================
+%%  SPECIFICATIONS TABLE  (mandatory)
+%% ============================================================
+\clearpage
+
+\section*{Specifications Table}
+
+\begin{table}[h!]
+\centering
+\caption*{}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{>{\bfseries}p{0.32\linewidth} p{0.62\linewidth}}
+\toprule
+Subject & Social Sciences; Criminology \\
+\midrule
+Specific subject area &
+  Spatiotemporal analysis of disappearances and missing
+  persons in Mexico at the municipality level \\
+\midrule
+Type of data &
+  Table (CSV format; four files); intermediate collection files
+  (Parquet format, one per victim-status category) \\
+\midrule
+Data collection &
+  Administrative records from Mexico's National Search Commission
+  (Comisi\'{o}n Nacional de B\'{u}squeda, CNB) obtained via the publicly
+  accessible sociodemographic interface of the National Registry
+  of Disappeared and Unlocated Persons (Registro Nacional de
+  Personas Desaparecidas y No Localizadas, RNPDNO).
+  A Python script using \texttt{requests} and \texttt{BeautifulSoup4}
+  systematically queried the portal by state, victim-status
+  category, and monthly date ranges (2015--2025), then parsed
+  municipality-level counts from HTML tables embedded in JSON
+  API responses.
+  Processed through a deterministic cleaning pipeline
+  with two-pass geographic normalization against the
+  National Institute of Statistics and Geography (Instituto
+  Nacional de Estad\'{i}stica y Geograf\'{i}a, INEGI) municipal
+  geo-code catalog. \\
+\midrule
+Data source location &
+  Country: Mexico.
+  Institution: National Search Commission (Comisi\'{o}n Nacional de B\'{u}squeda, CNB).
+  Source URL:
+  \url{https://versionpublicarnpdno.segob.gob.mx/Dashboard/Sociodemografico} \\
+\midrule
+Data accessibility &
+  Repository name: Open Science Framework (OSF) \newline
+  Data identification number: 5qmwr \newline
+  Direct URL to data: \url{https://osf.io/5qmwr/} \newline
+  Code repository: \url{https://github.com/marco-escobar/rnpdno-scraper} \\
+\midrule
+Related research article &
+  None (direct submission) \\
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+
+%% ============================================================
+%%  VALUE OF THE DATA
+%% ============================================================
+
+\section*{Value of the Data}
+
+\begin{itemize}
+
+  \item The RNPDNO portal employs session-based authentication and CAPTCHA verification that preclude bulk download or direct programmatic access; no public API or downloadable dataset is provided. This dataset offers the first machine-readable, analysis-ready extraction of the complete 2015--2025 registry, enabling reproducible computational research at national scale previously infeasible for independent researchers \cite{mandolessi_2022}.
+  \item Monthly temporal resolution across 132 periods
+    (January 2015 through December 2025) supports sub-annual
+    analyses, including event-study designs around policy
+    interventions, seasonal decomposition, and lagged response
+    modeling, that are not possible with the annual or cumulative
+    snapshots used in prior municipality-level studies
+    \cite{cadena_garrocho_2019, atuesta_2024}.
+
+  \item The standardized five-digit INEGI geo-code (\texttt{cvegeo})
+    enables direct spatial joins to official cartographic boundaries
+    (EPSG:6372), population projections, and census microdata,
+    supporting population-normalized rate computation and spatial
+    cluster detection methods (LISA, Getis-Ord $G_i^*$) without
+    intermediate reconciliation \cite{anselin_1995, inegi_ageeml}.
+
+  \item The four-file structure by victim-status category
+    (total registered, disappeared and not located, located alive,
+    located deceased) permits outcome-transition analysis:
+    researchers can compute location rates, resolution-time
+    proxies, and spatial heterogeneity in case outcomes, analytic
+    dimensions limited to single cities in existing work
+    \cite{aguilar_velazquez_2025}.
+
+  \item The open-source processing pipeline, including scraper,
+    text normalizer, two-pass geographic join, and git-tracked
+    manual override files, can be re-executed against future
+    RNPDNO releases to extend temporal coverage; schema-validation
+    modules detect source drift, supporting longitudinal research
+    programs aligned with emerging data-based disappearance
+    analysis frameworks \cite{ruiz_reyes_2024}.
+
+\end{itemize}
+
+\FloatBarrier
+\clearpage
+
+\section*{Data Description}
+
+The dataset consists of four processed CSV files, one per RNPDNO
+victim-status category, and four corresponding intermediate Parquet
+files retained from the collection stage.
+
+\subsection*{Processed CSV files}
+
+All four processed files share the twelve-column schema described in
+Table~\ref{tab:schema}.
+Each row represents one (municipality, year, month, status) observation.
+
+\begin{table}[ht]
+  \centering
+  \caption{Schema of the four processed RNPDNO CSV files.
+    All four files (\texttt{rnpdno\_total.csv},
+    \texttt{rnpdno\_disappeared\_not\_located.csv},
+    \texttt{rnpdno\_located\_alive.csv},
+    \texttt{rnpdno\_located\_dead.csv})
+    share this schema.
+    Geo-codes conform to the INEGI municipal geo-code catalog.
+    Counts represent persons reported within the given
+    municipality, month, and year.}
+  \label{tab:schema}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{llp{0.45\linewidth}}
+    \toprule
+    Column & Type & Description \\
+    \midrule
+    \texttt{cvegeo}     & string  & Five-digit composite INEGI geo-code
+                                    (\texttt{CVE\_ENT} + \texttt{CVE\_MUN});
+                                    zero-padded.
+                                    Sentinel values: \texttt{99998}
+                                    (unknown state),
+                                    \texttt{XX998} / \texttt{XX999}
+                                    (municipality unspecified/unknown). \\
+    \texttt{cve\_estado}& string  & Two-digit INEGI state code,
+                                    zero-padded (01--32).
+                                    Value \texttt{99} reserved for
+                                    unknown state. \\
+    \texttt{state}      & string  & Official state name (Spanish),
+                                    normalized from the INEGI catalog. \\
+    \texttt{cve\_mun}   & string  & Three-digit INEGI municipal code,
+                                    zero-padded (001--570).
+                                    Sentinel values: \texttt{998}
+                                    (no municipal reference),
+                                    \texttt{999} (municipality unknown). \\
+    \texttt{municipality}& string & Official municipal name (Spanish),
+                                    normalized from the INEGI catalog. \\
+    \texttt{male}       & integer & Count of male persons. \\
+    \texttt{female}     & integer & Count of female persons. \\
+    \texttt{undefined}  & integer & Count of persons with indeterminate
+                                    or unreported sex. \\
+    \texttt{total}      & integer & Total persons
+                                    (\texttt{male} + \texttt{female}
+                                    + \texttt{undefined}). \\
+    \texttt{year}       & integer & Calendar year (2015--2025). \\
+    \texttt{month}      & integer & Calendar month (1--12). \\
+    \texttt{status\_id} & integer & RNPDNO victim-status code:
+                                    0~=~total, 7~=~disappeared and
+                                    not located, 2~=~located alive,
+                                    3~=~located deceased. \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\paragraph{\texttt{rnpdno\_total.csv}}
+Contains 57{,}327 rows corresponding to all persons registered in
+the RNPDNO, regardless of subsequent location status
+(\texttt{status\_id}~=~0).
+Temporal coverage spans January 2015 through December 2025
+(up to 132 monthly periods per municipality).
+
+\paragraph{\texttt{rnpdno\_disappeared\_not\_located.csv}}
+Contains 34{,}640 rows for persons classified as disappeared and
+not yet located (\texttt{status\_id}~=~7).
+This file is the primary analytical target for
+spatiotemporal characterization of active disappearance caseloads.
+
+\paragraph{\texttt{rnpdno\_located\_alive.csv}}
+Contains 37{,}358 rows for persons subsequently located alive
+(\texttt{status\_id}~=~2).
+
+\paragraph{\texttt{rnpdno\_located\_dead.csv}}
+Contains 9{,}883 rows for persons located deceased
+(\texttt{status\_id}~=~3).
+
+
+\subsection*{Overview figures}
+
+Figure~\ref{fig:trend} shows the monthly national count of persons
+disappeared and not located (status\,=\,7) over the full 2015--2025
+period, disaggregated by sex.
+Figure~\ref{fig:states} shows the cumulative total for all statuses
+(status\,=\,0) by state, ranked by total volume.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth]{fig1_monthly_trend.pdf}
+\caption{Monthly national count of persons disappeared and not located
+    (\texttt{status\_id}\,=\,7), January 2015 -- December 2025,
+    disaggregated by sex.
+    Records with unknown state are excluded.}
+  \label{fig:trend}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth]{fig2_state_distribution.pdf}
+\caption{Cumulative total of registered persons across all outcome categories by state
+    (\texttt{status\_id}\,=\,0), 2015--2025, disaggregated by sex.
+    States ranked by total volume (ascending).
+    Records with unknown state are excluded.}
+  \label{fig:states}
+\end{figure}
+
+\subsection*{Sentinel geo-code records}
+
+A subset of rows in each file carries sentinel geo-codes indicating
+unresolvable geographic information in the source data
+(Table~\ref{tab:sentinels}).
+These rows are retained rather than discarded to preserve
+the original aggregate counts; analysts performing
+municipality-level spatial analyses should filter them as
+appropriate.
+\begin{table}[ht]
+  \centering
+  \caption{Sentinel geo-codes assigned to records with
+    unresolvable geographic information, summed across all four
+    processed CSV files. A given municipality-month cell may appear
+    in multiple files if cases with different outcomes were registered
+    there.}
+  \label{tab:sentinels}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{llrr}
+    \toprule
+    \texttt{cvegeo} & Condition & Rows & Persons \\
+    \midrule
+    \texttt{99998} & Unknown state
+                   & 198 & 408 \\
+    \texttt{XX998} & No municipal reference
+                   & 1{,}748 & 3{,}978 \\
+    \texttt{XX999} & Municipality unknown
+                   & 2{,}190 & 7{,}792 \\
+    \midrule
+    \textbf{Total} & & \textbf{4{,}136} & \textbf{12{,}178} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection*{Intermediate Parquet files}
+
+Four intermediate Parquet files contain the consolidated raw
+records after scraping but prior to geographic normalization.
+These files retain the original column names and free-text
+municipality strings from the RNPDNO portal and are provided
+for provenance purposes.
+Filenames reflect the original Spanish terminology used in the source system.
+
+\begin{description}
+  \item[status 0:] \texttt{rnpdno\_total\_2015\_2025.parquet}
+  \item[status 2:] \texttt{rnpdno\_localizadas\_con\_vida\_2015\_2025.parquet}
+  \item[status 3:] \texttt{rnpdno\_localizadas\_sin\_vida\_2015\_2025.parquet}
+  \item[status 7:] \texttt{rnpdno\_desaparecidas\_no\_localizadas\_2015\_2025.parquet}
+\end{description}
+
+
+\subsection*{Quality report}
+
+The file \texttt{3\_documentation/quality\_report.csv} contains
+per-dataset quality metrics generated at the end of each pipeline
+run, including row counts, sex-total consistency checks, and
+sentinel-record counts.
+As of the reference extraction (March 2026), all four processed files
+pass schema validation; zero sex-total inconsistencies are present;
+and exact duplicate rows originating from source-data artefacts
+have been removed.
+Sentinel-coded records (Table~\ref{tab:sentinels}) reflect
+unresolvable geographic information in the original RNPDNO source
+data, not pipeline matching failures.
+\clearpage
+%% ============================================================
+%%  EXPERIMENTAL DESIGN, MATERIALS, AND METHODS
+%% ============================================================
+\section*{Experimental Design, Materials, and Methods}
+
+\subsection*{Data source and access}
+
+Data were obtained from the publicly accessible sociodemographic
+query interface of the RNPDNO, maintained by the Comisión Nacional
+de Búsqueda (CNB), available at:
+\url{https://versionpublicarnpdno.segob.gob.mx/SocioDemografico/TablaDetalle}.
+The interface presents HTML tables aggregated by Mexican state
+(INEGI codes 01--32), year (2015--2025), and calendar month (1--12),
+for four victim-status categories
+(\texttt{id\_estatus\_victima}: 0, 2, 3, 7).
+No bulk-download functionality is provided; access requires
+iterative HTTP requests with a valid session cookie.
+
+\subsection*{Web scraping}
+
+The script \texttt{scripts/scrapers/scrape\_rnpdno\_single\_status.py} (Python~3.10)
+implements a single-status scraper that iterates over all
+combinations of state $\times$ year $\times$ month for one
+status value, using the \texttt{requests} library for HTTP
+communication and \texttt{BeautifulSoup4} for parsing HTML tables
+embedded in JSON API responses.
+Requests are serialized with a 0.5~s inter-state and 1.0~s
+inter-month delay to avoid server overload; a retry mechanism
+with exponential backoff (up to four retries, 45~s timeout)
+handles transient failures.
+Four independent invocations produce one Parquet file per
+status value, consolidated from individual CSV exports per
+state--year--month triplet.
+State~33 (\emph{Se desconoce}) is included in the iteration
+to capture records with unresolvable state-level geography,
+which are subsequently assigned sentinel geo-code
+\texttt{cvegeo}~=~\texttt{99998}.
+
+\subsection*{Geographic reference construction}
+
+The INEGI \emph{Archivo General de la Entidad Marco de Localidades}
+(AGEEML), obtained from \cite{inegi_ageeml}, provides the canonical
+municipality-level geographic reference.
+The script \texttt{src/build\_reference.py} reads the raw AGEEML
+file (ISO-8859-1 encoding, 2{,}478 rows), zero-pads geo-codes to
+canonical widths (\texttt{CVEGEO}: 5 digits; \texttt{CVE\_ENT}:
+2 digits; \texttt{CVE\_MUN}: 3 digits), and derives two normalized
+name variants using utilities in \texttt{src/normalize.py}:
+
+\begin{description}
+  \item[Standard normalization]
+    Lower-case; strip Unicode accents via NFD decomposition;
+    remove punctuation; collapse whitespace.
+    Formally:
+    \[
+      f_{\text{std}}(s) = \text{STRIP}\!\left(
+  \text{COLLAPSE}\!\left(
+    \text{RM\_PUNCT}\!\left(
+      \text{NFD\_STRIP}(s.\text{lower}())
+    \right)
+  \right)
+\right)
+    \]
+
+  \item[Aggressive normalization]
+    Applies $f_{\text{std}}$ then expands a curated abbreviation
+    dictionary (e.g., \texttt{Dr.}$\to$\texttt{doctor},
+    \texttt{Mpio.}$\to$\texttt{municipio}), removes common
+    prepositions (\emph{de}, \emph{del}, \emph{los}, \emph{las}),
+    and collapses repeated whitespace.
+\end{description}
+
+\subsection*{Pre-join state corrections (B1 heuristic)}
+
+The script \texttt{src/build\_state\_corrections\_b1.py}
+identifies municipality names that are unique nationwide in
+AGEEML (i.e., appear in exactly one state).
+For raw RNPDNO records whose reported state does not match the
+unique AGEEML state for their municipality name, the state
+identifier is corrected prior to the geographic join.
+This procedure produced 25 validated corrections
+(rule: \texttt{B1\_UNIQUE\_NATIONWIDE\_EXACT}),
+stored in \texttt{data/manual/geo\_state\_corrections.csv}.
+
+\subsection*{Two-pass geographic join}
+
+The main pipeline (\texttt{src/clean\_pipeline.py}) matches each
+raw record to an AGEEML entry via a two-pass procedure:
+
+\begin{enumerate}
+  \item \textbf{Pass 1 – standard join.}
+    Inner join on $(\texttt{cve\_estado}, f_{\text{std}}(\texttt{municipio}))$.
+
+  \item \textbf{Pass 2 – aggressive join (unambiguous only).}
+    For records unmatched in Pass~1, inner join on
+    $(\texttt{cve\_estado},$ $f_{\text{agg}}(\texttt{municipio}))$,
+    restricted to keys that map to exactly one AGEEML entry
+    (i.e., no ambiguity).
+\end{enumerate}
+
+Records unmatched after both passes are written to
+\texttt{data/manual/unmatched\_rnpdno\_*.csv} for manual review.
+
+\subsection*{Manual overrides}
+
+A git-tracked file \texttt{data/manual/geo\_overrides.csv} (35 rows)
+maps $(raw\_id\_estado, raw\_municipio) \to \texttt{cvegeo}$
+for cases requiring human disambiguation
+(e.g., politically renamed municipalities, cross-state
+boundary ambiguities).
+Overrides are applied after both join passes and before
+sentinel assignment.
+
+\subsection*{Sentinel geo-code assignment}
+
+Records that remain unresolvable after overrides are assigned
+sentinel geo-codes according to the logic in
+\texttt{data/manual/special\_geo\_cases.csv}:
+
+\begin{description}
+  \item[\texttt{cvegeo = 99998}]
+    Assigned to records with \texttt{id\_estado}~=~33
+    (unknown state) in the source data.
+
+  \item[\texttt{cve\_mun = 998}]
+    Source municipality string indicates no municipal reference.
+
+  \item[\texttt{cve\_mun = 999}]
+    Source municipality string indicates municipality unknown.
+\end{description}
+
+
+\subsection*{Quality checks}
+
+The pipeline executes the following automated quality checks
+before writing output:
+
+\begin{itemize}
+  \item Schema validation: all twelve columns present with
+    expected types.
+  \item Duplicate detection: exact-row duplicates originating
+    from source-data artefacts are identified and removed.
+  \item Sex-total consistency:
+    $\texttt{total} = \texttt{male} + \texttt{female}
+    + \texttt{undefined}$ verified for every row.
+  \item Temporal coverage: year range [2015,~2025] and month
+    range [1,~12] verified.
+  \item Cross-status consistency: the aggregate person-count
+    in the status-0 (total) file is compared against the sum
+    of the three sub-status files
+    (\texttt{status\_id}~$\in\{2,3,7\}$).
+    As of the reference scrape, the total file records
+    268{,}900 persons while the sum of the three sub-status
+    files yields 268{,}973 persons---the total file contains
+    73 fewer persons than the sub-status sum ($0.027\%$),
+    distributed across 55{,}524
+    (municipality, year, month) cells and confined to
+    deviations of $\pm1$ or $\pm2$ persons per cell.
+    This near-exact agreement confirms internal consistency
+    of the source system; the residual discrepancy is
+    attributed to asynchronous updates in the RNPDNO portal.
+\end{itemize}
+
+Results are written to \texttt{3\_documentation/quality\_report.csv}.
+
+
+\subsection*{Output assembly}
+
+Two municipality names could not be resolved to unique INEGI
+geo-codes across either join pass or the manual override file,
+and are therefore retained in the processed files with a null
+\texttt{cvegeo} value rather than discarded, preserving the
+full aggregate person-counts.
+
+\textbf{PUEBLO NUEVO} appears in the RNPDNO source under
+three states: Durango (\texttt{id\_estado}~=~10),
+Guanajuato (\texttt{id\_estado}~=~11), and Sinaloa
+(\texttt{id\_estado}~=~25).
+AGEEML contains canonical entries for Durango
+(\texttt{cvegeo}~=~\texttt{10023}) and Guanajuato
+(\texttt{cvegeo}~=~\texttt{11024}), but no municipality named
+Pueblo Nuevo exists in Sinaloa, suggesting a
+source-data error for the Sinaloa occurrence.
+All three (estado, \texttt{PUEBLO NUEVO}) combinations were
+flagged for manual review; the geo\_overrides file was not
+completed for these entries and they remain unresolved.
+
+\textbf{NOGALES} appears under Sinaloa
+(\texttt{id\_estado}~=~25), Sonora
+(\texttt{id\_estado}~=~26), and Veracruz
+(\texttt{id\_estado}~=~30).
+AGEEML contains canonical entries for Sonora
+(\texttt{cvegeo}~=~\texttt{26043}) and Veracruz
+(\texttt{cvegeo}~=~\texttt{30115}), but no municipality named
+Nogales exists in Sinaloa.
+Similarly, all three occurrences were flagged for manual
+review and the overrides file was left incomplete.
+
+Together, these six (estado, municipio) combinations account
+for 237 rows and 1{,}361 persons in the status-0 file; the
+corresponding unresolved rows in the three sub-status files
+total 380 rows (176, 144, and 60 for statuses 7, 2, and 3
+respectively).
+Analysts performing municipality-level spatial analyses should
+exclude rows with null \texttt{cvegeo} as appropriate.
+
+The four processed CSV files are written to
+\texttt{data/processed/}.
+
+\subsection*{Software environment}
+
+The pipeline requires Python~3.10 with the following
+packages: \texttt{pandas}~$\geq$2.0, \texttt{pyarrow}~$\geq$14.0,
+\texttt{requests}~$\geq$2.31, \texttt{beautifulsoup4}~$\geq$4.12,
+\texttt{python-dotenv}~$\geq$1.0.
+Code quality is enforced with \texttt{ruff} (line-length~=~99).
+Environment reproducibility is managed via a Conda environment
+file (\texttt{environment.yml}) and a DVC pipeline configuration.
+All code and manual override files are version-controlled in a
+public git repository \cite{code_repo}.
+
+%% ============================================================
+%%  ETHICS STATEMENT
+%% ============================================================
+\section*{Ethics Statement}
+
+The RNPDNO dataset is derived exclusively from publicly accessible
+administrative records published by the Mexican federal government
+through the Comisión Nacional de Búsqueda.
+All data are presented in aggregated, municipality-level form;
+no individual-level identifiers (names, dates of birth, case
+numbers, or biometric data) are present in any of the processed
+files.
+Accordingly, no Institutional Review Board (IRB) approval or
+ethics committee clearance is required for secondary analysis
+of these public administrative data.
+The collection and processing activities described here are
+consistent with applicable data-use conditions stated by the CNB
+for publicly disseminated RNPDNO statistics.
+
+%% ============================================================
+%%  CREDIT AUTHOR STATEMENT
+%% ============================================================
+\section*{CRediT Author Statement}
+
+\textbf{Marco A. Escobar:} Conceptualization, Data curation,
+Formal analysis, Software, Writing -- original draft.
+\textbf{Gerardo Reyes-Guzman:} Validation,
+Writing -- review \& editing, Supervision.
+\textbf{Abraham Sanchez Ruiz:} Validation,
+Writing -- review \& editing, Supervision.
+
+
+%% ============================================================
+%%  DECLARATION OF COMPETING INTERESTS
+%% ============================================================
+\section*{Declaration of Competing Interests}
+
+The authors declare that they have no known competing financial
+interests or personal relationships that could have influenced
+the work reported in this data article.
+
+%% ============================================================
+%%  ACKNOWLEDGMENTS / FUNDING
+%% ============================================================
+\section*{Acknowledgments}
+
+\textbf{Funding:} This research received financial support from
+Universidad La Salle Bajío (Grant No. ITC-2025-18) for data acquisition and processing.
+
+The authors acknowledge the Comisión Nacional de Búsqueda for
+publicly releasing the RNPDNO aggregate statistics.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+
+During the preparation of this work, the authors used Claude
+(Anthropic) to assist with the refinement of manuscript text for
+clarity and conciseness.
+After using this tool, the authors reviewed and edited the content
+as needed and take full responsibility for the content of the
+publication.
+
+
+
+%% ============================================================
+%%  REFERENCES
+%% ============================================================
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\end{document}

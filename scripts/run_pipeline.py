@@ -61,7 +61,7 @@ PHASES = [
     (
         4, "Tables",
         "scripts/15_generate_tables.py",
-        [ROOT / "manuscript" / "tables" / "table8_sex_hh_counts.tex"],
+        [ROOT / "manuscript" / "tables" / "table7_sex_hh_counts.tex"],
     ),
 ]
 
