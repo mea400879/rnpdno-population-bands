@@ -1,0 +1,33 @@
+cve_estado,state,region,status,hh_jun2015,hh_jun2025,peak_month,peak_count,slope_yr,p_value,ced_window,peak_in_window
+14,Jalisco,Centro-Norte,Total,6,8,2019-08,18,-0.841,0.0,2015-2025,true
+14,Jalisco,Centro-Norte,Not Located,8,6,2019-10,17,-1.016,0.0,2015-2025,true
+14,Jalisco,Centro-Norte,Located Alive,0,8,2019-08,15,-0.032,0.8061,2015-2025,true
+14,Jalisco,Centro-Norte,Located Dead,0,1,2019-11,12,-0.109,0.2349,2015-2025,true
+11,Guanajuato,Centro,Total,20,9,2015-05,23,-0.403,0.0245,2017-2025,false
+11,Guanajuato,Centro,Not Located,1,12,2025-08,19,0.752,0.0,2017-2025,true
+11,Guanajuato,Centro,Located Alive,20,2,2015-05,24,-0.566,0.0028,2017-2025,false
+11,Guanajuato,Centro,Located Dead,0,6,2022-11,11,0.167,0.0178,2017-2025,true
+05,Coahuila,Norte,Total,0,0,2022-08,3,0.02,0.09,2015-2016,false
+05,Coahuila,Norte,Not Located,0,0,2022-08,1,0.002,0.5054,2015-2016,false
+05,Coahuila,Norte,Located Alive,0,0,2020-03,1,0.038,0.0004,2015-2016,false
+05,Coahuila,Norte,Located Dead,0,0,2015-03,4,-0.006,0.6493,2015-2016,true
+30,Veracruz,Sur,Total,0,0,2022-03,15,0.127,0.0773,2015-2016,false
+30,Veracruz,Sur,Not Located,0,0,2024-01,5,-0.03,0.3667,2015-2016,false
+30,Veracruz,Sur,Located Alive,0,1,2022-03,14,0.22,0.0025,2015-2016,false
+30,Veracruz,Sur,Located Dead,0,2,2022-03,11,0.05,0.1443,2015-2016,false
+18,Nayarit,Norte-Occidente,Total,0,0,2017-07,4,0.098,0.0006,2015-2017,true
+18,Nayarit,Norte-Occidente,Not Located,0,0,2021-09,5,0.054,0.039,2015-2017,false
+18,Nayarit,Norte-Occidente,Located Alive,0,1,2021-09,4,0.17,0.0,2015-2017,false
+18,Nayarit,Norte-Occidente,Located Dead,0,1,2017-06,3,-0.003,0.7118,2015-2017,true
+27,Tabasco,Sur,Total,0,0,2021-03,6,0.15,0.0001,2024-2025,false
+27,Tabasco,Sur,Not Located,0,0,2021-02,7,0.214,0.0,2024-2025,false
+27,Tabasco,Sur,Located Alive,0,0,2019-10,3,0.117,0.0,2024-2025,false
+27,Tabasco,Sur,Located Dead,0,0,2025-01,3,0.016,0.0964,2024-2025,true
+19,Nuevo Leon,Norte,Total,1,12,2022-06,21,1.123,0.0,2015-2025,true
+19,Nuevo Leon,Norte,Not Located,0,4,2023-06,14,0.44,0.0,2015-2025,true
+19,Nuevo Leon,Norte,Located Alive,0,15,2022-04,17,1.342,0.0,2015-2025,true
+19,Nuevo Leon,Norte,Located Dead,0,5,2023-04,13,0.795,0.0,2015-2025,true
+15,Estado de Mexico,Centro,Total,23,36,2023-12,46,1.759,0.0,2015-2025,true
+15,Estado de Mexico,Centro,Not Located,4,24,2023-11,38,2.364,0.0,2015-2025,true
+15,Estado de Mexico,Centro,Located Alive,25,35,2020-11,46,1.812,0.0,2015-2025,true
+15,Estado de Mexico,Centro,Located Dead,0,13,2021-02,14,0.516,0.0,2015-2025,true

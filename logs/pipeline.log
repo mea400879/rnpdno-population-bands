@@ -637,3 +637,186 @@ shape: (12, 3)
 2026-04-04 14:09:50,529 INFO   table5_hh_cross_tabulation.tex: 598 bytes
 2026-04-04 14:09:50,529 INFO   table6_trend_slopes.tex: 754 bytes
 2026-04-04 14:09:50,530 INFO   table7_sex_hh_counts.tex: 652 bytes
+2026-04-06 00:28:32,014 [INFO] ============================================================
+2026-04-06 00:28:32,014 [INFO] Script 10: Build Monthly Panel
+2026-04-06 00:28:32,014 [INFO] ============================================================
+2026-04-06 00:28:32,014 [INFO] Step 1 — Loading raw CSVs...
+2026-04-06 00:28:32,037 [INFO]   rnpdno_total.csv: 57,373 rows, status_id=[0]
+2026-04-06 00:28:32,044 [INFO]   rnpdno_disappeared_not_located.csv: 34,617 rows, status_id=[7]
+2026-04-06 00:28:32,050 [INFO]   rnpdno_located_alive.csv: 37,379 rows, status_id=[2]
+2026-04-06 00:28:32,052 [INFO]   rnpdno_located_dead.csv: 9,936 rows, status_id=[3]
+2026-04-06 00:28:32,057 [INFO] Combined raw: 139,305 rows
+2026-04-06 00:28:32,057 [INFO] Step 2 — Removing sentinel geocodes...
+2026-04-06 00:28:32,095 [INFO] Sentinels removed: 4,141 rows  (139,305 → 135,164)
+2026-04-06 00:28:32,103 [INFO]   Persons in sentinel rows: 12,210
+2026-04-06 00:28:32,103 [INFO] Step 3 — Building name and state lookups...
+2026-04-06 00:28:32,133 [INFO]   Unique municipalities in raw data: 1,959
+2026-04-06 00:28:32,133 [INFO]   Unique states in raw data: 32
+2026-04-06 00:28:32,168 [INFO] Step 5 — Loading canonical municipality list from geoparquet...
+2026-04-06 00:28:32,393 [INFO]   Canonical municipalities: 2,478
+2026-04-06 00:28:32,393 [INFO] Step 6 — Loading regional classification...
+2026-04-06 00:28:32,395 [INFO] Step 7 — Building full grid...
+2026-04-06 00:28:32,418 [INFO] Full grid: 1,308,384 rows  (2,478 munis × 132 months × 4 statuses)
+2026-04-06 00:28:32,418 [INFO] Step 8 — Zero-infilling (joining counts onto grid)...
+2026-04-06 00:28:32,534 [INFO]   Zero-filled rows: 1,173,220 of 1,308,384
+2026-04-06 00:28:32,534 [INFO] Step 9 — Joining municipality names...
+2026-04-06 00:28:32,625 [INFO] Step 10 — Joining regional classification...
+2026-04-06 00:28:32,652 [INFO] Step 12 — Validating panel...
+2026-04-06 00:28:32,658 [INFO]   Total rows:  1,308,384
+2026-04-06 00:28:32,658 [INFO]   total != m+f+u mismatches: 0
+2026-04-06 00:28:32,662 [INFO]   Statuses:    [0, 2, 3, 7]
+2026-04-06 00:28:32,663 [INFO]   Year range:  2015–2025
+2026-04-06 00:28:32,663 [INFO]   Month range: 1–12
+2026-04-06 00:28:32,671 [INFO]   Unique cvegeo: 2,478
+2026-04-06 00:28:32,678 [INFO]   Sum of total (status_id=0): 263,402 person-months
+2026-04-06 00:28:32,749 [INFO] Saved → /home/marco/workspace/work/rnpdno-population-bands/data/processed/panel_monthly_counts.parquet
+2026-04-06 00:28:32,749 [INFO] Script 10 complete.
+2026-04-06 00:28:44,214 [INFO] ============================================================
+2026-04-06 00:28:44,214 [INFO] Script 11: Build Spatial Weights
+2026-04-06 00:28:44,214 [INFO] ============================================================
+2026-04-06 00:28:44,214 [INFO] Step 1 — Loading valid municipality list from panel...
+2026-04-06 00:28:44,257 [INFO]   Valid municipalities: 2,478
+2026-04-06 00:28:44,257 [INFO] Step 2 — Loading municipios geoparquet...
+2026-04-06 00:28:44,480 [INFO]   Loaded: 2,478 municipalities, CRS EPSG:6372
+2026-04-06 00:28:44,482 [INFO]   After filtering to valid munis: 2,478
+2026-04-06 00:28:44,482 [INFO] Step 5 — Building Queen contiguity weights (row-standardized)...
+2026-04-06 00:28:48,491 [INFO]   Observations:    2,478
+2026-04-06 00:28:48,491 [INFO]   Islands:         0
+2026-04-06 00:28:48,491 [INFO]   Min neighbors:   1
+2026-04-06 00:28:48,491 [INFO]   Max neighbors:   22
+2026-04-06 00:28:48,491 [INFO]   Mean neighbors:  5.88
+2026-04-06 00:28:48,493 [INFO] Saved → /home/marco/workspace/work/rnpdno-population-bands/data/processed/spatial_weights_queen.gal
+2026-04-06 00:28:48,493 [INFO] Saved → /home/marco/workspace/work/rnpdno-population-bands/data/processed/island_municipalities.csv  (0 islands)
+2026-04-06 00:28:48,493 [INFO] Script 11 complete.
+2026-04-06 00:28:58,491 INFO Loading spatial weights...
+2026-04-06 00:28:58,500 INFO Weights: 2478 obs, 5.88 mean neighbors, 0 islands
+2026-04-06 00:28:58,500 INFO Loading panel and building value lookup array...
+2026-04-06 00:28:58,632 INFO Value lookup array ready.
+2026-04-06 00:28:58,634 INFO Total LISA runs: 1584 → ~3,925,152 output rows
+2026-04-06 00:29:09,690 INFO   Run  100/1584 (  6.3%) — status=0 2017-10 total
+2026-04-06 00:29:20,718 INFO   Run  200/1584 ( 12.6%) — status=0 2020-07 male
+2026-04-06 00:29:31,708 INFO   Run  300/1584 ( 18.9%) — status=0 2023-04 female
+2026-04-06 00:29:42,806 INFO   Run  400/1584 ( 25.3%) — status=2 2015-02 total
+2026-04-06 00:29:53,817 INFO   Run  500/1584 ( 31.6%) — status=2 2017-11 male
+2026-04-06 00:30:04,851 INFO   Run  600/1584 ( 37.9%) — status=2 2020-08 female
+2026-04-06 00:30:15,872 INFO   Run  700/1584 ( 44.2%) — status=2 2023-06 total
+2026-04-06 00:30:26,856 INFO   Run  800/1584 ( 50.5%) — status=3 2015-03 male
+2026-04-06 00:30:37,913 INFO   Run  900/1584 ( 56.8%) — status=3 2017-12 female
+2026-04-06 00:30:49,003 INFO   Run 1000/1584 ( 63.1%) — status=3 2020-10 total
+2026-04-06 00:31:00,036 INFO   Run 1100/1584 ( 69.4%) — status=3 2023-07 male
+2026-04-06 00:31:11,019 INFO   Run 1200/1584 ( 75.8%) — status=7 2015-04 female
+2026-04-06 00:31:22,079 INFO   Run 1300/1584 ( 82.1%) — status=7 2018-02 total
+2026-04-06 00:31:33,159 INFO   Run 1400/1584 ( 88.4%) — status=7 2020-11 male
+2026-04-06 00:31:44,210 INFO   Run 1500/1584 ( 94.7%) — status=7 2023-08 female
+2026-04-06 00:31:53,523 INFO   Run 1584/1584 (100.0%) — status=7 2025-12 female
+2026-04-06 00:31:53,523 INFO All LISA runs complete. Building output DataFrames...
+2026-04-06 00:31:53,523 INFO Writing lisa_monthly_results.parquet...
+2026-04-06 00:31:54,095 INFO   lisa_monthly_results.parquet: 3,925,152 rows
+2026-04-06 00:31:54,095 INFO Writing morans_i_monthly.csv...
+2026-04-06 00:31:54,100 INFO   morans_i_monthly.csv: 528 rows (expected 528)
+2026-04-06 00:31:54,100 INFO Writing hh_clusters_monthly.parquet...
+2026-04-06 00:31:54,112 INFO   hh_clusters_monthly.parquet: 24,650 rows
+2026-04-06 00:31:54,112 INFO --- Sanity checks ---
+2026-04-06 00:31:54,138 INFO   Cluster labels present: ['HH', 'HL', 'LH', 'LL', 'NS']
+2026-04-06 00:31:54,157 INFO   HH counts by status/sex:
+shape: (12, 3)
+┌───────────┬────────┬───────┐
+│ status_id ┆ sex    ┆ n     │
+│ ---       ┆ ---    ┆ ---   │
+│ i32       ┆ str    ┆ u32   │
+╞═══════════╪════════╪═══════╡
+│ 0         ┆ total  ┆ 11713 │
+│ 3         ┆ total  ┆ 2678  │
+│ 2         ┆ total  ┆ 10167 │
+│ 3         ┆ female ┆ 284   │
+│ 7         ┆ total  ┆ 8581  │
+│ …         ┆ …      ┆ …     │
+│ 0         ┆ female ┆ 9173  │
+│ 0         ┆ male   ┆ 10819 │
+│ 7         ┆ female ┆ 3693  │
+│ 7         ┆ male   ┆ 7375  │
+│ 3         ┆ male   ┆ 2322  │
+└───────────┴────────┴───────┘
+2026-04-06 00:31:54,157 INFO   Moran's I range: -0.0058 – 0.4010
+2026-04-06 00:31:54,159 INFO   All global Moran's I significant (p<0.05): False
+2026-04-06 00:31:54,159 INFO Script 12 complete.
+2026-04-06 00:32:04,974 INFO Loading panel...
+2026-04-06 00:32:04,988 INFO Loading LISA results...
+2026-04-06 00:32:05,016 INFO Loading HH clusters...
+2026-04-06 00:32:05,022 INFO Computing concentration metrics...
+2026-04-06 00:32:05,055 INFO   status_id=0: done (132 year-months)
+2026-04-06 00:32:05,068 INFO   status_id=2: done (132 year-months)
+2026-04-06 00:32:05,083 INFO   status_id=3: done (132 year-months)
+2026-04-06 00:32:05,092 INFO   status_id=7: done (132 year-months)
+2026-04-06 00:32:05,093 INFO concentration_monthly.csv: 528 rows (expected 528)
+2026-04-06 00:32:05,093 INFO   Gini range: 0.9146 – 0.9927
+2026-04-06 00:32:05,093 INFO   HHI range:  0.0063 – 0.0776
+2026-04-06 00:32:05,093 INFO Computing HH regional composition...
+2026-04-06 00:32:05,122 INFO hh_regional_composition.csv: 3299 rows
+2026-04-06 00:32:05,122 INFO Computing HH cross-tabulation for latest month...
+2026-04-06 00:32:05,123 INFO   Latest month: 2025-12
+2026-04-06 00:32:05,137 INFO hh_cross_tabulation_latest.csv: 20 rows
+2026-04-06 00:32:05,137 INFO --- Script 13 complete ---
+2026-04-06 00:32:05,137 INFO   concentration_monthly.csv:        /home/marco/workspace/work/rnpdno-population-bands/data/processed/concentration_monthly.csv
+2026-04-06 00:32:05,137 INFO   hh_regional_composition.csv:      /home/marco/workspace/work/rnpdno-population-bands/data/processed/hh_regional_composition.csv
+2026-04-06 00:32:05,138 INFO   hh_cross_tabulation_latest.csv:   /home/marco/workspace/work/rnpdno-population-bands/data/processed/hh_cross_tabulation_latest.csv
+2026-04-06 00:34:16,143 INFO === Phase 3: Figure generation ===
+2026-04-06 00:34:16,143 INFO Loading panel_monthly_counts.parquet...
+2026-04-06 00:34:16,159 INFO Loading concentration_monthly.csv...
+2026-04-06 00:34:16,166 INFO Loading morans_i_monthly.csv...
+2026-04-06 00:34:16,167 INFO Loading lisa_monthly_results.parquet...
+2026-04-06 00:34:16,205 INFO Loading municipality geometry...
+2026-04-06 00:34:16,422 INFO Simplifying geometry (tolerance=1000 m)...
+2026-04-06 00:34:18,355 INFO Fig 1: time series by status...
+2026-04-06 00:34:19,543 INFO   Saved fig1_time_series_by_status.pdf + .png (PNG DPI=300)
+2026-04-06 00:34:19,545 INFO Fig 2: Gini time series...
+2026-04-06 00:34:19,814 INFO   Saved fig2_gini_time_series.pdf + .png (PNG DPI=300)
+2026-04-06 00:34:19,815 INFO Fig 3: Gini time series with OLS slopes...
+2026-04-06 00:34:20,127 INFO   Saved fig3_gini_time_series.pdf + .png (PNG DPI=300)
+2026-04-06 00:34:20,127 INFO Fig 4: Moran's I time series...
+2026-04-06 00:34:20,652 INFO   Saved fig4_morans_i_time_series.pdf + .png (PNG DPI=300)
+2026-04-06 00:34:20,652 INFO Fig 5: LISA maps Jun 2025...
+2026-04-06 00:34:22,543 INFO   Saved fig5_lisa_maps_latest.pdf + .png (PNG DPI=150)
+2026-04-06 00:34:22,544 INFO Fig 6: HH trend Norte vs Bajío vs Centro...
+2026-04-06 00:34:23,416 INFO   Saved fig6_hh_trend_norte_bajio.pdf + .png (PNG DPI=300)
+2026-04-06 00:34:23,416 INFO Fig 7: LISA maps Jun 2015 vs Jun 2025...
+2026-04-06 00:34:25,330 INFO   Saved fig7_lisa_maps_2015_vs_2025.pdf + .png (PNG DPI=150)
+2026-04-06 00:34:25,331 INFO Fig 8: Male vs female LISA maps Jun 2025...
+2026-04-06 00:34:27,192 INFO   Saved fig8_sex_disaggregation_maps.pdf + .png (PNG DPI=150)
+2026-04-06 00:34:27,192 INFO Fig 9: Regional HH heatmap...
+2026-04-06 00:34:28,353 INFO   Saved fig9_regional_hh_heatmap.pdf + .png (PNG DPI=300)
+2026-04-06 00:34:28,354 INFO === Phase 3 complete. All 9 figures saved to manuscript/figures/ ===
+2026-04-06 00:34:28,354 INFO   fig1_time_series_by_status.pdf: 37 KB PDF + 1114 KB PNG
+2026-04-06 00:34:28,354 INFO   fig2_gini_time_series.pdf: 23 KB PDF + 424 KB PNG
+2026-04-06 00:34:28,354 INFO   fig3_gini_time_series.pdf: 25 KB PDF + 463 KB PNG
+2026-04-06 00:34:28,354 INFO   fig3_lorenz_curves.pdf: 24 KB PDF + 391 KB PNG
+2026-04-06 00:34:28,354 INFO   fig4_morans_i_time_series.pdf: 27 KB PDF + 614 KB PNG
+2026-04-06 00:34:28,354 INFO   fig5_lisa_maps_latest.pdf: 2300 KB PDF + 541 KB PNG
+2026-04-06 00:34:28,354 INFO   fig6_hh_trend_norte_bajio.pdf: 49 KB PDF + 1477 KB PNG
+2026-04-06 00:34:28,354 INFO   fig7_lisa_maps_2015_vs_2025.pdf: 2317 KB PDF + 557 KB PNG
+2026-04-06 00:34:28,354 INFO   fig8_sex_disaggregation_maps.pdf: 2306 KB PDF + 579 KB PNG
+2026-04-06 00:34:28,354 INFO   fig9_regional_hh_heatmap.pdf: 43 KB PDF + 378 KB PNG
+2026-04-06 00:34:55,598 INFO === Phase 4: Table generation ===
+2026-04-06 00:34:55,598 INFO Loading data...
+2026-04-06 00:34:55,650 INFO Table 1: dataset summary...
+2026-04-06 00:34:55,685 INFO   Saved table1_dataset_summary.tex
+2026-04-06 00:34:55,685 INFO Table 2: summary statistics...
+2026-04-06 00:34:55,765 INFO   Saved table2_summary_statistics.tex
+2026-04-06 00:34:55,765 INFO Table 3: concentration metrics...
+2026-04-06 00:34:55,770 INFO   Saved table3_concentration_metrics.tex
+2026-04-06 00:34:55,770 INFO Table 4: LISA classification counts (Jun 2025)...
+2026-04-06 00:34:55,776 INFO   Saved table4_lisa_classification.tex
+2026-04-06 00:34:55,776 INFO Table 5: HH cross-tabulation (Jun 2025)...
+2026-04-06 00:34:55,780 INFO   Saved table5_hh_cross_tabulation.tex
+2026-04-06 00:34:55,780 INFO Table 6: OLS trend slopes by region × status...
+2026-04-06 00:34:56,029 INFO   Saved table6_trend_slopes.tex
+2026-04-06 00:34:56,029 INFO Table 7: HH counts by sex × status (Jun 2025)...
+2026-04-06 00:34:56,034 INFO   Saved table7_sex_hh_counts.tex
+2026-04-06 00:34:56,034 INFO === Phase 4 complete. Tables written to manuscript/tables/ ===
+2026-04-06 00:34:56,034 INFO   table1_dataset_summary.tex: 733 bytes
+2026-04-06 00:34:56,034 INFO   table2_summary_statistics.tex: 841 bytes
+2026-04-06 00:34:56,034 INFO   table3_concentration_metrics.tex: 885 bytes
+2026-04-06 00:34:56,034 INFO   table4_lisa_classification.tex: 650 bytes
+2026-04-06 00:34:56,034 INFO   table5_hh_cross_tabulation.tex: 602 bytes
+2026-04-06 00:34:56,034 INFO   table6_trend_slopes.tex: 756 bytes
+2026-04-06 00:34:56,034 INFO   table7_sex_hh_counts.tex: 655 bytes

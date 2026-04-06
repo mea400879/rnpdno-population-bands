@@ -1,0 +1,2268 @@
+cve_estado,status_id,year,month,n_hh_munis,state
+05,0,2019,3,1,Coahuila
+05,0,2019,10,1,Coahuila
+05,0,2020,10,1,Coahuila
+05,0,2020,11,1,Coahuila
+05,0,2020,12,1,Coahuila
+05,0,2021,6,2,Coahuila
+05,0,2021,8,1,Coahuila
+05,0,2022,3,1,Coahuila
+05,0,2022,4,1,Coahuila
+05,0,2022,5,1,Coahuila
+05,0,2022,8,3,Coahuila
+05,0,2022,9,1,Coahuila
+05,0,2022,10,1,Coahuila
+05,0,2022,12,1,Coahuila
+05,0,2023,4,1,Coahuila
+05,0,2023,6,1,Coahuila
+05,2,2020,3,1,Coahuila
+05,2,2020,9,1,Coahuila
+05,2,2020,10,1,Coahuila
+05,2,2020,12,1,Coahuila
+05,2,2021,2,1,Coahuila
+05,2,2021,3,1,Coahuila
+05,2,2021,4,1,Coahuila
+05,2,2021,6,1,Coahuila
+05,2,2021,8,1,Coahuila
+05,2,2022,1,1,Coahuila
+05,2,2022,2,1,Coahuila
+05,2,2022,3,1,Coahuila
+05,2,2022,4,1,Coahuila
+05,2,2022,5,1,Coahuila
+05,2,2022,8,1,Coahuila
+05,2,2022,9,1,Coahuila
+05,2,2022,12,1,Coahuila
+05,2,2023,1,1,Coahuila
+05,2,2023,2,1,Coahuila
+05,2,2023,4,1,Coahuila
+05,2,2023,6,1,Coahuila
+05,2,2024,1,1,Coahuila
+05,2,2025,7,1,Coahuila
+05,2,2025,9,1,Coahuila
+05,2,2025,10,1,Coahuila
+05,3,2015,3,4,Coahuila
+05,3,2018,6,1,Coahuila
+05,3,2021,4,1,Coahuila
+05,3,2021,9,2,Coahuila
+05,3,2022,8,1,Coahuila
+05,3,2022,10,3,Coahuila
+05,3,2023,4,1,Coahuila
+05,7,2022,8,1,Coahuila
+11,0,2015,1,20,Guanajuato
+11,0,2015,2,20,Guanajuato
+11,0,2015,3,16,Guanajuato
+11,0,2015,4,21,Guanajuato
+11,0,2015,5,23,Guanajuato
+11,0,2015,6,20,Guanajuato
+11,0,2015,7,18,Guanajuato
+11,0,2015,8,20,Guanajuato
+11,0,2015,9,22,Guanajuato
+11,0,2015,10,21,Guanajuato
+11,0,2015,11,18,Guanajuato
+11,0,2015,12,3,Guanajuato
+11,0,2016,1,20,Guanajuato
+11,0,2016,2,17,Guanajuato
+11,0,2016,3,16,Guanajuato
+11,0,2016,4,5,Guanajuato
+11,0,2016,5,5,Guanajuato
+11,0,2016,6,5,Guanajuato
+11,0,2016,7,3,Guanajuato
+11,0,2016,8,4,Guanajuato
+11,0,2016,12,1,Guanajuato
+11,0,2017,2,1,Guanajuato
+11,0,2017,4,2,Guanajuato
+11,0,2017,5,2,Guanajuato
+11,0,2017,6,9,Guanajuato
+11,0,2017,7,2,Guanajuato
+11,0,2017,8,3,Guanajuato
+11,0,2017,9,1,Guanajuato
+11,0,2017,10,1,Guanajuato
+11,0,2017,11,5,Guanajuato
+11,0,2017,12,2,Guanajuato
+11,0,2018,1,4,Guanajuato
+11,0,2018,2,5,Guanajuato
+11,0,2018,3,5,Guanajuato
+11,0,2018,4,6,Guanajuato
+11,0,2018,5,1,Guanajuato
+11,0,2018,6,1,Guanajuato
+11,0,2018,7,2,Guanajuato
+11,0,2018,8,2,Guanajuato
+11,0,2018,9,3,Guanajuato
+11,0,2018,10,4,Guanajuato
+11,0,2018,11,5,Guanajuato
+11,0,2018,12,1,Guanajuato
+11,0,2019,5,3,Guanajuato
+11,0,2019,7,2,Guanajuato
+11,0,2019,8,3,Guanajuato
+11,0,2019,9,7,Guanajuato
+11,0,2019,10,5,Guanajuato
+11,0,2019,11,4,Guanajuato
+11,0,2019,12,3,Guanajuato
+11,0,2020,1,4,Guanajuato
+11,0,2020,2,5,Guanajuato
+11,0,2020,3,6,Guanajuato
+11,0,2020,4,7,Guanajuato
+11,0,2020,5,7,Guanajuato
+11,0,2020,6,8,Guanajuato
+11,0,2020,7,11,Guanajuato
+11,0,2020,8,1,Guanajuato
+11,0,2020,10,1,Guanajuato
+11,0,2020,11,3,Guanajuato
+11,0,2020,12,1,Guanajuato
+11,0,2021,1,1,Guanajuato
+11,0,2021,3,1,Guanajuato
+11,0,2021,10,3,Guanajuato
+11,0,2021,12,1,Guanajuato
+11,0,2022,1,4,Guanajuato
+11,0,2022,6,1,Guanajuato
+11,0,2022,8,1,Guanajuato
+11,0,2022,9,4,Guanajuato
+11,0,2022,10,13,Guanajuato
+11,0,2022,11,18,Guanajuato
+11,0,2022,12,11,Guanajuato
+11,0,2023,1,9,Guanajuato
+11,0,2023,2,6,Guanajuato
+11,0,2023,3,3,Guanajuato
+11,0,2023,12,1,Guanajuato
+11,0,2024,1,8,Guanajuato
+11,0,2024,2,9,Guanajuato
+11,0,2024,3,3,Guanajuato
+11,0,2024,4,2,Guanajuato
+11,0,2024,6,1,Guanajuato
+11,0,2024,7,1,Guanajuato
+11,0,2024,8,3,Guanajuato
+11,0,2024,9,1,Guanajuato
+11,0,2024,10,2,Guanajuato
+11,0,2024,11,5,Guanajuato
+11,0,2024,12,3,Guanajuato
+11,0,2025,1,12,Guanajuato
+11,0,2025,2,18,Guanajuato
+11,0,2025,3,8,Guanajuato
+11,0,2025,4,5,Guanajuato
+11,0,2025,5,5,Guanajuato
+11,0,2025,6,9,Guanajuato
+11,0,2025,7,13,Guanajuato
+11,0,2025,8,19,Guanajuato
+11,0,2025,9,19,Guanajuato
+11,0,2025,10,19,Guanajuato
+11,0,2025,11,13,Guanajuato
+11,0,2025,12,13,Guanajuato
+11,2,2015,1,19,Guanajuato
+11,2,2015,2,20,Guanajuato
+11,2,2015,3,17,Guanajuato
+11,2,2015,4,20,Guanajuato
+11,2,2015,5,24,Guanajuato
+11,2,2015,6,20,Guanajuato
+11,2,2015,7,22,Guanajuato
+11,2,2015,8,24,Guanajuato
+11,2,2015,9,24,Guanajuato
+11,2,2015,10,22,Guanajuato
+11,2,2015,11,19,Guanajuato
+11,2,2015,12,1,Guanajuato
+11,2,2016,1,20,Guanajuato
+11,2,2016,2,17,Guanajuato
+11,2,2016,3,15,Guanajuato
+11,2,2016,4,9,Guanajuato
+11,2,2016,5,6,Guanajuato
+11,2,2016,6,5,Guanajuato
+11,2,2016,8,1,Guanajuato
+11,2,2016,11,2,Guanajuato
+11,2,2016,12,1,Guanajuato
+11,2,2017,1,1,Guanajuato
+11,2,2017,3,1,Guanajuato
+11,2,2017,4,1,Guanajuato
+11,2,2017,5,1,Guanajuato
+11,2,2017,6,4,Guanajuato
+11,2,2017,7,2,Guanajuato
+11,2,2017,9,1,Guanajuato
+11,2,2017,10,1,Guanajuato
+11,2,2020,6,2,Guanajuato
+11,2,2020,7,2,Guanajuato
+11,2,2022,1,1,Guanajuato
+11,2,2022,10,11,Guanajuato
+11,2,2022,11,16,Guanajuato
+11,2,2022,12,6,Guanajuato
+11,2,2023,1,9,Guanajuato
+11,2,2023,2,7,Guanajuato
+11,2,2023,12,1,Guanajuato
+11,2,2024,1,7,Guanajuato
+11,2,2024,2,5,Guanajuato
+11,2,2024,3,1,Guanajuato
+11,2,2024,6,1,Guanajuato
+11,2,2024,8,2,Guanajuato
+11,2,2025,1,12,Guanajuato
+11,2,2025,2,19,Guanajuato
+11,2,2025,3,1,Guanajuato
+11,2,2025,6,2,Guanajuato
+11,2,2025,7,11,Guanajuato
+11,2,2025,8,17,Guanajuato
+11,2,2025,9,18,Guanajuato
+11,2,2025,10,18,Guanajuato
+11,2,2025,11,11,Guanajuato
+11,2,2025,12,8,Guanajuato
+11,3,2015,1,4,Guanajuato
+11,3,2015,3,3,Guanajuato
+11,3,2015,5,3,Guanajuato
+11,3,2015,7,4,Guanajuato
+11,3,2015,8,2,Guanajuato
+11,3,2015,9,4,Guanajuato
+11,3,2015,10,4,Guanajuato
+11,3,2016,1,5,Guanajuato
+11,3,2016,2,2,Guanajuato
+11,3,2016,7,3,Guanajuato
+11,3,2016,10,1,Guanajuato
+11,3,2017,2,2,Guanajuato
+11,3,2017,5,1,Guanajuato
+11,3,2017,10,1,Guanajuato
+11,3,2017,11,2,Guanajuato
+11,3,2017,12,3,Guanajuato
+11,3,2018,3,4,Guanajuato
+11,3,2018,4,2,Guanajuato
+11,3,2018,5,1,Guanajuato
+11,3,2018,6,2,Guanajuato
+11,3,2018,7,1,Guanajuato
+11,3,2018,8,4,Guanajuato
+11,3,2019,2,1,Guanajuato
+11,3,2019,3,1,Guanajuato
+11,3,2019,5,1,Guanajuato
+11,3,2019,7,1,Guanajuato
+11,3,2019,8,4,Guanajuato
+11,3,2019,9,10,Guanajuato
+11,3,2019,10,4,Guanajuato
+11,3,2019,11,2,Guanajuato
+11,3,2019,12,3,Guanajuato
+11,3,2020,1,9,Guanajuato
+11,3,2020,2,4,Guanajuato
+11,3,2020,3,10,Guanajuato
+11,3,2020,4,4,Guanajuato
+11,3,2020,5,6,Guanajuato
+11,3,2020,6,6,Guanajuato
+11,3,2020,12,2,Guanajuato
+11,3,2021,1,2,Guanajuato
+11,3,2021,3,1,Guanajuato
+11,3,2022,8,2,Guanajuato
+11,3,2022,9,2,Guanajuato
+11,3,2022,10,2,Guanajuato
+11,3,2022,11,11,Guanajuato
+11,3,2022,12,2,Guanajuato
+11,3,2023,2,7,Guanajuato
+11,3,2023,3,1,Guanajuato
+11,3,2023,6,1,Guanajuato
+11,3,2023,11,2,Guanajuato
+11,3,2024,1,2,Guanajuato
+11,3,2024,2,4,Guanajuato
+11,3,2024,3,1,Guanajuato
+11,3,2024,4,1,Guanajuato
+11,3,2024,6,5,Guanajuato
+11,3,2024,8,1,Guanajuato
+11,3,2024,9,1,Guanajuato
+11,3,2024,10,2,Guanajuato
+11,3,2024,11,3,Guanajuato
+11,3,2024,12,5,Guanajuato
+11,3,2025,1,9,Guanajuato
+11,3,2025,2,10,Guanajuato
+11,3,2025,3,5,Guanajuato
+11,3,2025,4,7,Guanajuato
+11,3,2025,5,3,Guanajuato
+11,3,2025,6,6,Guanajuato
+11,3,2025,7,4,Guanajuato
+11,3,2025,8,7,Guanajuato
+11,3,2025,9,7,Guanajuato
+11,3,2025,10,2,Guanajuato
+11,3,2025,12,1,Guanajuato
+11,7,2015,4,1,Guanajuato
+11,7,2015,5,2,Guanajuato
+11,7,2015,6,1,Guanajuato
+11,7,2015,7,1,Guanajuato
+11,7,2015,9,1,Guanajuato
+11,7,2015,12,1,Guanajuato
+11,7,2016,1,1,Guanajuato
+11,7,2016,2,1,Guanajuato
+11,7,2016,7,1,Guanajuato
+11,7,2016,8,3,Guanajuato
+11,7,2017,4,4,Guanajuato
+11,7,2017,5,4,Guanajuato
+11,7,2017,6,5,Guanajuato
+11,7,2017,7,1,Guanajuato
+11,7,2017,8,5,Guanajuato
+11,7,2017,9,2,Guanajuato
+11,7,2017,11,4,Guanajuato
+11,7,2017,12,3,Guanajuato
+11,7,2018,1,7,Guanajuato
+11,7,2018,2,9,Guanajuato
+11,7,2018,3,5,Guanajuato
+11,7,2018,4,6,Guanajuato
+11,7,2018,5,4,Guanajuato
+11,7,2018,6,5,Guanajuato
+11,7,2018,7,5,Guanajuato
+11,7,2018,8,7,Guanajuato
+11,7,2018,9,7,Guanajuato
+11,7,2018,10,6,Guanajuato
+11,7,2018,11,7,Guanajuato
+11,7,2018,12,4,Guanajuato
+11,7,2019,1,6,Guanajuato
+11,7,2019,2,6,Guanajuato
+11,7,2019,3,8,Guanajuato
+11,7,2019,4,4,Guanajuato
+11,7,2019,5,12,Guanajuato
+11,7,2019,6,7,Guanajuato
+11,7,2019,7,4,Guanajuato
+11,7,2019,8,12,Guanajuato
+11,7,2019,9,11,Guanajuato
+11,7,2019,10,11,Guanajuato
+11,7,2019,11,13,Guanajuato
+11,7,2019,12,8,Guanajuato
+11,7,2020,1,4,Guanajuato
+11,7,2020,2,10,Guanajuato
+11,7,2020,3,11,Guanajuato
+11,7,2020,4,11,Guanajuato
+11,7,2020,5,9,Guanajuato
+11,7,2020,6,13,Guanajuato
+11,7,2020,7,12,Guanajuato
+11,7,2020,8,16,Guanajuato
+11,7,2020,9,8,Guanajuato
+11,7,2020,10,6,Guanajuato
+11,7,2020,11,13,Guanajuato
+11,7,2020,12,9,Guanajuato
+11,7,2021,1,8,Guanajuato
+11,7,2021,2,7,Guanajuato
+11,7,2021,3,9,Guanajuato
+11,7,2021,4,7,Guanajuato
+11,7,2021,5,4,Guanajuato
+11,7,2021,6,5,Guanajuato
+11,7,2021,7,4,Guanajuato
+11,7,2021,8,6,Guanajuato
+11,7,2021,9,3,Guanajuato
+11,7,2021,10,12,Guanajuato
+11,7,2021,11,5,Guanajuato
+11,7,2021,12,2,Guanajuato
+11,7,2022,1,6,Guanajuato
+11,7,2022,2,5,Guanajuato
+11,7,2022,3,3,Guanajuato
+11,7,2022,4,5,Guanajuato
+11,7,2022,5,6,Guanajuato
+11,7,2022,6,3,Guanajuato
+11,7,2022,7,3,Guanajuato
+11,7,2022,8,9,Guanajuato
+11,7,2022,9,9,Guanajuato
+11,7,2022,10,7,Guanajuato
+11,7,2022,11,10,Guanajuato
+11,7,2022,12,5,Guanajuato
+11,7,2023,1,10,Guanajuato
+11,7,2023,2,4,Guanajuato
+11,7,2023,3,5,Guanajuato
+11,7,2023,4,5,Guanajuato
+11,7,2023,7,2,Guanajuato
+11,7,2023,8,1,Guanajuato
+11,7,2023,9,4,Guanajuato
+11,7,2023,10,4,Guanajuato
+11,7,2023,11,2,Guanajuato
+11,7,2023,12,5,Guanajuato
+11,7,2024,1,9,Guanajuato
+11,7,2024,2,1,Guanajuato
+11,7,2024,3,11,Guanajuato
+11,7,2024,4,4,Guanajuato
+11,7,2024,5,3,Guanajuato
+11,7,2024,7,7,Guanajuato
+11,7,2024,8,6,Guanajuato
+11,7,2024,9,10,Guanajuato
+11,7,2024,10,10,Guanajuato
+11,7,2024,11,9,Guanajuato
+11,7,2024,12,2,Guanajuato
+11,7,2025,1,9,Guanajuato
+11,7,2025,2,12,Guanajuato
+11,7,2025,3,8,Guanajuato
+11,7,2025,4,8,Guanajuato
+11,7,2025,5,6,Guanajuato
+11,7,2025,6,12,Guanajuato
+11,7,2025,7,11,Guanajuato
+11,7,2025,8,19,Guanajuato
+11,7,2025,9,16,Guanajuato
+11,7,2025,10,18,Guanajuato
+11,7,2025,11,17,Guanajuato
+11,7,2025,12,13,Guanajuato
+14,0,2015,1,9,Jalisco
+14,0,2015,2,6,Jalisco
+14,0,2015,3,3,Jalisco
+14,0,2015,4,3,Jalisco
+14,0,2015,5,6,Jalisco
+14,0,2015,6,6,Jalisco
+14,0,2015,7,2,Jalisco
+14,0,2015,8,7,Jalisco
+14,0,2015,9,9,Jalisco
+14,0,2015,10,7,Jalisco
+14,0,2015,11,7,Jalisco
+14,0,2015,12,7,Jalisco
+14,0,2016,1,10,Jalisco
+14,0,2016,2,4,Jalisco
+14,0,2016,3,7,Jalisco
+14,0,2016,4,5,Jalisco
+14,0,2016,5,7,Jalisco
+14,0,2016,6,9,Jalisco
+14,0,2016,7,10,Jalisco
+14,0,2016,8,7,Jalisco
+14,0,2016,9,8,Jalisco
+14,0,2016,10,9,Jalisco
+14,0,2016,11,10,Jalisco
+14,0,2016,12,9,Jalisco
+14,0,2017,1,8,Jalisco
+14,0,2017,2,9,Jalisco
+14,0,2017,3,11,Jalisco
+14,0,2017,4,11,Jalisco
+14,0,2017,5,14,Jalisco
+14,0,2017,6,9,Jalisco
+14,0,2017,7,11,Jalisco
+14,0,2017,8,10,Jalisco
+14,0,2017,9,10,Jalisco
+14,0,2017,10,12,Jalisco
+14,0,2017,11,13,Jalisco
+14,0,2017,12,8,Jalisco
+14,0,2018,1,11,Jalisco
+14,0,2018,2,10,Jalisco
+14,0,2018,3,14,Jalisco
+14,0,2018,4,12,Jalisco
+14,0,2018,5,13,Jalisco
+14,0,2018,6,12,Jalisco
+14,0,2018,7,9,Jalisco
+14,0,2018,8,14,Jalisco
+14,0,2018,9,14,Jalisco
+14,0,2018,10,11,Jalisco
+14,0,2018,11,13,Jalisco
+14,0,2018,12,14,Jalisco
+14,0,2019,1,14,Jalisco
+14,0,2019,2,13,Jalisco
+14,0,2019,3,13,Jalisco
+14,0,2019,4,17,Jalisco
+14,0,2019,5,16,Jalisco
+14,0,2019,6,16,Jalisco
+14,0,2019,7,17,Jalisco
+14,0,2019,8,18,Jalisco
+14,0,2019,9,13,Jalisco
+14,0,2019,10,15,Jalisco
+14,0,2019,11,15,Jalisco
+14,0,2019,12,16,Jalisco
+14,0,2020,1,16,Jalisco
+14,0,2020,2,16,Jalisco
+14,0,2020,3,15,Jalisco
+14,0,2020,4,17,Jalisco
+14,0,2020,5,17,Jalisco
+14,0,2020,6,14,Jalisco
+14,0,2020,7,16,Jalisco
+14,0,2020,8,14,Jalisco
+14,0,2020,9,13,Jalisco
+14,0,2020,10,13,Jalisco
+14,0,2020,11,12,Jalisco
+14,0,2020,12,9,Jalisco
+14,0,2021,1,14,Jalisco
+14,0,2021,2,14,Jalisco
+14,0,2021,3,14,Jalisco
+14,0,2021,4,13,Jalisco
+14,0,2021,5,18,Jalisco
+14,0,2021,6,13,Jalisco
+14,0,2021,7,13,Jalisco
+14,0,2021,8,12,Jalisco
+14,0,2021,9,13,Jalisco
+14,0,2021,10,13,Jalisco
+14,0,2021,11,13,Jalisco
+14,0,2021,12,13,Jalisco
+14,0,2022,1,12,Jalisco
+14,0,2022,2,13,Jalisco
+14,0,2022,3,7,Jalisco
+14,0,2022,11,1,Jalisco
+14,0,2022,12,1,Jalisco
+14,0,2023,7,1,Jalisco
+14,0,2023,8,1,Jalisco
+14,0,2024,4,1,Jalisco
+14,0,2024,12,1,Jalisco
+14,0,2025,2,2,Jalisco
+14,0,2025,3,3,Jalisco
+14,0,2025,4,12,Jalisco
+14,0,2025,5,10,Jalisco
+14,0,2025,6,8,Jalisco
+14,0,2025,7,10,Jalisco
+14,0,2025,8,2,Jalisco
+14,0,2025,10,2,Jalisco
+14,2,2015,1,4,Jalisco
+14,2,2015,4,1,Jalisco
+14,2,2015,5,1,Jalisco
+14,2,2015,8,2,Jalisco
+14,2,2015,10,1,Jalisco
+14,2,2015,11,2,Jalisco
+14,2,2015,12,1,Jalisco
+14,2,2016,1,2,Jalisco
+14,2,2016,4,3,Jalisco
+14,2,2016,8,1,Jalisco
+14,2,2016,10,1,Jalisco
+14,2,2017,2,1,Jalisco
+14,2,2017,3,2,Jalisco
+14,2,2017,5,1,Jalisco
+14,2,2017,7,1,Jalisco
+14,2,2017,8,4,Jalisco
+14,2,2017,9,1,Jalisco
+14,2,2017,10,1,Jalisco
+14,2,2017,11,2,Jalisco
+14,2,2017,12,1,Jalisco
+14,2,2018,1,3,Jalisco
+14,2,2018,2,3,Jalisco
+14,2,2018,3,4,Jalisco
+14,2,2018,4,6,Jalisco
+14,2,2018,5,9,Jalisco
+14,2,2018,6,8,Jalisco
+14,2,2018,7,2,Jalisco
+14,2,2018,8,8,Jalisco
+14,2,2018,9,8,Jalisco
+14,2,2018,10,8,Jalisco
+14,2,2018,11,8,Jalisco
+14,2,2018,12,9,Jalisco
+14,2,2019,1,12,Jalisco
+14,2,2019,2,8,Jalisco
+14,2,2019,3,11,Jalisco
+14,2,2019,4,13,Jalisco
+14,2,2019,5,10,Jalisco
+14,2,2019,6,11,Jalisco
+14,2,2019,7,13,Jalisco
+14,2,2019,8,15,Jalisco
+14,2,2019,9,9,Jalisco
+14,2,2019,10,9,Jalisco
+14,2,2019,11,9,Jalisco
+14,2,2019,12,10,Jalisco
+14,2,2020,1,11,Jalisco
+14,2,2020,2,12,Jalisco
+14,2,2020,3,12,Jalisco
+14,2,2020,4,12,Jalisco
+14,2,2020,5,12,Jalisco
+14,2,2020,6,11,Jalisco
+14,2,2020,7,11,Jalisco
+14,2,2020,8,9,Jalisco
+14,2,2020,9,9,Jalisco
+14,2,2020,10,12,Jalisco
+14,2,2020,11,10,Jalisco
+14,2,2020,12,8,Jalisco
+14,2,2021,1,11,Jalisco
+14,2,2021,2,11,Jalisco
+14,2,2021,3,9,Jalisco
+14,2,2021,4,9,Jalisco
+14,2,2021,5,13,Jalisco
+14,2,2021,6,12,Jalisco
+14,2,2021,7,10,Jalisco
+14,2,2021,8,11,Jalisco
+14,2,2021,9,10,Jalisco
+14,2,2021,10,11,Jalisco
+14,2,2021,11,12,Jalisco
+14,2,2021,12,11,Jalisco
+14,2,2022,1,10,Jalisco
+14,2,2022,2,8,Jalisco
+14,2,2022,3,6,Jalisco
+14,2,2024,4,1,Jalisco
+14,2,2024,6,1,Jalisco
+14,2,2024,7,1,Jalisco
+14,2,2024,12,1,Jalisco
+14,2,2025,3,1,Jalisco
+14,2,2025,4,9,Jalisco
+14,2,2025,5,9,Jalisco
+14,2,2025,6,8,Jalisco
+14,2,2025,7,8,Jalisco
+14,2,2025,8,2,Jalisco
+14,3,2015,7,1,Jalisco
+14,3,2015,8,1,Jalisco
+14,3,2015,9,2,Jalisco
+14,3,2016,2,3,Jalisco
+14,3,2016,5,2,Jalisco
+14,3,2016,12,1,Jalisco
+14,3,2017,3,2,Jalisco
+14,3,2017,8,1,Jalisco
+14,3,2017,9,2,Jalisco
+14,3,2017,10,1,Jalisco
+14,3,2017,11,7,Jalisco
+14,3,2017,12,4,Jalisco
+14,3,2018,1,4,Jalisco
+14,3,2018,2,5,Jalisco
+14,3,2018,3,4,Jalisco
+14,3,2018,5,5,Jalisco
+14,3,2018,6,5,Jalisco
+14,3,2018,7,4,Jalisco
+14,3,2018,8,7,Jalisco
+14,3,2018,9,5,Jalisco
+14,3,2018,10,8,Jalisco
+14,3,2018,11,5,Jalisco
+14,3,2018,12,5,Jalisco
+14,3,2019,1,7,Jalisco
+14,3,2019,2,10,Jalisco
+14,3,2019,3,8,Jalisco
+14,3,2019,4,5,Jalisco
+14,3,2019,5,10,Jalisco
+14,3,2019,6,8,Jalisco
+14,3,2019,7,7,Jalisco
+14,3,2019,8,7,Jalisco
+14,3,2019,9,8,Jalisco
+14,3,2019,10,8,Jalisco
+14,3,2019,11,12,Jalisco
+14,3,2019,12,10,Jalisco
+14,3,2020,1,8,Jalisco
+14,3,2020,2,7,Jalisco
+14,3,2020,3,7,Jalisco
+14,3,2020,4,8,Jalisco
+14,3,2020,5,11,Jalisco
+14,3,2020,6,9,Jalisco
+14,3,2020,7,8,Jalisco
+14,3,2020,8,8,Jalisco
+14,3,2020,9,8,Jalisco
+14,3,2020,10,5,Jalisco
+14,3,2020,11,6,Jalisco
+14,3,2020,12,3,Jalisco
+14,3,2021,1,6,Jalisco
+14,3,2021,2,6,Jalisco
+14,3,2021,3,5,Jalisco
+14,3,2021,4,6,Jalisco
+14,3,2021,5,9,Jalisco
+14,3,2021,6,4,Jalisco
+14,3,2021,7,3,Jalisco
+14,3,2021,8,8,Jalisco
+14,3,2021,9,3,Jalisco
+14,3,2021,10,6,Jalisco
+14,3,2021,11,5,Jalisco
+14,3,2021,12,5,Jalisco
+14,3,2022,1,4,Jalisco
+14,3,2022,2,5,Jalisco
+14,3,2022,3,5,Jalisco
+14,3,2022,12,1,Jalisco
+14,3,2023,11,3,Jalisco
+14,3,2024,12,1,Jalisco
+14,3,2025,4,5,Jalisco
+14,3,2025,5,3,Jalisco
+14,3,2025,6,1,Jalisco
+14,3,2025,7,2,Jalisco
+14,7,2015,1,8,Jalisco
+14,7,2015,2,10,Jalisco
+14,7,2015,3,8,Jalisco
+14,7,2015,5,8,Jalisco
+14,7,2015,6,8,Jalisco
+14,7,2015,7,6,Jalisco
+14,7,2015,8,8,Jalisco
+14,7,2015,9,12,Jalisco
+14,7,2015,10,8,Jalisco
+14,7,2015,11,5,Jalisco
+14,7,2015,12,7,Jalisco
+14,7,2016,1,11,Jalisco
+14,7,2016,2,6,Jalisco
+14,7,2016,3,11,Jalisco
+14,7,2016,4,7,Jalisco
+14,7,2016,5,11,Jalisco
+14,7,2016,6,11,Jalisco
+14,7,2016,7,12,Jalisco
+14,7,2016,8,10,Jalisco
+14,7,2016,9,15,Jalisco
+14,7,2016,10,10,Jalisco
+14,7,2016,11,11,Jalisco
+14,7,2016,12,9,Jalisco
+14,7,2017,1,10,Jalisco
+14,7,2017,2,15,Jalisco
+14,7,2017,3,16,Jalisco
+14,7,2017,4,13,Jalisco
+14,7,2017,5,15,Jalisco
+14,7,2017,6,9,Jalisco
+14,7,2017,7,7,Jalisco
+14,7,2017,8,14,Jalisco
+14,7,2017,9,14,Jalisco
+14,7,2017,10,10,Jalisco
+14,7,2017,11,14,Jalisco
+14,7,2017,12,10,Jalisco
+14,7,2018,1,9,Jalisco
+14,7,2018,2,14,Jalisco
+14,7,2018,3,13,Jalisco
+14,7,2018,4,15,Jalisco
+14,7,2018,5,12,Jalisco
+14,7,2018,6,9,Jalisco
+14,7,2018,7,9,Jalisco
+14,7,2018,8,11,Jalisco
+14,7,2018,9,13,Jalisco
+14,7,2018,10,13,Jalisco
+14,7,2018,11,16,Jalisco
+14,7,2018,12,12,Jalisco
+14,7,2019,1,12,Jalisco
+14,7,2019,2,11,Jalisco
+14,7,2019,3,13,Jalisco
+14,7,2019,4,16,Jalisco
+14,7,2019,5,15,Jalisco
+14,7,2019,6,13,Jalisco
+14,7,2019,7,14,Jalisco
+14,7,2019,8,12,Jalisco
+14,7,2019,9,14,Jalisco
+14,7,2019,10,17,Jalisco
+14,7,2019,11,12,Jalisco
+14,7,2019,12,16,Jalisco
+14,7,2020,1,15,Jalisco
+14,7,2020,2,16,Jalisco
+14,7,2020,3,12,Jalisco
+14,7,2020,4,11,Jalisco
+14,7,2020,5,11,Jalisco
+14,7,2020,6,8,Jalisco
+14,7,2020,7,10,Jalisco
+14,7,2020,8,16,Jalisco
+14,7,2020,9,8,Jalisco
+14,7,2020,10,8,Jalisco
+14,7,2020,11,10,Jalisco
+14,7,2020,12,8,Jalisco
+14,7,2021,1,11,Jalisco
+14,7,2021,2,15,Jalisco
+14,7,2021,3,14,Jalisco
+14,7,2021,4,13,Jalisco
+14,7,2021,5,14,Jalisco
+14,7,2021,6,9,Jalisco
+14,7,2021,7,14,Jalisco
+14,7,2021,8,12,Jalisco
+14,7,2021,9,11,Jalisco
+14,7,2021,10,12,Jalisco
+14,7,2021,11,10,Jalisco
+14,7,2021,12,13,Jalisco
+14,7,2022,1,8,Jalisco
+14,7,2022,2,10,Jalisco
+14,7,2022,3,3,Jalisco
+14,7,2022,6,2,Jalisco
+14,7,2022,8,1,Jalisco
+14,7,2022,9,3,Jalisco
+14,7,2022,10,2,Jalisco
+14,7,2022,11,1,Jalisco
+14,7,2023,1,2,Jalisco
+14,7,2023,2,1,Jalisco
+14,7,2023,3,4,Jalisco
+14,7,2023,4,2,Jalisco
+14,7,2023,5,2,Jalisco
+14,7,2023,6,2,Jalisco
+14,7,2023,7,2,Jalisco
+14,7,2023,12,1,Jalisco
+14,7,2024,1,1,Jalisco
+14,7,2024,9,1,Jalisco
+14,7,2024,11,1,Jalisco
+14,7,2025,1,1,Jalisco
+14,7,2025,2,3,Jalisco
+14,7,2025,3,4,Jalisco
+14,7,2025,4,9,Jalisco
+14,7,2025,5,8,Jalisco
+14,7,2025,6,6,Jalisco
+14,7,2025,7,7,Jalisco
+14,7,2025,9,1,Jalisco
+14,7,2025,10,4,Jalisco
+14,7,2025,11,2,Jalisco
+14,7,2025,12,1,Jalisco
+15,0,2015,1,9,Estado de Mexico
+15,0,2015,2,20,Estado de Mexico
+15,0,2015,3,15,Estado de Mexico
+15,0,2015,4,21,Estado de Mexico
+15,0,2015,5,19,Estado de Mexico
+15,0,2015,6,23,Estado de Mexico
+15,0,2015,7,24,Estado de Mexico
+15,0,2015,8,12,Estado de Mexico
+15,0,2015,9,30,Estado de Mexico
+15,0,2015,10,24,Estado de Mexico
+15,0,2015,11,26,Estado de Mexico
+15,0,2015,12,26,Estado de Mexico
+15,0,2016,1,15,Estado de Mexico
+15,0,2016,2,16,Estado de Mexico
+15,0,2016,3,21,Estado de Mexico
+15,0,2016,4,15,Estado de Mexico
+15,0,2016,5,9,Estado de Mexico
+15,0,2016,6,21,Estado de Mexico
+15,0,2016,7,24,Estado de Mexico
+15,0,2016,8,20,Estado de Mexico
+15,0,2016,9,23,Estado de Mexico
+15,0,2016,10,14,Estado de Mexico
+15,0,2016,11,20,Estado de Mexico
+15,0,2016,12,32,Estado de Mexico
+15,0,2017,1,12,Estado de Mexico
+15,0,2017,2,28,Estado de Mexico
+15,0,2017,3,21,Estado de Mexico
+15,0,2017,4,28,Estado de Mexico
+15,0,2017,5,18,Estado de Mexico
+15,0,2017,6,20,Estado de Mexico
+15,0,2017,7,18,Estado de Mexico
+15,0,2017,8,11,Estado de Mexico
+15,0,2017,9,17,Estado de Mexico
+15,0,2017,10,28,Estado de Mexico
+15,0,2017,11,26,Estado de Mexico
+15,0,2017,12,25,Estado de Mexico
+15,0,2018,1,17,Estado de Mexico
+15,0,2018,2,25,Estado de Mexico
+15,0,2018,3,17,Estado de Mexico
+15,0,2019,1,2,Estado de Mexico
+15,0,2019,3,2,Estado de Mexico
+15,0,2019,5,2,Estado de Mexico
+15,0,2019,6,1,Estado de Mexico
+15,0,2019,7,2,Estado de Mexico
+15,0,2019,8,5,Estado de Mexico
+15,0,2019,9,3,Estado de Mexico
+15,0,2019,10,7,Estado de Mexico
+15,0,2019,11,35,Estado de Mexico
+15,0,2019,12,33,Estado de Mexico
+15,0,2020,1,33,Estado de Mexico
+15,0,2020,2,35,Estado de Mexico
+15,0,2020,3,32,Estado de Mexico
+15,0,2020,4,26,Estado de Mexico
+15,0,2020,5,31,Estado de Mexico
+15,0,2020,6,32,Estado de Mexico
+15,0,2020,7,30,Estado de Mexico
+15,0,2020,8,31,Estado de Mexico
+15,0,2020,9,37,Estado de Mexico
+15,0,2020,10,43,Estado de Mexico
+15,0,2020,11,45,Estado de Mexico
+15,0,2020,12,43,Estado de Mexico
+15,0,2021,1,44,Estado de Mexico
+15,0,2021,2,32,Estado de Mexico
+15,0,2021,3,36,Estado de Mexico
+15,0,2021,4,36,Estado de Mexico
+15,0,2021,5,35,Estado de Mexico
+15,0,2021,6,25,Estado de Mexico
+15,0,2021,7,25,Estado de Mexico
+15,0,2021,8,25,Estado de Mexico
+15,0,2021,9,24,Estado de Mexico
+15,0,2021,10,27,Estado de Mexico
+15,0,2021,11,20,Estado de Mexico
+15,0,2021,12,24,Estado de Mexico
+15,0,2022,1,12,Estado de Mexico
+15,0,2022,2,32,Estado de Mexico
+15,0,2022,3,25,Estado de Mexico
+15,0,2022,4,27,Estado de Mexico
+15,0,2022,5,30,Estado de Mexico
+15,0,2022,6,29,Estado de Mexico
+15,0,2022,7,34,Estado de Mexico
+15,0,2022,8,15,Estado de Mexico
+15,0,2022,9,10,Estado de Mexico
+15,0,2022,10,12,Estado de Mexico
+15,0,2022,11,9,Estado de Mexico
+15,0,2022,12,31,Estado de Mexico
+15,0,2023,1,30,Estado de Mexico
+15,0,2023,2,28,Estado de Mexico
+15,0,2023,3,37,Estado de Mexico
+15,0,2023,4,30,Estado de Mexico
+15,0,2023,5,39,Estado de Mexico
+15,0,2023,6,26,Estado de Mexico
+15,0,2023,7,33,Estado de Mexico
+15,0,2023,8,32,Estado de Mexico
+15,0,2023,9,43,Estado de Mexico
+15,0,2023,10,30,Estado de Mexico
+15,0,2023,11,34,Estado de Mexico
+15,0,2023,12,46,Estado de Mexico
+15,0,2024,1,35,Estado de Mexico
+15,0,2024,2,34,Estado de Mexico
+15,0,2024,3,31,Estado de Mexico
+15,0,2024,4,33,Estado de Mexico
+15,0,2024,5,31,Estado de Mexico
+15,0,2024,6,29,Estado de Mexico
+15,0,2024,7,36,Estado de Mexico
+15,0,2024,8,34,Estado de Mexico
+15,0,2024,9,31,Estado de Mexico
+15,0,2024,10,32,Estado de Mexico
+15,0,2024,11,31,Estado de Mexico
+15,0,2024,12,33,Estado de Mexico
+15,0,2025,1,24,Estado de Mexico
+15,0,2025,2,29,Estado de Mexico
+15,0,2025,3,35,Estado de Mexico
+15,0,2025,4,32,Estado de Mexico
+15,0,2025,5,33,Estado de Mexico
+15,0,2025,6,36,Estado de Mexico
+15,0,2025,7,39,Estado de Mexico
+15,0,2025,8,39,Estado de Mexico
+15,0,2025,9,32,Estado de Mexico
+15,0,2025,10,28,Estado de Mexico
+15,0,2025,11,22,Estado de Mexico
+15,0,2025,12,8,Estado de Mexico
+15,2,2015,1,6,Estado de Mexico
+15,2,2015,2,19,Estado de Mexico
+15,2,2015,3,17,Estado de Mexico
+15,2,2015,4,20,Estado de Mexico
+15,2,2015,5,27,Estado de Mexico
+15,2,2015,6,25,Estado de Mexico
+15,2,2015,7,25,Estado de Mexico
+15,2,2015,8,15,Estado de Mexico
+15,2,2015,9,26,Estado de Mexico
+15,2,2015,10,27,Estado de Mexico
+15,2,2015,11,24,Estado de Mexico
+15,2,2015,12,24,Estado de Mexico
+15,2,2016,1,20,Estado de Mexico
+15,2,2016,2,12,Estado de Mexico
+15,2,2016,3,15,Estado de Mexico
+15,2,2016,4,18,Estado de Mexico
+15,2,2016,5,14,Estado de Mexico
+15,2,2016,6,20,Estado de Mexico
+15,2,2016,7,15,Estado de Mexico
+15,2,2016,8,19,Estado de Mexico
+15,2,2016,9,19,Estado de Mexico
+15,2,2016,10,18,Estado de Mexico
+15,2,2016,11,24,Estado de Mexico
+15,2,2016,12,28,Estado de Mexico
+15,2,2017,1,17,Estado de Mexico
+15,2,2017,2,29,Estado de Mexico
+15,2,2017,3,29,Estado de Mexico
+15,2,2017,4,31,Estado de Mexico
+15,2,2017,5,20,Estado de Mexico
+15,2,2017,6,20,Estado de Mexico
+15,2,2017,7,22,Estado de Mexico
+15,2,2017,8,17,Estado de Mexico
+15,2,2017,9,27,Estado de Mexico
+15,2,2017,10,26,Estado de Mexico
+15,2,2017,11,19,Estado de Mexico
+15,2,2017,12,28,Estado de Mexico
+15,2,2018,1,22,Estado de Mexico
+15,2,2018,2,22,Estado de Mexico
+15,2,2018,3,16,Estado de Mexico
+15,2,2019,3,3,Estado de Mexico
+15,2,2019,5,1,Estado de Mexico
+15,2,2019,6,1,Estado de Mexico
+15,2,2019,8,3,Estado de Mexico
+15,2,2019,9,3,Estado de Mexico
+15,2,2019,10,7,Estado de Mexico
+15,2,2019,11,38,Estado de Mexico
+15,2,2019,12,39,Estado de Mexico
+15,2,2020,1,33,Estado de Mexico
+15,2,2020,2,37,Estado de Mexico
+15,2,2020,3,31,Estado de Mexico
+15,2,2020,4,28,Estado de Mexico
+15,2,2020,5,33,Estado de Mexico
+15,2,2020,6,34,Estado de Mexico
+15,2,2020,7,30,Estado de Mexico
+15,2,2020,8,37,Estado de Mexico
+15,2,2020,9,39,Estado de Mexico
+15,2,2020,10,41,Estado de Mexico
+15,2,2020,11,46,Estado de Mexico
+15,2,2020,12,42,Estado de Mexico
+15,2,2021,1,44,Estado de Mexico
+15,2,2021,2,34,Estado de Mexico
+15,2,2021,3,32,Estado de Mexico
+15,2,2021,4,40,Estado de Mexico
+15,2,2021,5,36,Estado de Mexico
+15,2,2021,6,25,Estado de Mexico
+15,2,2021,7,25,Estado de Mexico
+15,2,2021,8,28,Estado de Mexico
+15,2,2021,9,27,Estado de Mexico
+15,2,2021,10,22,Estado de Mexico
+15,2,2021,11,18,Estado de Mexico
+15,2,2021,12,22,Estado de Mexico
+15,2,2022,1,15,Estado de Mexico
+15,2,2022,2,35,Estado de Mexico
+15,2,2022,3,21,Estado de Mexico
+15,2,2022,4,30,Estado de Mexico
+15,2,2022,5,30,Estado de Mexico
+15,2,2022,6,29,Estado de Mexico
+15,2,2022,7,37,Estado de Mexico
+15,2,2022,8,17,Estado de Mexico
+15,2,2022,9,12,Estado de Mexico
+15,2,2022,10,8,Estado de Mexico
+15,2,2022,11,6,Estado de Mexico
+15,2,2022,12,28,Estado de Mexico
+15,2,2023,1,35,Estado de Mexico
+15,2,2023,2,33,Estado de Mexico
+15,2,2023,3,39,Estado de Mexico
+15,2,2023,4,33,Estado de Mexico
+15,2,2023,5,38,Estado de Mexico
+15,2,2023,6,28,Estado de Mexico
+15,2,2023,7,37,Estado de Mexico
+15,2,2023,8,33,Estado de Mexico
+15,2,2023,9,41,Estado de Mexico
+15,2,2023,10,31,Estado de Mexico
+15,2,2023,11,34,Estado de Mexico
+15,2,2023,12,32,Estado de Mexico
+15,2,2024,1,40,Estado de Mexico
+15,2,2024,2,35,Estado de Mexico
+15,2,2024,3,31,Estado de Mexico
+15,2,2024,4,36,Estado de Mexico
+15,2,2024,5,38,Estado de Mexico
+15,2,2024,6,33,Estado de Mexico
+15,2,2024,7,30,Estado de Mexico
+15,2,2024,8,38,Estado de Mexico
+15,2,2024,9,32,Estado de Mexico
+15,2,2024,10,33,Estado de Mexico
+15,2,2024,11,34,Estado de Mexico
+15,2,2024,12,29,Estado de Mexico
+15,2,2025,1,27,Estado de Mexico
+15,2,2025,2,35,Estado de Mexico
+15,2,2025,3,32,Estado de Mexico
+15,2,2025,4,33,Estado de Mexico
+15,2,2025,5,37,Estado de Mexico
+15,2,2025,6,35,Estado de Mexico
+15,2,2025,7,43,Estado de Mexico
+15,2,2025,8,39,Estado de Mexico
+15,2,2025,9,38,Estado de Mexico
+15,2,2025,10,35,Estado de Mexico
+15,2,2025,11,21,Estado de Mexico
+15,2,2025,12,3,Estado de Mexico
+15,3,2015,3,3,Estado de Mexico
+15,3,2015,7,7,Estado de Mexico
+15,3,2015,8,1,Estado de Mexico
+15,3,2015,9,7,Estado de Mexico
+15,3,2015,10,2,Estado de Mexico
+15,3,2015,11,3,Estado de Mexico
+15,3,2015,12,4,Estado de Mexico
+15,3,2016,3,5,Estado de Mexico
+15,3,2016,6,6,Estado de Mexico
+15,3,2016,7,2,Estado de Mexico
+15,3,2016,11,2,Estado de Mexico
+15,3,2016,12,2,Estado de Mexico
+15,3,2017,1,2,Estado de Mexico
+15,3,2017,2,2,Estado de Mexico
+15,3,2017,4,8,Estado de Mexico
+15,3,2017,9,2,Estado de Mexico
+15,3,2017,10,1,Estado de Mexico
+15,3,2017,11,6,Estado de Mexico
+15,3,2017,12,8,Estado de Mexico
+15,3,2018,1,4,Estado de Mexico
+15,3,2018,2,3,Estado de Mexico
+15,3,2018,3,3,Estado de Mexico
+15,3,2019,11,3,Estado de Mexico
+15,3,2019,12,2,Estado de Mexico
+15,3,2020,1,5,Estado de Mexico
+15,3,2020,2,9,Estado de Mexico
+15,3,2020,3,5,Estado de Mexico
+15,3,2020,4,1,Estado de Mexico
+15,3,2020,5,5,Estado de Mexico
+15,3,2020,6,7,Estado de Mexico
+15,3,2020,8,4,Estado de Mexico
+15,3,2020,9,6,Estado de Mexico
+15,3,2020,10,11,Estado de Mexico
+15,3,2020,11,2,Estado de Mexico
+15,3,2020,12,5,Estado de Mexico
+15,3,2021,1,8,Estado de Mexico
+15,3,2021,2,14,Estado de Mexico
+15,3,2021,3,13,Estado de Mexico
+15,3,2021,4,5,Estado de Mexico
+15,3,2021,5,2,Estado de Mexico
+15,3,2021,7,7,Estado de Mexico
+15,3,2021,9,3,Estado de Mexico
+15,3,2021,10,7,Estado de Mexico
+15,3,2021,11,4,Estado de Mexico
+15,3,2021,12,2,Estado de Mexico
+15,3,2022,2,2,Estado de Mexico
+15,3,2022,3,4,Estado de Mexico
+15,3,2022,4,2,Estado de Mexico
+15,3,2022,5,3,Estado de Mexico
+15,3,2022,6,4,Estado de Mexico
+15,3,2022,7,5,Estado de Mexico
+15,3,2022,8,1,Estado de Mexico
+15,3,2022,9,2,Estado de Mexico
+15,3,2022,10,6,Estado de Mexico
+15,3,2022,11,2,Estado de Mexico
+15,3,2022,12,4,Estado de Mexico
+15,3,2023,1,11,Estado de Mexico
+15,3,2023,2,3,Estado de Mexico
+15,3,2023,3,3,Estado de Mexico
+15,3,2023,4,8,Estado de Mexico
+15,3,2023,5,8,Estado de Mexico
+15,3,2023,6,3,Estado de Mexico
+15,3,2023,7,2,Estado de Mexico
+15,3,2023,8,5,Estado de Mexico
+15,3,2023,9,9,Estado de Mexico
+15,3,2023,10,4,Estado de Mexico
+15,3,2023,11,7,Estado de Mexico
+15,3,2023,12,12,Estado de Mexico
+15,3,2024,1,10,Estado de Mexico
+15,3,2024,2,7,Estado de Mexico
+15,3,2024,3,6,Estado de Mexico
+15,3,2024,4,8,Estado de Mexico
+15,3,2024,5,5,Estado de Mexico
+15,3,2024,6,11,Estado de Mexico
+15,3,2024,7,7,Estado de Mexico
+15,3,2024,8,7,Estado de Mexico
+15,3,2024,9,2,Estado de Mexico
+15,3,2024,10,10,Estado de Mexico
+15,3,2024,11,5,Estado de Mexico
+15,3,2024,12,7,Estado de Mexico
+15,3,2025,1,4,Estado de Mexico
+15,3,2025,2,11,Estado de Mexico
+15,3,2025,3,9,Estado de Mexico
+15,3,2025,4,3,Estado de Mexico
+15,3,2025,5,4,Estado de Mexico
+15,3,2025,6,13,Estado de Mexico
+15,3,2025,7,9,Estado de Mexico
+15,3,2025,8,5,Estado de Mexico
+15,3,2025,9,1,Estado de Mexico
+15,3,2025,10,3,Estado de Mexico
+15,7,2015,1,8,Estado de Mexico
+15,7,2015,2,1,Estado de Mexico
+15,7,2015,3,5,Estado de Mexico
+15,7,2015,4,2,Estado de Mexico
+15,7,2015,5,4,Estado de Mexico
+15,7,2015,6,4,Estado de Mexico
+15,7,2015,7,3,Estado de Mexico
+15,7,2015,8,3,Estado de Mexico
+15,7,2015,9,4,Estado de Mexico
+15,7,2015,10,6,Estado de Mexico
+15,7,2015,11,3,Estado de Mexico
+15,7,2015,12,8,Estado de Mexico
+15,7,2016,1,8,Estado de Mexico
+15,7,2016,2,6,Estado de Mexico
+15,7,2016,3,9,Estado de Mexico
+15,7,2016,4,7,Estado de Mexico
+15,7,2016,5,8,Estado de Mexico
+15,7,2016,6,2,Estado de Mexico
+15,7,2016,7,16,Estado de Mexico
+15,7,2016,8,9,Estado de Mexico
+15,7,2016,9,5,Estado de Mexico
+15,7,2016,10,2,Estado de Mexico
+15,7,2016,11,8,Estado de Mexico
+15,7,2016,12,13,Estado de Mexico
+15,7,2017,1,5,Estado de Mexico
+15,7,2017,2,7,Estado de Mexico
+15,7,2017,3,14,Estado de Mexico
+15,7,2017,4,10,Estado de Mexico
+15,7,2017,5,7,Estado de Mexico
+15,7,2017,6,3,Estado de Mexico
+15,7,2017,7,8,Estado de Mexico
+15,7,2017,8,7,Estado de Mexico
+15,7,2017,9,8,Estado de Mexico
+15,7,2017,10,14,Estado de Mexico
+15,7,2017,11,8,Estado de Mexico
+15,7,2017,12,12,Estado de Mexico
+15,7,2018,1,7,Estado de Mexico
+15,7,2018,2,6,Estado de Mexico
+15,7,2018,3,2,Estado de Mexico
+15,7,2019,1,1,Estado de Mexico
+15,7,2019,3,1,Estado de Mexico
+15,7,2019,5,1,Estado de Mexico
+15,7,2019,7,1,Estado de Mexico
+15,7,2019,8,1,Estado de Mexico
+15,7,2019,9,1,Estado de Mexico
+15,7,2019,10,1,Estado de Mexico
+15,7,2019,11,4,Estado de Mexico
+15,7,2020,2,4,Estado de Mexico
+15,7,2020,4,1,Estado de Mexico
+15,7,2020,6,1,Estado de Mexico
+15,7,2020,7,4,Estado de Mexico
+15,7,2020,8,8,Estado de Mexico
+15,7,2020,9,11,Estado de Mexico
+15,7,2020,10,3,Estado de Mexico
+15,7,2020,11,3,Estado de Mexico
+15,7,2020,12,17,Estado de Mexico
+15,7,2021,1,17,Estado de Mexico
+15,7,2021,2,14,Estado de Mexico
+15,7,2021,3,13,Estado de Mexico
+15,7,2021,4,17,Estado de Mexico
+15,7,2021,5,12,Estado de Mexico
+15,7,2021,6,9,Estado de Mexico
+15,7,2021,7,16,Estado de Mexico
+15,7,2021,8,10,Estado de Mexico
+15,7,2021,9,15,Estado de Mexico
+15,7,2021,10,11,Estado de Mexico
+15,7,2021,11,8,Estado de Mexico
+15,7,2021,12,14,Estado de Mexico
+15,7,2022,1,5,Estado de Mexico
+15,7,2022,2,7,Estado de Mexico
+15,7,2022,3,9,Estado de Mexico
+15,7,2022,4,17,Estado de Mexico
+15,7,2022,5,12,Estado de Mexico
+15,7,2022,6,12,Estado de Mexico
+15,7,2022,7,21,Estado de Mexico
+15,7,2022,8,10,Estado de Mexico
+15,7,2022,9,7,Estado de Mexico
+15,7,2022,10,7,Estado de Mexico
+15,7,2022,11,10,Estado de Mexico
+15,7,2022,12,18,Estado de Mexico
+15,7,2023,1,18,Estado de Mexico
+15,7,2023,2,18,Estado de Mexico
+15,7,2023,3,21,Estado de Mexico
+15,7,2023,4,25,Estado de Mexico
+15,7,2023,5,29,Estado de Mexico
+15,7,2023,6,16,Estado de Mexico
+15,7,2023,7,22,Estado de Mexico
+15,7,2023,8,28,Estado de Mexico
+15,7,2023,9,29,Estado de Mexico
+15,7,2023,10,28,Estado de Mexico
+15,7,2023,11,38,Estado de Mexico
+15,7,2023,12,33,Estado de Mexico
+15,7,2024,1,27,Estado de Mexico
+15,7,2024,2,22,Estado de Mexico
+15,7,2024,3,22,Estado de Mexico
+15,7,2024,4,26,Estado de Mexico
+15,7,2024,5,29,Estado de Mexico
+15,7,2024,6,23,Estado de Mexico
+15,7,2024,7,31,Estado de Mexico
+15,7,2024,8,24,Estado de Mexico
+15,7,2024,9,29,Estado de Mexico
+15,7,2024,10,27,Estado de Mexico
+15,7,2024,11,35,Estado de Mexico
+15,7,2024,12,30,Estado de Mexico
+15,7,2025,1,20,Estado de Mexico
+15,7,2025,2,30,Estado de Mexico
+15,7,2025,3,35,Estado de Mexico
+15,7,2025,4,24,Estado de Mexico
+15,7,2025,5,25,Estado de Mexico
+15,7,2025,6,24,Estado de Mexico
+15,7,2025,7,22,Estado de Mexico
+15,7,2025,8,36,Estado de Mexico
+15,7,2025,9,20,Estado de Mexico
+15,7,2025,10,25,Estado de Mexico
+15,7,2025,11,22,Estado de Mexico
+15,7,2025,12,8,Estado de Mexico
+18,0,2017,6,3,Nayarit
+18,0,2017,7,4,Nayarit
+18,0,2017,8,2,Nayarit
+18,0,2017,9,3,Nayarit
+18,0,2017,10,2,Nayarit
+18,0,2017,11,1,Nayarit
+18,0,2018,9,1,Nayarit
+18,0,2019,1,1,Nayarit
+18,0,2019,2,1,Nayarit
+18,0,2019,4,1,Nayarit
+18,0,2019,6,1,Nayarit
+18,0,2019,7,1,Nayarit
+18,0,2019,8,1,Nayarit
+18,0,2019,9,1,Nayarit
+18,0,2019,10,2,Nayarit
+18,0,2019,11,2,Nayarit
+18,0,2019,12,2,Nayarit
+18,0,2020,1,2,Nayarit
+18,0,2020,2,3,Nayarit
+18,0,2020,3,1,Nayarit
+18,0,2020,4,3,Nayarit
+18,0,2020,5,3,Nayarit
+18,0,2020,6,3,Nayarit
+18,0,2020,7,2,Nayarit
+18,0,2020,8,2,Nayarit
+18,0,2020,11,1,Nayarit
+18,0,2021,1,2,Nayarit
+18,0,2021,2,1,Nayarit
+18,0,2021,3,2,Nayarit
+18,0,2021,5,3,Nayarit
+18,0,2021,9,3,Nayarit
+18,0,2021,11,2,Nayarit
+18,0,2021,12,3,Nayarit
+18,0,2022,4,4,Nayarit
+18,0,2022,6,1,Nayarit
+18,0,2022,7,2,Nayarit
+18,0,2022,8,1,Nayarit
+18,0,2022,9,2,Nayarit
+18,0,2022,10,3,Nayarit
+18,0,2023,2,2,Nayarit
+18,0,2023,5,2,Nayarit
+18,0,2023,6,1,Nayarit
+18,0,2023,7,1,Nayarit
+18,0,2023,8,1,Nayarit
+18,0,2023,9,1,Nayarit
+18,0,2023,10,1,Nayarit
+18,0,2023,11,1,Nayarit
+18,0,2023,12,2,Nayarit
+18,0,2024,1,1,Nayarit
+18,0,2024,2,1,Nayarit
+18,0,2024,3,1,Nayarit
+18,0,2024,7,1,Nayarit
+18,0,2024,9,1,Nayarit
+18,0,2024,10,1,Nayarit
+18,0,2024,11,1,Nayarit
+18,0,2024,12,1,Nayarit
+18,0,2025,2,1,Nayarit
+18,0,2025,3,1,Nayarit
+18,0,2025,4,1,Nayarit
+18,0,2025,7,2,Nayarit
+18,0,2025,8,2,Nayarit
+18,0,2025,9,1,Nayarit
+18,0,2025,10,3,Nayarit
+18,0,2025,11,1,Nayarit
+18,0,2025,12,3,Nayarit
+18,2,2019,1,1,Nayarit
+18,2,2019,2,1,Nayarit
+18,2,2019,4,1,Nayarit
+18,2,2019,6,1,Nayarit
+18,2,2019,7,1,Nayarit
+18,2,2019,8,1,Nayarit
+18,2,2019,10,1,Nayarit
+18,2,2019,11,1,Nayarit
+18,2,2019,12,1,Nayarit
+18,2,2020,2,1,Nayarit
+18,2,2020,3,1,Nayarit
+18,2,2020,4,1,Nayarit
+18,2,2020,5,1,Nayarit
+18,2,2020,6,2,Nayarit
+18,2,2020,7,1,Nayarit
+18,2,2020,8,2,Nayarit
+18,2,2020,10,1,Nayarit
+18,2,2021,1,2,Nayarit
+18,2,2021,2,1,Nayarit
+18,2,2021,5,3,Nayarit
+18,2,2021,8,2,Nayarit
+18,2,2021,9,4,Nayarit
+18,2,2021,11,2,Nayarit
+18,2,2021,12,3,Nayarit
+18,2,2022,4,4,Nayarit
+18,2,2022,5,1,Nayarit
+18,2,2022,7,2,Nayarit
+18,2,2022,8,1,Nayarit
+18,2,2022,9,1,Nayarit
+18,2,2022,10,2,Nayarit
+18,2,2023,2,2,Nayarit
+18,2,2023,3,4,Nayarit
+18,2,2023,4,3,Nayarit
+18,2,2023,5,2,Nayarit
+18,2,2023,6,1,Nayarit
+18,2,2023,7,3,Nayarit
+18,2,2023,8,2,Nayarit
+18,2,2023,9,1,Nayarit
+18,2,2023,10,1,Nayarit
+18,2,2023,11,2,Nayarit
+18,2,2023,12,2,Nayarit
+18,2,2024,1,1,Nayarit
+18,2,2024,2,3,Nayarit
+18,2,2024,4,2,Nayarit
+18,2,2024,7,1,Nayarit
+18,2,2024,8,1,Nayarit
+18,2,2024,9,1,Nayarit
+18,2,2024,10,2,Nayarit
+18,2,2024,12,2,Nayarit
+18,2,2025,1,1,Nayarit
+18,2,2025,2,3,Nayarit
+18,2,2025,3,2,Nayarit
+18,2,2025,4,1,Nayarit
+18,2,2025,6,1,Nayarit
+18,2,2025,7,1,Nayarit
+18,2,2025,8,1,Nayarit
+18,2,2025,9,1,Nayarit
+18,2,2025,10,3,Nayarit
+18,2,2025,12,1,Nayarit
+18,3,2017,6,3,Nayarit
+18,3,2017,7,1,Nayarit
+18,3,2020,6,1,Nayarit
+18,3,2023,6,1,Nayarit
+18,3,2025,6,1,Nayarit
+18,7,2015,7,1,Nayarit
+18,7,2016,3,1,Nayarit
+18,7,2017,1,1,Nayarit
+18,7,2017,6,1,Nayarit
+18,7,2017,7,4,Nayarit
+18,7,2017,8,1,Nayarit
+18,7,2017,9,1,Nayarit
+18,7,2017,10,2,Nayarit
+18,7,2017,11,1,Nayarit
+18,7,2018,1,2,Nayarit
+18,7,2018,2,1,Nayarit
+18,7,2018,3,2,Nayarit
+18,7,2018,4,1,Nayarit
+18,7,2018,6,1,Nayarit
+18,7,2018,7,2,Nayarit
+18,7,2019,4,1,Nayarit
+18,7,2019,6,1,Nayarit
+18,7,2019,7,1,Nayarit
+18,7,2019,8,1,Nayarit
+18,7,2019,9,1,Nayarit
+18,7,2019,10,2,Nayarit
+18,7,2019,11,2,Nayarit
+18,7,2019,12,1,Nayarit
+18,7,2020,1,2,Nayarit
+18,7,2020,2,1,Nayarit
+18,7,2020,3,1,Nayarit
+18,7,2020,4,2,Nayarit
+18,7,2020,5,3,Nayarit
+18,7,2020,6,1,Nayarit
+18,7,2020,7,1,Nayarit
+18,7,2020,9,1,Nayarit
+18,7,2020,11,1,Nayarit
+18,7,2021,1,2,Nayarit
+18,7,2021,2,2,Nayarit
+18,7,2021,3,1,Nayarit
+18,7,2021,5,1,Nayarit
+18,7,2021,6,1,Nayarit
+18,7,2021,8,2,Nayarit
+18,7,2021,9,5,Nayarit
+18,7,2021,11,1,Nayarit
+18,7,2021,12,3,Nayarit
+18,7,2022,7,1,Nayarit
+18,7,2022,8,1,Nayarit
+18,7,2022,9,1,Nayarit
+18,7,2023,11,1,Nayarit
+18,7,2024,1,1,Nayarit
+18,7,2024,2,1,Nayarit
+18,7,2024,3,2,Nayarit
+18,7,2024,9,1,Nayarit
+18,7,2024,10,1,Nayarit
+18,7,2024,11,1,Nayarit
+18,7,2025,1,2,Nayarit
+18,7,2025,2,1,Nayarit
+18,7,2025,3,1,Nayarit
+18,7,2025,4,1,Nayarit
+18,7,2025,5,1,Nayarit
+18,7,2025,7,1,Nayarit
+18,7,2025,8,2,Nayarit
+18,7,2025,9,1,Nayarit
+18,7,2025,11,4,Nayarit
+18,7,2025,12,3,Nayarit
+19,0,2015,1,12,Nuevo Leon
+19,0,2015,2,15,Nuevo Leon
+19,0,2015,3,10,Nuevo Leon
+19,0,2015,4,7,Nuevo Leon
+19,0,2015,6,1,Nuevo Leon
+19,0,2015,7,1,Nuevo Leon
+19,0,2015,8,4,Nuevo Leon
+19,0,2015,9,6,Nuevo Leon
+19,0,2015,11,1,Nuevo Leon
+19,0,2015,12,2,Nuevo Leon
+19,0,2016,1,3,Nuevo Leon
+19,0,2016,2,4,Nuevo Leon
+19,0,2016,3,3,Nuevo Leon
+19,0,2016,4,2,Nuevo Leon
+19,0,2016,6,2,Nuevo Leon
+19,0,2016,7,7,Nuevo Leon
+19,0,2016,8,4,Nuevo Leon
+19,0,2016,9,7,Nuevo Leon
+19,0,2016,10,3,Nuevo Leon
+19,0,2016,11,7,Nuevo Leon
+19,0,2016,12,1,Nuevo Leon
+19,0,2017,2,3,Nuevo Leon
+19,0,2017,3,3,Nuevo Leon
+19,0,2017,4,5,Nuevo Leon
+19,0,2017,5,3,Nuevo Leon
+19,0,2017,6,1,Nuevo Leon
+19,0,2017,7,9,Nuevo Leon
+19,0,2017,8,5,Nuevo Leon
+19,0,2017,9,4,Nuevo Leon
+19,0,2017,10,5,Nuevo Leon
+19,0,2017,11,7,Nuevo Leon
+19,0,2017,12,4,Nuevo Leon
+19,0,2018,1,8,Nuevo Leon
+19,0,2018,2,5,Nuevo Leon
+19,0,2018,3,11,Nuevo Leon
+19,0,2018,4,10,Nuevo Leon
+19,0,2018,5,6,Nuevo Leon
+19,0,2018,6,7,Nuevo Leon
+19,0,2018,7,9,Nuevo Leon
+19,0,2018,8,9,Nuevo Leon
+19,0,2018,9,8,Nuevo Leon
+19,0,2018,10,12,Nuevo Leon
+19,0,2018,11,9,Nuevo Leon
+19,0,2018,12,10,Nuevo Leon
+19,0,2019,1,15,Nuevo Leon
+19,0,2019,2,14,Nuevo Leon
+19,0,2019,3,14,Nuevo Leon
+19,0,2019,4,14,Nuevo Leon
+19,0,2019,5,15,Nuevo Leon
+19,0,2019,6,11,Nuevo Leon
+19,0,2019,7,11,Nuevo Leon
+19,0,2019,8,7,Nuevo Leon
+19,0,2019,9,6,Nuevo Leon
+19,0,2019,10,10,Nuevo Leon
+19,0,2019,11,12,Nuevo Leon
+19,0,2019,12,12,Nuevo Leon
+19,0,2020,1,14,Nuevo Leon
+19,0,2020,2,13,Nuevo Leon
+19,0,2020,3,12,Nuevo Leon
+19,0,2020,4,14,Nuevo Leon
+19,0,2020,5,12,Nuevo Leon
+19,0,2020,7,10,Nuevo Leon
+19,0,2020,8,11,Nuevo Leon
+19,0,2020,9,10,Nuevo Leon
+19,0,2020,10,13,Nuevo Leon
+19,0,2020,11,14,Nuevo Leon
+19,0,2020,12,14,Nuevo Leon
+19,0,2021,1,14,Nuevo Leon
+19,0,2021,2,15,Nuevo Leon
+19,0,2021,3,14,Nuevo Leon
+19,0,2021,4,15,Nuevo Leon
+19,0,2021,5,14,Nuevo Leon
+19,0,2021,6,15,Nuevo Leon
+19,0,2021,7,15,Nuevo Leon
+19,0,2021,8,14,Nuevo Leon
+19,0,2021,9,15,Nuevo Leon
+19,0,2021,10,14,Nuevo Leon
+19,0,2021,11,15,Nuevo Leon
+19,0,2021,12,15,Nuevo Leon
+19,0,2022,1,15,Nuevo Leon
+19,0,2022,2,15,Nuevo Leon
+19,0,2022,3,14,Nuevo Leon
+19,0,2022,4,16,Nuevo Leon
+19,0,2022,5,15,Nuevo Leon
+19,0,2022,6,21,Nuevo Leon
+19,0,2022,7,11,Nuevo Leon
+19,0,2022,8,17,Nuevo Leon
+19,0,2022,9,14,Nuevo Leon
+19,0,2022,10,17,Nuevo Leon
+19,0,2022,11,16,Nuevo Leon
+19,0,2022,12,15,Nuevo Leon
+19,0,2023,1,12,Nuevo Leon
+19,0,2023,2,14,Nuevo Leon
+19,0,2023,3,14,Nuevo Leon
+19,0,2023,4,14,Nuevo Leon
+19,0,2023,5,12,Nuevo Leon
+19,0,2023,6,15,Nuevo Leon
+19,0,2023,7,15,Nuevo Leon
+19,0,2023,8,12,Nuevo Leon
+19,0,2023,9,14,Nuevo Leon
+19,0,2023,10,14,Nuevo Leon
+19,0,2023,11,12,Nuevo Leon
+19,0,2023,12,16,Nuevo Leon
+19,0,2024,1,15,Nuevo Leon
+19,0,2024,2,13,Nuevo Leon
+19,0,2024,3,15,Nuevo Leon
+19,0,2024,4,14,Nuevo Leon
+19,0,2024,5,12,Nuevo Leon
+19,0,2024,6,11,Nuevo Leon
+19,0,2024,7,15,Nuevo Leon
+19,0,2024,8,12,Nuevo Leon
+19,0,2024,9,12,Nuevo Leon
+19,0,2024,10,13,Nuevo Leon
+19,0,2024,11,14,Nuevo Leon
+19,0,2024,12,13,Nuevo Leon
+19,0,2025,1,14,Nuevo Leon
+19,0,2025,2,10,Nuevo Leon
+19,0,2025,3,14,Nuevo Leon
+19,0,2025,4,14,Nuevo Leon
+19,0,2025,5,15,Nuevo Leon
+19,0,2025,6,12,Nuevo Leon
+19,0,2025,7,12,Nuevo Leon
+19,0,2025,8,12,Nuevo Leon
+19,0,2025,9,13,Nuevo Leon
+19,0,2025,10,13,Nuevo Leon
+19,0,2025,11,14,Nuevo Leon
+19,0,2025,12,15,Nuevo Leon
+19,2,2015,1,9,Nuevo Leon
+19,2,2015,2,13,Nuevo Leon
+19,2,2015,3,8,Nuevo Leon
+19,2,2015,4,2,Nuevo Leon
+19,2,2015,9,2,Nuevo Leon
+19,2,2015,11,2,Nuevo Leon
+19,2,2015,12,3,Nuevo Leon
+19,2,2016,1,1,Nuevo Leon
+19,2,2016,2,2,Nuevo Leon
+19,2,2016,3,2,Nuevo Leon
+19,2,2016,4,2,Nuevo Leon
+19,2,2016,8,2,Nuevo Leon
+19,2,2016,9,1,Nuevo Leon
+19,2,2016,10,5,Nuevo Leon
+19,2,2016,11,5,Nuevo Leon
+19,2,2017,2,2,Nuevo Leon
+19,2,2017,3,4,Nuevo Leon
+19,2,2017,4,2,Nuevo Leon
+19,2,2017,5,4,Nuevo Leon
+19,2,2017,7,4,Nuevo Leon
+19,2,2017,8,4,Nuevo Leon
+19,2,2017,9,2,Nuevo Leon
+19,2,2017,10,3,Nuevo Leon
+19,2,2017,11,8,Nuevo Leon
+19,2,2017,12,3,Nuevo Leon
+19,2,2018,1,7,Nuevo Leon
+19,2,2018,2,5,Nuevo Leon
+19,2,2018,3,7,Nuevo Leon
+19,2,2018,4,8,Nuevo Leon
+19,2,2018,5,4,Nuevo Leon
+19,2,2018,6,4,Nuevo Leon
+19,2,2018,7,9,Nuevo Leon
+19,2,2018,8,9,Nuevo Leon
+19,2,2018,9,6,Nuevo Leon
+19,2,2018,10,4,Nuevo Leon
+19,2,2018,11,9,Nuevo Leon
+19,2,2018,12,8,Nuevo Leon
+19,2,2019,1,13,Nuevo Leon
+19,2,2019,2,13,Nuevo Leon
+19,2,2019,3,14,Nuevo Leon
+19,2,2019,4,14,Nuevo Leon
+19,2,2019,5,14,Nuevo Leon
+19,2,2019,6,12,Nuevo Leon
+19,2,2019,7,13,Nuevo Leon
+19,2,2019,9,3,Nuevo Leon
+19,2,2019,10,11,Nuevo Leon
+19,2,2019,11,11,Nuevo Leon
+19,2,2019,12,12,Nuevo Leon
+19,2,2020,1,13,Nuevo Leon
+19,2,2020,2,12,Nuevo Leon
+19,2,2020,3,12,Nuevo Leon
+19,2,2020,4,13,Nuevo Leon
+19,2,2020,5,11,Nuevo Leon
+19,2,2020,7,10,Nuevo Leon
+19,2,2020,8,10,Nuevo Leon
+19,2,2020,9,11,Nuevo Leon
+19,2,2020,10,13,Nuevo Leon
+19,2,2020,11,13,Nuevo Leon
+19,2,2020,12,13,Nuevo Leon
+19,2,2021,1,13,Nuevo Leon
+19,2,2021,2,15,Nuevo Leon
+19,2,2021,3,14,Nuevo Leon
+19,2,2021,4,14,Nuevo Leon
+19,2,2021,5,14,Nuevo Leon
+19,2,2021,6,14,Nuevo Leon
+19,2,2021,7,15,Nuevo Leon
+19,2,2021,8,14,Nuevo Leon
+19,2,2021,9,15,Nuevo Leon
+19,2,2021,10,14,Nuevo Leon
+19,2,2021,11,15,Nuevo Leon
+19,2,2021,12,15,Nuevo Leon
+19,2,2022,1,14,Nuevo Leon
+19,2,2022,2,14,Nuevo Leon
+19,2,2022,3,14,Nuevo Leon
+19,2,2022,4,17,Nuevo Leon
+19,2,2022,5,17,Nuevo Leon
+19,2,2022,6,17,Nuevo Leon
+19,2,2022,7,9,Nuevo Leon
+19,2,2022,8,16,Nuevo Leon
+19,2,2022,9,15,Nuevo Leon
+19,2,2022,10,17,Nuevo Leon
+19,2,2022,11,16,Nuevo Leon
+19,2,2022,12,15,Nuevo Leon
+19,2,2023,1,12,Nuevo Leon
+19,2,2023,2,14,Nuevo Leon
+19,2,2023,3,14,Nuevo Leon
+19,2,2023,4,16,Nuevo Leon
+19,2,2023,5,11,Nuevo Leon
+19,2,2023,6,13,Nuevo Leon
+19,2,2023,7,15,Nuevo Leon
+19,2,2023,8,11,Nuevo Leon
+19,2,2023,9,12,Nuevo Leon
+19,2,2023,10,14,Nuevo Leon
+19,2,2023,11,13,Nuevo Leon
+19,2,2023,12,14,Nuevo Leon
+19,2,2024,1,14,Nuevo Leon
+19,2,2024,2,13,Nuevo Leon
+19,2,2024,3,15,Nuevo Leon
+19,2,2024,4,15,Nuevo Leon
+19,2,2024,5,14,Nuevo Leon
+19,2,2024,6,14,Nuevo Leon
+19,2,2024,7,15,Nuevo Leon
+19,2,2024,8,14,Nuevo Leon
+19,2,2024,9,13,Nuevo Leon
+19,2,2024,10,15,Nuevo Leon
+19,2,2024,11,14,Nuevo Leon
+19,2,2024,12,14,Nuevo Leon
+19,2,2025,1,14,Nuevo Leon
+19,2,2025,2,12,Nuevo Leon
+19,2,2025,3,13,Nuevo Leon
+19,2,2025,4,16,Nuevo Leon
+19,2,2025,5,16,Nuevo Leon
+19,2,2025,6,15,Nuevo Leon
+19,2,2025,7,13,Nuevo Leon
+19,2,2025,8,12,Nuevo Leon
+19,2,2025,9,15,Nuevo Leon
+19,2,2025,10,16,Nuevo Leon
+19,2,2025,11,14,Nuevo Leon
+19,3,2015,1,3,Nuevo Leon
+19,3,2015,2,3,Nuevo Leon
+19,3,2017,5,1,Nuevo Leon
+19,3,2018,6,2,Nuevo Leon
+19,3,2018,8,4,Nuevo Leon
+19,3,2018,10,4,Nuevo Leon
+19,3,2019,1,3,Nuevo Leon
+19,3,2019,2,1,Nuevo Leon
+19,3,2019,3,5,Nuevo Leon
+19,3,2019,4,2,Nuevo Leon
+19,3,2019,5,7,Nuevo Leon
+19,3,2019,6,5,Nuevo Leon
+19,3,2019,7,4,Nuevo Leon
+19,3,2019,8,1,Nuevo Leon
+19,3,2019,10,2,Nuevo Leon
+19,3,2019,12,4,Nuevo Leon
+19,3,2020,1,1,Nuevo Leon
+19,3,2020,2,1,Nuevo Leon
+19,3,2020,3,2,Nuevo Leon
+19,3,2020,5,4,Nuevo Leon
+19,3,2020,7,1,Nuevo Leon
+19,3,2020,8,2,Nuevo Leon
+19,3,2020,9,2,Nuevo Leon
+19,3,2020,10,5,Nuevo Leon
+19,3,2020,11,6,Nuevo Leon
+19,3,2020,12,7,Nuevo Leon
+19,3,2021,1,3,Nuevo Leon
+19,3,2021,2,4,Nuevo Leon
+19,3,2021,3,6,Nuevo Leon
+19,3,2021,4,8,Nuevo Leon
+19,3,2021,5,9,Nuevo Leon
+19,3,2021,6,6,Nuevo Leon
+19,3,2021,7,5,Nuevo Leon
+19,3,2021,8,6,Nuevo Leon
+19,3,2021,9,7,Nuevo Leon
+19,3,2021,10,5,Nuevo Leon
+19,3,2021,11,4,Nuevo Leon
+19,3,2021,12,6,Nuevo Leon
+19,3,2022,1,6,Nuevo Leon
+19,3,2022,2,10,Nuevo Leon
+19,3,2022,3,5,Nuevo Leon
+19,3,2022,4,5,Nuevo Leon
+19,3,2022,5,9,Nuevo Leon
+19,3,2022,6,12,Nuevo Leon
+19,3,2022,7,10,Nuevo Leon
+19,3,2022,8,11,Nuevo Leon
+19,3,2022,9,8,Nuevo Leon
+19,3,2022,10,10,Nuevo Leon
+19,3,2022,11,7,Nuevo Leon
+19,3,2022,12,11,Nuevo Leon
+19,3,2023,1,3,Nuevo Leon
+19,3,2023,2,5,Nuevo Leon
+19,3,2023,3,8,Nuevo Leon
+19,3,2023,4,13,Nuevo Leon
+19,3,2023,5,7,Nuevo Leon
+19,3,2023,6,6,Nuevo Leon
+19,3,2023,7,8,Nuevo Leon
+19,3,2023,8,8,Nuevo Leon
+19,3,2023,9,2,Nuevo Leon
+19,3,2023,10,3,Nuevo Leon
+19,3,2023,11,8,Nuevo Leon
+19,3,2023,12,8,Nuevo Leon
+19,3,2024,1,6,Nuevo Leon
+19,3,2024,2,5,Nuevo Leon
+19,3,2024,3,5,Nuevo Leon
+19,3,2024,4,5,Nuevo Leon
+19,3,2024,5,11,Nuevo Leon
+19,3,2024,6,5,Nuevo Leon
+19,3,2024,7,10,Nuevo Leon
+19,3,2024,8,3,Nuevo Leon
+19,3,2024,9,9,Nuevo Leon
+19,3,2024,10,11,Nuevo Leon
+19,3,2024,11,6,Nuevo Leon
+19,3,2024,12,6,Nuevo Leon
+19,3,2025,1,5,Nuevo Leon
+19,3,2025,2,6,Nuevo Leon
+19,3,2025,3,9,Nuevo Leon
+19,3,2025,4,7,Nuevo Leon
+19,3,2025,5,8,Nuevo Leon
+19,3,2025,6,5,Nuevo Leon
+19,3,2025,7,4,Nuevo Leon
+19,3,2025,8,4,Nuevo Leon
+19,3,2025,9,3,Nuevo Leon
+19,3,2025,10,4,Nuevo Leon
+19,3,2025,12,5,Nuevo Leon
+19,7,2015,1,8,Nuevo Leon
+19,7,2015,2,5,Nuevo Leon
+19,7,2015,3,10,Nuevo Leon
+19,7,2015,4,6,Nuevo Leon
+19,7,2015,5,1,Nuevo Leon
+19,7,2015,7,3,Nuevo Leon
+19,7,2015,8,5,Nuevo Leon
+19,7,2015,9,4,Nuevo Leon
+19,7,2015,10,2,Nuevo Leon
+19,7,2015,11,2,Nuevo Leon
+19,7,2016,1,7,Nuevo Leon
+19,7,2016,2,2,Nuevo Leon
+19,7,2016,3,6,Nuevo Leon
+19,7,2016,4,1,Nuevo Leon
+19,7,2016,5,2,Nuevo Leon
+19,7,2016,6,4,Nuevo Leon
+19,7,2016,7,9,Nuevo Leon
+19,7,2016,8,8,Nuevo Leon
+19,7,2016,9,7,Nuevo Leon
+19,7,2016,10,2,Nuevo Leon
+19,7,2016,11,7,Nuevo Leon
+19,7,2016,12,8,Nuevo Leon
+19,7,2017,1,2,Nuevo Leon
+19,7,2017,2,4,Nuevo Leon
+19,7,2017,3,5,Nuevo Leon
+19,7,2017,4,6,Nuevo Leon
+19,7,2017,5,3,Nuevo Leon
+19,7,2017,6,1,Nuevo Leon
+19,7,2017,7,10,Nuevo Leon
+19,7,2017,8,1,Nuevo Leon
+19,7,2017,9,5,Nuevo Leon
+19,7,2017,10,1,Nuevo Leon
+19,7,2017,11,1,Nuevo Leon
+19,7,2017,12,6,Nuevo Leon
+19,7,2018,1,4,Nuevo Leon
+19,7,2018,2,6,Nuevo Leon
+19,7,2018,3,11,Nuevo Leon
+19,7,2018,4,8,Nuevo Leon
+19,7,2018,5,6,Nuevo Leon
+19,7,2018,6,9,Nuevo Leon
+19,7,2018,7,9,Nuevo Leon
+19,7,2018,8,7,Nuevo Leon
+19,7,2018,9,6,Nuevo Leon
+19,7,2018,10,13,Nuevo Leon
+19,7,2018,11,9,Nuevo Leon
+19,7,2018,12,9,Nuevo Leon
+19,7,2019,1,3,Nuevo Leon
+19,7,2019,2,13,Nuevo Leon
+19,7,2019,3,8,Nuevo Leon
+19,7,2019,4,6,Nuevo Leon
+19,7,2019,5,9,Nuevo Leon
+19,7,2019,6,9,Nuevo Leon
+19,7,2019,7,9,Nuevo Leon
+19,7,2019,8,10,Nuevo Leon
+19,7,2019,9,8,Nuevo Leon
+19,7,2019,10,10,Nuevo Leon
+19,7,2019,11,9,Nuevo Leon
+19,7,2019,12,9,Nuevo Leon
+19,7,2020,1,7,Nuevo Leon
+19,7,2020,2,4,Nuevo Leon
+19,7,2020,3,5,Nuevo Leon
+19,7,2020,4,6,Nuevo Leon
+19,7,2020,5,4,Nuevo Leon
+19,7,2020,6,3,Nuevo Leon
+19,7,2020,7,3,Nuevo Leon
+19,7,2020,8,2,Nuevo Leon
+19,7,2020,9,8,Nuevo Leon
+19,7,2020,10,4,Nuevo Leon
+19,7,2020,11,9,Nuevo Leon
+19,7,2020,12,9,Nuevo Leon
+19,7,2021,1,9,Nuevo Leon
+19,7,2021,2,9,Nuevo Leon
+19,7,2021,3,8,Nuevo Leon
+19,7,2021,4,12,Nuevo Leon
+19,7,2021,5,9,Nuevo Leon
+19,7,2021,6,10,Nuevo Leon
+19,7,2021,7,12,Nuevo Leon
+19,7,2021,8,10,Nuevo Leon
+19,7,2021,9,13,Nuevo Leon
+19,7,2021,10,8,Nuevo Leon
+19,7,2021,11,10,Nuevo Leon
+19,7,2021,12,12,Nuevo Leon
+19,7,2022,1,7,Nuevo Leon
+19,7,2022,2,9,Nuevo Leon
+19,7,2022,3,3,Nuevo Leon
+19,7,2022,4,8,Nuevo Leon
+19,7,2022,5,10,Nuevo Leon
+19,7,2022,6,11,Nuevo Leon
+19,7,2022,7,13,Nuevo Leon
+19,7,2022,8,11,Nuevo Leon
+19,7,2022,9,9,Nuevo Leon
+19,7,2022,10,11,Nuevo Leon
+19,7,2022,11,9,Nuevo Leon
+19,7,2022,12,11,Nuevo Leon
+19,7,2023,1,10,Nuevo Leon
+19,7,2023,2,9,Nuevo Leon
+19,7,2023,3,8,Nuevo Leon
+19,7,2023,4,8,Nuevo Leon
+19,7,2023,5,9,Nuevo Leon
+19,7,2023,6,14,Nuevo Leon
+19,7,2023,7,14,Nuevo Leon
+19,7,2023,8,10,Nuevo Leon
+19,7,2023,9,6,Nuevo Leon
+19,7,2023,10,14,Nuevo Leon
+19,7,2023,11,8,Nuevo Leon
+19,7,2023,12,14,Nuevo Leon
+19,7,2024,1,12,Nuevo Leon
+19,7,2024,2,7,Nuevo Leon
+19,7,2024,3,9,Nuevo Leon
+19,7,2024,4,9,Nuevo Leon
+19,7,2024,5,5,Nuevo Leon
+19,7,2024,6,9,Nuevo Leon
+19,7,2024,7,9,Nuevo Leon
+19,7,2024,8,4,Nuevo Leon
+19,7,2024,9,4,Nuevo Leon
+19,7,2024,10,8,Nuevo Leon
+19,7,2024,11,9,Nuevo Leon
+19,7,2024,12,12,Nuevo Leon
+19,7,2025,1,7,Nuevo Leon
+19,7,2025,2,10,Nuevo Leon
+19,7,2025,3,6,Nuevo Leon
+19,7,2025,4,5,Nuevo Leon
+19,7,2025,5,5,Nuevo Leon
+19,7,2025,6,4,Nuevo Leon
+19,7,2025,7,5,Nuevo Leon
+19,7,2025,8,9,Nuevo Leon
+19,7,2025,9,8,Nuevo Leon
+19,7,2025,10,2,Nuevo Leon
+19,7,2025,11,7,Nuevo Leon
+19,7,2025,12,8,Nuevo Leon
+27,0,2015,1,1,Tabasco
+27,0,2015,2,1,Tabasco
+27,0,2018,3,1,Tabasco
+27,0,2018,4,1,Tabasco
+27,0,2018,5,2,Tabasco
+27,0,2018,8,1,Tabasco
+27,0,2018,9,1,Tabasco
+27,0,2018,10,2,Tabasco
+27,0,2018,11,2,Tabasco
+27,0,2019,1,2,Tabasco
+27,0,2019,2,1,Tabasco
+27,0,2019,4,1,Tabasco
+27,0,2019,5,2,Tabasco
+27,0,2019,6,2,Tabasco
+27,0,2019,7,1,Tabasco
+27,0,2019,8,3,Tabasco
+27,0,2019,9,1,Tabasco
+27,0,2019,10,3,Tabasco
+27,0,2019,11,2,Tabasco
+27,0,2019,12,2,Tabasco
+27,0,2020,1,1,Tabasco
+27,0,2020,2,2,Tabasco
+27,0,2020,3,4,Tabasco
+27,0,2020,4,1,Tabasco
+27,0,2020,5,3,Tabasco
+27,0,2020,6,2,Tabasco
+27,0,2020,8,1,Tabasco
+27,0,2020,9,4,Tabasco
+27,0,2020,10,4,Tabasco
+27,0,2020,11,2,Tabasco
+27,0,2020,12,4,Tabasco
+27,0,2021,1,2,Tabasco
+27,0,2021,2,4,Tabasco
+27,0,2021,3,6,Tabasco
+27,0,2021,4,5,Tabasco
+27,0,2021,5,4,Tabasco
+27,0,2021,6,2,Tabasco
+27,0,2021,7,4,Tabasco
+27,0,2021,8,3,Tabasco
+27,0,2021,9,3,Tabasco
+27,0,2021,10,5,Tabasco
+27,0,2021,11,3,Tabasco
+27,0,2021,12,3,Tabasco
+27,0,2022,1,1,Tabasco
+27,0,2022,3,5,Tabasco
+27,0,2022,4,2,Tabasco
+27,0,2022,6,2,Tabasco
+27,0,2022,7,3,Tabasco
+27,0,2022,8,3,Tabasco
+27,0,2022,10,1,Tabasco
+27,0,2022,11,2,Tabasco
+27,0,2023,1,1,Tabasco
+27,0,2023,3,1,Tabasco
+27,0,2023,4,1,Tabasco
+27,0,2023,5,1,Tabasco
+27,0,2023,7,2,Tabasco
+27,0,2023,9,4,Tabasco
+27,0,2023,10,2,Tabasco
+27,0,2023,11,1,Tabasco
+27,0,2023,12,3,Tabasco
+27,0,2024,1,2,Tabasco
+27,0,2024,2,2,Tabasco
+27,0,2024,4,4,Tabasco
+27,0,2024,5,1,Tabasco
+27,0,2024,6,1,Tabasco
+27,0,2024,7,2,Tabasco
+27,0,2024,8,2,Tabasco
+27,0,2024,9,2,Tabasco
+27,0,2024,11,1,Tabasco
+27,0,2024,12,2,Tabasco
+27,0,2025,1,2,Tabasco
+27,0,2025,2,1,Tabasco
+27,0,2025,10,1,Tabasco
+27,0,2025,11,1,Tabasco
+27,0,2025,12,3,Tabasco
+27,2,2015,2,1,Tabasco
+27,2,2018,6,1,Tabasco
+27,2,2018,8,1,Tabasco
+27,2,2018,10,1,Tabasco
+27,2,2019,2,1,Tabasco
+27,2,2019,4,2,Tabasco
+27,2,2019,5,1,Tabasco
+27,2,2019,6,2,Tabasco
+27,2,2019,7,1,Tabasco
+27,2,2019,9,1,Tabasco
+27,2,2019,10,3,Tabasco
+27,2,2019,11,1,Tabasco
+27,2,2019,12,1,Tabasco
+27,2,2020,2,2,Tabasco
+27,2,2020,3,1,Tabasco
+27,2,2020,4,2,Tabasco
+27,2,2020,5,2,Tabasco
+27,2,2020,6,1,Tabasco
+27,2,2020,9,3,Tabasco
+27,2,2020,10,1,Tabasco
+27,2,2021,1,2,Tabasco
+27,2,2021,2,2,Tabasco
+27,2,2021,3,1,Tabasco
+27,2,2021,4,3,Tabasco
+27,2,2021,5,3,Tabasco
+27,2,2021,6,2,Tabasco
+27,2,2021,7,1,Tabasco
+27,2,2021,8,2,Tabasco
+27,2,2021,9,3,Tabasco
+27,2,2021,10,2,Tabasco
+27,2,2021,11,3,Tabasco
+27,2,2021,12,1,Tabasco
+27,2,2022,3,3,Tabasco
+27,2,2022,4,1,Tabasco
+27,2,2022,6,1,Tabasco
+27,2,2022,7,3,Tabasco
+27,2,2022,8,1,Tabasco
+27,2,2023,1,2,Tabasco
+27,2,2023,2,1,Tabasco
+27,2,2023,4,3,Tabasco
+27,2,2023,6,2,Tabasco
+27,2,2023,7,2,Tabasco
+27,2,2023,9,1,Tabasco
+27,2,2023,10,1,Tabasco
+27,2,2023,11,1,Tabasco
+27,2,2023,12,3,Tabasco
+27,2,2024,1,3,Tabasco
+27,2,2024,2,3,Tabasco
+27,2,2024,4,3,Tabasco
+27,2,2024,5,2,Tabasco
+27,2,2024,8,1,Tabasco
+27,2,2024,9,2,Tabasco
+27,2,2024,10,1,Tabasco
+27,2,2024,11,1,Tabasco
+27,2,2024,12,1,Tabasco
+27,2,2025,1,1,Tabasco
+27,2,2025,2,2,Tabasco
+27,2,2025,3,2,Tabasco
+27,3,2018,7,2,Tabasco
+27,3,2022,6,1,Tabasco
+27,3,2023,2,1,Tabasco
+27,3,2023,12,1,Tabasco
+27,3,2024,3,1,Tabasco
+27,3,2025,1,3,Tabasco
+27,7,2018,1,3,Tabasco
+27,7,2018,2,2,Tabasco
+27,7,2018,5,5,Tabasco
+27,7,2018,6,1,Tabasco
+27,7,2018,8,1,Tabasco
+27,7,2018,10,1,Tabasco
+27,7,2018,11,2,Tabasco
+27,7,2018,12,2,Tabasco
+27,7,2019,1,3,Tabasco
+27,7,2019,2,1,Tabasco
+27,7,2019,4,1,Tabasco
+27,7,2019,5,1,Tabasco
+27,7,2019,6,3,Tabasco
+27,7,2019,7,2,Tabasco
+27,7,2019,8,4,Tabasco
+27,7,2019,9,1,Tabasco
+27,7,2019,12,2,Tabasco
+27,7,2020,1,4,Tabasco
+27,7,2020,2,1,Tabasco
+27,7,2020,3,2,Tabasco
+27,7,2020,5,1,Tabasco
+27,7,2020,6,3,Tabasco
+27,7,2020,7,3,Tabasco
+27,7,2020,9,2,Tabasco
+27,7,2020,10,2,Tabasco
+27,7,2020,11,4,Tabasco
+27,7,2020,12,2,Tabasco
+27,7,2021,2,7,Tabasco
+27,7,2021,3,5,Tabasco
+27,7,2021,4,1,Tabasco
+27,7,2021,5,4,Tabasco
+27,7,2021,6,2,Tabasco
+27,7,2021,7,5,Tabasco
+27,7,2021,8,5,Tabasco
+27,7,2021,10,7,Tabasco
+27,7,2021,11,2,Tabasco
+27,7,2021,12,5,Tabasco
+27,7,2022,2,1,Tabasco
+27,7,2022,3,6,Tabasco
+27,7,2022,4,5,Tabasco
+27,7,2022,5,1,Tabasco
+27,7,2022,6,2,Tabasco
+27,7,2022,7,2,Tabasco
+27,7,2022,8,3,Tabasco
+27,7,2022,11,3,Tabasco
+27,7,2023,1,3,Tabasco
+27,7,2023,2,2,Tabasco
+27,7,2023,3,1,Tabasco
+27,7,2023,4,1,Tabasco
+27,7,2023,5,3,Tabasco
+27,7,2023,7,2,Tabasco
+27,7,2023,9,5,Tabasco
+27,7,2023,10,2,Tabasco
+27,7,2023,11,1,Tabasco
+27,7,2023,12,1,Tabasco
+27,7,2024,1,3,Tabasco
+27,7,2024,2,3,Tabasco
+27,7,2024,3,3,Tabasco
+27,7,2024,4,6,Tabasco
+27,7,2024,5,4,Tabasco
+27,7,2024,6,2,Tabasco
+27,7,2024,7,4,Tabasco
+27,7,2024,8,3,Tabasco
+27,7,2024,9,5,Tabasco
+27,7,2024,11,2,Tabasco
+27,7,2024,12,3,Tabasco
+27,7,2025,4,1,Tabasco
+27,7,2025,8,2,Tabasco
+27,7,2025,10,2,Tabasco
+27,7,2025,12,2,Tabasco
+30,0,2015,12,1,Veracruz
+30,0,2016,7,1,Veracruz
+30,0,2016,8,1,Veracruz
+30,0,2016,9,2,Veracruz
+30,0,2016,11,1,Veracruz
+30,0,2016,12,3,Veracruz
+30,0,2017,4,1,Veracruz
+30,0,2017,5,1,Veracruz
+30,0,2017,6,2,Veracruz
+30,0,2017,7,1,Veracruz
+30,0,2018,1,1,Veracruz
+30,0,2018,2,2,Veracruz
+30,0,2018,3,3,Veracruz
+30,0,2018,4,2,Veracruz
+30,0,2018,5,2,Veracruz
+30,0,2018,6,1,Veracruz
+30,0,2018,7,4,Veracruz
+30,0,2018,8,1,Veracruz
+30,0,2018,9,1,Veracruz
+30,0,2018,11,1,Veracruz
+30,0,2019,2,1,Veracruz
+30,0,2019,3,1,Veracruz
+30,0,2019,5,1,Veracruz
+30,0,2020,1,2,Veracruz
+30,0,2020,2,1,Veracruz
+30,0,2020,5,4,Veracruz
+30,0,2020,7,2,Veracruz
+30,0,2020,8,2,Veracruz
+30,0,2020,9,3,Veracruz
+30,0,2020,10,5,Veracruz
+30,0,2020,11,2,Veracruz
+30,0,2020,12,3,Veracruz
+30,0,2021,2,3,Veracruz
+30,0,2021,3,4,Veracruz
+30,0,2021,4,1,Veracruz
+30,0,2021,5,2,Veracruz
+30,0,2021,6,5,Veracruz
+30,0,2021,7,8,Veracruz
+30,0,2021,8,6,Veracruz
+30,0,2021,9,4,Veracruz
+30,0,2021,10,7,Veracruz
+30,0,2021,11,5,Veracruz
+30,0,2021,12,4,Veracruz
+30,0,2022,1,9,Veracruz
+30,0,2022,2,12,Veracruz
+30,0,2022,3,15,Veracruz
+30,0,2022,4,9,Veracruz
+30,0,2022,5,14,Veracruz
+30,0,2022,10,1,Veracruz
+30,0,2023,1,1,Veracruz
+30,0,2023,3,3,Veracruz
+30,0,2023,5,2,Veracruz
+30,0,2023,7,3,Veracruz
+30,0,2023,9,1,Veracruz
+30,0,2023,10,1,Veracruz
+30,0,2023,11,1,Veracruz
+30,0,2024,1,3,Veracruz
+30,0,2024,2,1,Veracruz
+30,0,2024,3,1,Veracruz
+30,0,2024,4,1,Veracruz
+30,0,2024,5,2,Veracruz
+30,0,2024,6,1,Veracruz
+30,0,2024,7,1,Veracruz
+30,0,2024,8,2,Veracruz
+30,0,2024,9,1,Veracruz
+30,0,2025,1,1,Veracruz
+30,0,2025,2,1,Veracruz
+30,0,2025,7,1,Veracruz
+30,2,2017,4,1,Veracruz
+30,2,2018,1,1,Veracruz
+30,2,2018,6,1,Veracruz
+30,2,2019,3,1,Veracruz
+30,2,2019,12,1,Veracruz
+30,2,2020,1,2,Veracruz
+30,2,2020,2,1,Veracruz
+30,2,2020,5,2,Veracruz
+30,2,2020,6,1,Veracruz
+30,2,2020,7,3,Veracruz
+30,2,2020,8,1,Veracruz
+30,2,2020,9,7,Veracruz
+30,2,2020,10,2,Veracruz
+30,2,2020,11,2,Veracruz
+30,2,2020,12,6,Veracruz
+30,2,2021,2,3,Veracruz
+30,2,2021,3,3,Veracruz
+30,2,2021,4,1,Veracruz
+30,2,2021,5,1,Veracruz
+30,2,2021,6,5,Veracruz
+30,2,2021,7,7,Veracruz
+30,2,2021,8,8,Veracruz
+30,2,2021,9,5,Veracruz
+30,2,2021,10,6,Veracruz
+30,2,2021,11,6,Veracruz
+30,2,2021,12,4,Veracruz
+30,2,2022,1,11,Veracruz
+30,2,2022,2,12,Veracruz
+30,2,2022,3,14,Veracruz
+30,2,2022,4,10,Veracruz
+30,2,2022,5,12,Veracruz
+30,2,2022,10,1,Veracruz
+30,2,2023,1,4,Veracruz
+30,2,2023,2,1,Veracruz
+30,2,2023,3,5,Veracruz
+30,2,2023,6,1,Veracruz
+30,2,2023,7,3,Veracruz
+30,2,2023,9,1,Veracruz
+30,2,2023,11,2,Veracruz
+30,2,2024,1,3,Veracruz
+30,2,2024,2,1,Veracruz
+30,2,2024,3,1,Veracruz
+30,2,2024,4,1,Veracruz
+30,2,2024,5,2,Veracruz
+30,2,2024,6,1,Veracruz
+30,2,2024,7,1,Veracruz
+30,2,2024,8,3,Veracruz
+30,2,2024,9,1,Veracruz
+30,2,2024,10,1,Veracruz
+30,2,2024,11,1,Veracruz
+30,2,2025,1,2,Veracruz
+30,2,2025,2,1,Veracruz
+30,2,2025,6,1,Veracruz
+30,2,2025,7,1,Veracruz
+30,2,2025,12,1,Veracruz
+30,3,2016,12,1,Veracruz
+30,3,2017,4,1,Veracruz
+30,3,2019,1,1,Veracruz
+30,3,2019,6,1,Veracruz
+30,3,2020,7,4,Veracruz
+30,3,2020,8,2,Veracruz
+30,3,2020,10,1,Veracruz
+30,3,2021,6,1,Veracruz
+30,3,2021,7,5,Veracruz
+30,3,2021,8,3,Veracruz
+30,3,2022,2,1,Veracruz
+30,3,2022,3,11,Veracruz
+30,3,2022,4,3,Veracruz
+30,3,2022,5,4,Veracruz
+30,3,2022,6,1,Veracruz
+30,3,2023,5,1,Veracruz
+30,3,2023,9,1,Veracruz
+30,3,2025,2,1,Veracruz
+30,3,2025,3,2,Veracruz
+30,3,2025,6,2,Veracruz
+30,7,2015,4,1,Veracruz
+30,7,2015,7,2,Veracruz
+30,7,2015,8,1,Veracruz
+30,7,2015,9,2,Veracruz
+30,7,2015,10,1,Veracruz
+30,7,2015,11,1,Veracruz
+30,7,2015,12,2,Veracruz
+30,7,2016,3,4,Veracruz
+30,7,2016,7,2,Veracruz
+30,7,2016,8,1,Veracruz
+30,7,2016,9,2,Veracruz
+30,7,2016,11,1,Veracruz
+30,7,2016,12,2,Veracruz
+30,7,2017,1,2,Veracruz
+30,7,2017,2,2,Veracruz
+30,7,2017,3,2,Veracruz
+30,7,2017,4,2,Veracruz
+30,7,2017,5,2,Veracruz
+30,7,2017,6,3,Veracruz
+30,7,2017,7,1,Veracruz
+30,7,2017,8,1,Veracruz
+30,7,2017,10,1,Veracruz
+30,7,2018,1,2,Veracruz
+30,7,2018,2,2,Veracruz
+30,7,2018,3,3,Veracruz
+30,7,2018,4,3,Veracruz
+30,7,2018,5,2,Veracruz
+30,7,2018,6,1,Veracruz
+30,7,2018,7,3,Veracruz
+30,7,2018,8,1,Veracruz
+30,7,2018,9,3,Veracruz
+30,7,2018,11,1,Veracruz
+30,7,2019,7,1,Veracruz
+30,7,2019,10,1,Veracruz
+30,7,2019,11,1,Veracruz
+30,7,2019,12,1,Veracruz
+30,7,2020,1,1,Veracruz
+30,7,2020,2,2,Veracruz
+30,7,2020,5,2,Veracruz
+30,7,2020,6,1,Veracruz
+30,7,2020,7,3,Veracruz
+30,7,2020,8,1,Veracruz
+30,7,2020,9,4,Veracruz
+30,7,2020,10,2,Veracruz
+30,7,2021,2,2,Veracruz
+30,7,2021,3,1,Veracruz
+30,7,2021,7,1,Veracruz
+30,7,2021,8,3,Veracruz
+30,7,2021,9,1,Veracruz
+30,7,2021,10,1,Veracruz
+30,7,2021,11,1,Veracruz
+30,7,2021,12,1,Veracruz
+30,7,2022,2,2,Veracruz
+30,7,2022,3,3,Veracruz
+30,7,2022,4,1,Veracruz
+30,7,2022,5,3,Veracruz
+30,7,2022,7,3,Veracruz
+30,7,2022,8,2,Veracruz
+30,7,2022,9,1,Veracruz
+30,7,2023,1,1,Veracruz
+30,7,2023,3,3,Veracruz
+30,7,2023,4,1,Veracruz
+30,7,2023,5,1,Veracruz
+30,7,2023,7,1,Veracruz
+30,7,2023,9,1,Veracruz
+30,7,2023,10,3,Veracruz
+30,7,2023,11,3,Veracruz
+30,7,2024,1,5,Veracruz
+30,7,2024,2,4,Veracruz
+30,7,2024,3,3,Veracruz
+30,7,2024,4,2,Veracruz
+30,7,2024,5,4,Veracruz
+30,7,2024,7,1,Veracruz

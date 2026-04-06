@@ -3,7 +3,7 @@
 Outputs (PDF + PNG) in manuscript/figures/:
   fig1_time_series_by_status   — monthly national counts, 4-panel by status, sex-disaggregated
   fig2_gini_time_series        — Gini coefficient over time, 4 statuses
-  fig3_lorenz_curves           — Lorenz curves, 4 statuses × 3 time points (Jun 2015/2019/2025)
+  fig3_gini_time_series        — Gini time series with OLS slopes, 4 statuses, ref line at 0.90
   fig4_morans_i_time_series    — Global Moran's I over time, 4 statuses
   fig5_lisa_maps_latest        — LISA maps Jun 2025, 2×2 grid by status
   fig6_hh_trend_norte_bajio    — HH municipalities over time, Norte vs Bajío, 4-panel
@@ -67,13 +67,13 @@ SEX_LABELS  = {"total": "Total",   "male": "Male",     "female": "Female"}
 
 LISA_COLORS = {
     "HH": "#c0392b",   # red
-    "LL": "#2980b9",   # blue
+    "LL": "#D9D9D9",   # grey (suppressed — LL not interpreted)
     "HL": "#f39c12",   # orange
     "LH": "#85c1e9",   # light blue
     "NS": "#e8e8e8",   # light gray
 }
 LISA_ORDER  = ["HH", "LL", "HL", "LH", "NS"]
-LISA_LABELS = {"HH": "High-High", "LL": "Low-Low", "HL": "High-Low", "LH": "Low-High", "NS": "Not Sig."}
+LISA_LABELS = {"HH": "High-High", "LL": "LL (not interpreted)", "HL": "High-Low", "LH": "Low-High", "NS": "Not Sig."}
 
 MAP_DPI       = 150   # for PNG of map figures
 NONMAP_DPI    = 300   # for PNG of non-map figures
@@ -111,17 +111,6 @@ def save_fig(fig, name: str, is_map: bool = False):
 def ym_to_date(year_arr, month_arr):
     """Convert parallel year/month arrays to list of pd.Timestamp."""
     return [pd.Timestamp(y, m, 1) for y, m in zip(year_arr, month_arr)]
-
-
-def lorenz_xy(counts: np.ndarray):
-    """Compute Lorenz curve (x, y) where x=cum. share of munis, y=cum. share of cases."""
-    v = np.sort(counts[counts >= 0].astype(float))
-    n = len(v)
-    cum = np.concatenate([[0.0], np.cumsum(v)])
-    total = cum[-1]
-    x = np.arange(n + 1) / n
-    y = cum / total if total > 0 else cum
-    return x, y
 
 
 def ols_trend(y: np.ndarray):
@@ -229,53 +218,48 @@ def make_fig2(conc: pl.DataFrame):
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 3: Lorenz curves
+# FIGURE 3: Gini time series with OLS slopes
 # ---------------------------------------------------------------------------
-def make_fig3(panel: pl.DataFrame):
-    log.info("Fig 3: Lorenz curves...")
+def make_fig3(conc: pl.DataFrame):
+    log.info("Fig 3: Gini time series with OLS slopes...")
 
-    TIME_POINTS = [(2015, 6, "Jun 2015"), (2019, 6, "Jun 2019"), (2025, 6, "Jun 2025")]
-    TP_COLORS   = ["#2c3e50", "#8e44ad", "#e67e22"]
-    TP_STYLES   = ["-", "--", ":"]
+    df = conc.to_pandas()
+    fig, ax = plt.subplots(figsize=(12, 5))
 
-    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
-    axes = axes.flatten()
+    for sid in STATUS_IDS:
+        sub = df[df["status_id"] == sid].sort_values(["year", "month"])
+        dates = ym_to_date(sub["year"], sub["month"])
+        y = sub["gini"].values
+        ax.plot(dates, y, color=STATUS_COLORS[sid],
+                linewidth=1.6, label=STATUS_LABELS[sid], alpha=0.9)
 
-    for i, sid in enumerate(STATUS_IDS):
-        ax = axes[i]
-        for (y, m, label), color, ls in zip(TIME_POINTS, TP_COLORS, TP_STYLES):
-            sub = (
-                panel.filter(
-                    (pl.col("status_id") == sid) &
-                    (pl.col("year") == y) &
-                    (pl.col("month") == m)
-                )
-                .select("total")
-                .to_series()
-                .to_numpy()
-            )
-            if sub.sum() == 0:
-                continue
-            x, yc = lorenz_xy(sub)
-            ax.plot(x, yc, color=color, linestyle=ls, linewidth=1.8, label=label)
+        # OLS trend annotation (slope per decade = slope_per_month * 120)
+        if len(y) >= 6:
+            sl = ols_trend(y)
+            slope_decade = sl.slope * 120
+            p_str = "p<0.001" if sl.pvalue < 0.001 else f"p={sl.pvalue:.3f}"
+            sig = "*" if sl.pvalue < 0.05 else ""
+            label_txt = f"{STATUS_LABELS[sid]}: {slope_decade:+.4f}/dec {sig}({p_str})"
+            # Place annotation in the plot area
+            ax.annotate(label_txt, xy=(dates[-1], y[-1]),
+                        xytext=(8, 0), textcoords="offset points",
+                        fontsize=7.5, color=STATUS_COLORS[sid], va="center")
 
-        # Perfect equality diagonal
-        ax.plot([0, 1], [0, 1], color="#bdc3c7", linestyle="--", linewidth=1, label="Perfect equality")
-
-        ax.set_title(STATUS_LABELS[sid], color=STATUS_COLORS[sid], fontweight="bold")
-        ax.set_xlabel("Cumulative share of municipalities")
-        ax.set_ylabel("Cumulative share of cases")
-        ax.set_xlim(0, 1); ax.set_ylim(0, 1)
-        ax.set_aspect("equal")
-        ax.grid(True, alpha=0.3, linestyle="--")
-        ax.spines[["top", "right"]].set_visible(False)
-        if i == 0:
-            ax.legend(loc="upper left", fontsize=8)
-
-    fig.suptitle("Lorenz Curves of Case Distribution by Outcome Status\nSelected Time Points",
-                 fontsize=13)
+    ax.axhline(0.90, color="#7f8c8d", linestyle="--", linewidth=1.0, alpha=0.7,
+               label="Reference (Gini = 0.90)")
+    ax.set_ylabel("Gini Coefficient")
+    ax.set_xlabel("")
+    ax.set_title("Geographic Concentration (Gini) by Outcome Status, 2015–2025\n"
+                 "with OLS Trend Slopes (per decade)")
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+    ax.xaxis.set_major_locator(mdates.YearLocator(1))
+    ax.tick_params(axis="x", rotation=45)
+    ax.set_ylim(0.85, 1.0)
+    ax.legend(loc="lower left", fontsize=8)
+    ax.grid(True, alpha=0.3, linestyle="--")
+    ax.spines[["top", "right"]].set_visible(False)
     plt.tight_layout()
-    save_fig(fig, "fig3_lorenz_curves", is_map=False)
+    save_fig(fig, "fig3_gini_time_series", is_map=False)
 
 
 # ---------------------------------------------------------------------------
@@ -353,7 +337,7 @@ def make_fig5(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
 # FIGURE 6: HH trend Norte vs Bajío, 4-panel by status
 # ---------------------------------------------------------------------------
 def make_fig6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
-    log.info("Fig 6: HH trend Norte vs Bajío...")
+    log.info("Fig 6: HH trend Norte vs Bajío vs Centro...")
 
     hh_total = (
         lisa.filter(
@@ -364,43 +348,50 @@ def make_fig6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
         .join(muni_meta, on="cvegeo", how="left")
     )
 
+    REGION_SPECS = [
+        ("Norte",  "region",   "Norte",  "#c0392b", "-"),
+        ("Bajío",  "is_bajio", True,     "#f39c12", "--"),
+        ("Centro", "region",   "Centro", "#2ca02c", "-"),
+    ]
+
     fig, axes = plt.subplots(2, 2, figsize=(14, 10), sharex=True)
     axes = axes.flatten()
 
     for i, sid in enumerate(STATUS_IDS):
         ax = axes[i]
         sub = hh_total.filter(pl.col("status_id") == sid)
+        annotations = []
 
-        norte = (
-            sub.filter(pl.col("region") == "Norte")
-            .group_by(["year", "month"])
-            .agg(pl.len().alias("n"))
-            .sort(["year", "month"])
-            .to_pandas()
-        )
-        bajio = (
-            sub.filter(pl.col("is_bajio") == True)
-            .group_by(["year", "month"])
-            .agg(pl.len().alias("n"))
-            .sort(["year", "month"])
-            .to_pandas()
-        )
-
-        for df_reg, label, color, ls in [
-            (norte, "Norte",  "#c0392b", "-"),
-            (bajio, "Bajío",  "#f39c12", "--"),
-        ]:
+        for label, col, val, color, ls in REGION_SPECS:
+            df_reg = (
+                sub.filter(pl.col(col) == val)
+                .group_by(["year", "month"])
+                .agg(pl.len().alias("n"))
+                .sort(["year", "month"])
+                .to_pandas()
+            )
             if len(df_reg) == 0:
                 continue
             dates = ym_to_date(df_reg["year"], df_reg["month"])
             y     = df_reg["n"].values
             ax.plot(dates, y, color=color, linestyle=ls, linewidth=1.8, label=label, alpha=0.9)
-            # OLS trend line
+            # OLS trend line + annotation
             if len(y) >= 6:
                 sl = ols_trend(y)
                 x_num = np.arange(len(y))
                 trend = sl.intercept + sl.slope * x_num
                 ax.plot(dates, trend, color=color, linestyle=":", linewidth=1.0, alpha=0.6)
+                slope_yr = sl.slope * 12
+                p_str = "p<0.001" if sl.pvalue < 0.001 else f"p={sl.pvalue:.3f}"
+                sig = "*" if sl.pvalue < 0.05 else ""
+                annotations.append(f"{label}: {slope_yr:+.2f} munis/yr {sig}({p_str})")
+
+        # Place OLS annotations in top-right of panel
+        if annotations:
+            txt = "\n".join(annotations)
+            ax.text(0.97, 0.97, txt, transform=ax.transAxes, fontsize=7,
+                    va="top", ha="right", family="monospace",
+                    bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.8))
 
         ax.set_title(STATUS_LABELS[sid], color=STATUS_COLORS[sid], fontweight="bold")
         ax.set_ylabel("HH municipalities")
@@ -412,7 +403,8 @@ def make_fig6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
         if i == 0:
             ax.legend(loc="upper left")
 
-    fig.suptitle("High-High Cluster Municipalities Over Time: Norte vs. Bajío\n(dotted lines = OLS trend)",
+    fig.suptitle("High-High Cluster Municipalities Over Time: Norte vs. Bajío vs. Centro\n"
+                 "(dotted lines = OLS trend)",
                  fontsize=13)
     plt.tight_layout()
     save_fig(fig, "fig6_hh_trend_norte_bajio", is_map=False)
@@ -621,7 +613,7 @@ def main():
     # --- Generate figures ---
     make_fig1(panel)
     make_fig2(conc)
-    make_fig3(panel)
+    make_fig3(conc)
     make_fig4(moran)
     make_fig5(lisa, gdf_map)
     make_fig6(lisa, muni_meta)
