@@ -1,21 +1,25 @@
-status_id,status_name,region,dec_2015,dec_2025,slope_per_year,pval,sig
-0,Total,Norte,7,19,0.643,0.0002,*
-0,Total,Centro-Norte,8,0,-0.739,0.0252,*
-0,Total,Norte-Occidente,2,7,0.577,0.0004,*
-0,Total,Centro,32,40,2.764,0.0008,*
-0,Total,Sur,4,6,0.112,0.4263,
-7,Not Located,Norte,8,8,0.226,0.1481,
-7,Not Located,Centro-Norte,4,0,-0.478,0.1106,
-7,Not Located,Norte-Occidente,1,4,0.44,0.0003,*
-7,Not Located,Centro,8,37,4.183,0.0,*
-7,Not Located,Sur,0,4,0.305,0.0003,*
-2,Located Alive,Norte,4,17,1.098,0.0,*
-2,Located Alive,Centro-Norte,2,0,-0.026,0.9017,
-2,Located Alive,Norte-Occidente,0,4,0.527,0.0,*
-2,Located Alive,Centro,27,31,3.041,0.0005,*
-2,Located Alive,Sur,6,0,0.212,0.0413,*
-3,Located Dead,Norte,0,7,0.437,0.0003,*
-3,Located Dead,Centro-Norte,0,0,-0.205,0.3664,
-3,Located Dead,Norte-Occidente,2,0,-0.014,0.8502,
-3,Located Dead,Centro,6,0,0.864,0.0,*
-3,Located Dead,Sur,0,0,0.01,0.9095,
+region,status_id,status_label,slope_yr,nw_se,p_value
+Norte,0,Total,0.6240,0.2527,0.0135
+Norte,7,Not Located,0.5904,0.1875,0.0016
+Norte,2,Located Alive,1.0586,0.2550,0.0000
+Norte,3,Located Dead,0.7802,0.1354,0.0000
+Norte-Occidente,0,Total,0.6262,0.1082,0.0000
+Norte-Occidente,7,Not Located,0.5025,0.0914,0.0000
+Norte-Occidente,2,Located Alive,0.8120,0.0956,0.0000
+Norte-Occidente,3,Located Dead,0.0813,0.0653,0.2132
+Centro-Norte,0,Total,-1.0221,0.4775,0.0323
+Centro-Norte,7,Not Located,-0.7558,0.3294,0.0218
+Centro-Norte,2,Located Alive,-0.0218,0.3014,0.9425
+Centro-Norte,3,Located Dead,-0.0493,0.2457,0.8410
+Centro,0,Total,3.4257,0.8919,0.0001
+Centro,7,Not Located,4.9621,0.4396,0.0000
+Centro,2,Located Alive,3.6298,0.9571,0.0001
+Centro,3,Located Dead,1.2626,0.1780,0.0000
+Sur,0,Total,-0.1664,0.1591,0.2958
+Sur,7,Not Located,0.3023,0.1163,0.0094
+Sur,2,Located Alive,0.0294,0.1272,0.8170
+Sur,3,Located Dead,0.0274,0.0359,0.4454
+Bajio,0,Total,-1.0852,0.4795,0.0236
+Bajio,7,Not Located,0.2433,0.3884,0.5310
+Bajio,2,Located Alive,-0.4681,0.5686,0.4104
+Bajio,3,Located Dead,0.2218,0.2216,0.3169

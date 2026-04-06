@@ -1,19 +1,49 @@
-period,status_a,status_b,n_hh_a,n_hh_b,intersection,union,jaccard
-Jan 2015,Total,Not Located,61,39,20,80,0.25
-Jan 2015,Total,Located Alive,61,44,44,61,0.7213
-Jan 2015,Total,Located Dead,61,2,1,62,0.0161
-Jan 2015,Not Located,Located Alive,39,44,10,73,0.137
-Jan 2015,Not Located,Located Dead,39,2,0,41,0.0
-Jan 2015,Located Alive,Located Dead,44,2,0,46,0.0
-Jan 2020,Total,Not Located,96,52,30,118,0.2542
-Jan 2020,Total,Located Alive,96,79,72,103,0.699
-Jan 2020,Total,Located Dead,96,23,14,105,0.1333
-Jan 2020,Not Located,Located Alive,52,79,16,115,0.1391
-Jan 2020,Not Located,Located Dead,52,23,7,68,0.1029
-Jan 2020,Located Alive,Located Dead,79,23,12,90,0.1333
-Dec 2025,Total,Not Located,72,53,46,79,0.5823
-Dec 2025,Total,Located Alive,72,52,46,78,0.5897
-Dec 2025,Total,Located Dead,72,7,5,74,0.0676
-Dec 2025,Not Located,Located Alive,53,52,28,77,0.3636
-Dec 2025,Not Located,Located Dead,53,7,2,58,0.0345
-Dec 2025,Located Alive,Located Dead,52,7,4,55,0.0727
+period,status_a,status_b,jaccard
+Jun 2015,Total,Total,1.000
+Jun 2015,Total,Not Located,0.247
+Jun 2015,Total,Located Alive,0.616
+Jun 2015,Total,Located Dead,0.024
+Jun 2015,Not Located,Total,0.247
+Jun 2015,Not Located,Not Located,1.000
+Jun 2015,Not Located,Located Alive,0.066
+Jun 2015,Not Located,Located Dead,0.103
+Jun 2015,Located Alive,Total,0.616
+Jun 2015,Located Alive,Not Located,0.066
+Jun 2015,Located Alive,Located Alive,1.000
+Jun 2015,Located Alive,Located Dead,0.000
+Jun 2015,Located Dead,Total,0.024
+Jun 2015,Located Dead,Not Located,0.103
+Jun 2015,Located Dead,Located Alive,0.000
+Jun 2015,Located Dead,Located Dead,1.000
+Jun 2020,Total,Total,1.000
+Jun 2020,Total,Not Located,0.218
+Jun 2020,Total,Located Alive,0.657
+Jun 2020,Total,Located Dead,0.216
+Jun 2020,Not Located,Total,0.218
+Jun 2020,Not Located,Not Located,1.000
+Jun 2020,Not Located,Located Alive,0.106
+Jun 2020,Not Located,Located Dead,0.164
+Jun 2020,Located Alive,Total,0.657
+Jun 2020,Located Alive,Not Located,0.106
+Jun 2020,Located Alive,Located Alive,1.000
+Jun 2020,Located Alive,Located Dead,0.198
+Jun 2020,Located Dead,Total,0.216
+Jun 2020,Located Dead,Not Located,0.164
+Jun 2020,Located Dead,Located Alive,0.198
+Jun 2020,Located Dead,Located Dead,1.000
+Jun 2025,Total,Total,1.000
+Jun 2025,Total,Not Located,0.555
+Jun 2025,Total,Located Alive,0.674
+Jun 2025,Total,Located Dead,0.205
+Jun 2025,Not Located,Total,0.555
+Jun 2025,Not Located,Not Located,1.000
+Jun 2025,Not Located,Located Alive,0.381
+Jun 2025,Not Located,Located Dead,0.143
+Jun 2025,Located Alive,Total,0.674
+Jun 2025,Located Alive,Not Located,0.381
+Jun 2025,Located Alive,Located Alive,1.000
+Jun 2025,Located Alive,Located Dead,0.151
+Jun 2025,Located Dead,Total,0.205
+Jun 2025,Located Dead,Not Located,0.143
+Jun 2025,Located Dead,Located Alive,0.151
+Jun 2025,Located Dead,Located Dead,1.000

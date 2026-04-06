@@ -1,0 +1,25 @@
+region,status_id,status_label,slope_yr,nw_se,t_stat,p_value
+Norte,0,Total,0.6240,0.2527,2.469,0.0135
+Norte,7,Not Located,0.5904,0.1875,3.149,0.0016
+Norte,2,Located Alive,1.0586,0.2550,4.152,0.0000
+Norte,3,Located Dead,0.7802,0.1354,5.764,0.0000
+Norte-Occidente,0,Total,0.6262,0.1082,5.786,0.0000
+Norte-Occidente,7,Not Located,0.5025,0.0914,5.496,0.0000
+Norte-Occidente,2,Located Alive,0.8120,0.0956,8.496,0.0000
+Norte-Occidente,3,Located Dead,0.0813,0.0653,1.245,0.2132
+Centro-Norte,0,Total,-1.0221,0.4775,-2.141,0.0323
+Centro-Norte,7,Not Located,-0.7558,0.3294,-2.294,0.0218
+Centro-Norte,2,Located Alive,-0.0218,0.3014,-0.072,0.9425
+Centro-Norte,3,Located Dead,-0.0493,0.2457,-0.201,0.8410
+Centro,0,Total,3.4257,0.8919,3.841,0.0001
+Centro,7,Not Located,4.9621,0.4396,11.287,0.0000
+Centro,2,Located Alive,3.6298,0.9571,3.792,0.0001
+Centro,3,Located Dead,1.2626,0.1780,7.094,0.0000
+Sur,0,Total,-0.1664,0.1591,-1.045,0.2958
+Sur,7,Not Located,0.3023,0.1163,2.599,0.0094
+Sur,2,Located Alive,0.0294,0.1272,0.231,0.8170
+Sur,3,Located Dead,0.0274,0.0359,0.763,0.4454
+Bajio,0,Total,-1.0852,0.4795,-2.263,0.0236
+Bajio,7,Not Located,0.2433,0.3884,0.626,0.5310
+Bajio,2,Located Alive,-0.4681,0.5686,-0.823,0.4104
+Bajio,3,Located Dead,0.2218,0.2216,1.001,0.3169
