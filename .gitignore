@@ -11,3 +11,14 @@ data/raw/*
 .DS_Store
 # Virtual environments
 .venv
+
+# Environment secrets
+.env
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz

@@ -1,112 +1,111 @@
 year,status,metric,cluster_id,n_munis,region,pct_bajio,is_bajio_cluster,dominant_band,band_label,centroid_x,centroid_y
-2015,total,rates,2015_total_rates_001,3,Norte,0.0,False,2,Band 2: Small Town,-112.913445,31.358043
-2015,total,rates,2015_total_rates_002,31,Centro,1.0,True,2,Band 2: Small Town,-101.069801,20.753195
-2015,total,rates,2015_total_rates_003,11,Centro-Norte,0.5455,True,1,Band 1: Rural,-103.884279,20.993427
-2015,total,rates,2015_total_rates_004,12,Sur,0.0,False,1,Band 1: Rural,-96.703738,17.06414
-2015,total,rates,2015_total_rates_005,6,Norte,0.0,False,1,Band 1: Rural,-106.092316,30.776588
-2015,total,rates,2015_total_rates_006,4,Norte,0.0,False,2,Band 2: Small Town,-98.196089,24.267491
-2015,total,rates,2015_total_rates_007,5,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.34542,21.961926
-2015,total,rates,2015_total_rates_008,4,Sur,0.0,False,2,Band 2: Small Town,-99.816115,18.006363
-2015,total,rates,2015_total_rates_009,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.568801,19.252665
-2015,total,rates,2015_total_rates_010,7,Norte,0.0,False,1,Band 1: Rural,-100.093485,27.059552
-2015,total,rates,2015_total_rates_011,4,Centro,1.0,True,2,Band 2: Small Town,-100.97088,20.533255
-2015,total,rates,2015_total_rates_012,4,Norte,0.0,False,1,Band 1: Rural,-106.250139,27.48978
-2015,total,rates,2015_total_rates_013,3,Sur,0.0,False,1,Band 1: Rural,-89.684961,20.829578
-2016,total,rates,2016_total_rates_001,4,Norte,0.0,False,1,Band 1: Rural,-112.70864,31.006393
-2016,total,rates,2016_total_rates_002,9,Sur,0.0,False,1,Band 1: Rural,-96.732046,17.050097
-2016,total,rates,2016_total_rates_003,14,Norte,0.0,False,1,Band 1: Rural,-98.661236,23.379772
-2016,total,rates,2016_total_rates_004,26,Norte,0.0,False,1,Band 1: Rural,-99.39843,26.216338
-2016,total,rates,2016_total_rates_005,3,Norte,0.0,False,1,Band 1: Rural,-108.256622,27.12069
-2016,total,rates,2016_total_rates_006,7,Centro-Norte,0.0,False,1,Band 1: Rural,-104.502988,20.102291
-2016,total,rates,2016_total_rates_007,6,Norte,0.0,False,1,Band 1: Rural,-106.092316,30.776588
-2016,total,rates,2016_total_rates_008,6,Centro-Norte,0.0,False,3,Band 3: Mid-Size,-103.791936,19.223657
-2016,total,rates,2016_total_rates_009,3,Centro-Norte,0.0,False,1,Band 1: Rural,-102.905535,20.095572
-2016,total,rates,2016_total_rates_010,5,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.293314,21.984118
-2016,total,rates,2016_total_rates_011,3,Sur,0.0,False,1,Band 1: Rural,-99.365196,17.589523
-2016,total,rates,2016_total_rates_012,3,Centro-Norte,0.0,False,1,Band 1: Rural,-102.971144,19.844589
-2017,total,rates,2017_total_rates_001,16,Norte,0.0,False,1,Band 1: Rural,-111.279319,30.684307
-2017,total,rates,2017_total_rates_002,9,Sur,0.0,False,1,Band 1: Rural,-96.726915,17.041033
-2017,total,rates,2017_total_rates_003,35,Norte,0.0,False,1,Band 1: Rural,-98.983653,25.000327
-2017,total,rates,2017_total_rates_004,21,Norte,0.0,False,1,Band 1: Rural,-107.610933,29.257365
-2017,total,rates,2017_total_rates_005,6,Centro-Norte,0.0,False,3,Band 3: Mid-Size,-103.791936,19.223657
-2017,total,rates,2017_total_rates_006,3,Norte,0.0,False,1,Band 1: Rural,-110.812611,28.175533
-2017,total,rates,2017_total_rates_007,7,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.327811,22.02626
-2017,total,rates,2017_total_rates_008,6,Sur,0.0,False,1,Band 1: Rural,-99.504889,17.791152
-2017,total,rates,2017_total_rates_009,3,Norte,0.0,False,2,Band 2: Small Town,-109.809005,27.304568
-2017,total,rates,2017_total_rates_010,3,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.252826,21.011239
-2018,total,rates,2018_total_rates_001,8,Norte,0.0,False,1,Band 1: Rural,-111.861054,31.163637
-2018,total,rates,2018_total_rates_002,6,Sur,0.0,False,1,Band 1: Rural,-96.705888,17.006692
-2018,total,rates,2018_total_rates_003,6,Centro-Norte,1.0,True,1,Band 1: Rural,-103.734044,20.776632
-2018,total,rates,2018_total_rates_004,5,Centro-Norte,0.0,False,3,Band 3: Mid-Size,-103.751001,19.266684
-2018,total,rates,2018_total_rates_005,23,Norte,0.0,False,1,Band 1: Rural,-107.407657,29.451295
-2018,total,rates,2018_total_rates_006,22,Norte,0.0,False,1,Band 1: Rural,-99.837735,26.360496
-2018,total,rates,2018_total_rates_007,4,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.357597,21.999684
-2018,total,rates,2018_total_rates_008,3,Norte,0.0,False,1,Band 1: Rural,-98.956218,22.950178
-2018,total,rates,2018_total_rates_009,4,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.2786,20.54287
-2018,total,rates,2018_total_rates_010,3,Centro-Norte,0.6667,True,2,Band 2: Small Town,-101.438065,19.751226
-2019,total,rates,2019_total_rates_001,9,Sur,0.0,False,1,Band 1: Rural,-96.736508,17.04284
-2019,total,rates,2019_total_rates_002,41,Centro-Norte,0.7073,True,2,Band 2: Small Town,-102.765267,20.550663
-2019,total,rates,2019_total_rates_003,20,Norte-Occidente,0.45,False,1,Band 1: Rural,-102.863255,22.711346
-2019,total,rates,2019_total_rates_004,4,Norte,0.0,False,2,Band 2: Small Town,-98.027301,25.117377
-2019,total,rates,2019_total_rates_005,4,Norte,0.0,False,1,Band 1: Rural,-107.8869,30.9337
-2019,total,rates,2019_total_rates_006,3,Centro-Norte,0.0,False,2,Band 2: Small Town,-102.79964,20.048197
-2019,total,rates,2019_total_rates_007,7,Centro,0.0,False,3,Band 3: Mid-Size,-99.142882,19.436696
-2019,total,rates,2019_total_rates_008,28,Norte,0.0,False,1,Band 1: Rural,-99.876226,26.338512
-2019,total,rates,2019_total_rates_009,3,Sur,0.0,False,1,Band 1: Rural,-89.020828,21.049814
-2019,total,rates,2019_total_rates_010,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
-2019,total,rates,2019_total_rates_011,3,Norte,0.0,False,3,Band 3: Mid-Size,-100.021715,25.480031
-2019,total,rates,2019_total_rates_012,5,Norte,0.0,False,1,Band 1: Rural,-108.669668,29.306289
-2020,total,rates,2020_total_rates_001,14,Centro,0.0,False,2,Band 2: Small Town,-99.521458,19.226451
-2020,total,rates,2020_total_rates_002,30,Norte-Occidente,0.3333,False,1,Band 1: Rural,-103.254427,22.919117
+2015,total,rates,2015_total_rates_001,42,Centro,1.0,True,2,Band 2: Small Town,-101.115101,20.818786
+2015,total,rates,2015_total_rates_002,7,Sur,0.0,False,1,Band 1: Rural,-89.670958,20.97266
+2015,total,rates,2015_total_rates_003,3,Norte,0.0,False,1,Band 1: Rural,-98.248967,24.428973
+2015,total,rates,2015_total_rates_004,7,Norte,0.0,False,1,Band 1: Rural,-100.093485,27.059552
+2015,total,rates,2015_total_rates_005,17,Norte,0.0,False,1,Band 1: Rural,-106.047294,28.853049
+2015,total,rates,2015_total_rates_006,12,Centro-Norte,0.6667,True,1,Band 1: Rural,-103.848914,21.007411
+2015,total,rates,2015_total_rates_007,13,Sur,0.0,False,1,Band 1: Rural,-96.703722,17.057885
+2015,total,rates,2015_total_rates_008,8,Norte-Occidente,0.0,False,2,Band 2: Small Town,-108.011604,25.550629
+2016,total,rates,2016_total_rates_001,7,Norte,0.0,False,2,Band 2: Small Town,-112.469168,30.458458
+2016,total,rates,2016_total_rates_002,9,Centro-Norte,0.0,False,3,Band 3: Mid-Size,-104.18764,19.193865
+2016,total,rates,2016_total_rates_003,12,Sur,0.0,False,1,Band 1: Rural,-96.704983,17.053358
+2016,total,rates,2016_total_rates_004,11,Norte-Occidente,0.0,False,2,Band 2: Small Town,-108.210594,26.115279
+2016,total,rates,2016_total_rates_005,7,Centro-Norte,0.0,False,1,Band 1: Rural,-104.502988,20.102291
+2016,total,rates,2016_total_rates_006,25,Norte,0.0,False,1,Band 1: Rural,-99.360446,26.206205
+2016,total,rates,2016_total_rates_007,15,Norte,0.0,False,1,Band 1: Rural,-98.679253,23.354832
+2016,total,rates,2016_total_rates_008,3,Centro,0.0,False,2,Band 2: Small Town,-98.918256,19.539164
+2016,total,rates,2016_total_rates_009,9,Norte-Occidente,0.7778,True,2,Band 2: Small Town,-102.825946,21.827982
+2016,total,rates,2016_total_rates_010,6,Norte,0.0,False,1,Band 1: Rural,-106.092316,30.776588
+2016,total,rates,2016_total_rates_011,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.11284,18.890111
+2016,total,rates,2016_total_rates_012,3,Sur,0.0,False,1,Band 1: Rural,-99.365196,17.589523
+2016,total,rates,2016_total_rates_013,3,Centro-Norte,0.0,False,1,Band 1: Rural,-102.971144,19.844589
+2017,total,rates,2017_total_rates_001,4,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.237508,21.147349
+2017,total,rates,2017_total_rates_002,17,Norte,0.0,False,1,Band 1: Rural,-111.459997,30.762693
+2017,total,rates,2017_total_rates_003,12,Centro-Norte,0.0,False,1,Band 1: Rural,-103.942234,19.183875
+2017,total,rates,2017_total_rates_004,12,Sur,0.0,False,1,Band 1: Rural,-96.716512,17.044014
+2017,total,rates,2017_total_rates_005,25,Norte,0.0,False,1,Band 1: Rural,-107.450991,28.997344
+2017,total,rates,2017_total_rates_006,15,Norte,0.0,False,1,Band 1: Rural,-99.431087,26.413904
+2017,total,rates,2017_total_rates_007,19,Norte,0.0,False,1,Band 1: Rural,-98.662539,23.841729
+2017,total,rates,2017_total_rates_008,6,Norte,0.0,False,1,Band 1: Rural,-110.091802,27.526594
+2017,total,rates,2017_total_rates_009,6,Sur,0.0,False,1,Band 1: Rural,-99.504889,17.791152
+2017,total,rates,2017_total_rates_010,3,Centro-Norte,0.6667,True,4,Band 4: Metropolitan,-103.410943,20.431686
+2017,total,rates,2017_total_rates_011,3,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.328066,22.024377
+2018,total,rates,2018_total_rates_001,9,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.372417,21.730919
+2018,total,rates,2018_total_rates_002,8,Norte,0.0,False,1,Band 1: Rural,-111.861054,31.163637
+2018,total,rates,2018_total_rates_003,22,Norte,0.0,False,1,Band 1: Rural,-99.837735,26.360496
+2018,total,rates,2018_total_rates_004,16,Centro-Norte,0.0,False,1,Band 1: Rural,-104.188987,19.315669
+2018,total,rates,2018_total_rates_005,6,Norte,0.0,False,2,Band 2: Small Town,-109.162154,26.749805
+2018,total,rates,2018_total_rates_006,27,Norte,0.0,False,1,Band 1: Rural,-107.263927,29.317839
+2018,total,rates,2018_total_rates_007,13,Centro-Norte,0.8462,True,1,Band 1: Rural,-103.54816,20.697429
+2018,total,rates,2018_total_rates_008,7,Centro-Norte,0.5714,True,1,Band 1: Rural,-102.384879,20.332159
+2018,total,rates,2018_total_rates_009,3,Norte,0.0,False,1,Band 1: Rural,-98.956218,22.950178
+2018,total,rates,2018_total_rates_010,3,Norte,0.0,False,1,Band 1: Rural,-110.374599,27.74862
+2018,total,rates,2018_total_rates_011,8,Sur,0.0,False,2,Band 2: Small Town,-96.732778,17.023602
+2018,total,rates,2018_total_rates_012,3,Centro-Norte,0.6667,True,2,Band 2: Small Town,-101.438065,19.751226
+2018,total,rates,2018_total_rates_013,3,Centro-Norte,0.0,False,1,Band 1: Rural,-102.743976,20.053613
+2019,total,rates,2019_total_rates_001,18,Norte-Occidente,0.4444,False,1,Band 1: Rural,-102.889833,22.659755
+2019,total,rates,2019_total_rates_002,54,Centro-Norte,0.7222,True,2,Band 2: Small Town,-102.907077,20.583742
+2019,total,rates,2019_total_rates_003,13,Sur,0.0,False,1,Band 1: Rural,-96.705385,17.046994
+2019,total,rates,2019_total_rates_004,33,Norte,0.0,False,1,Band 1: Rural,-99.901938,26.208008
+2019,total,rates,2019_total_rates_005,5,Norte,0.0,False,1,Band 1: Rural,-98.029333,24.850511
+2019,total,rates,2019_total_rates_006,3,Sur,0.0,False,1,Band 1: Rural,-89.020828,21.049814
+2019,total,rates,2019_total_rates_007,6,Centro,0.0,False,3,Band 3: Mid-Size,-99.147387,19.425469
+2019,total,rates,2019_total_rates_008,5,Norte,0.0,False,1,Band 1: Rural,-108.669668,29.306289
+2019,total,rates,2019_total_rates_009,3,Centro-Norte,0.0,False,2,Band 2: Small Town,-102.79964,20.048197
+2020,total,rates,2020_total_rates_001,8,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.252974,21.232902
+2020,total,rates,2020_total_rates_002,5,Norte,0.0,False,2,Band 2: Small Town,-111.945749,30.134344
 2020,total,rates,2020_total_rates_003,7,Norte,0.0,False,1,Band 1: Rural,-110.871719,30.761903
-2020,total,rates,2020_total_rates_004,40,Centro,0.0,False,2,Band 2: Small Town,-99.061853,19.030085
-2020,total,rates,2020_total_rates_005,39,Centro-Norte,0.8205,True,2,Band 2: Small Town,-101.989882,20.386963
-2020,total,rates,2020_total_rates_006,3,Centro-Norte,0.0,False,1,Band 1: Rural,-103.312164,18.598745
-2020,total,rates,2020_total_rates_007,7,Sur,0.0,False,1,Band 1: Rural,-96.747558,17.045363
-2020,total,rates,2020_total_rates_008,21,Norte,0.0,False,1,Band 1: Rural,-99.652837,26.261431
-2020,total,rates,2020_total_rates_009,3,Norte,0.0,False,2,Band 2: Small Town,-112.642197,30.768492
-2020,total,rates,2020_total_rates_010,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
-2020,total,rates,2020_total_rates_011,3,Centro-Norte,0.0,False,1,Band 1: Rural,-104.02328,20.162767
-2020,total,rates,2020_total_rates_012,3,Centro,1.0,True,2,Band 2: Small Town,-100.96375,20.530461
-2021,total,rates,2021_total_rates_001,6,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.40539,21.306965
-2021,total,rates,2021_total_rates_002,4,Sur,0.0,False,1,Band 1: Rural,-96.71616,16.999897
-2021,total,rates,2021_total_rates_003,31,Norte-Occidente,0.3548,False,1,Band 1: Rural,-103.015973,22.85324
-2021,total,rates,2021_total_rates_004,30,Centro,0.0,False,2,Band 2: Small Town,-99.316895,18.874176
-2021,total,rates,2021_total_rates_005,8,Centro-Norte,0.5,True,1,Band 1: Rural,-103.525172,20.95336
-2021,total,rates,2021_total_rates_006,37,Norte,0.0,False,1,Band 1: Rural,-99.818831,26.063208
-2021,total,rates,2021_total_rates_007,3,Centro-Norte,0.3333,False,1,Band 1: Rural,-100.288923,22.158186
-2021,total,rates,2021_total_rates_008,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
-2022,total,rates,2022_total_rates_001,6,Sur,0.0,False,1,Band 1: Rural,-96.869659,19.51041
-2022,total,rates,2022_total_rates_002,27,Norte-Occidente,0.4074,False,1,Band 1: Rural,-102.996106,22.825676
-2022,total,rates,2022_total_rates_003,41,Norte,0.0,False,1,Band 1: Rural,-99.856308,26.003959
-2022,total,rates,2022_total_rates_004,18,Centro,0.0,False,2,Band 2: Small Town,-99.186619,18.709923
-2022,total,rates,2022_total_rates_005,4,Sur,0.0,False,2,Band 2: Small Town,-96.931668,18.88251
-2022,total,rates,2022_total_rates_006,5,Centro,0.0,False,1,Band 1: Rural,-98.135635,19.26861
-2022,total,rates,2022_total_rates_007,5,Norte,0.0,False,1,Band 1: Rural,-99.091133,23.809056
-2022,total,rates,2022_total_rates_008,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
-2023,total,rates,2023_total_rates_001,4,Centro,0.0,False,1,Band 1: Rural,-98.359552,18.197831
-2023,total,rates,2023_total_rates_002,17,Centro,0.0,False,1,Band 1: Rural,-99.53977,19.25683
-2023,total,rates,2023_total_rates_003,32,Norte-Occidente,0.4688,False,1,Band 1: Rural,-102.73723,22.771601
-2023,total,rates,2023_total_rates_004,8,Centro-Norte,0.75,True,1,Band 1: Rural,-101.581879,19.847486
-2023,total,rates,2023_total_rates_005,51,Norte,0.0,False,1,Band 1: Rural,-99.550461,25.400108
-2023,total,rates,2023_total_rates_006,8,Centro,0.0,False,3,Band 3: Mid-Size,-99.114586,18.838584
-2023,total,rates,2023_total_rates_007,6,Centro,0.0,False,2,Band 2: Small Town,-99.923055,19.211187
-2023,total,rates,2023_total_rates_008,4,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.357597,21.999684
-2023,total,rates,2023_total_rates_009,8,Norte,0.0,False,1,Band 1: Rural,-111.924451,30.952782
-2023,total,rates,2023_total_rates_010,3,Centro-Norte,0.0,False,1,Band 1: Rural,-99.776651,22.017389
-2023,total,rates,2023_total_rates_011,3,Centro-Norte,0.6667,True,1,Band 1: Rural,-102.016434,20.187341
-2024,total,rates,2024_total_rates_001,18,Norte,0.0,False,1,Band 1: Rural,-111.450112,30.560057
-2024,total,rates,2024_total_rates_002,46,Norte,0.0,False,1,Band 1: Rural,-99.615965,25.598428
-2024,total,rates,2024_total_rates_003,7,Centro,0.0,False,1,Band 1: Rural,-98.376894,19.082213
-2024,total,rates,2024_total_rates_004,19,Norte-Occidente,0.6316,True,1,Band 1: Rural,-102.645907,22.725517
-2024,total,rates,2024_total_rates_005,11,Centro-Norte,0.9091,True,2,Band 2: Small Town,-101.335033,20.096066
-2024,total,rates,2024_total_rates_006,24,Centro,0.0,False,3,Band 3: Mid-Size,-99.368696,19.380262
-2024,total,rates,2024_total_rates_007,4,Centro,0.0,False,1,Band 1: Rural,-97.938683,18.937018
-2024,total,rates,2024_total_rates_008,4,Centro,0.0,False,3,Band 3: Mid-Size,-98.757516,20.019122
-2024,total,rates,2024_total_rates_009,4,Centro,0.0,False,1,Band 1: Rural,-98.489121,18.631974
-2024,total,rates,2024_total_rates_010,8,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.278609,22.044838
-2024,total,rates,2024_total_rates_011,8,Centro,0.0,False,2,Band 2: Small Town,-98.797362,19.893577
-2024,total,rates,2024_total_rates_012,3,Centro,0.0,False,3,Band 3: Mid-Size,-98.819783,19.276041
-2024,total,rates,2024_total_rates_013,6,Norte,0.0,False,1,Band 1: Rural,-109.294115,28.07231
-2024,total,rates,2024_total_rates_014,5,Norte-Occidente,0.0,False,2,Band 2: Small Town,-105.561559,23.177523
-2024,total,rates,2024_total_rates_015,3,Centro,0.0,False,2,Band 2: Small Town,-99.272083,19.976945
+2020,total,rates,2020_total_rates_004,11,Centro,0.0,False,2,Band 2: Small Town,-99.519415,19.264558
+2020,total,rates,2020_total_rates_005,14,Centro-Norte,0.7857,True,2,Band 2: Small Town,-103.302599,20.50614
+2020,total,rates,2020_total_rates_006,6,Centro,0.0,False,1,Band 1: Rural,-98.246621,19.334678
+2020,total,rates,2020_total_rates_007,19,Norte,0.0,False,1,Band 1: Rural,-99.683,26.237748
+2020,total,rates,2020_total_rates_008,4,Centro,0.0,False,3,Band 3: Mid-Size,-98.901594,19.551794
+2020,total,rates,2020_total_rates_009,24,Centro,0.0,False,1,Band 1: Rural,-99.113928,18.865818
+2020,total,rates,2020_total_rates_010,18,Centro-Norte,0.6111,True,1,Band 1: Rural,-101.975924,20.103584
+2020,total,rates,2020_total_rates_011,26,Norte-Occidente,0.3462,False,1,Band 1: Rural,-103.275015,22.973802
+2020,total,rates,2020_total_rates_012,5,Centro-Norte,0.0,False,1,Band 1: Rural,-103.45005,18.776001
+2020,total,rates,2020_total_rates_013,3,Centro,0.0,False,3,Band 3: Mid-Size,-98.683778,20.040716
+2020,total,rates,2020_total_rates_014,7,Sur,0.0,False,1,Band 1: Rural,-96.736454,17.038211
+2020,total,rates,2020_total_rates_015,3,Centro-Norte,0.0,False,1,Band 1: Rural,-104.02328,20.162767
+2020,total,rates,2020_total_rates_016,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.119137,19.705197
+2021,total,rates,2021_total_rates_001,36,Norte-Occidente,0.3056,False,1,Band 1: Rural,-103.325948,22.710483
+2021,total,rates,2021_total_rates_002,8,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.351147,21.248634
+2021,total,rates,2021_total_rates_003,47,Norte,0.0,False,1,Band 1: Rural,-99.887258,26.072968
+2021,total,rates,2021_total_rates_004,20,Centro-Norte,0.65,True,2,Band 2: Small Town,-103.391001,20.720228
+2021,total,rates,2021_total_rates_005,8,Centro,0.0,False,1,Band 1: Rural,-98.187744,19.350199
+2021,total,rates,2021_total_rates_006,3,Sur,0.0,False,2,Band 2: Small Town,-97.150202,18.850564
+2021,total,rates,2021_total_rates_007,33,Centro,0.0,False,2,Band 2: Small Town,-99.327045,18.893864
+2021,total,rates,2021_total_rates_008,5,Sur,0.0,False,1,Band 1: Rural,-96.710046,16.998312
+2021,total,rates,2021_total_rates_009,3,Sur,0.0,False,2,Band 2: Small Town,-96.150807,18.953554
+2021,total,rates,2021_total_rates_010,5,Centro,0.0,False,3,Band 3: Mid-Size,-99.073796,19.728368
+2021,total,rates,2021_total_rates_011,3,Sur,0.0,False,1,Band 1: Rural,-96.929284,19.565385
+2021,total,rates,2021_total_rates_012,3,Centro-Norte,0.3333,False,1,Band 1: Rural,-100.288923,22.158186
+2022,total,rates,2022_total_rates_001,31,Norte-Occidente,0.3871,False,1,Band 1: Rural,-103.199482,22.686068
+2022,total,rates,2022_total_rates_002,45,Norte,0.0,False,1,Band 1: Rural,-99.892865,25.964138
+2022,total,rates,2022_total_rates_003,7,Sur,0.0,False,2,Band 2: Small Town,-96.878352,19.50143
+2022,total,rates,2022_total_rates_004,19,Centro,0.0,False,1,Band 1: Rural,-98.159185,19.291733
+2022,total,rates,2022_total_rates_005,3,Sur,0.0,False,1,Band 1: Rural,-96.240851,19.09311
+2022,total,rates,2022_total_rates_006,6,Norte,0.0,False,1,Band 1: Rural,-98.91552,23.804721
+2022,total,rates,2022_total_rates_007,19,Centro,0.0,False,2,Band 2: Small Town,-99.183755,18.734048
+2022,total,rates,2022_total_rates_008,5,Sur,0.0,False,1,Band 1: Rural,-96.905262,18.871302
+2023,total,rates,2023_total_rates_001,36,Norte-Occidente,0.5278,True,1,Band 1: Rural,-102.700177,22.698544
+2023,total,rates,2023_total_rates_002,8,Norte,0.0,False,1,Band 1: Rural,-111.924451,30.952782
+2023,total,rates,2023_total_rates_003,3,Centro-Norte,0.0,False,1,Band 1: Rural,-99.776651,22.017389
+2023,total,rates,2023_total_rates_004,36,Norte,0.0,False,1,Band 1: Rural,-99.85297,26.015986
+2023,total,rates,2023_total_rates_005,5,Centro,0.0,False,1,Band 1: Rural,-98.350508,18.16884
+2023,total,rates,2023_total_rates_006,5,Centro-Norte,0.8,True,1,Band 1: Rural,-101.644045,19.842911
+2023,total,rates,2023_total_rates_007,12,Centro,0.0,False,4,Band 4: Metropolitan,-99.189093,19.6721
+2023,total,rates,2023_total_rates_008,8,Norte,0.0,False,1,Band 1: Rural,-99.34017,24.076055
+2023,total,rates,2023_total_rates_009,4,Centro,0.0,False,3,Band 3: Mid-Size,-99.0977,18.889966
+2023,total,rates,2023_total_rates_010,15,Centro,0.0,False,2,Band 2: Small Town,-99.618281,19.173254
+2024,total,rates,2024_total_rates_001,25,Norte-Occidente,0.72,True,1,Band 1: Rural,-102.566728,22.576431
+2024,total,rates,2024_total_rates_002,27,Norte,0.0,False,1,Band 1: Rural,-110.893499,29.756483
+2024,total,rates,2024_total_rates_003,64,Centro,0.0,False,2,Band 2: Small Town,-99.141106,19.629935
+2024,total,rates,2024_total_rates_004,49,Norte,0.0,False,1,Band 1: Rural,-99.653672,25.59402
+2024,total,rates,2024_total_rates_005,13,Centro-Norte,0.9231,True,2,Band 2: Small Town,-101.240213,20.167177
+2024,total,rates,2024_total_rates_006,4,Centro,0.0,False,2,Band 2: Small Town,-97.938683,18.937018
+2024,total,rates,2024_total_rates_007,8,Centro,0.0,False,1,Band 1: Rural,-98.372985,19.073248
+2024,total,rates,2024_total_rates_008,9,Norte-Occidente,0.0,False,2,Band 2: Small Town,-105.979056,23.531191
+2024,total,rates,2024_total_rates_009,4,Centro,0.0,False,1,Band 1: Rural,-99.430252,18.810551
+2024,total,rates,2024_total_rates_010,5,Centro,0.0,False,1,Band 1: Rural,-98.516476,18.607649

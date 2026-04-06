@@ -1,86 +1,92 @@
 year,status,metric,cluster_id,n_munis,region,pct_bajio,is_bajio_cluster,dominant_band,band_label,centroid_x,centroid_y
-2015,disappeared,cases,2015_disappeared_cases_001,3,Norte,0.0,False,2,Band 2: Small Town,-112.913445,31.358043
-2015,disappeared,cases,2015_disappeared_cases_002,6,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.294627,20.549445
-2015,disappeared,cases,2015_disappeared_cases_003,3,Norte,0.0,False,4,Band 4: Metropolitan,-110.812611,28.175533
-2015,disappeared,cases,2015_disappeared_cases_004,4,Norte,0.0,False,2,Band 2: Small Town,-97.843301,25.486819
-2015,disappeared,cases,2015_disappeared_cases_005,11,Centro,0.0,False,3,Band 3: Mid-Size,-99.010504,19.430928
-2015,disappeared,cases,2015_disappeared_cases_006,4,Centro-Norte,1.0,True,2,Band 2: Small Town,-103.71487,20.831166
-2015,disappeared,cases,2015_disappeared_cases_007,3,Norte,0.0,False,1,Band 1: Rural,-109.647495,27.066484
-2015,disappeared,cases,2015_disappeared_cases_008,3,Norte,0.0,False,3,Band 3: Mid-Size,-97.937336,22.366713
-2015,disappeared,cases,2015_disappeared_cases_009,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.206529,18.847133
-2015,disappeared,cases,2015_disappeared_cases_010,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
-2016,disappeared,cases,2016_disappeared_cases_001,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.180456,19.7469
-2016,disappeared,cases,2016_disappeared_cases_002,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
-2016,disappeared,cases,2016_disappeared_cases_003,3,Norte,0.0,False,2,Band 2: Small Town,-97.946898,25.445213
-2016,disappeared,cases,2016_disappeared_cases_004,12,Centro,0.0,False,3,Band 3: Mid-Size,-98.975255,19.446429
-2016,disappeared,cases,2016_disappeared_cases_005,3,Centro,0.0,False,3,Band 3: Mid-Size,-98.296328,19.071271
-2016,disappeared,cases,2016_disappeared_cases_006,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
-2016,disappeared,cases,2016_disappeared_cases_007,4,Norte,0.0,False,3,Band 3: Mid-Size,-115.646532,32.028356
-2017,disappeared,cases,2017_disappeared_cases_001,6,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.294627,20.549445
-2017,disappeared,cases,2017_disappeared_cases_002,3,Norte,0.0,False,4,Band 4: Metropolitan,-110.812611,28.175533
-2017,disappeared,cases,2017_disappeared_cases_003,4,Centro,1.0,True,2,Band 2: Small Town,-100.97088,20.533255
-2017,disappeared,cases,2017_disappeared_cases_004,3,Norte,0.0,False,2,Band 2: Small Town,-97.946898,25.445213
-2017,disappeared,cases,2017_disappeared_cases_005,4,Centro-Norte,0.0,False,3,Band 3: Mid-Size,-103.747122,19.234227
-2017,disappeared,cases,2017_disappeared_cases_006,7,Centro,0.0,False,3,Band 3: Mid-Size,-98.977153,19.458248
-2017,disappeared,cases,2017_disappeared_cases_007,4,Norte,0.0,False,3,Band 3: Mid-Size,-98.091612,22.471604
-2017,disappeared,cases,2017_disappeared_cases_008,3,Norte-Occidente,0.0,False,3,Band 3: Mid-Size,-108.64992,26.055351
-2017,disappeared,cases,2017_disappeared_cases_009,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
-2018,disappeared,cases,2018_disappeared_cases_001,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
-2018,disappeared,cases,2018_disappeared_cases_002,5,Sur,0.0,False,3,Band 3: Mid-Size,-93.297742,18.225651
-2018,disappeared,cases,2018_disappeared_cases_003,4,Centro,1.0,True,3,Band 3: Mid-Size,-101.37602,21.077569
-2018,disappeared,cases,2018_disappeared_cases_004,4,Centro,1.0,True,2,Band 2: Small Town,-100.97088,20.533255
-2018,disappeared,cases,2018_disappeared_cases_005,3,Norte,0.0,False,2,Band 2: Small Town,-97.946898,25.445213
-2018,disappeared,cases,2018_disappeared_cases_006,3,Norte,0.0,False,3,Band 3: Mid-Size,-97.945198,22.326531
-2018,disappeared,cases,2018_disappeared_cases_007,3,Centro-Norte,0.6667,True,1,Band 1: Rural,-103.656544,20.595851
-2018,disappeared,cases,2018_disappeared_cases_008,3,Norte-Occidente,0.0,False,2,Band 2: Small Town,-108.64992,26.055351
-2018,disappeared,cases,2018_disappeared_cases_009,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
-2019,disappeared,cases,2019_disappeared_cases_001,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
-2019,disappeared,cases,2019_disappeared_cases_002,3,Sur,0.0,False,3,Band 3: Mid-Size,-92.918584,18.208691
-2019,disappeared,cases,2019_disappeared_cases_003,16,Centro,0.9375,True,2,Band 2: Small Town,-101.886634,20.939864
-2019,disappeared,cases,2019_disappeared_cases_004,4,Centro,1.0,True,2,Band 2: Small Town,-100.97088,20.533255
-2019,disappeared,cases,2019_disappeared_cases_005,4,Norte,0.0,False,2,Band 2: Small Town,-97.843301,25.486819
-2019,disappeared,cases,2019_disappeared_cases_006,13,Centro,0.0,False,3,Band 3: Mid-Size,-99.120774,19.38566
-2019,disappeared,cases,2019_disappeared_cases_007,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
-2020,disappeared,cases,2020_disappeared_cases_001,3,Norte,0.0,False,2,Band 2: Small Town,-97.946898,25.445213
-2020,disappeared,cases,2020_disappeared_cases_002,16,Centro,0.0,False,3,Band 3: Mid-Size,-99.085237,19.407102
-2020,disappeared,cases,2020_disappeared_cases_003,4,Sur,0.0,False,3,Band 3: Mid-Size,-92.803593,18.117742
-2020,disappeared,cases,2020_disappeared_cases_004,6,Centro,0.0,False,3,Band 3: Mid-Size,-99.090906,18.844147
-2020,disappeared,cases,2020_disappeared_cases_005,17,Centro,0.9412,True,2,Band 2: Small Town,-101.861685,20.859175
-2020,disappeared,cases,2020_disappeared_cases_006,4,Norte-Occidente,0.5,True,1,Band 1: Rural,-103.159668,23.363832
-2020,disappeared,cases,2020_disappeared_cases_007,4,Centro-Norte,0.0,False,2,Band 2: Small Town,-102.404412,19.743319
-2020,disappeared,cases,2020_disappeared_cases_008,6,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.294627,20.549445
-2020,disappeared,cases,2020_disappeared_cases_009,4,Centro,1.0,True,2,Band 2: Small Town,-100.97088,20.533255
-2020,disappeared,cases,2020_disappeared_cases_010,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
-2021,disappeared,cases,2021_disappeared_cases_001,5,Centro,0.0,False,3,Band 3: Mid-Size,-99.575787,19.221661
-2021,disappeared,cases,2021_disappeared_cases_002,12,Norte-Occidente,0.25,False,2,Band 2: Small Town,-103.168631,23.152028
-2021,disappeared,cases,2021_disappeared_cases_003,20,Centro,0.0,False,3,Band 3: Mid-Size,-99.046807,19.422073
-2021,disappeared,cases,2021_disappeared_cases_004,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.181318,19.720501
-2021,disappeared,cases,2021_disappeared_cases_005,9,Sur,0.0,False,3,Band 3: Mid-Size,-93.015328,18.077359
-2021,disappeared,cases,2021_disappeared_cases_006,4,Centro,0.0,False,3,Band 3: Mid-Size,-99.220654,18.870067
-2021,disappeared,cases,2021_disappeared_cases_007,7,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.271853,20.539768
-2021,disappeared,cases,2021_disappeared_cases_008,4,Centro-Norte,1.0,True,2,Band 2: Small Town,-102.020143,21.532485
-2021,disappeared,cases,2021_disappeared_cases_009,4,Centro,1.0,True,2,Band 2: Small Town,-100.97088,20.533255
-2021,disappeared,cases,2021_disappeared_cases_010,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
-2022,disappeared,cases,2022_disappeared_cases_001,3,Sur,0.0,False,3,Band 3: Mid-Size,-92.918584,18.208691
-2022,disappeared,cases,2022_disappeared_cases_002,4,Centro,1.0,True,3,Band 3: Mid-Size,-100.97088,20.533255
-2022,disappeared,cases,2022_disappeared_cases_003,4,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.285846,20.606697
-2022,disappeared,cases,2022_disappeared_cases_004,24,Centro,0.0,False,3,Band 3: Mid-Size,-99.090341,19.411166
-2022,disappeared,cases,2022_disappeared_cases_005,7,Norte-Occidente,0.2857,False,2,Band 2: Small Town,-102.970109,23.211449
-2022,disappeared,cases,2022_disappeared_cases_006,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
-2023,disappeared,cases,2023_disappeared_cases_001,36,Centro,0.0,False,3,Band 3: Mid-Size,-99.203682,19.385379
-2023,disappeared,cases,2023_disappeared_cases_002,10,Norte-Occidente,0.5,True,2,Band 2: Small Town,-102.944987,23.132939
-2023,disappeared,cases,2023_disappeared_cases_003,5,Sur,0.0,False,3,Band 3: Mid-Size,-92.88875,18.067037
-2023,disappeared,cases,2023_disappeared_cases_004,6,Norte,0.0,False,3,Band 3: Mid-Size,-100.292716,25.961985
-2023,disappeared,cases,2023_disappeared_cases_005,4,Norte,0.0,False,3,Band 3: Mid-Size,-115.646532,32.028356
-2023,disappeared,cases,2023_disappeared_cases_006,4,Centro,1.0,True,3,Band 3: Mid-Size,-100.97088,20.533255
-2023,disappeared,cases,2023_disappeared_cases_007,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
-2023,disappeared,cases,2023_disappeared_cases_008,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.180456,19.7469
-2024,disappeared,cases,2024_disappeared_cases_001,3,Norte,0.0,False,2,Band 2: Small Town,-112.913445,31.358043
-2024,disappeared,cases,2024_disappeared_cases_002,6,Norte-Occidente,0.6667,True,2,Band 2: Small Town,-102.905601,22.867309
-2024,disappeared,cases,2024_disappeared_cases_003,34,Centro,0.0,False,3,Band 3: Mid-Size,-99.178206,19.400787
-2024,disappeared,cases,2024_disappeared_cases_004,5,Centro,0.0,False,3,Band 3: Mid-Size,-99.120462,19.735288
-2024,disappeared,cases,2024_disappeared_cases_005,3,Norte,0.0,False,1,Band 1: Rural,-110.812611,28.175533
-2024,disappeared,cases,2024_disappeared_cases_006,5,Sur,0.0,False,3,Band 3: Mid-Size,-92.88875,18.067037
-2024,disappeared,cases,2024_disappeared_cases_007,5,Norte,0.0,False,3,Band 3: Mid-Size,-115.418757,31.499415
-2024,disappeared,cases,2024_disappeared_cases_008,4,Centro,1.0,True,3,Band 3: Mid-Size,-100.97088,20.533255
-2024,disappeared,cases,2024_disappeared_cases_009,4,Norte,0.0,False,4,Band 4: Metropolitan,-100.243639,25.711495
+2015,disappeared,cases,2015_disappeared_cases_001,10,Norte,0.0,False,3,Band 3: Mid-Size,-100.342305,25.730954
+2015,disappeared,cases,2015_disappeared_cases_002,13,Centro-Norte,0.9231,True,2,Band 2: Small Town,-103.429805,20.643559
+2015,disappeared,cases,2015_disappeared_cases_003,10,Centro,0.0,False,4,Band 4: Metropolitan,-99.083024,19.524977
+2015,disappeared,cases,2015_disappeared_cases_004,5,Sur,0.0,False,2,Band 2: Small Town,-99.487469,17.367739
+2015,disappeared,cases,2015_disappeared_cases_005,4,Norte,0.0,False,1,Band 1: Rural,-110.448144,27.813578
+2015,disappeared,cases,2015_disappeared_cases_006,4,Norte,0.0,False,2,Band 2: Small Town,-97.843301,25.486819
+2015,disappeared,cases,2015_disappeared_cases_007,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.206529,18.847133
+2015,disappeared,cases,2015_disappeared_cases_008,4,Norte,0.0,False,2,Band 2: Small Town,-109.586336,26.962031
+2015,disappeared,cases,2015_disappeared_cases_009,7,Norte-Occidente,0.0,False,2,Band 2: Small Town,-107.992195,25.495513
+2015,disappeared,cases,2015_disappeared_cases_010,3,Norte,0.0,False,3,Band 3: Mid-Size,-97.937336,22.366713
+2016,disappeared,cases,2016_disappeared_cases_001,4,Norte,0.0,False,2,Band 2: Small Town,-113.272796,31.522749
+2016,disappeared,cases,2016_disappeared_cases_002,7,Sur,0.0,False,2,Band 2: Small Town,-99.673813,17.3807
+2016,disappeared,cases,2016_disappeared_cases_003,8,Norte-Occidente,0.0,False,2,Band 2: Small Town,-108.35365,25.822165
+2016,disappeared,cases,2016_disappeared_cases_004,12,Centro-Norte,0.9167,True,2,Band 2: Small Town,-103.360533,20.603585
+2016,disappeared,cases,2016_disappeared_cases_005,17,Centro,0.0,False,3,Band 3: Mid-Size,-99.019367,19.501076
+2016,disappeared,cases,2016_disappeared_cases_006,10,Norte,0.0,False,3,Band 3: Mid-Size,-100.293401,25.64271
+2016,disappeared,cases,2016_disappeared_cases_007,3,Norte,0.0,False,1,Band 1: Rural,-110.484505,27.964827
+2016,disappeared,cases,2016_disappeared_cases_008,3,Norte,0.0,False,3,Band 3: Mid-Size,-116.412921,32.067315
+2016,disappeared,cases,2016_disappeared_cases_009,4,Norte,0.0,False,2,Band 2: Small Town,-97.843301,25.486819
+2016,disappeared,cases,2016_disappeared_cases_010,3,Centro,0.0,False,3,Band 3: Mid-Size,-98.296328,19.071271
+2017,disappeared,cases,2017_disappeared_cases_001,5,Sur,0.0,False,2,Band 2: Small Town,-99.662234,17.24631
+2017,disappeared,cases,2017_disappeared_cases_002,13,Centro-Norte,0.7692,True,2,Band 2: Small Town,-103.386726,20.621922
+2017,disappeared,cases,2017_disappeared_cases_003,13,Centro,0.0,False,3,Band 3: Mid-Size,-99.015248,19.516888
+2017,disappeared,cases,2017_disappeared_cases_004,4,Norte,0.0,False,3,Band 3: Mid-Size,-100.23832,25.711197
+2017,disappeared,cases,2017_disappeared_cases_005,4,Norte,0.0,False,1,Band 1: Rural,-110.448144,27.813578
+2017,disappeared,cases,2017_disappeared_cases_006,6,Norte,0.0,False,3,Band 3: Mid-Size,-98.259055,22.500972
+2017,disappeared,cases,2017_disappeared_cases_007,3,Norte,0.0,False,3,Band 3: Mid-Size,-116.412921,32.067315
+2017,disappeared,cases,2017_disappeared_cases_008,4,Norte,0.0,False,2,Band 2: Small Town,-97.843301,25.486819
+2017,disappeared,cases,2017_disappeared_cases_009,6,Centro,1.0,True,2,Band 2: Small Town,-100.817957,20.5299
+2017,disappeared,cases,2017_disappeared_cases_010,3,Norte-Occidente,0.0,False,2,Band 2: Small Town,-105.254495,21.605377
+2017,disappeared,cases,2017_disappeared_cases_011,4,Norte-Occidente,0.0,False,2,Band 2: Small Town,-106.829843,24.633551
+2018,disappeared,cases,2018_disappeared_cases_001,15,Centro,1.0,True,2,Band 2: Small Town,-100.9946,20.689194
+2018,disappeared,cases,2018_disappeared_cases_002,15,Centro-Norte,0.8667,True,2,Band 2: Small Town,-103.429751,20.606827
+2018,disappeared,cases,2018_disappeared_cases_003,10,Norte,0.0,False,3,Band 3: Mid-Size,-100.274663,25.657504
+2018,disappeared,cases,2018_disappeared_cases_004,3,Norte,0.0,False,1,Band 1: Rural,-110.484505,27.964827
+2018,disappeared,cases,2018_disappeared_cases_005,6,Sur,0.0,False,3,Band 3: Mid-Size,-93.1792,18.248324
+2018,disappeared,cases,2018_disappeared_cases_006,3,Norte,0.0,False,2,Band 2: Small Town,-97.946898,25.445213
+2018,disappeared,cases,2018_disappeared_cases_007,3,Norte-Occidente,0.0,False,2,Band 2: Small Town,-105.254495,21.605377
+2018,disappeared,cases,2018_disappeared_cases_008,3,Norte,0.0,False,1,Band 1: Rural,-109.55226,26.944338
+2018,disappeared,cases,2018_disappeared_cases_009,3,Norte,0.0,False,3,Band 3: Mid-Size,-97.945198,22.326531
+2019,disappeared,cases,2019_disappeared_cases_001,28,Centro,0.9643,True,2,Band 2: Small Town,-101.607813,20.770791
+2019,disappeared,cases,2019_disappeared_cases_002,3,Sur,0.0,False,2,Band 2: Small Town,-99.850746,17.388385
+2019,disappeared,cases,2019_disappeared_cases_003,15,Centro-Norte,0.8667,True,2,Band 2: Small Town,-103.368201,20.612881
+2019,disappeared,cases,2019_disappeared_cases_004,10,Norte,0.0,False,3,Band 3: Mid-Size,-100.288406,25.683473
+2019,disappeared,cases,2019_disappeared_cases_005,14,Centro,0.0,False,3,Band 3: Mid-Size,-99.134358,19.381278
+2019,disappeared,cases,2019_disappeared_cases_006,3,Norte,0.0,False,1,Band 1: Rural,-110.484505,27.964827
+2019,disappeared,cases,2019_disappeared_cases_007,3,Sur,0.0,False,3,Band 3: Mid-Size,-92.918584,18.208691
+2019,disappeared,cases,2019_disappeared_cases_008,3,Norte,0.0,False,2,Band 2: Small Town,-97.946898,25.445213
+2019,disappeared,cases,2019_disappeared_cases_009,3,Norte,0.0,False,1,Band 1: Rural,-109.55226,26.944338
+2020,disappeared,cases,2020_disappeared_cases_001,17,Centro,1.0,True,2,Band 2: Small Town,-101.488484,20.962797
+2020,disappeared,cases,2020_disappeared_cases_002,3,Norte,0.0,False,2,Band 2: Small Town,-113.517122,31.755513
+2020,disappeared,cases,2020_disappeared_cases_003,17,Centro,0.0,False,3,Band 3: Mid-Size,-99.095437,19.431377
+2020,disappeared,cases,2020_disappeared_cases_004,3,Sur,0.0,False,1,Band 1: Rural,-96.207436,19.070177
+2020,disappeared,cases,2020_disappeared_cases_005,10,Norte,0.0,False,3,Band 3: Mid-Size,-100.288406,25.683473
+2020,disappeared,cases,2020_disappeared_cases_006,9,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.402577,20.605939
+2020,disappeared,cases,2020_disappeared_cases_007,8,Norte,0.0,False,3,Band 3: Mid-Size,-110.520208,28.105824
+2020,disappeared,cases,2020_disappeared_cases_008,8,Centro-Norte,0.125,False,2,Band 2: Small Town,-102.372858,19.884279
+2020,disappeared,cases,2020_disappeared_cases_009,3,Norte,0.0,False,3,Band 3: Mid-Size,-116.412921,32.067315
+2020,disappeared,cases,2020_disappeared_cases_010,4,Sur,0.0,False,3,Band 3: Mid-Size,-92.803593,18.117742
+2020,disappeared,cases,2020_disappeared_cases_011,3,Norte,0.0,False,2,Band 2: Small Town,-97.946898,25.445213
+2020,disappeared,cases,2020_disappeared_cases_012,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.150867,18.89442
+2020,disappeared,cases,2020_disappeared_cases_013,6,Centro,0.8333,True,2,Band 2: Small Town,-101.785723,20.417563
+2020,disappeared,cases,2020_disappeared_cases_014,4,Norte-Occidente,0.5,True,1,Band 1: Rural,-102.800085,23.355088
+2021,disappeared,cases,2021_disappeared_cases_001,13,Centro,1.0,True,2,Band 2: Small Town,-101.597431,21.027108
+2021,disappeared,cases,2021_disappeared_cases_002,34,Centro,0.0,False,3,Band 3: Mid-Size,-99.21004,19.418191
+2021,disappeared,cases,2021_disappeared_cases_003,8,Sur,0.0,False,3,Band 3: Mid-Size,-92.936408,18.065748
+2021,disappeared,cases,2021_disappeared_cases_004,13,Centro-Norte,0.9231,True,2,Band 2: Small Town,-103.385031,20.61523
+2021,disappeared,cases,2021_disappeared_cases_005,13,Norte,0.0,False,3,Band 3: Mid-Size,-100.259144,25.701344
+2021,disappeared,cases,2021_disappeared_cases_006,3,Norte-Occidente,0.0,False,3,Band 3: Mid-Size,-110.722172,24.321984
+2021,disappeared,cases,2021_disappeared_cases_007,15,Norte-Occidente,0.2667,False,2,Band 2: Small Town,-103.434074,22.932163
+2021,disappeared,cases,2021_disappeared_cases_008,3,Centro,0.0,False,3,Band 3: Mid-Size,-99.206529,18.847133
+2022,disappeared,cases,2022_disappeared_cases_001,34,Centro,0.0,False,3,Band 3: Mid-Size,-99.122479,19.427867
+2022,disappeared,cases,2022_disappeared_cases_002,13,Norte,0.0,False,3,Band 3: Mid-Size,-100.25126,25.741842
+2022,disappeared,cases,2022_disappeared_cases_003,6,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.342438,20.616572
+2022,disappeared,cases,2022_disappeared_cases_004,9,Centro,1.0,True,3,Band 3: Mid-Size,-100.996171,20.678373
+2022,disappeared,cases,2022_disappeared_cases_005,3,Norte,0.0,False,3,Band 3: Mid-Size,-116.412921,32.067315
+2022,disappeared,cases,2022_disappeared_cases_006,3,Sur,0.0,False,3,Band 3: Mid-Size,-92.918584,18.208691
+2022,disappeared,cases,2022_disappeared_cases_007,7,Norte-Occidente,0.2857,False,2,Band 2: Small Town,-102.970109,23.211449
+2023,disappeared,cases,2023_disappeared_cases_001,13,Norte,0.0,False,3,Band 3: Mid-Size,-100.287882,25.762042
+2023,disappeared,cases,2023_disappeared_cases_002,5,Sur,0.0,False,3,Band 3: Mid-Size,-92.88875,18.067037
+2023,disappeared,cases,2023_disappeared_cases_003,52,Centro,0.0,False,3,Band 3: Mid-Size,-99.214418,19.448276
+2023,disappeared,cases,2023_disappeared_cases_004,3,Centro-Norte,1.0,True,4,Band 4: Metropolitan,-103.299314,20.629254
+2023,disappeared,cases,2023_disappeared_cases_005,6,Centro,1.0,True,3,Band 3: Mid-Size,-101.127466,20.708509
+2023,disappeared,cases,2023_disappeared_cases_006,4,Norte,0.0,False,3,Band 3: Mid-Size,-116.521516,32.15352
+2023,disappeared,cases,2023_disappeared_cases_007,9,Norte-Occidente,0.5556,True,2,Band 2: Small Town,-102.975222,23.164103
+2024,disappeared,cases,2024_disappeared_cases_001,9,Norte,0.0,False,3,Band 3: Mid-Size,-115.163831,31.714817
+2024,disappeared,cases,2024_disappeared_cases_002,5,Sur,0.0,False,3,Band 3: Mid-Size,-92.88875,18.067037
+2024,disappeared,cases,2024_disappeared_cases_003,48,Centro,0.0,False,3,Band 3: Mid-Size,-99.208313,19.434044
+2024,disappeared,cases,2024_disappeared_cases_004,9,Norte,0.0,False,3,Band 3: Mid-Size,-100.285908,25.687791
+2024,disappeared,cases,2024_disappeared_cases_005,4,Centro,1.0,True,2,Band 2: Small Town,-100.994171,20.500836
+2024,disappeared,cases,2024_disappeared_cases_006,5,Norte-Occidente,0.6,True,2,Band 2: Small Town,-102.951111,22.893625

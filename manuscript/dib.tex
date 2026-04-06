@@ -1,6 +1,6 @@
 %% ============================================================
 %%  Data in Brief – Article Outline
-%%  Dataset: RNPDNO (Mexico, 2015–Oct 2025)
+%%  Dataset: RNPDNO (Mexico, 2015–2025)
 %%  Template: elsarticle, 3p option
 %% ============================================================
 \documentclass[3p]{elsarticle}
@@ -47,46 +47,41 @@ in Mexico from the National Registry of Disappeared Persons, 2015--2025}
   Salamanca, Guanajuato 37000, Mexico}
 
 
-%% ----------------------------------------------------------
-%%  ABSTRACT  (248 words; DIB limit = 250)
-%% ----------------------------------------------------------
-\begin{abstract}
-
-Data were obtained from the publicly accessible sociodemographic
-dashboard of Mexico's National Search Commission
-(Comisi\'{o}n Nacional de B\'{u}squeda, CNB) through a Python-based
-web scraper that systematically queried the National Registry of
-Disappeared and Unlocated Persons (Registro Nacional de Personas
-Desaparecidas y No Localizadas, RNPDNO) portal.
-The scraper iterated over all combinations of state,
-victim-status category, and monthly date ranges, retrieving
-sex-disaggregated counts from HTML tables embedded in JSON API
-responses.
-Raw records were processed through a reproducible cleaning pipeline
-to normalize administrative and geographic identifiers and to assign
-standardized municipal geo-codes from Mexico's National Institute of
-Statistics and Geography (Instituto Nacional de Estad\'{i}stica y
-Geograf\'{i}a, INEGI).
-
-The dataset is organized into four comma-separated value (CSV) files
-corresponding to distinct victim-status categories:
-(i)~all registered persons regardless of location outcome
-(\texttt{status\_id}~=~0; 57{,}327 rows);
-(ii)~persons disappeared and not yet located
-(\texttt{status\_id}~=~7; 34{,}640 rows);
-(iii)~persons located alive
-(\texttt{status\_id}~=~2; 37{,}358 rows);
-and
-(iv)~persons located deceased
-(\texttt{status\_id}~=~3; 9{,}883 rows).
-Each row represents a unique municipality--year--month cell.
-All files share a twelve-column schema comprising composite and
-disaggregated INEGI geo-codes, normalized state and municipal names,
-sex-disaggregated counts, total persons, calendar year, calendar
-month, and victim-status identifier.
-Three sentinel geocodes flag records with unresolvable geographic information, accounting for 4{,}136 rows (12{,}178 persons), retained for transparency.
-The complete processing pipeline, including web scraping, text normalization and manual override files, is released alongside the dataset in an open-source code repository.
-\end{abstract}
+\begin{abstract}                                                                                                                                                                            
+                                                                                                                                                                                            
+  More than 132{,}000 persons are officially registered as disappeared and not located in Mexico, yet the government registry that documents
+  this crisis, the National Registry of Disappeared and Unlocated                                                                                                                             
+  Persons (Registro Nacional de Personas Desaparecidas y No                                                                                                                                 
+  Localizadas, RNPDNO), provides no public API, no bulk-download                                                                                                                              
+  facility, and no machine-readable data export.
+  The portal employs session-based authentication, CAPTCHA                                                                                                                                    
+  verification, and rate limiting; individual queries return                                                                                                                                
+  dynamically rendered HTML tables for single                                                                                                                                                 
+  municipality-status-date combinations.
+  We constructed an original extraction pipeline                                                                                                                                              
+  (Python, \texttt{requests}, \texttt{BeautifulSoup4}) that                                                                                                                                 
+  systematically queried the portal across all combinations of
+  2{,}478~municipalities, four victim-status categories, and monthly
+  date ranges from January~2015 through December~2025.                                                                                                                                        
+  Raw records were processed through a deterministic cleaning pipeline
+  with two-pass geographic normalization against the INEGI municipal                                                                                                                          
+  geo-code catalog.                                                                                                                                                                         
+                                                                                                                                                                                              
+  The dataset is organized into four CSV files by victim-status
+  category:                                                                                                                                                                                   
+  (i)~all registered persons (\texttt{status\_id}~=~0; 57{,}374 rows);                                                                                                                      
+  (ii)~disappeared and not located (\texttt{status\_id}~=~7; 34{,}618 rows);
+  (iii)~located alive (\texttt{status\_id}~=~2; 37{,}379 rows);                                                                                                                               
+  (iv)~located deceased (\texttt{status\_id}~=~3; 9{,}936 rows).
+  Each row represents a unique municipality--year--month cell with                                                                                                                            
+  sex-disaggregated counts.                                                                                                                                                                 
+  Standardized five-digit INEGI geo-codes enable direct spatial joins                                                                                                                         
+  to census and cartographic data.                                                                                                                                                          
+  Four sentinel geo-codes flag 4{,}163 rows (12{,}232 persons) with                                                                                                                           
+  unresolvable geographic information.
+  The complete pipeline and all manual override files are released in                                                                                                                         
+  an open-source repository.                                                                                                                                                                
+  \end{abstract}
 \begin{keyword}
 missing persons \sep
 RNPDNO \sep administrative records \sep
@@ -144,8 +139,8 @@ Data source location &
 \midrule
 Data accessibility &
   Repository name: Open Science Framework (OSF) \newline
-  Data identification number: 5qmwr \newline
-  Direct URL to data: \url{https://osf.io/5qmwr/} \newline
+  Data identification number: 4aymz \newline
+  Direct URL to data: \url{https://osf.io/4aymz/} \newline
   Code repository: \url{https://github.com/marco-escobar/rnpdno-scraper} \\
 \midrule
 Related research article &
@@ -160,43 +155,88 @@ Related research article &
 %% ============================================================
 
 \section*{Value of the Data}
-
 \begin{itemize}
 
-  \item The RNPDNO portal employs session-based authentication and CAPTCHA verification that preclude bulk download or direct programmatic access; no public API or downloadable dataset is provided. This dataset offers the first machine-readable, analysis-ready extraction of the complete 2015--2025 registry, enabling reproducible computational research at national scale previously infeasible for independent researchers \cite{mandolessi_2022}.
-  \item Monthly temporal resolution across 132 periods
-    (January 2015 through December 2025) supports sub-annual
-    analyses, including event-study designs around policy
-    interventions, seasonal decomposition, and lagged response
-    modeling, that are not possible with the annual or cumulative
-    snapshots used in prior municipality-level studies
-    \cite{cadena_garrocho_2019, atuesta_2024}.
+  \item Mexico's disappearance crisis is among the most severe
+    human rights emergencies in the Western Hemisphere:
+    more than 132{,}000 persons are officially registered as
+    disappeared and not located as of early 2026, a figure that
+    has nearly quadrupled since 2015
+    \cite{mandolessi_2022, cnb_rnpdno}.
+    In March 2026, the UN Committee on Enforced Disappearances
+    concluded that enforced disappearances in Mexico constitute
+    crimes against humanity \cite{CED_MEX_art34_2026}.
+    The 2017 \emph{Ley General en Materia de Desaparici\'{o}n
+Forzada} (General Act on Enforced Disappearance of Persons,
+Disappearance Committed by Private Individuals, and the
+National Search System) mandated a national registry and
+search infrastructure \cite{ley_general_2017}, but the resulting
+    RNPDNO portal provides no API, no bulk download, and no
+    machine-readable export; access requires iterative queries
+    through a CAPTCHA-protected interface that returns dynamically
+    rendered HTML for single municipality, status, and date
+    combinations.
+    This dataset is the first machine-readable, analysis-ready
+    extraction of the complete registry at national scale
+    (2{,}475~municipalities, 132~monthly periods, 2015 to 2025),
+    removing a critical barrier to independent computational
+    research on disappearances in Mexico.
 
-  \item The standardized five-digit INEGI geo-code (\texttt{cvegeo})
-    enables direct spatial joins to official cartographic boundaries
-    (EPSG:6372), population projections, and census microdata,
-    supporting population-normalized rate computation and spatial
-    cluster detection methods (LISA, Getis-Ord $G_i^*$) without
-    intermediate reconciliation \cite{anselin_1995, inegi_ageeml}.
-
-  \item The four-file structure by victim-status category
-    (total registered, disappeared and not located, located alive,
-    located deceased) permits outcome-transition analysis:
-    researchers can compute location rates, resolution-time
-    proxies, and spatial heterogeneity in case outcomes, analytic
-    dimensions limited to single cities in existing work
+  \item The dataset serves researchers across multiple
+    disciplines: criminologists studying the spatial diffusion
+    of cartel-related violence \cite{atuesta_2024};
+    human rights scholars documenting enforced disappearance
+    patterns \cite{mandolessi_2022};
+    public health researchers analyzing violence as an
+    epidemiological phenomenon \cite{das_2025};
+    and policy analysts evaluating search-commission resource
+    allocation.
+    The four-file structure by victim-status category
+    (total, disappeared and not located, located alive,
+    located deceased) enables outcome-transition analyses
+    (location rates, resolution-time proxies, and spatial
+    heterogeneity in case outcomes) that existing single-status
+    or single-city studies cannot support
     \cite{aguilar_velazquez_2025}.
 
+  \item Monthly temporal resolution across 132~periods
+    (January~2015 through December~2025) supports sub-annual
+    analyses (event-study designs around policy interventions,
+    seasonal decomposition, and lagged-response modeling) that
+    are not possible with the annual or cumulative snapshots
+    used in prior municipality-level studies
+    \cite{cadena_garrocho_2019, atuesta_2024}.
+
+  \item The original RNPDNO portal reports geographic information
+    only as free-text municipality names and numeric state
+    identifiers, with no standardized geo-codes.
+    Our pipeline assigns each record a five-digit INEGI geo-code
+    (\texttt{cvegeo}) through two-pass normalization against the
+    official municipal catalog, an original contribution that
+    enables direct spatial joins to cartographic boundaries
+    (EPSG:6372), population projections (CONAPO), and census
+    microdata without intermediate reconciliation
+    \cite{inegi_ageeml}.
+    This standardization is a prerequisite for
+    population-normalized rate computation and spatial cluster
+    detection (LISA, Getis-Ord~$G_i^*$) \cite{anselin_1995}.
+    Sex-disaggregated counts (male, female, undefined) at the
+    municipality and month level further permit gendered analyses
+    of disappearance patterns, a dimension largely absent from
+    existing national-scale data products.
+    
   \item The open-source processing pipeline, including scraper,
     text normalizer, two-pass geographic join, and git-tracked
     manual override files, can be re-executed against future
-    RNPDNO releases to extend temporal coverage; schema-validation
-    modules detect source drift, supporting longitudinal research
-    programs aligned with emerging data-based disappearance
-    analysis frameworks \cite{ruiz_reyes_2024}.
+    RNPDNO releases to extend temporal coverage;
+    schema-validation modules detect source drift, supporting
+    longitudinal research programs \cite{reyes_where_2025}.
+    This extraction-and-standardization approach parallels
+    established methodologies for constructing research-grade
+    datasets from computationally inaccessible government
+    portals \cite{fazekas_2024}.
 
 \end{itemize}
-
 \FloatBarrier
 \clearpage
 
@@ -234,12 +274,14 @@ Each row represents one (municipality, year, month, status) observation.
                                     zero-padded.
                                     Sentinel values: \texttt{99998}
                                     (unknown state),
+                                    \texttt{99999} (unresolved state),
                                     \texttt{XX998} / \texttt{XX999}
                                     (municipality unspecified/unknown). \\
     \texttt{cve\_estado}& string  & Two-digit INEGI state code,
                                     zero-padded (01--32).
                                     Value \texttt{99} reserved for
-                                    unknown state. \\
+                                    records with unresolved
+                                    state assignment. \\
     \texttt{state}      & string  & Official state name (Spanish),
                                     normalized from the INEGI catalog. \\
     \texttt{cve\_mun}   & string  & Three-digit INEGI municipal code,
@@ -267,26 +309,26 @@ Each row represents one (municipality, year, month, status) observation.
 \end{table}
 
 \paragraph{\texttt{rnpdno\_total.csv}}
-Contains 57{,}327 rows corresponding to all persons registered in
-the RNPDNO, regardless of subsequent location status
-(\texttt{status\_id}~=~0).
-Temporal coverage spans January 2015 through December 2025
-(up to 132 monthly periods per municipality).
-
-\paragraph{\texttt{rnpdno\_disappeared\_not\_located.csv}}
-Contains 34{,}640 rows for persons classified as disappeared and
-not yet located (\texttt{status\_id}~=~7).
-This file is the primary analytical target for
-spatiotemporal characterization of active disappearance caseloads.
-
-\paragraph{\texttt{rnpdno\_located\_alive.csv}}
-Contains 37{,}358 rows for persons subsequently located alive
-(\texttt{status\_id}~=~2).
-
-\paragraph{\texttt{rnpdno\_located\_dead.csv}}
-Contains 9{,}883 rows for persons located deceased
-(\texttt{status\_id}~=~3).
-
+ Contains 57{,}374 rows corresponding to all persons registered in                                                                                                                         
+  the RNPDNO, regardless of subsequent location status
+  (\texttt{status\_id}~=~0).
+  Temporal coverage spans January 2015 through December 2025                                                                                                                                  
+  (up to 132 monthly periods per municipality).
+                                                                                                                                                                                              
+  \paragraph{\texttt{rnpdno\_disappeared\_not\_located.csv}}                                                                                                                                
+  Contains 34{,}618 rows for persons classified as disappeared and
+  not yet located (\texttt{status\_id}~=~7).                                                                                                                                                  
+  This file is the primary analytical target for
+  spatiotemporal characterization of active disappearance caseloads.                                                                                                                          
+                                                                                                                                                                                            
+  \paragraph{\texttt{rnpdno\_located\_alive.csv}}                                                                                                                                             
+  Contains 37{,}379 rows for persons subsequently located alive
+  (\texttt{status\_id}~=~2).                                                                                                                                                                  
+                                                                                                                                                                                            
+  \paragraph{\texttt{rnpdno\_located\_dead.csv}}
+  Contains 9{,}936 rows for persons located deceased
+  (\texttt{status\_id}~=~3).                                                                  
+  
 
 \subsection*{Overview figures}
 
@@ -316,56 +358,57 @@ Figure~\ref{fig:states} shows the cumulative total for all statuses
   \label{fig:states}
 \end{figure}
 
-\subsection*{Sentinel geo-code records}
+ \subsection*{Sentinel geo-code records}
+                                                                                                                                                                                              
+  A subset of rows in each file carries sentinel geo-codes indicating
+  unresolvable geographic information in the source data                                                                                                                                      
+  (Table~\ref{tab:sentinels}).                                                                                                                                                              
+  These rows are retained rather than discarded to preserve                                                                                                                                 
+  the original aggregate counts; analysts performing
+  municipality-level spatial analyses should filter them as                                                                                                                                   
+  appropriate.
+  \begin{table}[ht]                                                                                                                                                                           
+    \centering                                                                                                                                                                              
+    \caption{Sentinel geo-codes assigned to records with                                                                                                                                    
+      unresolvable geographic information, summed across all four
+      processed CSV files. A given municipality-month cell may appear
+      in multiple files if cases with different outcomes were registered                                                                                                                      
+      there.}
+    \label{tab:sentinels}                                                                                                                                                                     
+    \renewcommand{\arraystretch}{1.2}                                                                                                                                                       
+    \begin{tabular}{llrr}                                                                                                                                                                   
+      \toprule                                                                                                                                                                                
+      \texttt{cvegeo} & Condition & Rows & Persons \\
+      \midrule                                                                                                                                                                                
+      \texttt{99998} & Unknown state (\texttt{id\_estado}~=~33)                                                                                                                             
+                     & 198 & 436 \\                                                                                                                                                         
+      \texttt{99999} & Unresolved state assignment                                                                                                                                            
+                     & 26 & 26 \\
+      \texttt{XX998} & No municipal reference                                                                                                                                                 
+                     & 1{,}749 & 3{,}978 \\                                                                                                                                                 
+      \texttt{XX999} & Municipality unknown                                                                                                                                                   
+                     & 2{,}190 & 7{,}792 \\
+      \midrule                                                                                                                                                                                
+      \textbf{Total} & & \textbf{4{,}163} & \textbf{12{,}232} \\                                                                                                                            
+      \bottomrule                                                                                                                                                                             
+    \end{tabular}
+  \end{table}                                                                                                                                                                                 
+                                                                                                                                                                                            
+  \subsection*{Intermediate Parquet files}                                                                                                                                                  
 
-A subset of rows in each file carries sentinel geo-codes indicating
-unresolvable geographic information in the source data
-(Table~\ref{tab:sentinels}).
-These rows are retained rather than discarded to preserve
-the original aggregate counts; analysts performing
-municipality-level spatial analyses should filter them as
-appropriate.
-\begin{table}[ht]
-  \centering
-  \caption{Sentinel geo-codes assigned to records with
-    unresolvable geographic information, summed across all four
-    processed CSV files. A given municipality-month cell may appear
-    in multiple files if cases with different outcomes were registered
-    there.}
-  \label{tab:sentinels}
-  \renewcommand{\arraystretch}{1.2}
-  \begin{tabular}{llrr}
-    \toprule
-    \texttt{cvegeo} & Condition & Rows & Persons \\
-    \midrule
-    \texttt{99998} & Unknown state
-                   & 198 & 408 \\
-    \texttt{XX998} & No municipal reference
-                   & 1{,}748 & 3{,}978 \\
-    \texttt{XX999} & Municipality unknown
-                   & 2{,}190 & 7{,}792 \\
-    \midrule
-    \textbf{Total} & & \textbf{4{,}136} & \textbf{12{,}178} \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\subsection*{Intermediate Parquet files}
-
-Four intermediate Parquet files contain the consolidated raw
-records after scraping but prior to geographic normalization.
-These files retain the original column names and free-text
-municipality strings from the RNPDNO portal and are provided
-for provenance purposes.
-Filenames reflect the original Spanish terminology used in the source system.
-
-\begin{description}
-  \item[status 0:] \texttt{rnpdno\_total\_2015\_2025.parquet}
-  \item[status 2:] \texttt{rnpdno\_localizadas\_con\_vida\_2015\_2025.parquet}
-  \item[status 3:] \texttt{rnpdno\_localizadas\_sin\_vida\_2015\_2025.parquet}
-  \item[status 7:] \texttt{rnpdno\_desaparecidas\_no\_localizadas\_2015\_2025.parquet}
-\end{description}
-
+  Four intermediate Parquet files contain the consolidated raw                                                                                                                                
+  records after scraping but prior to geographic normalization.
+  These files retain the original column names and free-text                                                                                                                                  
+  municipality strings from the RNPDNO portal and are provided                                                                                                                              
+  for provenance purposes.                                                                                                                                                                  
+  Filenames reflect the original Spanish terminology used in the source system.
+                                                                                                                                                                                              
+  \begin{description}
+    \item[status 0:] \texttt{rnpdno\_total\_2015\_2025.parquet}                                                                                                                               
+    \item[status 2:] \texttt{rnpdno\_localizadas\_con\_vida\_2015\_2025.parquet}                                                                                                            
+    \item[status 3:] \texttt{rnpdno\_localizadas\_sin\_vida\_2015\_2025.parquet}                                                                                                              
+    \item[status 7:] \texttt{rnpdno\_desaparecidas\_no\_localizadas\_2015\_2025.parquet}
+  \end{description}                                           
 
 \subsection*{Quality report}
 
@@ -410,64 +453,64 @@ embedded in JSON API responses.
 Requests are serialized with a 0.5~s inter-state and 1.0~s
 inter-month delay to avoid server overload; a retry mechanism
 with exponential backoff (up to four retries, 45~s timeout)
-handles transient failures.
-Four independent invocations produce one Parquet file per
-status value, consolidated from individual CSV exports per
-state--year--month triplet.
-State~33 (\emph{Se desconoce}) is included in the iteration
+handles transient failures. Four independent invocations produce one Parquet file per status value, consolidated from individual CSV exports per
+  year--month pair (each covering all 33 states).  
+State~33 (\emph{Se desconoce}, ``unknown'') is included in the iteration
 to capture records with unresolvable state-level geography,
 which are subsequently assigned sentinel geo-code
 \texttt{cvegeo}~=~\texttt{99998}.
 
 \subsection*{Geographic reference construction}
 
-The INEGI \emph{Archivo General de la Entidad Marco de Localidades}
-(AGEEML), obtained from \cite{inegi_ageeml}, provides the canonical
-municipality-level geographic reference.
-The script \texttt{src/build\_reference.py} reads the raw AGEEML
-file (ISO-8859-1 encoding, 2{,}478 rows), zero-pads geo-codes to
-canonical widths (\texttt{CVEGEO}: 5 digits; \texttt{CVE\_ENT}:
-2 digits; \texttt{CVE\_MUN}: 3 digits), and derives two normalized
-name variants using utilities in \texttt{src/normalize.py}:
+\subsection*{Geographic reference construction}
+
+The INEGI \emph{Catálogo de Claves de Áreas Geoestadísticas
+Estatales, Municipales y Localidades} (AGEEML), obtained from
+\cite{inegi_ageeml}, provides the canonical municipality-level
+geographic reference.
+The function \texttt{build\_reference()} in
+\texttt{scripts/\allowbreak{}processing/\allowbreak{}clean\_pipeline.py}
+reads the raw AGEEML file (ISO-8859-1 encoding, 2{,}478 rows),
+zero-pads geo-codes to canonical widths
+(\texttt{CVEGEO}: 5~digits; \texttt{CVE\_ENT}: 2~digits;
+\texttt{CVE\_MUN}: 3~digits), and derives two normalized
+name variants using utilities in
+\texttt{scripts/\allowbreak{}processing/\allowbreak{}normalize.py}:         
+  2 digits; \texttt{CVE\_MUN}: 3 digits), and derives two normalized       
+  name variants using utilities in                                         
+  \texttt{scripts/processing/normalize.py}:
+
 
 \begin{description}
   \item[Standard normalization]
-    Lower-case; strip Unicode accents via NFD decomposition;
-    remove punctuation; collapse whitespace.
-    Formally:
-    \[
-      f_{\text{std}}(s) = \text{STRIP}\!\left(
-  \text{COLLAPSE}\!\left(
-    \text{RM\_PUNCT}\!\left(
-      \text{NFD\_STRIP}(s.\text{lower}())
-    \right)
-  \right)
-\right)
-    \]
+    Unicode accents are stripped via NFD decomposition,
+    text is lower-cased, punctuation is removed, and
+    whitespace is collapsed to single spaces.
 
   \item[Aggressive normalization]
-    Applies $f_{\text{std}}$ then expands a curated abbreviation
-    dictionary (e.g., \texttt{Dr.}$\to$\texttt{doctor},
-    \texttt{Mpio.}$\to$\texttt{municipio}), removes common
-    prepositions (\emph{de}, \emph{del}, \emph{los}, \emph{las}),
-    and collapses repeated whitespace.
-\end{description}
+    Applies standard normalization, then expands a curated
+    abbreviation dictionary
+    (e.g., \texttt{Dr.}$\to$\texttt{doctor},
+    \texttt{Gral.}$\to$\texttt{general}),
+    removes the filler word \emph{de}, and collapses
+    repeated whitespace.
+\end{description}  
 
 \subsection*{Pre-join state corrections (B1 heuristic)}
 
-The script \texttt{src/build\_state\_corrections\_b1.py}
-identifies municipality names that are unique nationwide in
-AGEEML (i.e., appear in exactly one state).
-For raw RNPDNO records whose reported state does not match the
-unique AGEEML state for their municipality name, the state
-identifier is corrected prior to the geographic join.
-This procedure produced 25 validated corrections
-(rule: \texttt{B1\_UNIQUE\_NATIONWIDE\_EXACT}),
-stored in \texttt{data/manual/geo\_state\_corrections.csv}.
+  The function \texttt{load\_state\_corrections()} in 
+  \texttt{scripts/processing/clean\_pipeline.py} reads a curated
+  lookup table of municipality names that are unique nationwide in         
+  AGEEML (i.e., appear in exactly one state).                              
+  For raw RNPDNO records whose reported state does not match the
+  unique AGEEML state for their municipality name, the state               
+  identifier is corrected prior to the geographic join.                    
+  This procedure applies 25 validated corrections stored in
+  \texttt{data/manual/geo\_state\_corrections.csv}.   
 
 \subsection*{Two-pass geographic join}
 
-The main pipeline (\texttt{src/clean\_pipeline.py}) matches each
+The main pipeline (\texttt{scripts/processing/clean\_pipeline.py}) matches each
 raw record to an AGEEML entry via a two-pass procedure:
 
 \begin{enumerate}
@@ -481,12 +524,13 @@ raw record to an AGEEML entry via a two-pass procedure:
     (i.e., no ambiguity).
 \end{enumerate}
 
-Records unmatched after both passes are written to
-\texttt{data/manual/unmatched\_rnpdno\_*.csv} for manual review.
+Records unmatched after both passes proceed to manual
+  overrides, sentinel assignment, and finally unresolved
+  geo-code assignment (see below).   
 
 \subsection*{Manual overrides}
 
-A git-tracked file \texttt{data/manual/geo\_overrides.csv} (35 rows)
+A git-tracked file \texttt{data/manual/geo\_overrides.csv} (36 rows)
 maps $(raw\_id\_estado, raw\_municipio) \to \texttt{cvegeo}$
 for cases requiring human disambiguation
 (e.g., politically renamed municipalities, cross-state
@@ -533,74 +577,65 @@ before writing output:
     of the three sub-status files
     (\texttt{status\_id}~$\in\{2,3,7\}$).
     As of the reference scrape, the total file records
-    268{,}900 persons while the sum of the three sub-status
-    files yields 268{,}973 persons---the total file contains
-    73 fewer persons than the sub-status sum ($0.027\%$),
-    distributed across 55{,}524
-    (municipality, year, month) cells and confined to
-    deviations of $\pm1$ or $\pm2$ persons per cell.
+    269{,}507 persons while the sum of the three sub-status
+    files yields 269{,}164 persons---the total file contains
+    343 more persons than the sub-status sum ($0.127\%$),
+    distributed across 55{,}558
+    non-sentinel (municipality, year, month) cells.
     This near-exact agreement confirms internal consistency
     of the source system; the residual discrepancy is
     attributed to asynchronous updates in the RNPDNO portal.
 \end{itemize}
 
-Results are written to \texttt{3\_documentation/quality\_report.csv}.
+Results are written to \texttt{logs/quality\_report.csv}.
 
 
-\subsection*{Output assembly}
-
-Two municipality names could not be resolved to unique INEGI
-geo-codes across either join pass or the manual override file,
-and are therefore retained in the processed files with a null
-\texttt{cvegeo} value rather than discarded, preserving the
-full aggregate person-counts.
-
-\textbf{PUEBLO NUEVO} appears in the RNPDNO source under
-three states: Durango (\texttt{id\_estado}~=~10),
-Guanajuato (\texttt{id\_estado}~=~11), and Sinaloa
-(\texttt{id\_estado}~=~25).
-AGEEML contains canonical entries for Durango
-(\texttt{cvegeo}~=~\texttt{10023}) and Guanajuato
-(\texttt{cvegeo}~=~\texttt{11024}), but no municipality named
-Pueblo Nuevo exists in Sinaloa, suggesting a
-source-data error for the Sinaloa occurrence.
-All three (estado, \texttt{PUEBLO NUEVO}) combinations were
-flagged for manual review; the geo\_overrides file was not
-completed for these entries and they remain unresolved.
-
-\textbf{NOGALES} appears under Sinaloa
-(\texttt{id\_estado}~=~25), Sonora
-(\texttt{id\_estado}~=~26), and Veracruz
-(\texttt{id\_estado}~=~30).
-AGEEML contains canonical entries for Sonora
-(\texttt{cvegeo}~=~\texttt{26043}) and Veracruz
-(\texttt{cvegeo}~=~\texttt{30115}), but no municipality named
-Nogales exists in Sinaloa.
-Similarly, all three occurrences were flagged for manual
-review and the overrides file was left incomplete.
-
-Together, these six (estado, municipio) combinations account
-for 237 rows and 1{,}361 persons in the status-0 file; the
-corresponding unresolved rows in the three sub-status files
-total 380 rows (176, 144, and 60 for statuses 7, 2, and 3
-respectively).
-Analysts performing municipality-level spatial analyses should
-exclude rows with null \texttt{cvegeo} as appropriate.
-
-The four processed CSV files are written to
-\texttt{data/processed/}.
-
-\subsection*{Software environment}
-
-The pipeline requires Python~3.10 with the following
-packages: \texttt{pandas}~$\geq$2.0, \texttt{pyarrow}~$\geq$14.0,
-\texttt{requests}~$\geq$2.31, \texttt{beautifulsoup4}~$\geq$4.12,
-\texttt{python-dotenv}~$\geq$1.0.
-Code quality is enforced with \texttt{ruff} (line-length~=~99).
-Environment reproducibility is managed via a Conda environment
-file (\texttt{environment.yml}) and a DVC pipeline configuration.
-All code and manual override files are version-controlled in a
-public git repository \cite{code_repo}.
+\subsection*{Output assembly}                                                                                                                                                               
+                                                            
+  Records that remain unmatched after the two-pass join, manual
+  overrides, and sentinel assignment are assigned to a dedicated
+  \emph{unresolved} geo-code (\texttt{cvegeo}~=~\texttt{99999},
+  \texttt{cve\_estado}~=~\texttt{99}, \texttt{state}~=~``unresolved'')                                                                                                                        
+  rather than being discarded, preserving the full aggregate
+  person-counts.                                                                                                                                                                              
+  Across the four processed files, 4 rows (4 persons) carry 
+  the unresolved code.                                                                                                                                                                        
+                                                            
+  Two municipality names account for all unresolved records.                                                                                                                                  
+  \textbf{PUEBLO NUEVO} appears in the source under Durango
+  (\texttt{id\_estado}~=~10), Guanajuato                                                                                                                                                      
+  (\texttt{id\_estado}~=~11), and Sinaloa                   
+  (\texttt{id\_estado}~=~25).
+  AGEEML contains canonical entries for Durango                                                                                                                                               
+  (\texttt{cvegeo}~=~\texttt{10023}) and Guanajuato
+  (\texttt{cvegeo}~=~\texttt{11024}), both resolved through                                                                                                                                   
+  the standard join; no municipality named Pueblo Nuevo exists                                                                                                                                
+  in Sinaloa, suggesting a source-data error.
+  \textbf{OCAMPO} appears under Ciudad de M\'{e}xico                                                                                                                                          
+  (\texttt{id\_estado}~=~9); AGEEML lists Ocampo in six                                                                                                                                       
+  other states (Coahuila, Chihuahua, Durango, Guanajuato,                                                                                                                                     
+  Michoac\'{a}n, Tamaulipas) but none in Ciudad de M\'{e}xico,                                                                                                                                
+  and the correct target state cannot be determined.                                                                                                                                          
+  Because neither case can be disambiguated, they are assigned                                                                                                                                
+  \texttt{cvegeo}~=~\texttt{99999}.                                                                                                                                                           
+                                                            
+  No rows with null \texttt{cvegeo} values remain in the                                                                                                                                      
+  processed files.                                          
+  The four processed CSV files are written to
+  \texttt{data/processed/}.                                                                                                                                                                   
+   
+  \subsection*{Software environment}                                                                                                                                                          
+                                                            
+  The pipeline requires Python~3.10 with the following
+  packages: \texttt{polars}~$\geq$1.0, \texttt{pandas}~$\geq$2.0,
+  \texttt{pyarrow}~$\geq$14.0,                                                                                                                                                                
+  \texttt{requests}~$\geq$2.31, \texttt{beautifulsoup4}~$\geq$4.12,
+  \texttt{python-dotenv}~$\geq$1.0, \texttt{matplotlib}~$\geq$3.7,                                                                                                                            
+  \texttt{seaborn}~$\geq$0.12.                              
+  Environment reproducibility is managed via a Conda environment                                                                                                                              
+  file (\texttt{environment.yml}).                          
+  All code and manual override files are version-controlled in a                                                                                                                              
+  public git repository \cite{code_repo}.                   
 
 %% ============================================================
 %%  ETHICS STATEMENT
