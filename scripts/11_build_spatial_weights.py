@@ -13,7 +13,7 @@ import warnings
 import polars as pl
 import geopandas as gpd
 import pandas as pd
-from libpysal.weights import Queen
+from libpysal.weights import fuzzy_contiguity
 from pathlib import Path
 
 # ─── Configuration ────────────────────────────────────────────────────────────
@@ -72,7 +72,7 @@ def main():
     log.info("Step 5 — Building Queen contiguity weights (row-standardized)...")
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
-        w = Queen.from_dataframe(gdf_valid, use_index=True)
+        w = fuzzy_contiguity(gdf_valid, buffering=True, buffer=50)
     w.transform = "R"
 
     log.info(f"  Observations:    {w.n:,}")

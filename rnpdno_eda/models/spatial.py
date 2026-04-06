@@ -3,7 +3,7 @@
 import geopandas as gpd
 import numpy as np
 import pandas as pd
-from libpysal.weights import Queen
+from libpysal.weights import Queen, fuzzy_contiguity
 from esda.moran import Moran, Moran_Local
 from pathlib import Path
 import warnings
@@ -32,11 +32,23 @@ def load_municipios():
     return gdf
 
 
-def build_queen_weights(gdf):
-    """Build Queen contiguity weights."""
+def build_queen_weights(gdf, buffer=50):
+    """Build Queen contiguity weights with fuzzy tolerance.
+
+    Uses fuzzy_contiguity with a small buffer to close sub-metre gaps
+    caused by geometry precision issues in the source geoparquet,
+    which otherwise produce dozens of false island municipalities.
+
+    Parameters
+    ----------
+    gdf : GeoDataFrame
+        Must be in a projected CRS (e.g. EPSG:6372, metres).
+    buffer : float
+        Buffer distance in CRS units (metres for EPSG:6372).
+    """
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
-        w = Queen.from_dataframe(gdf, use_index=True)
+        w = fuzzy_contiguity(gdf, buffering=True, buffer=buffer)
     w.transform = "R"
     return w
 
