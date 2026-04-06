@@ -66,12 +66,72 @@ CED window: 2015-2025
 - Located Alive: Jun15=25, Jun25=35, peak=2020-11(46), slope=+1.812/yr *, window-aligned=YES
 - Located Dead: Jun15=0, Jun25=13, peak=2021-02(14), slope=+0.516/yr *, window-aligned=YES
 
-## Tabasco Sex Disaggregation (2023-2025)
+## Tabasco Sex Disaggregation (2023–2025)
 
-### Not Located
-- male: 21 months with HH clusters, 39 total HH municipality-months (2023-2025)
-- female: 18 months with HH clusters, 34 total HH municipality-months (2023-2025)
+### Monthly HH Municipality Counts (Tabasco, 2023–2025)
 
-### Located Alive
-- male: 6 months with HH clusters, 6 total HH municipality-months (2023-2025)
-- female: 18 months with HH clusters, 31 total HH municipality-months (2023-2025)
+#### Not Located
+
+| Year | Month | Male HH | Female HH |
+|------|-------|---------|-----------|
+| 2023 | 01 | 3 | 1 |
+| 2023 | 02 | 0 | 1 |
+| 2023 | 03 | 1 | 0 |
+| 2023 | 05 | 2 | 3 |
+| 2023 | 07 | 1 | 1 |
+| 2023 | 09 | 3 | 4 |
+| 2023 | 10 | 1 | 3 |
+| 2023 | 11 | 1 | 0 |
+| 2023 | 12 | 1 | 2 |
+| 2024 | 01 | 1 | 2 |
+| 2024 | 02 | 2 | 1 |
+| 2024 | 03 | 2 | 0 |
+| 2024 | 04 | 3 | 0 |
+| 2024 | 05 | 1 | 1 |
+| 2024 | 06 | 2 | 0 |
+| 2024 | 07 | 3 | 2 |
+| 2024 | 08 | 3 | 2 |
+| 2024 | 09 | 1 | 3 |
+| 2024 | 11 | 2 | 0 |
+| 2024 | 12 | 3 | 1 |
+| 2025 | 06 | 0 | 2 |
+| 2025 | 10 | 1 | 2 |
+| 2025 | 11 | 0 | 2 |
+| 2025 | 12 | 2 | 1 |
+
+#### Located Alive
+
+| Year | Month | Male HH | Female HH |
+|------|-------|---------|-----------|
+| 2023 | 01 | 1 | 0 |
+| 2023 | 02 | 1 | 0 |
+| 2023 | 04 | 1 | 1 |
+| 2023 | 06 | 0 | 2 |
+| 2023 | 07 | 1 | 2 |
+| 2023 | 10 | 0 | 2 |
+| 2023 | 12 | 1 | 2 |
+| 2024 | 01 | 0 | 2 |
+| 2024 | 02 | 0 | 3 |
+| 2024 | 03 | 0 | 1 |
+| 2024 | 04 | 0 | 2 |
+| 2024 | 05 | 0 | 2 |
+| 2024 | 08 | 1 | 0 |
+| 2024 | 09 | 0 | 2 |
+| 2024 | 10 | 0 | 1 |
+| 2024 | 11 | 0 | 2 |
+| 2024 | 12 | 0 | 1 |
+| 2025 | 01 | 0 | 1 |
+| 2025 | 02 | 0 | 2 |
+| 2025 | 03 | 0 | 2 |
+| 2025 | 08 | 0 | 1 |
+
+#### Summary
+
+- Not Located / male: 21 months with HH, 39 HH municipality-months
+- Not Located / female: 18 months with HH, 34 HH municipality-months
+
+- Located Alive / male: 6 months with HH, 6 HH municipality-months
+- Located Alive / female: 18 months with HH, 31 HH municipality-months
+
+**CED claim (girls/women):** Located Alive female HH muni-months = 31, male = 6.
+Female exceeds male by 25 muni-months — **consistent** with CED claim.
