@@ -1,0 +1,73 @@
+% ==============================================================================
+% Appendix
+% ==============================================================================
+\appendix
+
+\section{Robustness Checks}
+\label{app:robustness}
+
+\subsection{Temporal Stability of Local Moran's I}
+
+To assess the temporal stability of the spatial structure, we compute Spearman rank correlations of municipality-level local Moran's $I_i$ values between the June 2024 and June 2025 cross-sections for each status$\times$sex combination.
+All correlations are statistically significant ($p < 0.001$).
+Values range from 0.227 (Located Dead, male) to 0.607 (Total, total), indicating moderate to strong rank-order stability across the twelve-month interval.
+Located Dead shows the weakest correlations (0.227--0.303), consistent with the greater volatility expected from sparse count data.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Spearman rank correlation of local Moran's $I_i$ between June 2024 and June 2025.}
+  \label{tab:spearman}
+  \begin{tabular}{llcc}
+    \toprule
+    Status & Sex & Spearman $\rho$ & $p$-value \\
+    \midrule
+    Total & total & 0.607 & $<$0.001 \\
+    Total & male & 0.526 & $<$0.001 \\
+    Total & female & 0.485 & $<$0.001 \\
+    Not Located & total & 0.334 & $<$0.001 \\
+    Not Located & male & 0.305 & $<$0.001 \\
+    Not Located & female & 0.355 & $<$0.001 \\
+    Located Alive & total & 0.540 & $<$0.001 \\
+    Located Alive & male & 0.494 & $<$0.001 \\
+    Located Alive & female & 0.434 & $<$0.001 \\
+    Located Dead & total & 0.249 & $<$0.001 \\
+    Located Dead & male & 0.227 & $<$0.001 \\
+    Located Dead & female & 0.303 & $<$0.001 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Significance Threshold Sensitivity}
+
+Table~\ref{tab:threshold} reports HH municipality counts at three significance thresholds to assess sensitivity to the $\alpha = 0.05$ choice.
+At $\alpha = 0.01$, 33--49\% of HH municipalities are retained, confirming that the core clusters remain robust under more stringent thresholds.
+No HH municipalities survive $\alpha = 0.001$ with 999 permutations, as expected given the discrete permutation distribution.
+
+\begin{table}[htbp]
+  \centering
+  \caption{HH municipality counts at different significance thresholds, \referencemonth{} (total sex).}
+  \label{tab:threshold}
+  \begin{tabular}{lcccc}
+    \toprule
+    Status & $\alpha=0.05$ & $\alpha=0.01$ & $\alpha=0.001$ & Retention (0.01/0.05) \\
+    \midrule
+    Total & 106 & 48 & 0 & 45\% \\
+    Not Located & 93 & 46 & 0 & 49\% \\
+    Located Alive & 110 & 36 & 0 & 33\% \\
+    Located Dead & 35 & 12 & 0 & 34\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Spatial Weights Specification}
+
+All analyses use Queen contiguity weights constructed via \texttt{fuzzy\_contiguity} with a 50-metre buffer on EPSG:6372 projected coordinates.
+This approach yields \nislands{} island municipalities.
+A prior implementation using exact topological intersection (\texttt{Queen.from\_dataframe}) produced 52 false islands due to sub-metre geometry precision gaps in the source geoparquet---a known issue with high-resolution municipal boundary files.
+The 50-metre buffer resolves all boundary gaps without creating spurious connections between non-adjacent municipalities.
+
+\subsection{Jaccard Stability Across Reference Periods}
+
+The Jaccard matrix is broadly stable across reference periods.
+In June 2015, NL$\leftrightarrow$LD Jaccard was 0.103 and LA$\leftrightarrow$LD was 0.000; in June 2020, these were 0.164 and 0.198; and in June 2025, 0.143 and 0.151, respectively.
+The consistently low values for Located Dead pairs across all three cross-sections reinforce the non-interchangeability finding.

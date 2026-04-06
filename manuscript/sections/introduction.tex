@@ -1,0 +1,62 @@
+% ==============================================================================
+% Section 1: Introduction
+% ==============================================================================
+\section{Introduction}
+\label{sec:intro}
+
+% ---- Block 1: Scale and stakes ------------------------------------------------
+Mexico's disappearance crisis is among the most severe humanitarian emergencies in the Western Hemisphere.
+As of early 2026, the Registro Nacional de Personas Desaparecidas y No Localizadas (RNPDNO) has recorded over 115,000 persons whose whereabouts remain unknown---a figure widely acknowledged to undercount the true scale \citep{mandolessi_2022, guercke_2021}.
+In March 2026, the UN Committee on Enforced Disappearances (CED) issued its first-ever referral to the General Assembly under Article~34 of the Convention, finding that enforced disappearances in Mexico constitute crimes against humanity \citep{CED_MEX_art34_2026}.
+The decision explicitly notes that attacks occurred ``at different moments and in different parts of the territory''---a spatial and temporal characterization that, until now, has lacked systematic quantitative support at the national scale.
+Forced disappearances have been documented across multiple contexts: as a tool of state repression, a byproduct of organized criminal violence, and a consequence of weak institutional capacity to investigate and resolve cases \citep{solar_2021, guercke_2021, rios_2013}.
+
+% ---- Block 2: Spatial criminology lineage --------------------------------------
+Spatial analysis of crime has a well-established lineage in quantitative criminology.
+\citet{sherman_1989} demonstrated that predatory crime concentrates at specific places, a finding that launched the hot-spot policing paradigm \citep{braga_hotspots_2014}.
+\citet{anselin_1995}'s Local Indicators of Spatial Association (LISA) provided the statistical framework for identifying clusters of high and low values while accounting for spatial dependence.
+\citet{weisburd_2015}'s ``law of crime concentration'' formalized the empirical regularity that approximately 50\% of crime occurs in 4--6\% of places, a benchmark that has been validated across cities and crime types \citep{weisburd_2004, curman_2015, steenbeek_weisburd_2016}.
+The \emph{Journal of Quantitative Criminology} has dedicated special issues to place-based crime analysis \citep{braga_law_2017, andresen_advances_2021}, and concentration measurement has been refined using Gini coefficients and related indices \citep{prieto_curiel_2018, schnell_braga_piza_2017}.
+
+% ---- Block 3: Mexico-specific spatial work -------------------------------------
+Spatial analysis of violence in Mexico has focused primarily on homicides.
+\citet{vilalta_muggah_2016} and \citet{vilalta_2021} examined homicide patterns in Mexico City using spatial regression and diffusion models, identifying neighborhood-level clustering tied to socioeconomic deprivation and routine activities.
+\citet{cadena_garrocho_2019} provided the first national-scale spatial analysis to include both homicides and disappearances at the municipal level for 2006--2017, documenting a northward shift in violence associated with cartel territorial competition---but treated disappearances as a monolithic category.
+\citet{atuesta_2024} examined organized crime-related disappearances in three northern states (Durango, Tamaulipas, Coahuila) using case-level data, documenting spatial patterns linked to drug trafficking routes, but their analysis was restricted to three states and did not examine outcome status decomposition.
+\citet{aguilar_velazquez_2025} analyzed disappearances in Mexico City using data-driven methods but at a single-city scale.
+None of these studies disaggregated disappearances by outcome status or examined the full national territory at monthly resolution.
+
+% ---- Block 4: The gap ---------------------------------------------------------
+All prior spatial work on disappearances in Mexico treats them as a single phenomenon.
+This is a consequential simplification.
+The RNPDNO distinguishes four outcome statuses that reflect fundamentally different processes: Not Located cases represent active search failures---persons whose whereabouts remain unknown; Located Alive cases represent successful recoveries; and Located Dead cases represent lethal outcomes.
+If these processes are driven by different actors, institutional responses, or structural conditions, they should produce different spatial signatures.
+A municipality that is a hotspot for living recoveries may not be a hotspot for lethal outcomes; a municipality with many unresolved cases may not be a municipality where bodies are found.
+These distinctions have direct implications for resource allocation: forensic identification teams should be deployed where lethal outcomes concentrate, while active search and prevention programs should target areas of concentrated unresolved cases---and these may be different places.
+The RNPDNO makes outcome-disaggregated analysis possible, but no study has exploited this structure at the national scale.
+
+% ---- Block 5: This paper -------------------------------------------------------
+This paper presents the first outcome-disaggregated spatial analysis of disappearances in Mexico at the national scale with monthly resolution.
+We analyze \nmunis{} municipalities over \nmonths{} months (\studyperiod{}) across four outcome statuses, executing \nLISAruns{} LISA runs.
+Two methodological contributions distinguish this work.
+First, we quantify cross-status spatial non-interchangeability using Jaccard similarity coefficients on pairwise HH cluster sets---demonstrating that outcome statuses produce distinct hotspot geographies.
+Second, the monthly temporal resolution reveals dynamics invisible to annual analyses, most notably the rapid expansion of HH clusters in Mexico's Centro region.
+We further examine whether the CED's qualitative geographic claims about eight named states find support in the quantitative spatial record.
+A companion Data in Brief descriptor documents the dataset schema and processing pipeline \todocite{cite Data in Brief descriptor when published}.
+
+% ---- Block 6: Research questions -----------------------------------------------
+This paper addresses four research questions:
+
+\begin{enumerate}
+  \item \textbf{RQ1 (Concentration):} How geographically concentrated are
+        disappearances, and does concentration differ across outcome statuses?
+  \item \textbf{RQ2 (Clustering):} Do the four outcome statuses produce distinct
+        spatial cluster geographies at the municipal level?
+  \item \textbf{RQ3 (Temporal dynamics):} How has the spatial distribution of
+        each status evolved from 2015 to 2025, and do regional hotspot trajectories
+        diverge by outcome?
+  \item \textbf{RQ4 (Sex disaggregation):} Do male and female disappearances
+        exhibit different spatial patterns across outcome statuses?
+\end{enumerate}
+
+\noindent We additionally examine the alignment between our empirical findings and the CED's geographic characterization of disappearance patterns across eight named states.

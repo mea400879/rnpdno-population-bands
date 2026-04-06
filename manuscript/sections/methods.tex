@@ -1,0 +1,92 @@
+% ==============================================================================
+% Section 3: Methods
+% ==============================================================================
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Spatial Weights}
+\label{sec:weights}
+
+We construct a Queen contiguity spatial weights matrix for all \nmunis{} municipalities using the \texttt{libpysal} library \citep{rey_pysal_2010}.
+To address sub-metre geometry precision gaps in the source geoparquet that would otherwise produce false island municipalities, we employ fuzzy contiguity with a 50-metre buffer (\texttt{fuzzy\_contiguity(buffering=True, buffer=50)}) rather than exact topological intersection.
+The matrix is row-standardized.
+This approach yields \nislands{} island municipalities---all boundary gaps are resolved by the buffer tolerance.
+
+\subsection{Global Spatial Autocorrelation}
+\label{sec:global}
+
+Global Moran's $I$ quantifies the overall degree of spatial clustering:
+
+\begin{equation}
+  I = \frac{n}{\sum_i \sum_j w_{ij}}
+      \cdot
+      \frac{\sum_i \sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}
+           {\sum_i (x_i - \bar{x})^2}
+  \label{eq:moran}
+\end{equation}
+
+\noindent where $x_i$ is the case count in municipality $i$, $w_{ij}$ are row-standardized Queen contiguity weights, and $n = \text{\nmunis{}}$.
+Statistical significance is assessed via 999 conditional permutations at $\alpha = 0.05$.
+
+\subsection{Local Spatial Autocorrelation (LISA)}
+\label{sec:lisa}
+
+Local Moran's $I_i$ decomposes the global statistic into municipality-level contributions \citep{anselin_1995}:
+
+\begin{equation}
+  I_i = \frac{(x_i - \bar{x})}{m_2} \sum_j w_{ij}(x_j - \bar{x}), \quad
+  m_2 = \frac{1}{n}\sum_i (x_i - \bar{x})^2
+  \label{eq:lisa}
+\end{equation}
+
+\noindent Municipalities are classified into five types based on the sign of their local statistic and the significance of their pseudo-$p$-value at $\alpha = 0.05$: High-High (HH), Low-Low (LL), High-Low (HL), Low-High (LH), and Not Significant (NS).
+HH municipalities have high counts surrounded by high-count neighbors; LL municipalities have low counts surrounded by low-count neighbors.
+
+We extract connected-component HH clusters via breadth-first search on the Queen adjacency graph, retaining only clusters of three or more contiguous HH municipalities.
+LL clusters are retained in tables for completeness but are not interpreted as a substantive finding: the extreme zero-inflation of the count data (77--98\% of municipality-months record zero cases, depending on status) means that LL classification largely identifies municipalities where nothing happened surrounded by municipalities where nothing happened.
+
+The total computational scope is \nLISAruns{} LISA runs: 4 statuses $\times$ 3 sex categories (total, male, female) $\times$ \nmonths{} months, each computed over $N = \text{\nmunis{}}$ municipalities with 999 permutations.
+
+\subsection{Geographic Concentration}
+\label{sec:concentration}
+
+We quantify geographic concentration using the Gini coefficient:
+
+\begin{equation}
+  G = \frac{2\sum_{i=1}^{n} i \cdot x_{(i)}}{n \sum_{i=1}^{n} x_{(i)}}
+      - \frac{n+1}{n}
+  \label{eq:gini}
+\end{equation}
+
+\noindent and the Herfindahl-Hirschman Index (HHI):
+
+\begin{equation}
+  \text{HHI} = \sum_{i=1}^{n} s_i^2, \quad s_i = \frac{x_i}{\sum_j x_j}
+  \label{eq:hhi}
+\end{equation}
+
+\noindent where $x_{(i)}$ is the $i$-th order statistic of the count distribution.
+Both metrics are computed for each of the \nmonths{} monthly cross-sections per status.
+We benchmark our concentration estimates against \citet{weisburd_2015}'s ``law of crime concentration,'' which posits that approximately 50\% of crime concentrates in 4--6\% of places.
+
+\subsection{Trend Analysis}
+\label{sec:trend}
+
+We fit OLS regressions of the form $y_t = \alpha + \beta t + \varepsilon_t$ separately for each (region $\times$ status) combination, where $y_t$ is the monthly count of HH municipalities and $t = 1, \ldots, \text{\nmonths{}}$.
+Slopes are expressed as municipalities per year ($\hat\beta \times 12$).
+Because monthly HH counts exhibit serial correlation, standard errors are computed using the \citet{newey_west_1987} heteroskedasticity and autocorrelation consistent (HAC) estimator with a bandwidth of 12 months.
+
+\subsection{Sex Disaggregation}
+\label{sec:sex_methods}
+
+LISA is repeated separately for male and female case counts across all statuses and months.
+We compare male and female HH geographies using Jaccard similarity (intersection over union of HH municipality sets) for each status at the \referencemonth{} cross-section.
+A critical limitation applies to female Located Dead: with a mean of 0.0065 cases per municipality-month and 99.4\% zero cells, the LISA algorithm lacks sufficient spatial variation to detect meaningful clusters.
+Female Located Dead results are reported for completeness but should be interpreted with extreme caution.
+
+\subsection{CED Alignment Analysis}
+\label{sec:ced_methods}
+
+As a post-hoc exercise, we extract HH dynamics for eight states explicitly named in the Committee on Enforced Disappearances' Article~34 decision \citep{CED_MEX_art34_2026}: Jalisco, Guanajuato, Coahuila, Veracruz, Nayarit, Tabasco, Nuevo Le\'{o}n, and Estado de M\'{e}xico.
+For each state, we count the number of municipalities classified as HH in each month, overlay the CED's temporal claims, and compute OLS trend slopes.
+No additional LISA runs are required; this analysis operates entirely on the existing \nLISAruns{} runs.

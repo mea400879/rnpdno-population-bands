@@ -1,14 +1,29 @@
-%% References for rnpdno_dib_outline.tex
+% =============================================================================
+% references.bib — Paper 1: Spatial Dynamics of Disappearances in Mexico
+% Target: Journal of Quantitative Criminology (JQC)
+% Last updated: 2026-04-06
+%
+% LEGEND:
+%   %% VERIFIED — Marco checked bibliographic info
+%   %% TODO-VERIFY — needs Marco to confirm year/journal/pages from Zotero
+% =============================================================================
 
+
+% ---------------------------------------------------------------------------
+% A. DATASET, LEGAL FRAMEWORK, INSTITUTIONAL
+% ---------------------------------------------------------------------------
+
+%% VERIFIED
 @misc{cnb_rnpdno,
   author       = {{Comisión Nacional de Búsqueda}},
   title        = {Registro Nacional de Personas Desaparecidas y No Localizadas
-                  ({RNPDNO}) -- Tabla Sociodemográfica},
-  howpublished = {\url{https://versionpublicarnpdno.segob.gob.mx/SocioDemografico/TablaDetalle}},
-  year         = {2025},
-  note         = {Accessed: 2026-01-14},
+                  ({RNPDNO})},
+  howpublished = {\url{https://versionpublicarnpdno.segob.gob.mx/Dashboard/ContextoGeneral}},
+  year         = {2026},
+  note         = {Accessed: 2026-04-05},
 }
 
+%% VERIFIED
 @misc{inegi_ageeml,
   author       = {{Instituto Nacional de Estadística y Geografía}},
   title        = {Catálogo Único de Claves de Áreas Geoestadísticas
@@ -19,6 +34,7 @@
   note         = {Accessed: 2026-01-14},
 }
 
+%% VERIFIED
 @misc{code_repo,
   author       = {Escobar, Marco A.},
   title        = {{RNPDNO} Scraper: Processing pipeline for the {RNPDNO} dataset},
@@ -26,6 +42,47 @@
   year         = {2026},
 }
 
+%% VERIFIED
+@misc{ley_general_2017,
+  title        = {Ley General en Materia de Desaparici{\'o}n Forzada de
+                  Personas, Desaparici{\'o}n Cometida por Particulares y del
+                  Sistema Nacional de B{\'u}squeda de Personas},
+  year         = {2017},
+  howpublished = {Diario Oficial de la Federaci{\'o}n, 17 de noviembre
+                  de 2017},
+  url          = {https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMDFP.pdf},
+  note         = {Last reform DOF 2023-05-22},
+}
+
+%% VERIFIED
+@misc{CED_MEX_art34_2026,
+  author       = {{Committee on Enforced Disappearances}},
+  title        = {Decision under article~34 of the {Convention}: {Mexico}},
+  year         = {2026},
+  howpublished = {United Nations, Document CED/C/MEX/A.34/D/1},
+  url          = {https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CED\%2FC\%2FMEX\%2FA.34\%2FD\%2F1&Lang=en},
+  note         = {Adopted at the 29th and 30th sessions
+                  (September 2025 and March 2026). First referral
+                  to the UN General Assembly under article~34
+                  of the Convention},
+}
+
+%% TODO-VERIFY — confirm URL still resolves; document number CED/C/MEX/VR/1
+@misc{CED_MEX_visit_2022,
+  author       = {{Committee on Enforced Disappearances}},
+  title        = {Report on the visit to {Mexico} under article~33 of the
+                  {Convention}: Findings},
+  year         = {2022},
+  howpublished = {United Nations, Document CED/C/MEX/VR/1 (Findings)},
+  url          = {https://digitallibrary.un.org/record/4032520},
+}
+
+
+% ---------------------------------------------------------------------------
+% B. DISAPPEARANCES IN MEXICO — SUBSTANTIVE
+% ---------------------------------------------------------------------------
+
+%% VERIFIED
 @incollection{mandolessi_2022,
   author    = {Mandolessi, Silvana},
   title     = {Introduction---Disappearances in {Mexico}},
@@ -34,9 +91,10 @@
   address   = {London},
   year      = {2022},
   pages     = {1--27},
-  doi       = {10.4324/9781003169611-1}
+  doi       = {10.4324/9781003169611-1},
 }
 
+%% VERIFIED
 @article{cadena_garrocho_2019,
   author  = {Cadena, Edel and Garrocho, Carlos},
   title   = {Geografía del terror: homicidios y desapariciones forzadas
@@ -46,9 +104,10 @@
   number  = {102},
   pages   = {219--273},
   year    = {2019},
-  doi     = {10.22185/24487147.2019.102.37}
+  doi     = {10.22185/24487147.2019.102.37},
 }
 
+%% VERIFIED
 @article{atuesta_2024,
   author  = {Atuesta, Laura H. and González, Isaac Vargas},
   title   = {Organized crime-related disappearances in {Mexico}:
@@ -58,20 +117,10 @@
   number  = {2},
   pages   = {148--172},
   year    = {2024},
-  doi     = {10.1007/s12117-022-09452-3}
+  doi     = {10.1007/s12117-022-09452-3},
 }
 
-@article{anselin_1995,
-  author  = {Anselin, Luc},
-  title   = {Local Indicators of Spatial Association---{LISA}},
-  journal = {Geographical Analysis},
-  volume  = {27},
-  number  = {2},
-  pages   = {93--115},
-  year    = {1995},
-  doi     = {10.1111/j.1538-4632.1995.tb00338.x}
-}
-
+%% VERIFIED
 @article{aguilar_velazquez_2025,
   author  = {Aguilar-Velázquez, Daniel and Calvario Peréz, Ruben
              and Mondragón Mendoza, Carlos
@@ -83,43 +132,10 @@
   number  = {9},
   pages   = {e0323405},
   year    = {2025},
-  doi     = {10.1371/journal.pone.0323405}
+  doi     = {10.1371/journal.pone.0323405},
 }
 
-@article{ruiz_reyes_2024,
-  author  = {Ruiz Reyes, Jorge and Congram, Derek and Sirbu, Renée
-             and Floridi, Luciano},
-  title   = {Where are they? {A} review of statistical techniques
-             and data analysis to support the search for missing
-             persons and the new field of data-based disappearance
-             analysis},
-  journal = {SSRN Electronic Journal},
-  year    = {2024},
-  doi     = {10.2139/ssrn.4704138}
-}
-
-@misc{ley_general_2017,
-  title        = {Ley General en Materia de Desaparici{\'o}n Forzada de
-                  Personas, Desaparici{\'o}n Cometida por Particulares y del
-                  Sistema Nacional de B{\'u}squeda de Personas},
-  year         = {2017},
-  howpublished = {Diario Oficial de la Federaci{\'o}n, 17 de noviembre
-                  de 2017},
-  url          = {https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMDFP.pdf},
-  note         = {Last reform DOF 2023-05-22},
-}
- 
-@article{fazekas_2024,
-  author  = {Fazekas, Mih{\'a}ly and T{\'o}th, Bence and Abdou, Aly
-             and Desrosiers, Aur{\'e}lien and Nolan-Flecha, Natalia},
-  title   = {Global Contract-level Public Procurement Dataset},
-  journal = {Data in Brief},
-  volume  = {54},
-  pages   = {110412},
-  year    = {2024},
-  doi     = {10.1016/j.dib.2024.110412},
-}
- 
+%% VERIFIED
 @article{das_2025,
   author  = {Das, Abhery and Lee, Eileen and Ganguli, Devoja
              and Bruckner, Tim A.},
@@ -129,6 +145,445 @@
   volume  = {240},
   pages   = {217--222},
   year    = {2025},
-  doi     = {10.1016/j.puhe.2024.12.016},
+  doi     = {10.1016/j.puhe.2025.01.011},
 }
- 
+
+%% VERIFIED
+@article{reyes_where_2025,
+  author  = {Reyes, Jorge Ruiz and Congram, Derek and Sirbu, Renée A.
+             and Floridi, Luciano},
+  title   = {Where are they? {A} review of statistical techniques and data
+             analysis to support the search for missing persons},
+  journal = {Forensic Science International},
+  volume  = {376},
+  pages   = {112582},
+  year    = {2025},
+  doi     = {10.1016/j.forsciint.2025.112582},
+}
+
+%% VERIFIED
+@article{fazekas_2024,
+  author  = {Fazekas, Mihály and Tóth, Bence and Abdou, Aly
+             and Al-Shaibani, Ahmed},
+  title   = {Global Contract-level Public Procurement Dataset},
+  journal = {Data in Brief},
+  volume  = {54},
+  pages   = {110412},
+  year    = {2024},
+  doi     = {10.1016/j.dib.2024.110412},
+}
+
+%% TODO-VERIFY — confirm volume/pages from Zotero
+@article{solar_2021,
+  author  = {Solar, Carlos},
+  title   = {Forced Disappearances and the Inequalities of a Global Crime},
+  journal = {Alternatives: Global, Local, Political},
+  volume  = {46},
+  number  = {1},
+  pages   = {17--22},
+  year    = {2021},
+  doi     = {10.1177/03043754211021270},
+}
+
+%% TODO-VERIFY — confirm volume/pages from Zotero
+@article{guercke_2021,
+  author  = {Guercke, Lene},
+  title   = {State Responsibility for a Failure to Prevent Violations of
+             the Right to Life by Organised Criminal Groups: Disappearances
+             in {Mexico}},
+  journal = {Human Rights Law Review},
+  volume  = {21},
+  number  = {2},
+  pages   = {329--357},
+  year    = {2021},
+  doi     = {10.1093/hrlr/ngaa061},
+}
+
+%% TODO-VERIFY — confirm volume/number/pages; journal title may need checking
+@article{rangel_romero_2023,
+  author  = {Rangel Romero, Xochithl Guadalupe},
+  title   = {Alertas de búsqueda para Niños, niñas y adolescentes ({NnyA})
+             en las Comisiones locales de búsqueda en {México}},
+  journal = {Revista de Derecho},
+  volume  = {8},
+  number  = {2},
+  year    = {2023},
+  doi     = {10.47712/rd.2023.v8i2.249},
+}
+
+
+% ---------------------------------------------------------------------------
+% C. MEXICO VIOLENCE — CAUSAL / CONTEXTUAL
+% ---------------------------------------------------------------------------
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{rios_2013,
+  author  = {Rios, Viridiana},
+  title   = {Why did {Mexico} become so violent? {A} self-reinforcing violent
+             equilibrium caused by competition and enforcement},
+  journal = {Trends in Organized Crime},
+  volume  = {16},
+  number  = {2},
+  pages   = {138--155},
+  year    = {2013},
+  doi     = {10.1007/s12117-012-9175-z},
+}
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{shirk_wallman_2015,
+  author  = {Shirk, David and Wallman, Joel},
+  title   = {Understanding {Mexico}'s Drug Violence},
+  journal = {Journal of Conflict Resolution},
+  volume  = {59},
+  number  = {8},
+  pages   = {1348--1376},
+  year    = {2015},
+  doi     = {10.1177/0022002715587049},
+}
+
+%% TODO-VERIFY — confirm pages; this is the Science paper on cartel recruitment
+@article{prieto_curiel_cartels_2023,
+  author  = {Prieto-Curiel, Rafael and Campedelli, Gian Maria and Hope, Alejandro},
+  title   = {Reducing cartel recruitment is the only way to lower violence
+             in {Mexico}},
+  journal = {Science},
+  volume  = {381},
+  number  = {6664},
+  pages   = {1312--1316},
+  year    = {2023},
+  doi     = {10.1126/science.adh2888},
+}
+
+%% TODO-VERIFY — confirm volume/pages from Zotero
+@article{atuesta_connection_2025,
+  author  = {Atuesta, Laura H.},
+  title   = {The Connection Between Drug-Related Detentions and Drug-Related
+             Violence: Another Failure of the War on Drugs in {Mexico}},
+  journal = {Deviant Behavior},
+  volume  = {46},
+  number  = {7},
+  pages   = {821--837},
+  year    = {2025},
+  doi     = {10.1080/01639625.2024.2372421},
+}
+
+%% TODO-VERIFY — volume/pages from Zotero
+@article{vilalta_muggah_2016,
+  author  = {Vilalta, Carlos and Muggah, Robert},
+  title   = {What Explains Criminal Violence in {Mexico City}? {A} Test of
+             Two Theories of Crime},
+  journal = {Stability: International Journal of Security \& Development},
+  volume  = {5},
+  number  = {1},
+  pages   = {1},
+  year    = {2016},
+  doi     = {10.5334/sta.433},
+}
+
+%% TODO-VERIFY — volume/pages from Zotero
+@article{vilalta_2021,
+  author  = {Vilalta, Carlos and Lopez-Ramirez, Pablo and Fondevila, Gustavo},
+  title   = {The spatial diffusion of homicide in {Mexico City}: a test of
+             theories in context},
+  journal = {Global Crime},
+  volume  = {22},
+  number  = {3},
+  pages   = {222--239},
+  year    = {2021},
+  doi     = {10.1080/17440572.2021.1909480},
+}
+
+%% TODO-VERIFY — volume/pages from Zotero
+@article{herrera_2022,
+  author  = {Herrera, Joel Salvador and Martinez-Alvarez, Cesar B.},
+  title   = {Diversifying violence: Mining, export-agriculture, and criminal
+             governance in {Mexico}},
+  journal = {World Development},
+  volume  = {151},
+  pages   = {105769},
+  year    = {2022},
+  doi     = {10.1016/j.worlddev.2021.105769},
+}
+
+
+% ---------------------------------------------------------------------------
+% D. SPATIAL CRIMINOLOGY — FOUNDATIONAL
+% ---------------------------------------------------------------------------
+
+%% VERIFIED
+@article{anselin_1995,
+  author  = {Anselin, Luc},
+  title   = {Local Indicators of Spatial Association---{LISA}},
+  journal = {Geographical Analysis},
+  volume  = {27},
+  number  = {2},
+  pages   = {93--115},
+  year    = {1995},
+  doi     = {10.1111/j.1538-4632.1995.tb00338.x},
+}
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{getis_ord_1992,
+  author  = {Getis, Arthur and Ord, J. K.},
+  title   = {The Analysis of Spatial Association by Use of Distance Statistics},
+  journal = {Geographical Analysis},
+  volume  = {24},
+  number  = {3},
+  pages   = {189--206},
+  year    = {1992},
+  doi     = {10.1111/j.1538-4632.1992.tb00261.x},
+}
+
+%% TODO-VERIFY — single-page article, confirm page number
+@article{tobler_1970,
+  author  = {Tobler, W. R.},
+  title   = {A Computer Movie Simulating Urban Growth in the {Detroit} Region},
+  journal = {Economic Geography},
+  volume  = {46},
+  pages   = {234--240},
+  year    = {1970},
+  doi     = {10.2307/143141},
+}
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{sherman_1989,
+  author  = {Sherman, Lawrence W. and Gartin, Patrick R. and Buerger, Michael E.},
+  title   = {Hot Spots of Predatory Crime: Routine Activities and the
+             Criminology of Place},
+  journal = {Criminology},
+  volume  = {27},
+  number  = {1},
+  pages   = {27--56},
+  year    = {1989},
+  doi     = {10.1111/j.1745-9125.1989.tb00862.x},
+}
+
+%% TODO-VERIFY — original is ASR 1979. Zotero has nodate. Confirm vol/pages.
+@article{cohen_felson_1979,
+  author  = {Cohen, Lawrence E. and Felson, Marcus},
+  title   = {Social Change and Crime Rate Trends: A Routine Activity Approach},
+  journal = {American Sociological Review},
+  volume  = {44},
+  number  = {4},
+  pages   = {588--608},
+  year    = {1979},
+}
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{weisburd_2015,
+  author  = {Weisburd, David},
+  title   = {The law of crime concentration and the criminology of place},
+  journal = {Criminology},
+  volume  = {53},
+  number  = {2},
+  pages   = {133--157},
+  year    = {2015},
+  doi     = {10.1111/1745-9125.12070},
+}
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{weisburd_2004,
+  author  = {Weisburd, David and Bushway, Shawn and Lum, Cynthia
+             and Yang, Sue-Ming},
+  title   = {Trajectories of Crime at Places: A Longitudinal Study of Street
+             Segments in the City of {Seattle}},
+  journal = {Criminology},
+  volume  = {42},
+  number  = {2},
+  pages   = {283--322},
+  year    = {2004},
+  doi     = {10.1111/j.1745-9125.2004.tb00521.x},
+}
+
+%% TODO-VERIFY — confirm ISBN
+@book{weisburd_2012,
+  author    = {Weisburd, David and Groff, Elizabeth R. and Yang, Sue-Ming},
+  title     = {The Criminology of Place: Street Segments and Our Understanding
+               of the Crime Problem},
+  publisher = {Oxford University Press},
+  address   = {Oxford},
+  year      = {2012},
+}
+
+
+% ---------------------------------------------------------------------------
+% E. SPATIAL CRIMINOLOGY — JQC POSITIONING
+% ---------------------------------------------------------------------------
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{braga_law_2017,
+  author  = {Braga, Anthony A. and Andresen, Martin A. and Lawton, Brian},
+  title   = {The Law of Crime Concentration at Places: Editors' Introduction},
+  journal = {Journal of Quantitative Criminology},
+  volume  = {33},
+  number  = {3},
+  pages   = {421--426},
+  year    = {2017},
+  doi     = {10.1007/s10940-017-9342-0},
+}
+
+%% TODO-VERIFY — confirm DOI resolves; this is the 2021 JQC special issue intro
+@article{andresen_advances_2021,
+  author  = {Andresen, Martin A. and Haberman, Cory P. and Johnson, Shane D.
+             and Steenbeek, Wouter},
+  title   = {Advances in Place-Based Methods: Editors' Introduction},
+  journal = {Journal of Quantitative Criminology},
+  year    = {2021},
+  doi     = {10.1007/s10940-021-09517-6},
+}
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{prieto_curiel_2018,
+  author  = {Prieto Curiel, Rafael and Collignon Delmar, Sofía
+             and Bishop, Steven Richard},
+  title   = {Measuring the Distribution of Crime and Its Concentration},
+  journal = {Journal of Quantitative Criminology},
+  volume  = {34},
+  number  = {3},
+  pages   = {775--803},
+  year    = {2018},
+  doi     = {10.1007/s10940-017-9354-9},
+}
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{schnell_braga_piza_2017,
+  author  = {Schnell, Cory and Braga, Anthony A. and Piza, Eric L.},
+  title   = {The Influence of Community Areas, Neighborhood Clusters, and
+             Street Segments on the Spatial Variability of Violent Crime
+             in {Chicago}},
+  journal = {Journal of Quantitative Criminology},
+  volume  = {33},
+  number  = {3},
+  pages   = {469--496},
+  year    = {2017},
+  doi     = {10.1007/s10940-016-9313-x},
+}
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{steenbeek_weisburd_2016,
+  author  = {Steenbeek, Wouter and Weisburd, David},
+  title   = {Where the Action is in Crime? {An} Examination of Variability
+             of Crime Across Different Spatial Units in {The Hague},
+             2001--2009},
+  journal = {Journal of Quantitative Criminology},
+  volume  = {32},
+  number  = {3},
+  pages   = {449--469},
+  year    = {2016},
+  doi     = {10.1007/s10940-015-9276-3},
+}
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{curman_2015,
+  author  = {Curman, Andrea S. N. and Andresen, Martin A.
+             and Brantingham, Paul J.},
+  title   = {Crime and Place: A Longitudinal Examination of Street Segment
+             Patterns in {Vancouver}, {BC}},
+  journal = {Journal of Quantitative Criminology},
+  volume  = {31},
+  number  = {1},
+  pages   = {127--147},
+  year    = {2015},
+  doi     = {10.1007/s10940-014-9228-3},
+}
+
+%% TODO-VERIFY — confirm pages from Zotero
+@article{andresen_2006,
+  author  = {Andresen, Martin A.},
+  title   = {Crime Measures and the Spatial Analysis of Criminal Activity},
+  journal = {The British Journal of Criminology},
+  volume  = {46},
+  number  = {2},
+  pages   = {258--285},
+  year    = {2006},
+  doi     = {10.1093/bjc/azi054},
+}
+
+%% TODO-VERIFY — confirm pages; Braga et al. hot spots meta-analysis
+@article{braga_hotspots_2014,
+  author  = {Braga, Anthony A. and Papachristos, Andrew V.
+             and Hureau, David M.},
+  title   = {The Effects of Hot Spots Policing on Crime: An Updated
+             Systematic Review and Meta-Analysis},
+  journal = {Justice Quarterly},
+  volume  = {31},
+  number  = {4},
+  pages   = {633--663},
+  year    = {2014},
+  doi     = {10.1080/07418825.2012.673632},
+}
+
+
+% ---------------------------------------------------------------------------
+% F. NICE-TO-HAVE — DEEPER FRAMING
+% ---------------------------------------------------------------------------
+
+%% TODO-VERIFY — confirm volume/pages from Zotero
+@article{pereda_2022,
+  author  = {Pereda, Valentin},
+  title   = {Why {Global North} criminology fails to explain organized crime
+             in {Mexico}},
+  journal = {Theoretical Criminology},
+  volume  = {26},
+  number  = {4},
+  pages   = {620--640},
+  year    = {2022},
+  doi     = {10.1177/13624806221104562},
+}
+
+%% TODO-VERIFY — confirm this is an edited collection, not article; check ISBN
+@collection{estevez_2021,
+  editor    = {Estévez, Ariadna},
+  title     = {Necropower in {North America}: The Legal Spatialization of
+               Disposability and Lucrative Death},
+  publisher = {Springer International Publishing},
+  address   = {Cham},
+  year      = {2021},
+  doi       = {10.1007/978-3-030-73659-0},
+}
+
+%% TODO-VERIFY — Zotero key messner_spatial_nodate. Confirm: Messner et al. 1999,
+%% Journal of Criminal Justice 27(5):423-444. Add year/journal/volume/pages.
+@article{messner_1999,
+  author  = {Messner, Steven F. and Anselin, Luc and Baller, Robert D.
+             and Hawkins, Darnell F. and Deane, Glenn and Tolnay, Stewart E.},
+  title   = {The Spatial Patterning of County Homicide Rates: An Application
+             of Exploratory Spatial Data Analysis},
+  journal = {Journal of Quantitative Criminology},
+  volume  = {15},
+  number  = {4},
+  pages   = {423--444},
+  year    = {1999},
+  doi     = {10.1023/A:1007544208712},
+}
+
+%% TODO-VERIFY — Zotero key noauthor_simple_nodate. This is Newey & West 1987.
+%% Confirm: Econometrica 55(3):703-708.
+@article{newey_west_1987,
+  author  = {Newey, Whitney K. and West, Kenneth D.},
+  title   = {A Simple, Positive Semi-Definite, Heteroskedasticity and
+             Autocorrelation Consistent Covariance Matrix},
+  journal = {Econometrica},
+  volume  = {55},
+  number  = {3},
+  pages   = {703--708},
+  year    = {1987},
+}
+
+
+% ---------------------------------------------------------------------------
+% G. SOFTWARE
+% ---------------------------------------------------------------------------
+
+%% TODO-VERIFY — need PySAL reference. Rey et al. 2021 or Rey & Anselin 2007.
+%% Check which version is cited in current main.tex as Rey2021.
+@article{rey_pysal_2010,
+  author  = {Rey, Sergio J. and Anselin, Luc},
+  title   = {{PySAL}: A {Python} Library of Spatial Analytical Methods},
+  journal = {Review of Regional Studies},
+  volume  = {37},
+  number  = {1},
+  pages   = {5--27},
+  year    = {2007},
+  doi     = {10.52324/001c.8285},
+}

@@ -8,22 +8,32 @@
 
 % ---- Packages ----------------------------------------------------------------
 \usepackage[margin=1in]{geometry}
-\usepackage{booktabs}          % \toprule \midrule \bottomrule \cmidrule
+\usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{natbib}
 \usepackage{setspace}
-\usepackage{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage[font=small,labelfont=bf]{caption}
-\usepackage{subcaption}        % for multi-panel figure references
-\usepackage{adjustbox}         % for wide tables: \begin{adjustbox}{max width=\textwidth}
-\usepackage{array}             % extended column types
-\usepackage{xcolor}            % \todo color
-\usepackage{soul}              % \hl highlighting for TODO passages
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{xcolor}
 
-% ---- TODO helper -------------------------------------------------------------
+% ---- TODO system -------------------------------------------------------------
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
-% \cite is provided by natbib; use \citep / \citet in body text
+\newcommand{\todoverify}[1]{\textcolor{orange}{\textbf{[VERIFY: #1]}}}
+\newcommand{\todocite}[1]{\textcolor{blue}{\textbf{[CITE: #1]}}}
+\newcommand{\todowrite}[1]{\textcolor{purple}{\textbf{[WRITE: #1]}}}
+
+% ---- Study parameter commands ------------------------------------------------
+\newcommand{\studyperiod}{January 2015 -- December 2025}
+\newcommand{\nmonths}{132}
+\newcommand{\nmunis}{2,478}
+\newcommand{\referencemonth}{June 2025}
+\newcommand{\bookendstart}{June 2015}
+\newcommand{\nislands}{0}
+\newcommand{\nLISAruns}{1,584}
 
 % ---- Document settings -------------------------------------------------------
 \doublespacing
@@ -32,7 +42,7 @@
 \title{Spatial Dynamics of Disappearances in Mexico, 2015--2025:\\
        A Municipal-Level Analysis by Outcome Status}
 
-\author{\todo{Author(s)}}
+\author{\todo{Author(s) and affiliations}}
 \date{\today}
 
 % ==============================================================================
@@ -40,693 +50,59 @@
 \maketitle
 
 % ---- Abstract ----------------------------------------------------------------
-\begin{abstract}
-\todo{Write abstract last. Key points to cover:
-(1) first outcome-disaggregated spatial analysis of disappearances in Mexico
-    at monthly resolution, 2015--2025;
-(2) four outcome statuses are NOT spatially interchangeable:
-    Located Dead dominated by Low-Low in Dec 2024 (118 LL vs 18 HH),
-    distinct from Total/Not Located/Located Alive;
-(3) Centro is the fastest-growing hotspot region (+2.76 munis/yr total,
-    +4.18 not located), not Norte as previously found with annual data;
-(4) Baj\'io declining for Located Alive ($-0.51^{**}$/yr) but rising for
-    Located Dead ($+0.23^{*}$/yr);
-(5) sex disaggregation: Not Located 78\% male, Located Alive near-equal (49\%),
-    Located Dead 86\% male;
-(6) policy implication: forensic and prevention resources should use different
-    geographic targets.
-Approximately 200 words.}
-\end{abstract}
+\input{sections/abstract}
 
 \textbf{Keywords:} enforced disappearances; spatial autocorrelation; LISA;
-Mexico; outcome status; municipal level; hotspot analysis; temporal dynamics
+Mexico; outcome status; municipal level; hotspot analysis; crime concentration
 
 \newpage
 
 % ==============================================================================
-% SESSION NOTE (2026-03-16) — PAPER PURPOSE:
-% Prior research treats disappearances in Mexico as a single geographic
-% phenomenon.  This paper's core argument is that the OUTCOME STATUS of a
-% disappearance (not located vs located alive vs located dead) determines
-% WHERE the case clusters spatially — and those geographies are
-% fundamentally non-interchangeable.
-%
-% Why it matters for policy:
-%   - Not Located geography  → where to deploy active search and prevention
-%   - Located Dead geography → where to deploy forensic identification capacity
-%   - These are DIFFERENT PLACES, so treating disappearances as one metric
-%     leads to misallocation of search and forensic resources.
-%
-% Why it matters for criminology:
-%   - First outcome-disaggregated spatial analysis of disappearances at
-%     national scale with monthly resolution (132 periods, 2,478 municipalities)
-%   - Demonstrates spatial non-interchangeability empirically (Table 5 Jaccard,
-%     Table 7 divergent trends, Table 8 sex patterns)
-%   - Reveals Centro expansion invisible to annual/aggregate analyses
-% ==============================================================================
-\section{Introduction}
-\label{sec:intro}
-% ---- Target length: ~1,500 words ---------------------------------------------
-
-\todo{Para 1 — Scale and stakes: Mexico's disappearance crisis.
-250k+ registered in RNPDNO as of 2025. Humanitarian toll.
-Brief international context.}
-
-\todo{Para 2 — Spatial criminology background: hotspot policing (Sherman et al.
-1989), LISA (Anselin 1995), applications to Mexico (Vilalta, Osorio, Atuesta).
-All prior work treats disappearances as monolithic --- no outcome decomposition.}
-
-\todo{Para 3 — The gap: why outcome status matters.
-Not Located = active search failure.
-Located Alive = resolution through recovery.
-Located Dead = lethal outcome.
-These reflect fundamentally different processes, potentially different actors
-and geographies. Cite DiB data descriptor for dataset release.}
-
-\todo{Para 4 — This paper: monthly resolution (132 periods), 4 statuses,
-2,478 municipalities, 2015--2025.
-Contribution: first study to demonstrate spatial non-interchangeability of
-disappearance outcome statuses at national scale.}
-
-\todo{Para 5 — Four research questions (RQ1--RQ4, see below).}
-
-This paper addresses four research questions:
-
-\begin{enumerate}
-  \item \textbf{RQ1 (Concentration):} How geographically concentrated are
-        disappearances, and does concentration differ across outcome statuses?
-  \item \textbf{RQ2 (Clustering):} Do the four outcome statuses produce distinct
-        spatial cluster geographies at the municipal level?
-  \item \textbf{RQ3 (Temporal dynamics):} How has the spatial distribution of
-        each status evolved from 2015 to 2025, and do Norte and Baj\'io exhibit
-        divergent trajectories?
-  \item \textbf{RQ4 (Sex disaggregation):} Do male and female disappearances
-        exhibit different spatial patterns across outcome statuses?
-\end{enumerate}
+\input{sections/introduction}
 
 % ==============================================================================
-\section{Data and Methods}
-\label{sec:methods}
+\input{sections/data}
 
-% ---- 2.1 Data ----------------------------------------------------------------
-\subsection{Data}
-\label{sec:data}
-% ---- Target length: ~800 words -----------------------------------------------
-
-% SESSION NOTE (2026-03-16):
-% The data is FLOW (new monthly registrations), NOT a cumulative stock.
-% The commonly-cited ~111k–115k figure is the historical cumulative stock
-% (all cases ever registered since inception, including pre-2015 cases).
-% Our 11-year flow totals: 89,850 not located; 157,688 located alive;
-% 15,343 located dead.  These figures are correct — not undercounts.
-% Evidence for FLOW interpretation: values fluctuate month-to-month
-% (not monotonically increasing); Dec 2024 national snapshot = 2,745 total
-% (impossible as a stock for a country with 100k+ registered cases).
-% Annual growth confirms the crisis worsened: Not Located new registrations
-% tripled from 3,745/yr (2015) to 12,888/yr (2024).
-The RNPDNO is released as four CSV files, one per outcome status, publicly
-available through \todo{cite DiB data descriptor}.
-Each row represents a municipality $\times$ month cell recording the count of
-persons whose case was \emph{registered} during that calendar month.
-These are \textbf{flow} counts --- new registrations entering the system each
-month --- not a cumulative stock of all cases ever recorded.
-The commonly cited national aggregate of approximately 111,000--115,000
-registered disappearances refers to the historical stock since the registry's
-inception (including cases pre-dating 2015) and substantially exceeds the
-flow-based totals reported here.
-Over the 132-month window January 2015--December 2025, 89,850 persons entered
-the registry under Not Located status, 157,688 under Located Alive, and
-15,343 under Located Dead (Table~\ref{tab:dataset}).
-Status identifiers are: 0 = Total, 7 = Not Located, 2 = Located Alive,
-3 = Located Dead.
-Municipality geocodes (cvegeo) are five-digit INEGI codes;
-1,803--240 sentinel rows per status (geocodes ending in 998/999 or equal
-to 99998) are excluded prior to spatial analysis as they cannot be assigned
-to a specific municipality.
-
-Table~\ref{tab:dataset} summarises the four files.
-
-\begin{table}[htbp]
-  \centering
-  \caption{RNPDNO dataset summary by outcome status}
-  \label{tab:dataset}
-  \begin{adjustbox}{max width=\textwidth}
-    \input{tables/table1_dataset_summary.tex}
-  \end{adjustbox}
-\end{table}
-
-\todo{Para 2 -- Note the sex pattern from Table 1:
-Not Located 78\% male (active disappearance disproportionately affects men);
-Located Alive near-parity (49.4\% male) --- gender-neutral resolution processes?;
-Located Dead 86\% male --- strongly aligned with homicide patterns.
-Discuss briefly; full analysis in \S\ref{sec:sex}.}
-
-\todo{Para 3 -- Sentinel geocodes: 1,803--1,256--837--240 rows excluded.
-Represent unresolvable geography (border municipalities, unknown state).
-12,206 total persons excluded from spatial analysis.}
-
-\todo{Para 4 -- INEGI Marco Geoestadístico 2025: 2,478 municipalities,
-EPSG:6372 (Mexico ITRF2008 / LCC). cvegeo as join key.}
-
-\todo{Para 5 -- Regional classification: 5 regions (Sur, Centro, Centro-Norte,
-Norte, Norte-Occidente) per CESOP/Mexicoencifras scheme.
-Baj\'io sub-flag: Guanajuato, Querétaro, Aguascalientes, SLP + Altos de Jalisco
-corridor (200 municipalities). Cite Mexicoencifras.}
-
-% ---- 2.2 Methods -------------------------------------------------------------
-\subsection{Spatial Weights}
-\label{sec:weights}
-
-We construct a Queen contiguity spatial weights matrix for the 2,478 valid
-municipalities using the \texttt{libpysal} library \citep{Rey2021}.
-The matrix is row-standardised.
-Of the 2,478 municipalities, 52 are islands (no Queen neighbours); these are
-retained in the analysis, as the conditional-permutation approach
-handles islands by assigning them a pseudo-\textit{p}-value based on the
-empirical distribution under random relabelling \citep{Anselin1995}.
-
-\subsection{Global Spatial Autocorrelation}
-\label{sec:global}
-
-Global Moran's $I$ is computed as:
-
-\begin{equation}
-  I = \frac{n}{\sum_i \sum_j w_{ij}}
-      \cdot
-      \frac{\sum_i \sum_j w_{ij}(x_i - \bar{x})(x_j - \bar{x})}
-           {\sum_i (x_i - \bar{x})^2}
-  \label{eq:moran}
-\end{equation}
-
-\noindent where $x_i$ is the case count in municipality $i$, $w_{ij}$ are
-row-standardised Queen-contiguity weights, and $n = 2{,}478$.
-Statistical significance is assessed via 999 conditional permutations;
-$\alpha = 0.05$.
-
-\subsection{Local Spatial Autocorrelation (LISA)}
-\label{sec:lisa}
-
-Local Moran's $I_i$ for municipality $i$ is:
-
-\begin{equation}
-  I_i = \frac{(x_i - \bar{x})}{m_2} \sum_j w_{ij}(x_j - \bar{x}), \quad
-  m_2 = \frac{1}{n}\sum_i (x_i - \bar{x})^2
-  \label{eq:lisa}
-\end{equation}
-
-Municipalities are classified into five types: High-High (HH), Low-Low (LL),
-High-Low (HL), Low-High (LH), and Not Significant (NS) at $\alpha = 0.05$
-\citep{Anselin1995}.
-HH clusters are connected components of spatially contiguous HH municipalities
-with a minimum size of three municipalities, identified via breadth-first
-search on the Queen adjacency graph.
-
-\subsection{Geographic Concentration}
-\label{sec:concentration}
-
-We quantify geographic concentration using the Gini coefficient:
-
-\begin{equation}
-  G = \frac{2\sum_{i=1}^{n} i \cdot x_{(i)}}{n \sum_{i=1}^{n} x_{(i)}}
-      - \frac{n+1}{n}
-  \label{eq:gini}
-\end{equation}
-
-\noindent and the Herfindahl-Hirschman Index (HHI):
-
-\begin{equation}
-  \text{HHI} = \sum_{i=1}^{n} s_i^2, \quad s_i = \frac{x_i}{\sum_j x_j}
-  \label{eq:hhi}
-\end{equation}
-
-\noindent where $x_{(i)}$ is the $i$-th order statistic of the count distribution.
-Both metrics are computed for each of the 132 monthly cross-sections per status.
-
-\subsection{Trend Analysis}
-\label{sec:trend}
-
-We fit OLS regressions of the form $y_t = \alpha + \beta t + \varepsilon_t$
-separately for each (region, status) combination, where $y_t$ is the monthly
-count of HH municipalities ($t = 1, \ldots, 132$).
-Slopes are expressed as municipalities per year ($\hat\beta \times 12$).
-Statistical significance assessed at $\alpha = 0.05$ using heteroskedasticity-
-consistent standard errors.
-\todo{Check: use HC SE or report OLS SE as is? Confirm with Fig 7 patterns.}
+% ==============================================================================
+\input{sections/methods}
 
 % ==============================================================================
 \section{Results}
 \label{sec:results}
 
-% ---- 3.1 Descriptive ---------------------------------------------------------
-\subsection{Descriptive Overview}
-\label{sec:descriptive}
-% ---- Target length: ~400 words -----------------------------------------------
-
-Figure~\ref{fig:timeseries} shows the national monthly time series for each
-outcome status, disaggregated by sex.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/fig1_time_series_by_status.pdf}
-  \caption{Monthly registered persons by outcome status, Mexico, 2015--2025.
-           Lines show total (solid), male (dashed), and female (dotted)
-           case counts aggregated nationally.}
-  \label{fig:timeseries}
-\end{figure}
-
-A prominent feature of the time series is the sustained acceleration of new
-registrations over the study period.
-New Not Located registrations grew from approximately 3,745 per year in 2015
-to 12,888 per year in 2024 --- a 244\,\% increase --- before showing a modest
-decline in 2025.
-Located Dead registrations nearly quadrupled, from 565 per year (2015) to
-1,804 per year (2024).
-Taken together, these trends document a worsening crisis rather than a
-statistical artefact: the flow of new disappearances entering the registry each
-year grew dramatically across the decade.
-\todo{Fill Located Alive annual totals for 2015 and 2024 from
-      concentration\_monthly.csv and add sentence here.}
-\todo{Key remaining points for 3.1:
-(1) National totals rise then plateau/decline post-2020 for Total and Not Located ---
-    describe inflection point from Fig 1;
-(2) Located Dead trajectory distinct (steeper or later peak?);
-(3) Sex imbalance varies by status: Not Located 78\% male, Located Alive~50\%,
-    Located Dead 86\% male (Table 1);
-(4) Brief reference to Table 2 for distributional statistics.}
-
-Table~\ref{tab:summary} reports summary statistics for the distribution of
-monthly case counts across municipalities.
-
-\begin{table}[htbp]
-  \centering
-  \caption{Summary statistics of monthly case counts by outcome status
-           (municipality $\times$ month observations, zero-filled)}
-  \label{tab:summary}
-  \begin{adjustbox}{max width=\textwidth}
-    \input{tables/table2_summary_statistics.tex}
-  \end{adjustbox}
-\end{table}
-
-% ---- 3.2 Concentration -------------------------------------------------------
-\subsection{Geographic Concentration (RQ1)}
-\label{sec:concentration_results}
-% ---- Target length: ~600 words -----------------------------------------------
-
-\todo{Opening: Across all 132 months, disappearances are extremely
-geographically concentrated regardless of outcome status (Gini $>$ 0.91
-in all cases). This exceeds typical crime concentration benchmarks
-(e.g., the ``law of crime concentration'' suggests 50\% of crime in 5--6\%
-of places; here even harsher).}
-
-Figure~\ref{fig:gini} plots the evolution of the Gini coefficient for each
-outcome status over the study period.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/fig2_gini_time_series.pdf}
-  \caption{Gini coefficient of case count distribution by outcome status,
-           January 2015 -- December 2025.}
-  \label{fig:gini}
-\end{figure}
-
-\todo{Key points for 3.2:
-(1) Located Dead is the most concentrated (Gini near ceiling);
-(2) Describe any convergence/divergence between statuses over time;
-(3) Table 3 for quantitative comparison.}
-
-Figure~\ref{fig:lorenz} presents Lorenz curves for three reference periods.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/fig3_lorenz_curves.pdf}
-  \caption{Lorenz curves for case count distribution across municipalities,
-           by outcome status, for January 2015, January 2020, and December 2024.
-           Dashed diagonal = perfect equality.}
-  \label{fig:lorenz}
-\end{figure}
-
-\begin{table}[htbp]
-  \centering
-  \caption{Geographic concentration metrics (Gini and HHI) by outcome status,
-           132 monthly observations, 2015--2025}
-  \label{tab:concentration}
-  \begin{adjustbox}{max width=\textwidth}
-    \input{tables/table3_concentration_metrics.tex}
-  \end{adjustbox}
-\end{table}
-
-% ---- 3.3 Spatial Clustering --------------------------------------------------
-\subsection{Spatial Clustering (RQ2)}
-\label{sec:clustering}
-% ---- Target length: ~800 words -----------------------------------------------
-
-\todo{Opening: Global Moran's I confirms significant positive spatial
-autocorrelation in 95.6\% of 528 status-month combinations (p $<$ 0.05).
-The 23 non-significant periods concentrate in early months for Located Dead
-(sparse counts). Describe overall magnitude (range $-0.012$ to $0.424$).}
-
-Figure~\ref{fig:morans} plots monthly Moran's $I$ for each outcome status.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/fig4_morans_i_time_series.pdf}
-  \caption{Global Moran's $I$ by outcome status, January 2015 -- December 2025.
-           Open circles indicate periods with $p \geq 0.05$.}
-  \label{fig:morans}
-\end{figure}
-
-\todo{Key points: which status shows strongest/weakest autocorrelation?
-Trend in I over time (rising = increasing spatial concentration)?}
-
-LISA classification counts for December 2024 are reported in
-Table~\ref{tab:lisa_counts}.
-A notable pattern is the asymmetry for Located Dead: 118~LL municipalities
-versus only 18~HH municipalities in December 2024 --- the inverse of the
-pattern seen for all other statuses ($\text{HH} > \text{LL}$).
-This suggests lethal-outcome recovery is spatially restricted to a small
-number of municipalities with strong forensic capacity, while most of the
-country forms large low-count clusters.
-
-\begin{table}[htbp]
-  \centering
-  \caption{LISA cluster classification counts by outcome status, December 2024
-           (total sex, Queen contiguity, 999 permutations, $\alpha = 0.05$)}
-  \label{tab:lisa_counts}
-  \input{tables/table4_lisa_classification.tex}
-\end{table}
-
-Figure~\ref{fig:lisa_latest} maps the LISA classification for December 2024.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/fig5_lisa_maps_latest.pdf}
-  \caption{LISA cluster maps by outcome status, December 2024.
-           Red = High-High, Blue = Low-Low, Orange = High-Low,
-           Light blue = Low-High, Grey = Not Significant.
-           Projection: EPSG:6372.}
-  \label{fig:lisa_latest}
-\end{figure}
-
-\todo{Describe Fig 5: where are the HH clusters for each status?
-Norte dominance for Located Dead? Centro for Not Located?
-How different are the four maps?}
-
-Table~\ref{tab:crosstab} reports the pairwise overlap of HH municipalities
-across statuses in December 2024.
-
-\begin{table}[htbp]
-  \centering
-  \caption{Pairwise overlap of High-High municipalities across outcome statuses,
-           December 2024 (diagonal = total HH per status)}
-  \label{tab:crosstab}
-  \input{tables/table5_hh_cross_tabulation.tex}
-\end{table}
-
-\todo{Key point for 3.3: are the hotspot geographies largely non-overlapping?
-(Paper's core claim.) Compute Jaccard from Table 5 values and report.
-If overlap $>$ 60\% for any pair, flag Option A fallback (see blueprint).}
-
-% ---- 3.4 Temporal Dynamics ---------------------------------------------------
-\subsection{Temporal Dynamics (RQ3)}
-\label{sec:temporal}
-% ---- Target length: ~1,000 words --- core section ----------------------------
-
-\todo{Opening: Having established that the four statuses cluster in different
-places, we now ask how those spatial patterns have evolved since 2015.
-We focus on the Norte--Baj\'io axis (prior literature's key geographic divide)
-and the unexpected emergence of Centro as a growth region.}
-
-Figure~\ref{fig:hh_trend} shows the monthly count of HH municipalities
-in Norte and Baj\'io for each outcome status.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/fig6_hh_trend_norte_bajio.pdf}
-  \caption{Monthly count of High-High cluster municipalities in Norte
-           (solid) and Baj\'io (dashed) by outcome status, 2015--2025.
-           Dotted lines indicate OLS trend.}
-  \label{fig:hh_trend}
-\end{figure}
-
-OLS trend slopes by region and outcome status are reported in
-Table~\ref{tab:slopes}.
-Three patterns deserve attention.
-
-\begin{table}[htbp]
-  \centering
-  \caption{OLS trend slopes in High-High cluster municipalities
-           (municipalities per year) by region and outcome status,
-           January 2015 -- December 2025}
-  \label{tab:slopes}
-  \input{tables/table7_trend_slopes.tex}
-\end{table}
-
-% SESSION NOTE (2026-03-16):
-% Norte is hardening, not shifting. It was already the dominant hotspot in 2015
-% and is growing larger and more intense across ALL four statuses simultaneously.
-% The key interpretive question: simultaneous HH growth in Located Alive AND
-% Located Dead in the same region suggests entrenched organised crime presence
-% (people going missing AND being found dead there) coexisting with some degree
-% of forensic/institutional activity (bodies being recovered and registered).
-% This is not a contradiction — it may reflect that Norte has both the highest
-% disappearance incidence AND the most developed forensic infrastructure.
-% Frame as hypothesis; do not claim causal mechanism.
-\textbf{The Norte consolidation.}
-Norte shows consistent positive growth in HH municipalities across all four
-statuses (Total: $+0.64^{***}$, Not Located: $+0.23^{*}$,
-Located Alive: $+1.12^{***}$, Located Dead: $+0.57^{***}$).
-\todo{Interpret: Norte is consolidating as a multi-status hotspot.
-What does simultaneous growth in Located Alive AND Located Dead suggest
-(organised crime presence + some forensic activity)?}
-
-% SESSION NOTE (2026-03-16):
-% The earlier annual pipeline (scripts 07–09) found Bajío was rising overall
-% and generated the "route reorganisation" hypothesis: CJNG expanding into the
-% Guanajuato/Jalisco corridor.  The monthly pipeline QUALIFIES this:
-%   - Located Alive in Bajío is DECLINING (-0.51/yr, p<0.01)
-%   - Located Dead in Bajío is RISING   (+0.23/yr, p<0.05)
-% Interpretation: fewer people are being found alive in the region (the
-% trafficking/kidnap-for-ransom route is collapsing or displacing) but lethal
-% outcomes are increasing (territorial violence is getting deadlier).
-% The Bajío "rise" we saw annually was real but masked a composition shift
-% from recoveries to lethality.  The monthly resolution reveals this divergence.
-% IMPORTANT: frame the CJNG mechanism as hypothesis only — we have no direct
-% evidence of actor attribution in the RNPDNO data.
-\textbf{The Baj\'io divergence.}
-Baj\'io shows a significant decline in Located Alive hotspots
-($-0.51^{**}$\,municipalities/yr) but a rising trend for Located Dead
-($+0.23^{*}$).
-\todo{Interpret: the Baj\'io route reorganisation hypothesis from the annual
-pipeline (declining Located Alive) is confirmed but now qualified --- lethality
-is rising even as living recoveries fall. Cartel territorial expansion into
-Guanajuato/Jalisco corridor as a possible mechanism (frame as hypothesis only).}
-
-% SESSION NOTE (2026-03-16):
-% Centro (CDMX + Estado de México + Puebla + Morelos + Hidalgo) is the
-% BIGGEST SURPRISE of the monthly pipeline.  The annual analysis (scripts
-% 07–09) focused on Norte–Bajío because that's what the literature emphasises,
-% and missed this entirely.
-% Centro has the LARGEST positive slopes of ANY region across all statuses.
-% Two competing interpretations that MUST be flagged in the paper:
-%   (A) Real increase: metropolitan corridor urbanisation of disappearances —
-%       organised crime expanding into/through the capital region.
-%   (B) Reporting artefact: urban areas have more prosecutors, more civil
-%       society pressure, more news media — so MORE cases get registered even
-%       if underlying incidence didn't change as sharply.
-% We cannot distinguish A from B with the RNPDNO data alone.
-% Paper 3 (econometric covariates) is the right venue to test this.
-% For this paper: report the finding, present both interpretations, flag as
-% a hypothesis requiring further investigation.  Do NOT claim A over B.
-\textbf{The Centro expansion.}
-Unexpectedly, Centro shows the largest positive slopes of any region
-(Total: $+2.76^{***}$, Not Located: $+4.18^{***}$,
-Located Alive: $+3.04^{***}$, Located Dead: $+1.02^{***}$).
-\todo{Interpret: CDMX + Estado de M\'exico + Puebla corridor urbanisation
-of disappearances. This was not visible in the annual pipeline which focused
-on Norte--Baj\'io. Is this a real increase or improved reporting infrastructure
-in urban areas? Flag as alternative interpretation.}
-
-Figure~\ref{fig:lisa_comparison} compares LISA maps for Located Alive and
-Located Dead in December 2015 versus December 2024.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/fig7_lisa_maps_2015_vs_2024.pdf}
-  \caption{LISA cluster maps for Located Alive (rows 1) and Located Dead (row 2),
-           December 2015 (left) and December 2024 (right).
-           Projection: EPSG:6372.}
-  \label{fig:lisa_comparison}
-\end{figure}
-
-\todo{Describe Fig 7: visual comparison of geographic shift.
-What is immediately apparent between 2015 and 2024 for each status?}
-
-Table~\ref{tab:regional} summarises the regional composition of HH
-municipalities at the two endpoints and reports $\chi^2$ tests for
-distributional change.
-
-\begin{table}[htbp]
-  \centering
-  \caption{Regional composition of High-High cluster municipalities,
-           December 2015 vs.\ December 2024, by outcome status}
-  \label{tab:regional}
-  \begin{adjustbox}{max width=\textwidth}
-    \input{tables/table6_regional_composition.tex}
-  \end{adjustbox}
-\end{table}
-
-% SESSION NOTE (2026-03-16) — SEX PATTERNS:
-% The aggregate sex breakdown is one of the most striking descriptive findings:
-%   - Not Located:    77.8% male  → active disappearance is male-dominated
-%   - Located Alive:  49.4% male  → near gender-parity in living recoveries
-%   - Located Dead:   85.9% male  → strongly aligned with homicide patterns
-%
-% The Located Alive near-parity is puzzling: women are 49% of living recoveries
-% but only ~22% of active disappearances.  Two possible interpretations:
-%   (A) Women who disappear are found alive at a higher rate than men
-%       (different types of disappearance — domestic violence, trafficking
-%       cases with higher recovery rates?)
-%   (B) Women's disappearances are registered differently (more pressure to
-%       register recoveries for women, or men's cases stay open longer)
-% The spatial RQ4 question is whether male and female hotspots are in the
-% same places or diverge geographically.  Flag: female Located Dead sample
-% is tiny (2,123 total over 11 years) — statistical power for LISA is limited.
-% ---- 3.5 Sex Disaggregation --------------------------------------------------
-\subsection{Sex Disaggregation (RQ4)}
-\label{sec:sex}
-% ---- Target length: ~600 words -----------------------------------------------
-
-\todo{Opening: As reported in Table 1, the four outcome statuses differ markedly
-in their sex composition. Not Located is 78\% male, Located Alive is near-parity
-(49.4\%), and Located Dead is 86\% male. We now ask whether these aggregate
-differences map onto distinct spatial patterns.}
-
-Figure~\ref{fig:sex_maps} compares male and female LISA maps for Not Located
-and Located Dead in December 2024.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/fig8_sex_disaggregation_maps.pdf}
-  \caption{LISA cluster maps by sex for Not Located (top row) and
-           Located Dead (bottom row), December 2024.
-           Left = male; right = female. Projection: EPSG:6372.}
-  \label{fig:sex_maps}
-\end{figure}
-
-Table~\ref{tab:sex} quantifies HH overlap between male and female LISA
-classifications.
-
-\begin{table}[htbp]
-  \centering
-  \caption{High-High cluster municipalities by sex and outcome status,
-           December 2024}
-  \label{tab:sex}
-  \input{tables/table8_sex_hh_counts.tex}
-\end{table}
-
-\todo{Key points for 3.5:
-(1) Describe male-only vs female-only hotspots from Table 8;
-(2) Located Dead: very few female HH given only 2,123 female victims total ---
-    what are the spatial implications?
-(3) Located Alive near-parity: are the male and female hotspots in the same
-    places, or do they diverge geographically (compare maps)?
-(4) Flag limitation: sex-undefined cases (327 total) excluded from sex analysis.}
+\input{sections/results_descriptive}
+\input{sections/results_concentration}
+\input{sections/results_clustering}
+\input{sections/results_temporal}
+\input{sections/results_sex}
+\input{sections/results_ced}
 
 % ==============================================================================
-\section{Discussion}
-\label{sec:discussion}
-% ---- Target length: ~1,500 words ---------------------------------------------
-
-\subsection{Spatial Non-Interchangeability of Outcome Statuses}
-
-\todo{Core argument: the four statuses cluster in different places (Table 5 overlap),
-exhibit different temporal dynamics (Table 7), and have different sex compositions
-(Table 1, 8). They cannot be treated as a single geographic phenomenon.
-Policy implications: forensic teams (Located Dead geography) and prevention
-resources (Not Located geography) require different spatial targeting.}
-
-\subsection{Regional Dynamics: Norte, Centro, and Baj\'io}
-
-\todo{Synthesise the three findings from 3.4.
-Norte: multi-status consolidation --- organised crime hotspot hardening.
-Centro: unexpected expansion --- methodological note on why annual pipeline missed this.
-Baj\'io: divergence between Located Alive (declining) and Located Dead (rising)
---- cartel territorial dynamics hypothesis (cite available literature on
-Guanajuato / CJNG / Jalisco Nueva Generación).
-Frame all causal interpretations as hypotheses, not established facts.}
-
-\subsection{Sex Patterns: Implications for Gendered Victimisation}
-
-\todo{Discuss Located Alive near-parity as puzzling: women are located alive
-in proportions exceeding their share of Not Located.
-Female Located Dead concentration in specific municipalities (femicide hotspots?).
-Frame as hypothesis needing disaggregated investigation.}
-
-\subsection{Limitations}
-
-\begin{enumerate}
-  \item \textbf{Raw counts only.} No population normalisation. Concentration
-        in urban/high-population municipalities may partly reflect population
-        size rather than elevated risk. Population-normalised analysis reserved
-        for Paper~2.
-  \item \textbf{Ecological fallacy.} Municipal-level analysis cannot make
-        individual-level inferences.
-  \item \textbf{Zero-infilling assumption.} Municipality-months absent from the
-        RNPDNO export are treated as zero cases. If absences reflect reporting
-        failures rather than true zeros, concentration metrics are underestimated
-        in under-reporting municipalities.
-  \item \textbf{Spatial weights specification.} Queen contiguity may not capture
-        functional connectivity (road networks, institutional jurisdictions).
-        Sensitivity to alternative weight matrices is left for future work.
-  \item \textbf{Descriptive design.} The analysis documents patterns; it does
-        not identify causal mechanisms. All regional narratives are hypotheses.
-  \item \textbf{Potential underreporting.} RNPDNO relies on official registry
-        data. Disappearances in areas with weak state presence or high impunity
-        may be systematically underreported, biasing hotspot maps toward
-        high-capacity jurisdictions.
-\end{enumerate}
+\input{sections/discussion}
 
 % ==============================================================================
-\section{Conclusion}
-\label{sec:conclusion}
-% ---- Target length: ~500 words -----------------------------------------------
+\input{sections/conclusion}
 
-\todo{Para 1 -- Summary: first national-scale outcome-disaggregated monthly
-spatial analysis of disappearances in Mexico.}
-
-\todo{Para 2 -- Key empirical facts established:
-(1) spatial non-interchangeability confirmed;
-(2) Centro is the fastest-growing hotspot region;
-(3) Baj\'io lethality rising while living recoveries decline;
-(4) sex disaggregation shows distinct geographies.}
-
-\todo{Para 3 -- Policy recommendation: outcome-specific geographic targeting.
-Forensic search capacity should follow Located Dead geography (Norte, limited
-Centro). Prevention and search activation resources should follow Not Located
-geography (Norte + rapidly expanding Centro).}
-
-\todo{Para 4 -- Future work: Paper 2 (dual-metric: counts vs.\ rates, Jaccard
-framework), Paper 3 (econometric panel model with SESNSP + Banxico + mortality).}
-
-% ==============================================================================
-% References
 % ==============================================================================
 \bibliographystyle{apalike}
 \bibliography{references}
 
 % ==============================================================================
-% Appendix (optional)
-% ==============================================================================
-\appendix
-
-\section{Robustness: Island Municipalities}
-\label{app:islands}
-\todo{Re-run LISA excluding 52 island municipalities. Report change in
-Moran's I and HH counts. Table A1.}
-
-\section{Sensitivity: Alternative Reference Periods}
-\label{app:periods}
-\todo{Show that key findings from December 2024 cross-section hold for
-June 2024 and December 2023.}
+\input{sections/appendix}
 
 \end{document}
+
+% ==============================================================================
+% TODO SUMMARY (auto-generated)
+% ==============================================================================
+% \todo{Author(s) and affiliations} — main.tex
+% \todocite{cite Data in Brief descriptor when published} — data.tex (x1)
+% \todocite{cite Mexicoencifras regional scheme} — data.tex (x1)
+% \todocite{cite Data in Brief descriptor when published} — introduction.tex (x1)
+%
+% Total: 4 TODOs
+%   - 1 \todo (author metadata)
+%   - 3 \todocite (Data in Brief descriptor x2, Mexicoencifras x1)
+%   - 0 \todoverify
+%   - 0 \todowrite
+% ==============================================================================

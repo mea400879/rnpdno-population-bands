@@ -1,0 +1,53 @@
+% ==============================================================================
+% Section 2: Data
+% ==============================================================================
+\section{Data}
+\label{sec:data}
+
+\subsection{National Registry of Disappeared and Not Located Persons}
+
+The Registro Nacional de Personas Desaparecidas y No Localizadas (RNPDNO) is Mexico's centralized registry of disappearance cases, established under the 2017 General Law on Disappearances \citep{ley_general_2017} and administered by the Comisi\'{o}n Nacional de B\'{u}squeda \citep{cnb_rnpdno}.
+The public version of the registry is released as four CSV files, one per outcome status, available through the CNB dashboard.
+Each row represents a municipality $\times$ month cell recording the count of persons whose case was \emph{registered} during that calendar month.
+
+These are \textbf{flow} counts---new registrations entering the system each month---not a cumulative stock of all cases ever recorded.
+The commonly cited national aggregate of approximately 115,000 registered disappearances refers to the historical stock since the registry's inception (including cases pre-dating 2015) and substantially exceeds the flow-based totals reported here.
+Over the \nmonths{}-month window \studyperiod{}, the registry recorded 263,402 person-registrations under Total status, of which 89,850 were classified as Not Located, 157,688 as Located Alive, and 15,343 as Located Dead (Table~\ref{tab:dataset}).
+Evidence for the flow interpretation is straightforward: monthly national totals fluctuate between 1,500 and 3,200 rather than increasing monotonically, and the \referencemonth{} snapshot records 3,095 total registrations---impossible as a stock for a country with over 100,000 cumulative cases.
+
+Status identifiers in the raw data are: 0 = Total, 7 = Not Located, 2 = Located Alive, 3 = Located Dead.
+Municipality geocodes (cvegeo) are five-digit INEGI codes.
+The four files contain 57,366; 34,665; 37,363; and 9,883 non-zero municipality-month rows, respectively.
+Sentinel rows---geocodes ending in 998 or 999, or equal to 99998---represent cases with unresolvable geography (border municipalities, unknown state).
+These are excluded prior to spatial analysis; their removal affects 12,206 total person-registrations across all statuses.
+The full dataset schema, processing pipeline, and validation are documented in a companion Data in Brief descriptor \todocite{cite Data in Brief descriptor when published}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{RNPDNO dataset summary by outcome status, \studyperiod{}.}
+  \label{tab:dataset}
+  \begin{adjustbox}{max width=\textwidth}
+    \input{tables/table1_dataset_summary.tex}
+  \end{adjustbox}
+\end{table}
+
+\subsection{Sex Composition}
+
+The four outcome statuses differ markedly in their sex composition.
+Not Located registrations are 77.9\% male, reflecting the strongly male-dominated profile of active disappearances.
+Located Dead is even more skewed (85.9\% male), closely aligned with homicide victimization patterns.
+Located Alive, by contrast, approaches near-parity (49.4\% male, 50.5\% female), suggesting gender-neutral resolution processes or different types of disappearance events leading to living recovery.
+Sex-undefined cases account for 0.1--0.3\% of registrations per status.
+The spatial implications of these compositional differences are examined in Section~\ref{sec:sex}.
+
+\subsection{Geographic Framework}
+
+We use the INEGI Marco Geoestad\'{i}stico 2024, which defines \nmunis{} municipalities in projected coordinates (EPSG:6372, Mexico ITRF2008/LCC) \citep{inegi_ageeml}.
+The five-digit cvegeo code serves as the spatial join key across all datasets.
+All \nmunis{} municipalities in the geoparquet are matched one-to-one with the panel dataset.
+
+\subsection{Regional Classification}
+
+Municipalities are classified into five macro-regions following the CESOP/Mexicoencifras scheme: Norte, Norte-Occidente, Centro-Norte, Centro, and Sur \todocite{cite Mexicoencifras regional scheme}.
+A cross-cutting Baj\'{i}o sub-flag identifies 200 municipalities spanning portions of Guanajuato, Quer\'{e}taro, Aguascalientes, San Luis Potos\'{i}, and the Altos de Jalisco corridor.
+The Baj\'{i}o classification is not mutually exclusive with the five-region scheme; municipalities may belong to both a macro-region and the Baj\'{i}o sub-group.

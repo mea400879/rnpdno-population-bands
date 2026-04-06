@@ -1,0 +1,110 @@
+% ==============================================================================
+% Section 5: Discussion
+% ==============================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Non-Interchangeability of Outcome Statuses}
+\label{sec:disc_noninterchange}
+
+The central finding of this paper is that the four outcome statuses are not spatially interchangeable.
+Jaccard coefficients below 0.15 for all pairs involving Located Dead demonstrate that the municipalities where lethal outcomes concentrate are fundamentally different from the municipalities where active disappearances or living recoveries cluster.
+Even the highest pairwise overlap---Total and Located Alive at 0.674---leaves one-third of hotspot municipalities unshared.
+
+This result has a direct analogue in the spatial criminology literature.
+\citet{andresen_2006} demonstrated that counts and rates of the same crime type produce different hotspot geographies, leading to different policy conclusions depending on which metric is used.
+Our finding extends this logic: even holding the metric constant (raw counts), different \emph{outcome categories} of the same underlying phenomenon produce non-overlapping spatial clusters.
+The implication is analogous to \citeauthor{braga_law_2017}'s (\citeyear{braga_law_2017}) observation that crime type disaggregation matters for concentration analysis---here, outcome status disaggregation matters for disappearance analysis.
+
+For policy, the non-interchangeability result means that forensic search teams---which should be deployed where bodies are found (Located Dead geography)---and prevention or active search programs---which should target areas of concentrated unresolved cases (Not Located geography)---cannot use the same geographic prioritization.
+Treating disappearances as a single metric produces a composite map dominated by Located Alive cases (which account for 60\% of registrations), potentially directing resources away from the distinct municipalities where the most severe outcomes concentrate.
+
+\subsection{Regional Dynamics}
+\label{sec:disc_regional}
+
+\subsubsection{Centro: Real Expansion or Reporting Artefact?}
+
+The Centro region's emergence as the fastest-growing HH cluster---with Not Located slopes exceeding $+4.96$ municipalities per year---is the most surprising empirical finding of this study.
+Prior literature on Mexico's disappearance crisis has focused almost exclusively on the Norte--Baj\'{i}o axis, where cartel territorial competition is well documented \citep{cadena_garrocho_2019, rios_2013}.
+The Centro expansion went undetected in annual analyses because it began gradually around 2019 and accelerated through 2024--2025, a trajectory that requires monthly resolution to identify.
+
+Two competing hypotheses may explain this pattern, and we cannot distinguish between them with the available data.
+The first is a real increase in disappearances in the metropolitan corridor spanning Estado de M\'{e}xico, CDMX, Puebla, Morelos, and Hidalgo---potentially reflecting the urbanization of organized criminal violence as trafficking routes shift toward the capital region.
+The second is a reporting artefact: urban areas with stronger prosecutorial capacity, more active civil society organizations, and greater media attention may register a higher proportion of cases even if underlying incidence did not increase as sharply.
+The RNPDNO records registrations, not verified events.
+Disentangling these hypotheses requires external covariates (prosecutorial capacity indices, media attention proxies) and is the subject of planned econometric work.
+
+\subsubsection{Norte: Multi-Status Consolidation}
+
+Norte's consistent positive slopes across all four statuses suggest an entrenched disappearance hotspot that is simultaneously deepening and revealing its outcomes.
+The coexistence of growing Located Alive and Located Dead HH clusters may reflect a combination of high organized crime incidence and relatively developed forensic and search infrastructure in states such as Tamaulipas and Nuevo Le\'{o}n.
+This interpretation---high violence \emph{and} institutional capacity---is a hypothesis; it could alternatively reflect that Norte's crisis has simply reached a scale at which all outcome categories produce detectable spatial clustering.
+
+\subsubsection{Baj\'{i}o: Hypothesis Rejected}
+
+The ``rising Baj\'{i}o'' hypothesis, suggested by \citet{cadena_garrocho_2019}'s 2006--2017 analysis and attributed to cartel route reorganization through the Guanajuato--Jalisco corridor, is rejected by our monthly data.
+Baj\'{i}o Total HH municipalities declined at $-1.09$ per year ($p = 0.024$).
+The non-significant Located Dead slope ($+0.22$, $p = 0.317$) prevents us from claiming a lethality increase.
+If anything, the Baj\'{i}o pattern suggests a contracting hotspot footprint---though this could reflect displacement to adjacent regions rather than genuine improvement.
+
+\subsection{CED Alignment}
+\label{sec:disc_ced}
+
+Our analysis provides the first national-scale quantitative evidence supporting the CED's characterization of enforced disappearances as involving ``multiple attacks at different moments and in different parts of the territory'' \citep{CED_MEX_art34_2026}.
+The LISA results show HH clusters emerging, expanding, and shifting across states over \nmonths{} months---a pattern consistent with the CED's temporal and geographic narrative.
+
+Three important qualifications apply.
+First, the RNPDNO aggregates all disappearances regardless of perpetrator type; our spatial clusters capture the composite phenomenon, not enforced disappearances specifically.
+The Mexican government has argued that many registered cases reflect private-actor violence, not state involvement \citep{CED_MEX_visit_2022}.
+Our analysis is agnostic to this distinction.
+Second, several CED-named states (Coahuila, Veracruz, Nayarit) show low or zero HH municipalities, which may reflect underreporting rather than absence of crisis.
+Third, the discrepancy between our Jalisco finding (declining HH) and the CED's characterization (``currently highest'') highlights the difference between absolute volume and spatial clustering: a state may report the most disappearances nationally while those cases are too spatially diffuse to produce significant local clusters.
+
+\subsection{Sex Patterns}
+\label{sec:disc_sex}
+
+The Located Alive near-parity result (49.4\% male, 50.5\% female) is puzzling in light of the male-dominated profile of Not Located cases (77.9\% male).
+Women who disappear appear to be found alive at a rate disproportionate to their share of active disappearances.
+Two possible mechanisms warrant investigation: (i) gender-specific disappearance types with different recovery profiles (e.g., domestic violence or trafficking cases involving women may have higher resolution rates); or (ii) differential registration practices (women's recoveries may be recorded more systematically due to advocacy pressure).
+The spatial divergence in Not Located male vs.\ female HH (Jaccard = 0.262) suggests that these are not simply different counts in the same places but geographically distinct phenomena.
+
+The female Located Dead power failure (zero HH municipalities) underscores a general limitation of spatial analysis applied to rare events: with mean counts near zero, no spatial method can detect meaningful patterns.
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+\begin{enumerate}
+  \item \textbf{Raw counts without population normalization.}
+        Concentration in large, high-population municipalities may partly reflect population size rather than elevated risk.
+        A population-normalized companion analysis is forthcoming \citep[cf.][]{andresen_2006}.
+
+  \item \textbf{Ecological fallacy.}
+        Municipal-level analysis cannot support individual-level inferences about victimization risk or perpetrator behavior.
+
+  \item \textbf{Zero-infilling assumption.}
+        Municipality-months absent from the RNPDNO are treated as zero cases.
+        If absences reflect reporting failure rather than true zeros, concentration metrics are underestimated in under-reporting municipalities, and the true geographic spread of disappearances is broader than our estimates suggest.
+
+  \item \textbf{Spatial weights specification.}
+        Queen contiguity may not capture functional connectivity such as road networks, cartel territorial boundaries, or institutional jurisdictions.
+        Sensitivity to alternative weight matrices (k-nearest neighbors, distance-based) is left for future work.
+
+  \item \textbf{Descriptive design.}
+        This analysis documents spatial patterns; it does not identify causal mechanisms.
+        All regional narratives are hypotheses requiring econometric testing.
+
+  \item \textbf{Potential underreporting.}
+        The RNPDNO relies on official registration.
+        Disappearances in municipalities with weak state presence, high impunity, or low civil society activity may be systematically underreported, biasing hotspot maps toward high-capacity jurisdictions \citep{guercke_2021}.
+
+  \item \textbf{Female Located Dead statistical power.}
+        With a mean of 0.0065 cases per municipality-month and 99.4\% zero cells, LISA results for female Located Dead are uninformative and should not guide policy.
+
+  \item \textbf{No enforced/non-enforced distinction.}
+        The RNPDNO does not distinguish enforced disappearances (state involvement) from disappearances by private actors.
+        Our spatial clusters capture both.
+
+  \item \textbf{End-of-period reporting lag.}
+        November--December 2025 totals show Dec/Jul ratios of 0.46--0.72, indicating incomplete registration.
+        June cross-sections mitigate this for snapshot analyses, but full-series trend estimates include these lagged months.
+\end{enumerate}
