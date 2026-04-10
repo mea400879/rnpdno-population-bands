@@ -1,7 +1,7 @@
 % ==============================================================================
 % Spatial Dynamics of Disappearances in Mexico, 2015–2025
 % Target: Journal of Quantitative Criminology (JQC), Springer
-% Monthly pipeline — Paper 1 of series
+% Single-file version - April 2026
 % ==============================================================================
 
 \documentclass[12pt]{article}
@@ -9,7 +9,7 @@
 % ---- Packages ----------------------------------------------------------------
 \usepackage[margin=1in]{geometry}
 \usepackage{booktabs}
-\usepackage{graphicx}
+\usepackage{threeparttable}
 \usepackage{amsmath}
 \usepackage{natbib}
 \usepackage{setspace}
@@ -19,6 +19,26 @@
 \usepackage{adjustbox}
 \usepackage{array}
 \usepackage{xcolor}
+
+% ====================== ROBUST FIGURE CONFIGURATION ======================
+\usepackage{graphicx}
+\graphicspath{{figures/}{./figures/}{figs/}{./figs/}}
+
+% Strong global fix for all figures (BoundingBox error)
+\setkeys{Gin}{
+  width=\textwidth,
+  keepaspectratio=true,
+  natwidth=1000pt,
+  natheight=650pt
+}
+
+\usepackage{epstopdf}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg,.eps}
+\pdfsuppresswarningpagegroup=1
+% =====================================================================
+
+% Define email command
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
 
 % ---- TODO system -------------------------------------------------------------
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
@@ -30,7 +50,7 @@
 \newcommand{\studyperiod}{January 2015 -- December 2025}
 \newcommand{\nmonths}{132}
 \newcommand{\nmunis}{2,478}
-\newcommand{\referencemonth}{June 2025}
+\newcommand{\referencemonth}{December 2025}
 \newcommand{\bookendstart}{June 2015}
 \newcommand{\nislands}{0}
 \newcommand{\nLISAruns}{1,584}
@@ -42,12 +62,15 @@
 \title{Spatial Dynamics of Disappearances in Mexico, 2015--2025:\\
        A Municipal-Level Analysis by Outcome Status}
 
-\author{Marco A.\ Escobar\textsuperscript{1} \and
+\author{Marco A.\ Escobar\textsuperscript{1}\thanks{Corresponding author. Email: \email{marcoescobar@ieee.org}} \and
         Gerardo Reyes-Guzman\textsuperscript{2} \and
-        Abraham Sanchez Ruiz\textsuperscript{3} \\[6pt]
-        \small\textsuperscript{1}\todo{Affiliation 1} \\
-        \small\textsuperscript{2}\todo{Affiliation 2} \\
-        \small\textsuperscript{3}\todo{Affiliation 3}}
+        Abraham Sanchez Ruiz\textsuperscript{3} \\[8pt]
+        \small\textsuperscript{1}Facultad de Ingenierías y Tecnologías, Universidad La Salle Bajío, \\
+        León, Guanajuato 37150, Mexico \\
+        \small\textsuperscript{2}Facultad de Economía, Benemérita Universidad Autónoma de Puebla, \\
+        Puebla, Puebla 72570, Mexico \\
+        \small\textsuperscript{3}Facultad de Estudios Superiores, Universidad La Salle Bajío, \\
+        Salamanca, Guanajuato 37000, Mexico}
 \date{\today}
 
 % ==============================================================================
@@ -64,14 +87,9 @@ Mexico; outcome status; municipal level; hotspot analysis; crime concentration
 
 % ==============================================================================
 \input{sections/introduction}
-
-% ==============================================================================
 \input{sections/data}
-
-% ==============================================================================
 \input{sections/methods}
 
-% ==============================================================================
 \section{Results}
 \label{sec:results}
 
@@ -84,8 +102,6 @@ Mexico; outcome status; municipal level; hotspot analysis; crime concentration
 
 % ==============================================================================
 \input{sections/discussion}
-
-% ==============================================================================
 \input{sections/conclusion}
 
 % ==============================================================================
@@ -96,17 +112,3 @@ Mexico; outcome status; municipal level; hotspot analysis; crime concentration
 \input{sections/appendix}
 
 \end{document}
-
-% ==============================================================================
-% TODO SUMMARY (auto-generated)
-% ==============================================================================
-% \todo{Affiliation 1} — main.tex
-% \todo{Affiliation 2} — main.tex
-% \todo{Affiliation 3} — main.tex
-%
-% Total: 3 TODOs
-%   - 3 \todo (author affiliations)
-%   - 0 \todocite
-%   - 0 \todoverify
-%   - 0 \todowrite
-% ==============================================================================

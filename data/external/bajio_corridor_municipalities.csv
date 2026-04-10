@@ -1,0 +1,30 @@
+cvegeo,municipality,state,cve_estado,cve_mun,zm_entity,entity_type
+01001,Aguascalientes,Aguascalientes,1,1,ZM Aguascalientes,metropolitana
+01005,Jesús María,Aguascalientes,1,5,ZM Aguascalientes,metropolitana
+01011,San Francisco de los Romo,Aguascalientes,1,11,ZM Aguascalientes,metropolitana
+11003,San Miguel de Allende,Guanajuato,11,3,Conurbación San Miguel de Allende,conurbacion
+11005,Apaseo el Grande,Guanajuato,11,5,ZM Querétaro,metropolitana
+11007,Celaya,Guanajuato,11,7,ZM Celaya,metropolitana
+11009,Comonfort,Guanajuato,11,9,ZM Celaya,metropolitana
+11011,Cortázar,Guanajuato,11,11,ZM Celaya,metropolitana
+11015,Guanajuato,Guanajuato,11,15,ZM Guanajuato,metropolitana
+11017,Irapuato,Guanajuato,11,17,Conurbación Irapuato,conurbacion
+11020,León,Guanajuato,11,20,ZM León,metropolitana
+11021,Moroleón,Guanajuato,11,21,ZM Moroleón-Uriangato,metropolitana
+11023,Pénjamo,Guanajuato,11,23,ZM La Piedad-Pénjamo,metropolitana
+11025,Purísima del Rincón,Guanajuato,11,25,ZM San Francisco del Rincón,metropolitana
+11027,Salamanca,Guanajuato,11,27,Conurbación Salamanca,conurbacion
+11031,San Francisco del Rincón,Guanajuato,11,31,ZM San Francisco del Rincón,metropolitana
+11037,Silao de la Victoria,Guanajuato,11,37,ZM León,metropolitana
+11041,Uriangato,Guanajuato,11,41,ZM Moroleón-Uriangato,metropolitana
+11044,Villagrán,Guanajuato,11,44,ZM Celaya,metropolitana
+16069,La Piedad,Michoacán,16,69,ZM La Piedad-Pénjamo,metropolitana
+22006,Corregidora,Querétaro,22,6,ZM Querétaro,metropolitana
+22008,Huimilpan,Querétaro,22,8,ZM Querétaro,metropolitana
+22011,El Marqués,Querétaro,22,11,ZM Querétaro,metropolitana
+22014,Querétaro,Querétaro,22,14,ZM Querétaro,metropolitana
+22016,San Juan del Río,Querétaro,22,16,Conurbación San Juan del Río,conurbacion
+24011,Ciudad Fernández,San Luis Potosí,24,11,ZM Rioverde,metropolitana
+24024,Rioverde,San Luis Potosí,24,24,ZM Rioverde,metropolitana
+24028,San Luis Potosí,San Luis Potosí,24,28,ZM San Luis Potosí,metropolitana
+24035,Soledad de Graciano Sánchez,San Luis Potosí,24,35,ZM San Luis Potosí,metropolitana

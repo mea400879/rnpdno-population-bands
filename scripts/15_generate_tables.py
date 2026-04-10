@@ -356,6 +356,13 @@ def make_table5(lisa: pl.DataFrame):
 def make_table6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
     log.info("Table 6: OLS trend slopes by region × status...")
 
+    # Load new 29-municipality Bajío corridor (Medina-Fernández et al. 2023)
+    bajio_csv = pl.read_csv(
+        ROOT / "data" / "external" / "bajio_corridor_municipalities.csv",
+        schema_overrides={"cvegeo": pl.Utf8},
+    )
+    bajio_cvs = set(bajio_csv["cvegeo"].str.zfill(5).to_list())
+
     hh_all = (
         lisa.filter(
             (pl.col("sex") == "total") &
@@ -406,7 +413,7 @@ def make_table6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
             if reg == "Bajío":
                 sub = hh_all.filter(
                     (pl.col("status_id") == sid) &
-                    (pl.col("is_bajio") == True)
+                    (pl.col("cvegeo").is_in(list(bajio_cvs)))
                 )
             else:
                 sub = hh_all.filter(

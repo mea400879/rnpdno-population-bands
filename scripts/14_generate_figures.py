@@ -1,15 +1,14 @@
-"""Phase 3 — Publication figures (9 figures).
+"""Phase 3 — Publication figures (8 figures).
 
 Outputs (PDF + PNG) in manuscript/figures/:
   fig1_time_series_by_status   — monthly national counts, 4-panel by status, sex-disaggregated
-  fig2_gini_time_series        — Gini coefficient over time, 4 statuses
-  fig3_gini_time_series        — Gini time series with OLS slopes, 4 statuses, ref line at 0.90
-  fig4_morans_i_time_series    — Global Moran's I over time, 4 statuses
-  fig5_lisa_maps_latest        — LISA maps Jun 2025, 2×2 grid by status
-  fig6_hh_trend_norte_bajio    — HH municipalities over time, Norte vs Bajío, 4-panel
-  fig7_lisa_maps_2015_vs_2025  — LISA maps Jun 2015 vs Jun 2025, Located Alive + Dead
-  fig8_sex_disaggregation_maps — Male vs female LISA maps Jun 2025, Not Located + Located Dead
-  fig9_regional_hh_heatmap     — Regional HH heatmap, 11 June snapshots × 4 statuses
+  fig2_gini_time_series        — Gini time series with OLS slopes, 4 statuses, ref line at 0.90
+  fig3_morans_i_time_series    — Global Moran's I over time, 4 statuses
+  fig4_lisa_maps_latest        — LISA maps Jun 2025, 2×2 grid by status
+  fig5_hh_trend_norte_bajio    — HH municipalities over time, Norte vs Bajío vs Centro, 4-panel
+  fig6_lisa_maps_2015_vs_2025  — LISA maps Jun 2015 vs Jun 2025, Located Alive + Dead
+  fig7_sex_disaggregation_maps — Male vs female LISA maps Jun 2025, Not Located + Located Dead
+  fig8_regional_hh_heatmap     — Regional HH heatmap, 11 June snapshots × 4 statuses
 
 Map PNG outputs: 150 DPI (file-size conscious).
 Non-map PNG outputs: 300 DPI.
@@ -189,39 +188,10 @@ def make_fig1(panel: pl.DataFrame):
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 2: Gini time series
+# FIGURE 2: Gini time series with OLS slopes
 # ---------------------------------------------------------------------------
 def make_fig2(conc: pl.DataFrame):
-    log.info("Fig 2: Gini time series...")
-
-    df = conc.to_pandas()
-    fig, ax = plt.subplots(figsize=(12, 5))
-
-    for sid in STATUS_IDS:
-        sub = df[df["status_id"] == sid].sort_values(["year", "month"])
-        dates = ym_to_date(sub["year"], sub["month"])
-        ax.plot(dates, sub["gini"], color=STATUS_COLORS[sid],
-                linewidth=1.6, label=STATUS_LABELS[sid], alpha=0.9)
-
-    ax.set_ylabel("Gini Coefficient")
-    ax.set_xlabel("")
-    ax.set_title("Geographic Concentration (Gini) by Outcome Status, 2015–2025")
-    ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
-    ax.xaxis.set_major_locator(mdates.YearLocator(1))
-    ax.tick_params(axis="x", rotation=45)
-    ax.set_ylim(0.85, 1.0)
-    ax.legend(loc="lower right")
-    ax.grid(True, alpha=0.3, linestyle="--")
-    ax.spines[["top", "right"]].set_visible(False)
-    plt.tight_layout()
-    save_fig(fig, "fig2_gini_time_series", is_map=False)
-
-
-# ---------------------------------------------------------------------------
-# FIGURE 3: Gini time series with OLS slopes
-# ---------------------------------------------------------------------------
-def make_fig3(conc: pl.DataFrame):
-    log.info("Fig 3: Gini time series with OLS slopes...")
+    log.info("Fig 2: Gini time series with OLS slopes...")
 
     df = conc.to_pandas()
     fig, ax = plt.subplots(figsize=(12, 5))
@@ -259,14 +229,14 @@ def make_fig3(conc: pl.DataFrame):
     ax.grid(True, alpha=0.3, linestyle="--")
     ax.spines[["top", "right"]].set_visible(False)
     plt.tight_layout()
-    save_fig(fig, "fig3_gini_time_series", is_map=False)
+    save_fig(fig, "fig2_gini_time_series", is_map=False)
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 4: Global Moran's I time series
+# FIGURE 3: Global Moran's I time series
 # ---------------------------------------------------------------------------
-def make_fig4(moran: pl.DataFrame):
-    log.info("Fig 4: Moran's I time series...")
+def make_fig3(moran: pl.DataFrame):
+    log.info("Fig 3: Moran's I time series...")
 
     df = moran.to_pandas()
     fig, ax = plt.subplots(figsize=(12, 5))
@@ -297,14 +267,14 @@ def make_fig4(moran: pl.DataFrame):
     ax.grid(True, alpha=0.3, linestyle="--")
     ax.spines[["top", "right"]].set_visible(False)
     plt.tight_layout()
-    save_fig(fig, "fig4_morans_i_time_series", is_map=False)
+    save_fig(fig, "fig3_morans_i_time_series", is_map=False)
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 5: LISA maps — latest period (Jun 2025), 4 statuses
+# FIGURE 4: LISA maps — latest period (Jun 2025), 4 statuses
 # ---------------------------------------------------------------------------
-def make_fig5(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
-    log.info("Fig 5: LISA maps Jun 2025...")
+def make_fig4(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
+    log.info("Fig 4: LISA maps Jun 2025...")
 
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
     axes = axes.flatten()
@@ -330,14 +300,21 @@ def make_fig5(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
     fig.suptitle("Local Spatial Autocorrelation (LISA) by Outcome Status\nJune 2025 (total sex, α = 0.05)",
                  fontsize=13, y=1.00)
     plt.tight_layout()
-    save_fig(fig, "fig5_lisa_maps_latest", is_map=True)
+    save_fig(fig, "fig4_lisa_maps_latest", is_map=True)
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 6: HH trend Norte vs Bajío, 4-panel by status
+# FIGURE 5: HH trend Norte vs Bajío vs Centro, 4-panel by status
 # ---------------------------------------------------------------------------
-def make_fig6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
-    log.info("Fig 6: HH trend Norte vs Bajío vs Centro...")
+def make_fig5(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
+    log.info("Fig 5: HH trend Norte vs Bajío vs Centro...")
+
+    # Load new 29-municipality Bajío corridor (Medina-Fernández et al. 2023)
+    bajio_csv = pl.read_csv(
+        DATA_EXT / "bajio_corridor_municipalities.csv",
+        schema_overrides={"cvegeo": pl.Utf8},
+    )
+    bajio_cvs = set(bajio_csv["cvegeo"].str.zfill(5).to_list())
 
     hh_total = (
         lisa.filter(
@@ -346,12 +323,15 @@ def make_fig6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
         )
         .select(["status_id", "year", "month", "cvegeo"])
         .join(muni_meta, on="cvegeo", how="left")
+        .with_columns(
+            pl.col("cvegeo").is_in(list(bajio_cvs)).alias("is_bajio_corridor")
+        )
     )
 
     REGION_SPECS = [
-        ("Norte",  "region",   "Norte",  "#c0392b", "-"),
-        ("Bajío",  "is_bajio", True,     "#f39c12", "--"),
-        ("Centro", "region",   "Centro", "#2ca02c", "-"),
+        ("Norte",  "region",            "Norte",  "#c0392b", "-"),
+        ("Bajío",  "is_bajio_corridor", True,     "#f39c12", "--"),
+        ("Centro", "region",            "Centro", "#2ca02c", "-"),
     ]
 
     fig, axes = plt.subplots(2, 2, figsize=(14, 10), sharex=True)
@@ -362,6 +342,12 @@ def make_fig6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
         sub = hh_total.filter(pl.col("status_id") == sid)
         annotations = []
 
+        # Full month grid for consistent OLS (include zero-count months)
+        all_ym = pd.DataFrame(
+            [(y, m) for y in range(2015, 2026) for m in range(1, 13)],
+            columns=["year", "month"],
+        )
+
         for label, col, val, color, ls in REGION_SPECS:
             df_reg = (
                 sub.filter(pl.col(col) == val)
@@ -370,17 +356,18 @@ def make_fig6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
                 .sort(["year", "month"])
                 .to_pandas()
             )
-            if len(df_reg) == 0:
-                continue
-            dates = ym_to_date(df_reg["year"], df_reg["month"])
-            y     = df_reg["n"].values
-            ax.plot(dates, y, color=color, linestyle=ls, linewidth=1.8, label=label, alpha=0.9)
-            # OLS trend line + annotation
-            if len(y) >= 6:
-                sl = ols_trend(y)
-                x_num = np.arange(len(y))
+            # Join with full grid so zero-count months are included in OLS
+            df_full = all_ym.merge(df_reg, on=["year", "month"], how="left").fillna(0)
+            df_full["n"] = df_full["n"].astype(int)
+            dates_full = ym_to_date(df_full["year"], df_full["month"])
+            y_full = df_full["n"].values
+            ax.plot(dates_full, y_full, color=color, linestyle=ls, linewidth=1.8, label=label, alpha=0.9)
+            # OLS trend line + annotation (on full grid)
+            if len(y_full) >= 6:
+                sl = ols_trend(y_full)
+                x_num = np.arange(len(y_full))
                 trend = sl.intercept + sl.slope * x_num
-                ax.plot(dates, trend, color=color, linestyle=":", linewidth=1.0, alpha=0.6)
+                ax.plot(dates_full, trend, color=color, linestyle=":", linewidth=1.0, alpha=0.6)
                 slope_yr = sl.slope * 12
                 p_str = "p<0.001" if sl.pvalue < 0.001 else f"p={sl.pvalue:.3f}"
                 sig = "*" if sl.pvalue < 0.05 else ""
@@ -407,14 +394,14 @@ def make_fig6(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
                  "(dotted lines = OLS trend)",
                  fontsize=13)
     plt.tight_layout()
-    save_fig(fig, "fig6_hh_trend_norte_bajio", is_map=False)
+    save_fig(fig, "fig5_hh_trend_norte_bajio", is_map=False)
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 7: LISA maps Jun 2015 vs Jun 2025 — Located Alive + Located Dead
+# FIGURE 6: LISA maps Jun 2015 vs Jun 2025 — Located Alive + Located Dead
 # ---------------------------------------------------------------------------
-def make_fig7(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
-    log.info("Fig 7: LISA maps Jun 2015 vs Jun 2025...")
+def make_fig6(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
+    log.info("Fig 6: LISA maps Jun 2015 vs Jun 2025...")
 
     PERIODS  = [(2015, 6, "Jun 2015"), (2025, 6, "Jun 2025")]
     STATUSES = [2, 3]   # located_alive, located_dead
@@ -446,14 +433,14 @@ def make_fig7(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
     fig.suptitle("LISA Cluster Maps: Located Alive vs. Located Dead\nJune 2015 vs. June 2025 (total sex, α = 0.05)",
                  fontsize=13, y=1.00)
     plt.tight_layout()
-    save_fig(fig, "fig7_lisa_maps_2015_vs_2025", is_map=True)
+    save_fig(fig, "fig6_lisa_maps_2015_vs_2025", is_map=True)
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 8: Male vs female LISA maps — Not Located + Located Dead (Jun 2025)
+# FIGURE 7: Male vs female LISA maps — Not Located + Located Dead (Jun 2025)
 # ---------------------------------------------------------------------------
-def make_fig8(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
-    log.info("Fig 8: Male vs female LISA maps Jun 2025...")
+def make_fig7(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
+    log.info("Fig 7: Male vs female LISA maps Jun 2025...")
 
     SEX_CATS = ["male", "female"]
     STATUSES = [7, 3]   # not_located, located_dead
@@ -485,14 +472,21 @@ def make_fig8(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
     fig.suptitle("LISA Cluster Maps by Sex: Not Located vs. Located Dead\nJune 2025 (α = 0.05)",
                  fontsize=13, y=1.00)
     plt.tight_layout()
-    save_fig(fig, "fig8_sex_disaggregation_maps", is_map=True)
+    save_fig(fig, "fig7_sex_disaggregation_maps", is_map=True)
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 9: Regional HH heatmap — 11 June snapshots × 4 statuses
+# FIGURE 8: Regional HH heatmap — 11 June snapshots × 4 statuses
 # ---------------------------------------------------------------------------
-def make_fig9(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
-    log.info("Fig 9: Regional HH heatmap...")
+def make_fig8(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
+    log.info("Fig 8: Regional HH heatmap...")
+
+    # Load new 29-municipality Bajío corridor (Medina-Fernández et al. 2023)
+    bajio_csv = pl.read_csv(
+        DATA_EXT / "bajio_corridor_municipalities.csv",
+        schema_overrides={"cvegeo": pl.Utf8},
+    )
+    bajio_cvs = set(bajio_csv["cvegeo"].str.zfill(5).to_list())
 
     REGIONS_ORDER = ["Norte", "Norte-Occidente", "Centro-Norte", "Centro", "Sur", "Bajío"]
     YEARS = list(range(2015, 2026))
@@ -510,7 +504,7 @@ def make_fig9(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
 
     def count_hh(sub, region):
         if region == "Bajío":
-            return sub.filter(pl.col("is_bajio") == True)
+            return sub.filter(pl.col("cvegeo").is_in(list(bajio_cvs)))
         return sub.filter(pl.col("region") == region)
 
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
@@ -562,7 +556,7 @@ def make_fig9(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
         fontsize=13
     )
     plt.tight_layout()
-    save_fig(fig, "fig9_regional_hh_heatmap", is_map=False)
+    save_fig(fig, "fig8_regional_hh_heatmap", is_map=False)
 
 
 # ---------------------------------------------------------------------------
@@ -613,15 +607,14 @@ def main():
     # --- Generate figures ---
     make_fig1(panel)
     make_fig2(conc)
-    make_fig3(conc)
-    make_fig4(moran)
-    make_fig5(lisa, gdf_map)
-    make_fig6(lisa, muni_meta)
+    make_fig3(moran)
+    make_fig4(lisa, gdf_map)
+    make_fig5(lisa, muni_meta)
+    make_fig6(lisa, gdf_map)
     make_fig7(lisa, gdf_map)
-    make_fig8(lisa, gdf_map)
-    make_fig9(lisa, muni_meta)
+    make_fig8(lisa, muni_meta)
 
-    log.info("=== Phase 3 complete. All 9 figures saved to manuscript/figures/ ===")
+    log.info("=== Phase 3 complete. All 8 figures saved to manuscript/figures/ ===")
 
     # List outputs
     for f in sorted(OUT_DIR.glob("fig*.pdf")):

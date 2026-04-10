@@ -1,3 +1,6 @@
+\begin{table}[htbp]
+\centering
+\caption{RNPDNO dataset summary by outcome status, \studyperiod{}.}\label{tab:dataset}
 \begin{tabular}{lrrrrrr}
   \toprule
   \textbf{Status} & \textbf{CSV rows} & \textbf{Valid rows} & \textbf{Sentinel rows} & \textbf{Total persons} & \textbf{Valid persons} & \textbf{Sentinel persons} \\
@@ -7,6 +10,10 @@
   Located Alive & 37,379 & 36,541 & 838 & 160,901 & 157,990 & 2,911 \\
   Located Dead & 9,936 & 9,696 & 240 & 15,777 & 15,438 & 339 \\
   \bottomrule
-  \multicolumn{7}{l}{\footnotesize Temporal coverage: January 2015 -- December 2025.} \\
-  \multicolumn{7}{l}{\footnotesize Sentinel geocodes (cvegeo ending 998/999 or equal to 99998) excluded from all spatial analyses.} \\
 \end{tabular}
+\begin{tablenotes}
+\small
+\item Note: Temporal coverage: January 2015 -- December 2025.
+\item Sentinel geocodes (cvegeo ending 998/999 or equal to 99998) excluded from all spatial analyses.
+\end{tablenotes}
+\end{table}
