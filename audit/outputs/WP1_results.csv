@@ -1,0 +1,55 @@
+task,check,observed,expected,verdict,note
+1.1,row_count_total,57373.0,57373.0,PASS,
+1.1,row_count_nl,34617.0,34617.0,PASS,
+1.1,row_count_la,37379.0,37379.0,PASS,
+1.1,row_count_ld,9936.0,9936.0,PASS,
+1.2,persons_incl_sentinels_total,269507.0,269507.0,PASS,
+1.2,persons_incl_sentinels_nl,92486.0,92486.0,PASS,
+1.2,persons_incl_sentinels_la,160901.0,160901.0,PASS,
+1.2,persons_incl_sentinels_ld,15777.0,15777.0,PASS,
+1.3,persons_excl_sentinels_broad_total,263402.0,263402.0,PASS,broad exclusion (ends 998/999)
+1.3,excl_persons_broad_total,6105.0,6105.0,PASS,
+1.3,persons_excl_sentinels_broad_nl,89631.0,89631.0,PASS,broad exclusion (ends 998/999)
+1.3,excl_persons_broad_nl,2855.0,2855.0,PASS,
+1.3,persons_excl_sentinels_broad_la,157990.0,157990.0,PASS,broad exclusion (ends 998/999)
+1.3,excl_persons_broad_la,2911.0,2911.0,PASS,
+1.3,persons_excl_sentinels_broad_ld,15438.0,15438.0,PASS,broad exclusion (ends 998/999)
+1.3,excl_persons_broad_ld,339.0,339.0,PASS,
+1.2b,persons_after_broad_exclusion_total,263402.0,263402.0,PASS,
+1.2b,persons_after_broad_exclusion_nl,89631.0,89631.0,PASS,
+1.2b,persons_after_broad_exclusion_la,157990.0,157990.0,PASS,
+1.2b,persons_after_broad_exclusion_ld,15438.0,15438.0,PASS,
+1.4,nonzero_rows_after_exclusion_total,55568.0,55568.0,PASS,
+1.4,nonzero_rows_after_exclusion_nl,33359.0,33359.0,PASS,
+1.4,nonzero_rows_after_exclusion_la,36541.0,36541.0,PASS,
+1.4,nonzero_rows_after_exclusion_ld,9696.0,9696.0,PASS,
+1.5,unique_muni_post_exclusion_union,1959.0,2025.0,FAIL,"EDA reports 2,025 unique munis; JQC balanced panel has 2,478"
+1.6,cross_status_nonzero_residuals,75.0,0.0,FAIL,max residual = 58.0
+1.7,june2025_active_total,570.0,573.0,FAIL,rows with total>0 in raw clean data
+1.7,june2025_persons_total,3095.0,3098.0,FAIL,
+1.7,june2025_active_nl,354.0,357.0,FAIL,rows with total>0 in raw clean data
+1.7,june2025_persons_nl,1170.0,1173.0,FAIL,
+1.7,june2025_active_la,391.0,391.0,PASS,rows with total>0 in raw clean data
+1.7,june2025_persons_la,1788.0,1788.0,PASS,
+1.7,june2025_active_ld,91.0,91.0,PASS,rows with total>0 in raw clean data
+1.7,june2025_persons_ld,144.0,144.0,PASS,
+1.7,june2025_zero_rate_total,0.77,0.77,PASS,"denom=2,478"
+1.7,june2025_zero_rate_nl,0.857,0.857,PASS,"denom=2,478"
+1.7,june2025_zero_rate_la,0.842,0.842,PASS,"denom=2,478"
+1.7,june2025_zero_rate_ld,0.963,0.963,PASS,"denom=2,478"
+1.8,female_ld_mean_per_muni_month,0.2199,0.0065,FAIL,
+1.8,female_ld_zero_rate,0.803,0.994,FAIL,
+1.9,lag_ratio_dec_jul_total,0.694,,N/A,JQC expects 0.46-0.72 range
+1.9,lag_ratio_dec_jul_nl,0.723,,N/A,JQC expects 0.46-0.72 range
+1.9,lag_ratio_dec_jul_la,0.455,,N/A,JQC expects 0.46-0.72 range
+1.9,lag_ratio_dec_jul_ld,0.617,,N/A,JQC expects 0.46-0.72 range
+1.10,unique_yearmonth_total,132.0,132.0,PASS,
+1.10,duplicates_total,0.0,0.0,PASS,
+1.10,unique_yearmonth_nl,132.0,132.0,PASS,
+1.10,duplicates_nl,0.0,0.0,PASS,
+1.10,unique_yearmonth_la,132.0,132.0,PASS,
+1.10,duplicates_la,0.0,0.0,PASS,
+1.10,unique_yearmonth_ld,132.0,132.0,PASS,
+1.10,duplicates_ld,0.0,0.0,PASS,
+1.11,panel_shape_rows,1308384.0,,N/A,inspect manually
+1.12,nl_persons_narrow_exclusion,92321.0,92321.0,PASS,should match Marco's pivot

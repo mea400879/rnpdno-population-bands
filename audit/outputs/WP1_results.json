@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "timestamp": "2026-04-16T16:54:43.845196",
+  "input_hashes": {
+    "rnpdno_total.csv": "f85febff9d628ab7750a797d311ea292ee058ead05a1427418eef1eaf0836bbe",
+    "rnpdno_disappeared_not_located.csv": "41fe8e179612ff8c2607aef4fb562b4d33a83da50b8779ae17c0ca3f2644b0a7",
+    "rnpdno_located_alive.csv": "761b5715e7a91ef763bb079c8ba45784f8ae03b64a9449f3cda36c547204e6d9",
+    "rnpdno_located_dead.csv": "19d76726d99b30a54380e2746f4945652dcd905d75e4d2c5045d3de089df1525"
+  },
+  "n_checks": 54,
+  "n_pass": 41,
+  "n_fail": 8,
+  "n_na": 5
+}
