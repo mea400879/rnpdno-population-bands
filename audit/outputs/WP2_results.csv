@@ -1,0 +1,140 @@
+task,check,observed,expected,verdict,note
+2.12,n_municipalities_panel,2478,2478,PASS,
+2.12,n_months,132,132,PASS,
+2.12,lisa_runs,1584,1584,PASS,4 status × 3 sex × 132 months
+2.12,persons_total_JQC,263402,263402,PASS,after broad exclusion
+2.1,conc_rows,528,528,PASS,4 statuses × 132 months
+2.1,gini_recompute_max_diff,0.0,,N/A,max abs diff vs stored (mean=0.000000)
+2.1,gini_mean_total,0.935,0.935,PASS,
+2.1,gini_min_total,0.915,0.915,PASS,
+2.1,gini_max_total,0.958,0.958,PASS,
+2.1,gini_mean_nl,0.946,0.946,PASS,
+2.1,gini_min_nl,0.926,0.926,PASS,
+2.1,gini_max_nl,0.966,0.966,PASS,
+2.1,gini_mean_la,0.955,0.955,PASS,
+2.1,gini_min_la,0.935,0.935,PASS,
+2.1,gini_max_la,0.978,0.978,PASS,
+2.1,gini_mean_ld,0.979,0.979,PASS,
+2.1,gini_min_ld,0.963,0.963,PASS,
+2.1,gini_max_ld,0.993,0.993,PASS,
+2.1,gini_trend_total,-0.004,-0.004,PASS,
+2.1,gini_trend_nl,-0.003,-0.003,PASS,
+2.1,gini_trend_la,-0.004,-0.004,PASS,
+2.1,gini_trend_ld,-0.002,-0.002,PASS,
+2.1,jun25_50pct_munis_NL,42,42,PASS,50% of NL in 42 muni (1.7%)
+2.1,jun25_50pct_munis_LD,22,22,PASS,50% of LD in 22 (0.9%)
+2.1,jun25_50pct_munis_Total,48,48,PASS,50% of Total in 48 (1.9%)
+2.2,morans_rows,528,528,PASS,4 statuses × 132 months
+2.2,n_significant_total,132,132,PASS,
+2.2,n_significant_nl,132,132,PASS,
+2.2,n_significant_la,127,127,PASS,
+2.2,n_significant_ld,122,122,PASS,
+2.2,moran_mean_total,0.199,0.199,PASS,
+2.2,moran_min_total,0.038,0.038,PASS,
+2.2,moran_max_total,0.374,0.374,PASS,
+2.2,moran_mean_nl,0.163,0.163,PASS,
+2.2,moran_min_nl,0.043,0.043,PASS,
+2.2,moran_max_nl,0.28,0.28,PASS,
+2.2,moran_mean_la,0.187,0.187,PASS,
+2.2,moran_min_la,0.011,0.011,PASS,
+2.2,moran_max_la,0.401,0.401,PASS,
+2.2,moran_mean_ld,0.101,0.101,PASS,
+2.2,moran_min_ld,-0.006,-0.006,PASS,
+2.2,moran_max_ld,0.297,0.298,PASS,
+2.2,moran_trend_total,0.019,0.019,PASS,
+2.2,moran_trend_nl,0.007,0.007,PASS,
+2.2,moran_trend_la,0.02,0.02,PASS,
+2.2,moran_trend_ld,0.005,0.005,PASS,
+2.2,moran_trend_ld_pvalue,0.23,,N/A,manuscript says p=0.224
+2.3,total_HH_jun25,106,106,PASS,
+2.3,total_LL_jun25,50,50,PASS,
+2.3,total_HL_jun25,1,1,PASS,
+2.3,total_LH_jun25,62,62,PASS,
+2.3,total_NS_jun25,2259,2259,PASS,
+2.3,nl_HH_jun25,93,93,PASS,
+2.3,nl_LL_jun25,2,2,PASS,
+2.3,nl_HL_jun25,2,2,PASS,
+2.3,nl_LH_jun25,52,52,PASS,
+2.3,nl_NS_jun25,2329,2329,PASS,
+2.3,la_HH_jun25,110,110,PASS,
+2.3,la_LL_jun25,5,5,PASS,
+2.3,la_HL_jun25,35,35,PASS,
+2.3,la_LH_jun25,69,69,PASS,
+2.3,la_NS_jun25,2259,2259,PASS,
+2.3,ld_HH_jun25,35,35,PASS,
+2.3,ld_LL_jun25,7,7,PASS,
+2.3,ld_HL_jun25,38,38,PASS,
+2.3,ld_LH_jun25,105,105,PASS,
+2.3,ld_NS_jun25,2293,2293,PASS,
+2.4,HH_diag_total,106,106,PASS,
+2.4,HH_diag_nl,93,93,PASS,
+2.4,HH_diag_la,110,110,PASS,
+2.4,HH_diag_ld,35,35,PASS,
+2.4,intersection_total-nl,71,71,PASS,
+2.4,intersection_total-la,87,87,PASS,
+2.4,intersection_total-ld,24,24,PASS,
+2.4,intersection_nl-la,56,56,PASS,
+2.4,intersection_nl-ld,16,16,PASS,
+2.4,intersection_la-ld,19,19,PASS,
+2.4,jaccard_total-nl,0.555,,N/A,
+2.4,jaccard_total-la,0.674,0.674,PASS,
+2.4,jaccard_total-ld,0.205,,N/A,
+2.4,jaccard_nl-la,0.381,0.381,PASS,
+2.4,jaccard_nl-ld,0.143,0.143,PASS,
+2.4,jaccard_la-ld,0.151,0.151,PASS,
+2.4,jaccard_nl_ld_jun2015,0.103,0.103,PASS,
+2.4,jaccard_la_ld_jun2015,0.0,0.0,PASS,
+2.4,jaccard_nl_ld_jun2020,0.164,0.164,PASS,
+2.4,jaccard_la_ld_jun2020,0.198,0.198,PASS,
+2.5,all_pairwise_mw_p_gt_0.50,False,True,FAIL,manuscript: all pairwise p > 0.50
+2.6,slope_Bajio_nl,0.501,0.5,PASS,
+2.6,slope_Centro_nl,4.962,4.96,PASS,
+2.7,chow_F,77.72,78.13,QUAL,
+2.7,chow_p_lt_001,True,True,PASS,
+2.7,slope_pre_break_yr,-8.6,-8.82,QUAL,
+2.7,slope_post_break_yr,0.48,0.47,QUAL,
+2.7,t6_bajio_slope_nl,0.501,0.5,PASS,HAC:*** OLS:*** manuscript:***
+2.7,t6_bajio_slope_ld,0.148,0.15,QUAL,HAC:ns OLS:* manuscript:*
+2.7,t6_bajio_slope_la,-0.346,-0.35,QUAL,HAC:ns OLS:** manuscript:**
+2.7,t6_bajio_slope_total,-0.307,-0.31,QUAL,HAC:ns OLS:* manuscript:*
+2.8,chi2_total,9.5,9.5,PASS,
+2.8,chi2_p_total,0.05,0.05,PASS,
+2.8,chi2_nl,16.5,16.5,PASS,
+2.8,chi2_p_nl,0.002,0.002,PASS,
+2.8,chi2_la,17.7,17.7,PASS,
+2.8,chi2_p_la,0.001,0.001,PASS,
+2.8,chi2_ld,14.1,14.1,PASS,
+2.8,chi2_p_ld,0.007,0.007,PASS,
+2.9,HH_male_total,121,121,PASS,
+2.9,HH_female_total,99,99,PASS,
+2.9,shared_total,74,74,PASS,
+2.9,jaccard_sex_total,0.507,0.507,PASS,
+2.9,HH_male_nl,85,85,PASS,
+2.9,HH_female_nl,50,50,PASS,
+2.9,shared_nl,28,28,PASS,
+2.9,jaccard_sex_nl,0.262,0.262,PASS,
+2.9,HH_male_la,83,83,PASS,
+2.9,HH_female_la,90,90,PASS,
+2.9,shared_la,58,58,PASS,
+2.9,jaccard_sex_la,0.504,0.504,PASS,
+2.9,HH_male_ld,27,27,PASS,
+2.9,HH_female_ld,0,0,PASS,
+2.9,shared_ld,0,0,PASS,
+2.9,jaccard_sex_ld,0.0,0.0,PASS,
+2.9,nl_counterfactual_28_of_85,0.33,0.33,PASS,"if female set = 85, shared fraction = 28/85 = 33%"
+2.10,ced_slope_Estado de México_nl,2.364,2.36,PASS,p=0.0 (expected p<0.001)
+2.10,ced_slope_Estado de México_la,1.812,1.81,PASS,p=0.0002 (expected p<0.001)
+2.10,ced_slope_Nuevo León_la,1.342,1.34,PASS,p=0.0 (expected p<0.001)
+2.10,ced_slope_Nuevo León_ld,0.795,0.8,QUAL,p=0.0 (expected p<0.001)
+2.10,ced_slope_Guanajuato_nl,0.752,0.75,PASS,p=0.0013 (expected p<0.001)
+2.10,ced_slope_Guanajuato_la,-0.566,-0.57,QUAL,p=0.3999 (expected p<0.001)
+2.10,jalisco_total_registrations_2021,3824,3825,FAIL,
+2.10,jalisco_total_registrations_2024,213,216,FAIL,
+2.10,jalisco_total_active_munis_2021,102,103,FAIL,
+2.10,jalisco_total_active_munis_2024,39,41,FAIL,
+2.11,spearman_range_min,0.227,,N/A,manuscript: 0.227 to 0.607
+2.11,spearman_range_max,0.607,,N/A,manuscript: 0.227 to 0.607
+2.11,spearman_all_positive,True,True,PASS,
+2.13,vawri_rb_min,0.81,,N/A,manuscript: 0.76–0.96
+2.13,vawri_rb_max,0.89,,N/A,manuscript: 0.76–0.96
+2.13,vawri_rb_all_in_range,True,True,PASS,all should be ≥0.70 (manuscript says 0.76–0.96)
