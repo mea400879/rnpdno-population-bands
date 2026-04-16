@@ -21,6 +21,7 @@ The five non-significant months for Located Alive and ten for Located Dead conce
 The magnitude of spatial autocorrelation varies by status.
 Total shows the highest mean $I$ (0.199, range: 0.038--0.374), followed by Located Alive (0.187, range: 0.011--0.401), Not Located (0.163, range: 0.043--0.280), and Located Dead (0.101, range: $-$0.006--0.298).
 The lower values for Located Dead reflect the extreme sparsity of lethal-outcome cases across most of the country.
+Global spatial autocorrelation is significantly increasing over the study period for Total ($+0.019$/yr, $p < 0.001$), Not Located ($+0.007$/yr, $p < 0.001$), and Located Alive ($+0.020$/yr, $p < 0.001$); Located Dead shows no significant trend ($+0.005$/yr, $p = 0.224$).
 
 \subsubsection{LISA Classification}
 
@@ -47,17 +48,15 @@ Located Dead HH clusters are sparse and geographically restricted, with concentr
 \end{figure}
 
 \subsubsection{Non-Interchangeability: The Jaccard Evidence}
-
-The paper's headline result is the quantitative demonstration that outcome statuses produce non-interchangeable spatial cluster geographies.
-Table~\ref{tab:crosstab} reports pairwise Jaccard similarity coefficients (intersection over union of HH municipality sets) for \referencemonth{}.
-
+The quantitative core of the non-interchangeability argument rests on pairwise Jaccard similarity coefficients (intersection over union of HH municipality sets) for \referencemonth{}.
+Table~\ref{tab:crosstab} reports these coefficients.
 \input{tables/table5_hh_cross_tabulation.tex}
-
 The Jaccard coefficients involving Located Dead are strikingly low: NL$\leftrightarrow$LD = 0.143 and LA$\leftrightarrow$LD = 0.151.
-Only 14--15\% of the municipalities identified as hotspots for lethal outcomes overlap with hotspots for either Not Located or Located Alive cases.
+The union of HH municipalities for each pair involving Located Dead shares only 14--15\% of its members with the other status.
 The NL$\leftrightarrow$LA pair shows moderate overlap (0.381), suggesting some shared geography between active disappearances and recoveries.
 The Total$\leftrightarrow$LA pair is highest (0.674), as expected given that Located Alive cases numerically dominate the Total series.
-
+This divergence is not an artefact of population size: municipal populations of HH sets do not differ significantly across outcome statuses (Mann-Whitney $U$, all pairwise $p > 0.50$; Kolmogorov-Smirnov tests likewise non-significant), confirming that the Jaccard structure reflects distinct spatial processes rather than differential concentration in large versus small municipalities.
 These results are stable across reference periods.
-The Spearman rank correlation of local Moran's $I_i$ values between June 2024 and June 2025 ranges from 0.249 (Located Dead, total sex) to 0.607 (Total, total sex), confirming temporal stability in the underlying spatial structure (Appendix~\ref{app:robustness}).
-The Jaccard pattern is also consistent across earlier cross-sections: in \bookendstart{}, NL$\leftrightarrow$LD Jaccard was 0.103 and LA$\leftrightarrow$LD was 0.000 (no overlap whatsoever between Located Alive and Located Dead hotspots).
+The Spearman rank correlation of local Moran's $I_i$ values between June 2024 and June 2025 ranges from 0.249 (Located Dead, total sex) to 0.607 (Total, total sex), indicating weak to moderate temporal stability in the underlying spatial structure; the low value for Located Dead is consistent with the small and spatially volatile HH set for lethal outcomes.
+The Jaccard pattern is consistent across earlier cross-sections: in \bookendstart{}, NL$\leftrightarrow$LD Jaccard was 0.103 and LA$\leftrightarrow$LD was 0.000 (no overlap whatsoever between Located Alive and Located Dead hotspots); at the midpoint (June 2020), NL$\leftrightarrow$LD was 0.164 and LA$\leftrightarrow$LD was 0.198.
+The inverted LL--LH structure of Located Dead noted in Table~\ref{tab:lisa_counts}---105 LH municipalities against only 7 LL---indicates that low-count municipalities are typically adjacent to at least one high-count neighbor, consistent with a phenomenon that is both spatially sparse and geographically focal.

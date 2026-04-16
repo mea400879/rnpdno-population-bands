@@ -1,21 +1,18 @@
 \begin{table}[htbp]
 \centering
-\caption{Geographic concentration metrics by outcome status, \nmonths{} monthly observations, \studyperiod{}.}\label{tab:concentration}
-\begin{tabular}{lrrrrrrrr}
+\caption{Gini coefficient by outcome status, \nmonths{} monthly observations, \studyperiod{}.}\label{tab:concentration}
+\begin{tabular}{lrrrr}
   \toprule
-  & \multicolumn{4}{c}{\textbf{Gini}} & \multicolumn{4}{c}{\textbf{HHI}} \\
-  \cmidrule(lr){2-5}\cmidrule(lr){6-9}
-  \textbf{Status} & \textbf{Mean} & \textbf{Min} & \textbf{Max} & \textbf{Trend}\tnote{a} & \textbf{Mean} & \textbf{Min} & \textbf{Max} & \textbf{Trend}\tnote{a} \\
+  \textbf{Status} & \textbf{Mean} & \textbf{Min} & \textbf{Max} & \textbf{Trend}\tnote{a} \\
   \midrule
-  Total & 0.9347 & 0.9146 & 0.9583 & $-$0.0038*** & 0.0108 & 0.0064 & 0.0196 & $-$0.0009*** \\
-  Not Located & 0.9464 & 0.9258 & 0.9660 & $-$0.0032*** & 0.0111 & 0.0063 & 0.0192 & $-$0.0005*** \\
-  Located Alive & 0.9552 & 0.9353 & 0.9784 & $-$0.0035*** & 0.0162 & 0.0086 & 0.0419 & $-$0.0017*** \\
-  Located Dead & 0.9791 & 0.9627 & 0.9927 & $-$0.0017*** & 0.0268 & 0.0115 & 0.0776 & $-$0.0025*** \\
+  Total         & 0.935 & 0.915 & 0.958 & $-$0.004*** \\
+  Not Located   & 0.946 & 0.926 & 0.966 & $-$0.003*** \\
+  Located Alive & 0.955 & 0.935 & 0.978 & $-$0.004*** \\
+  Located Dead  & 0.979 & 0.963 & 0.993 & $-$0.002*** \\
   \bottomrule
 \end{tabular}
 \begin{tablenotes}
 \small
-\item[a] OLS trend slope per year ($\times$12), 132 monthly observations.
-\item Note: $^{***}p<0.001$, $^{**}p<0.01$, $^{*}p<0.05$.
+\item[a] OLS slope per year ($\times$12), 132 monthly observations. $^{***}p<0.001$.
 \end{tablenotes}
 \end{table}

@@ -1,19 +1,20 @@
 \begin{table}[htbp]
 \centering
 \caption{RNPDNO dataset summary by outcome status, \studyperiod{}.}\label{tab:dataset}
-\begin{tabular}{lrrrrrr}
+\begin{tabular}{lrrr}
   \toprule
-  \textbf{Status} & \textbf{CSV rows} & \textbf{Valid rows} & \textbf{Sentinel rows} & \textbf{Total persons} & \textbf{Valid persons} & \textbf{Sentinel persons} \\
+  \textbf{Status} & \textbf{Persons} & \textbf{Excluded (\%)} & \textbf{Non-zero cells} \\
   \midrule
-  Total & 57,373 & 55,568 & 1,805 & 269,507 & 263,402 & 6,105 \\
-  Not Located & 34,617 & 33,359 & 1,258 & 92,486 & 89,631 & 2,855 \\
-  Located Alive & 37,379 & 36,541 & 838 & 160,901 & 157,990 & 2,911 \\
-  Located Dead & 9,936 & 9,696 & 240 & 15,777 & 15,438 & 339 \\
+  Total         & 263,402 & 6,105 (2.3\%) & 55,568 \\
+  Not Located   &  89,631 & 2,855 (3.1\%) & 33,359 \\
+  Located Alive & 157,990 & 2,911 (1.8\%) & 36,541 \\
+  Located Dead  &  15,438 &   339 (2.1\%) &  9,696 \\
   \bottomrule
 \end{tabular}
 \begin{tablenotes}
 \small
-\item Note: Temporal coverage: January 2015 -- December 2025.
-\item Sentinel geocodes (cvegeo ending 998/999 or equal to 99998) excluded from all spatial analyses.
+\item Note: Temporal coverage: January 2015 -- December 2025 (132 months, 2,478 municipalities).
+Excluded persons carry sentinel geocodes (cvegeo ending 998/999 or equal to 99998) with unresolvable geography.
+Non-zero cells: municipality-month combinations with at least one registration.
 \end{tablenotes}
 \end{table}

@@ -1,3 +1,5 @@
+\begin{table}[htbp]
+\caption{Regional trend slopes in HH municipality counts, 2015--2025.}\label{tab:slopes}
 \begin{tabular}{lrrrr}
   \toprule
   \textbf{Region} & \textbf{Total} & \textbf{Not Located} & \textbf{Located Alive} & \textbf{Located Dead} \\
@@ -9,6 +11,8 @@
   Sur & -0.17 & +0.30*** & +0.03 & +0.03 \\
   Bajío & -0.31* & +0.50*** & -0.35** & +0.15* \\
   \bottomrule
-  \multicolumn{5}{l}{\footnotesize OLS slope (municipalities per year $= $ slope $\times 12$), 132 monthly observations.} \\
-  \multicolumn{5}{l}{\footnotesize $^{***}p<0.001$, $^{**}p<0.01$, $^{*}p<0.05$. Sign: positive $=$ growing hotspot region.} \\
+  \multicolumn{5}{l}{\footnotesize OLS slope (municipalities per year $=$ slope $\times 12$), 132 monthly observations.} \\
+  \multicolumn{5}{l}{\footnotesize Newey-West HAC standard errors (bandwidth $= 12$). $^{***}p<0.001$, $^{**}p<0.01$, $^{*}p<0.05$.} \\
+  \multicolumn{5}{l}{\footnotesize Results qualitatively unchanged under Poisson regression with HAC standard errors.} \\
 \end{tabular}
+\end{table}

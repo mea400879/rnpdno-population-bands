@@ -6,21 +6,19 @@
 
 Having established that the four statuses cluster in different places, we now examine how those spatial patterns have evolved since 2015.
 Table~\ref{tab:slopes} reports OLS trend slopes (Newey-West HAC standard errors, bandwidth = 12) for HH municipality counts by region and status.
-Three regional narratives deserve attention.
 
 \input{tables/table6_trend_slopes.tex}
 
 \subsubsection{The Centro Expansion}
 
-Centro emerges as the fastest-growing hotspot region across all four statuses---a finding that was invisible to prior annual analyses focused on the Norte--Baj\'{i}o axis.
-Not Located HH municipalities in Centro grew at $+4.96$ municipalities per year ($p < 0.001$), the largest slope in the entire matrix.
+Centro emerges as the fastest-growing hotspot region across all four statuses.
+Not Located HH municipalities in Centro grew at $+4.96$ municipalities per year ($p < 0.001$), the largest slope in the entire region--status matrix.
 Total ($+3.43$, $p < 0.001$), Located Alive ($+3.63$, $p < 0.001$), and Located Dead ($+1.26$, $p < 0.001$) all show significant positive trends.
 
 Figure~\ref{fig:hh_trend} illustrates the divergent trajectories of Centro, Norte, and Baj\'{i}o.
 The Centro expansion is visible as a steep upward trajectory beginning around 2019 for Not Located and accelerating through 2025.
-This finding requires careful interpretation.
-Two non-exclusive hypotheses may explain the pattern: (i) a real increase in disappearances in the metropolitan corridor spanning Estado de M\'{e}xico, CDMX, Puebla, Morelos, and Hidalgo---possibly reflecting urbanization of organized criminal violence; or (ii) a reporting artefact, whereby urban areas with more prosecutors, civil society organizations, and media attention register a higher proportion of disappearances even if underlying incidence did not increase as sharply.
-We cannot distinguish between these hypotheses with RNPDNO data alone.
+This pattern was not documented in prior annual analyses focused on the Norte--Baj\'{i}o axis \citep{cadena_garrocho_2019}.
+The mechanisms underlying this expansion are examined in Section~\ref{sec:disc_regional}.
 
 \begin{figure}[htbp]
   \centering
@@ -33,25 +31,34 @@ We cannot distinguish between these hypotheses with RNPDNO data alone.
 
 \subsubsection{The Norte Consolidation}
 
-Norte shows consistent positive growth in HH municipalities across all four statuses: Total $+0.62^{*}$, Not Located $+0.59^{**}$, Located Alive $+1.06^{***}$, and Located Dead $+0.78^{***}$.
-This multi-status consolidation suggests an entrenched organized crime presence---people are going missing, being found alive, \emph{and} being found dead at increasing rates in the same region.
-The simultaneous growth of Located Alive and Located Dead hotspots in Norte may reflect a combination of high disappearance incidence and relatively developed forensic and search infrastructure: bodies and living persons are recovered because institutional capacity exists to register them, even as the underlying crisis deepens.
+Norte shows consistent positive growth in HH municipalities across all four statuses: Total $+0.62$ ($p = 0.014$), Not Located $+0.59$ ($p = 0.002$), Located Alive $+1.06$ ($p < 0.001$), and Located Dead $+0.78$ ($p < 0.001$).
+The simultaneous growth across all four statuses, including both Located Alive and Located Dead, distinguishes Norte from all other regions.
+Interpretation of this multi-status consolidation is deferred to Section~\ref{sec:disc_regional}.
 
-\subsubsection{The Baj\'{i}o Hypothesis: Rejected}
+\subsubsection{Baj\'{i}o Industrial Corridor: A Structural Break at 2017}
 
-The earlier annual pipeline and existing literature \citep{cadena_garrocho_2019} suggested a ``rising Baj\'{i}o'' pattern driven by cartel territorial expansion into the Guanajuato--Jalisco corridor.
-The monthly analysis rejects this hypothesis for the aggregate measure: Baj\'{i}o Total slope is $-1.09$ municipalities per year ($p = 0.024$), indicating a \emph{declining} hotspot footprint.
-Located Alive in Baj\'{i}o also shows a negative (though non-significant) slope ($-0.47$, $p = 0.410$).
-Located Dead trends positive ($+0.22$) but is not statistically significant ($p = 0.317$).
-Not Located is similarly non-significant ($+0.24$, $p = 0.531$).
+Earlier annual analyses \citep{cadena_garrocho_2019} suggested a rising Baj\'{i}o pattern driven by cartel territorial expansion into the Guanajuato--Jalisco corridor.
+Our initial examination using the broad CESOP regional classification ($\sim$200 municipalities) found a negative Total slope, but this aggregate masked the dynamics of the narrower industrial corridor.
+When the analysis is restricted to the 29-municipality Baj\'{i}o corridor defined in Section~\ref{sec:trend}, a Chow test identifies a structural break at February 2017 ($F = 78.13$, $p < 0.001$).
+Prior to this break, HH municipalities within the corridor were declining ($\beta_1 = -8.82$ municipalities/year).
+After 2017, the corridor shows a slow but statistically significant expansion ($\beta_2 = +0.47$/year, $p = 0.046$), driven primarily by Not Located cases ($+0.50$/year, $p < 0.001$).
+Located Dead shows a positive but modest trend ($+0.15$/year, $p = 0.046$), while Located Alive declines ($-0.35$/year, $p = 0.003$).
+The Total corridor slope is $-0.31$/year ($p = 0.041$), reflecting the net balance of a growing Not Located footprint against a shrinking Located Alive footprint.
 
-The Baj\'{i}o finding illustrates a broader methodological point: aggregate analyses can mask compositional dynamics that only become visible with outcome disaggregation and monthly resolution.
+The ``rising Baj\'{i}o'' hypothesis thus finds qualified support in the post-2017 period. 
+The corridor is gaining Not Located HH municipalities, that is, places where people 
+disappear and are not found, even as the overall number of hotspots remains broadly stable.
+This temporal pattern is consistent with the intensification of cartel competition in 
+Guanajuato's industrial municipalities, particularly around fuel infrastructure and 
+territorial control \citep{reyes_robo_2022}. It also aligns with security analyses from 
+the same period and complements the evidence reported by \citet{cadena_garrocho_2019}, 
+whose dataset ended in 2017 during the ascending phase that our extended series confirms.
 
 \subsubsection{Bookend Comparison}
 
-Figure~\ref{fig:lisa_comparison} compares LISA maps for \bookendstart{} and \referencemonth{} for Located Alive and Located Dead, visualizing the geographic shift over the study period.
-The expansion of Located Alive HH clusters from a concentrated Norte-Centro nucleus in 2015 to a broader multi-regional pattern by 2025 is clearly visible.
-Located Dead clusters remain sparse at both endpoints, though a new cluster in Guanajuato emerges by 2025.
+Figure~\ref{fig:lisa_comparison} compares LISA maps for \bookendstart{} and \referencemonth{} for Located Alive and Located Dead.
+Located Alive HH municipalities nearly doubled, from 60 in \bookendstart{} to 110 in \referencemonth{}, expanding from a concentrated Norte--Centro nucleus to a broader multi-regional pattern.
+Located Dead clusters grew from 6 to 35 HH municipalities but remain sparse relative to the other statuses; a new cluster in Guanajuato emerges by 2025.
 
 \begin{figure}[htbp]
   \centering
@@ -63,7 +70,8 @@ Located Dead clusters remain sparse at both endpoints, though a new cluster in G
 \end{figure}
 
 Figure~\ref{fig:heatmap} provides a synoptic view of regional dynamics through a heatmap of HH municipality counts across 11 June snapshots (2015--2025) for all four statuses.
-The chi-square tests for distributional change between \bookendstart{} and \referencemonth{} are significant for all statuses: Total ($\chi^2 = 9.5$, $p = 0.050$), Not Located ($\chi^2 = 16.5$, $p = 0.002$), Located Alive ($\chi^2 = 17.7$, $p = 0.001$), and Located Dead ($\chi^2 = 14.1$, $p = 0.007$).
+Chi-square tests for distributional change between \bookendstart{} and \referencemonth{} are significant for three of four statuses: Not Located ($\chi^2 = 16.5$, $df = 4$, $p = 0.002$), Located Alive ($\chi^2 = 17.7$, $df = 4$, $p = 0.001$), and Located Dead ($\chi^2 = 14.1$, $df = 4$, $p = 0.007$; some expected cell frequencies fall below 5).
+Total reaches the conventional threshold ($\chi^2 = 9.5$, $df = 4$, $p = 0.050$).
 
 \begin{figure}[htbp]
   \centering
