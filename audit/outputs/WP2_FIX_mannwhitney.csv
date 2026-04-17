@@ -1,0 +1,7 @@
+pair,n_a,n_b,u_stat,p_value,gt_050
+Total-NL,89,81,3613.5,0.9788,True
+Total-LA,89,81,3569.0,0.9129,True
+Total-LD,89,24,857.5,0.1396,False
+NL-LA,81,81,3254.0,0.9305,True
+NL-LD,81,24,800.0,0.1899,False
+LA-LD,81,24,795.5,0.1786,False

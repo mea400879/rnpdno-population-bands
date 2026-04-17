@@ -1,0 +1,7 @@
+analysis,status,segment,n,slope_yr,hac_se_yr,hac_p,hac_stars,ols_p,ols_stars,ms_slope,ms_p_str,ms_stars
+chow_piecewise_total,total,pre (Jan2015–Jan2017),26,-8.599,0.6019,0.0,***,0.0,***,,,
+chow_piecewise_total,total,post (Feb2017–Dec2025),106,0.477,0.2449,0.0539,ns,0.0001,***,-0.31,p=0.041,*
+subcomponent_full_period,total,full (Jan2015–Dec2025),132,-0.307,0.4234,0.4696,ns,0.0143,*,-0.31,p=0.041,*
+subcomponent_full_period,nl,full (Jan2015–Dec2025),132,0.501,0.1484,0.001,***,0.0,***,0.5,p<0.001,***
+subcomponent_full_period,la,full (Jan2015–Dec2025),132,-0.346,0.44,0.4328,ns,0.0085,**,-0.35,p=0.003,**
+subcomponent_full_period,ld,full (Jan2015–Dec2025),132,0.148,0.1099,0.1808,ns,0.0119,*,0.15,p=0.046,*
