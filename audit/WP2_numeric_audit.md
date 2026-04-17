@@ -9,9 +9,9 @@
 
 ## Overall Verdict
 
-**GATE 2: CONDITIONAL PASS — one mandatory fix required before submission.**
+**GATE 2: CONDITIONAL PASS — two mandatory fixes required before submission (see WP2-FIX Amendment below).**
 
-Every core quantitative claim in the JQC manuscript reproduces exactly from stored processed outputs (LISA, Moran's I, Gini concentration, Jaccard, chi-square, VAWRI). Four findings are documented. One (F2) requires a correction to Table 6 before submission. Two (F3, F4) are minor; one (F1) requires a single-sentence rewording.
+Every core quantitative claim in the JQC manuscript reproduces exactly from stored processed outputs (LISA, Moran's I, Gini concentration, Jaccard, chi-square, VAWRI). Post-audit fix identified two bugs in Task 2.6: wrong HH data source (raw LISA vs BFS) and missing zero-fill. Five findings documented; F2 and F3 are mandatory before submission.
 
 ---
 
@@ -311,13 +311,13 @@ The manuscript significance stars (*, **, ***) match plain OLS standard errors, 
 | Sect 4.3.1 | Moran's I means, trends, significance counts | ✅ All exact |
 | Sect 4.3.2 | LISA Table 3 cluster counts | ✅ All 20 cells exact |
 | Sect 4.3.3 | Jaccard Table 4 intersections and coefficients | ✅ All 10 load-bearing exact |
-| Sect 4.3.3 | Mann-Whitney HH populations | ⚠️ F1 — one pair p=0.254 not >0.50 |
-| Sect 4.4 | Table 5 HAC slopes | ✅ Two load-bearing cells exact; full table saved |
+| Sect 4.3.3 | Mann-Whitney HH populations | ⚠️ F1 (revised) — 3/6 pairs p<0.50; all p>0.05 |
+| Sect 4.4 | Table 5 HAC slopes | ⚠️ F2 (revised) — BFS fix required; 18 slope changes, 7 star changes |
 | Sect 4.4.3 | Chow test F and piecewise slopes | ⚠️ F5 — trivial rounding |
 | Table 6 | Bajío row slopes | ✅ Slopes exact; ⚠️ F2 — stars from OLS not HAC |
 | Sect 4.5 | Chi-square bookend tests | ✅ All 8 checks exact |
 | Table 6 (sex) | HH male/female counts and Jaccard | ✅ All 17 checks exact |
-| Sect 4.6 | CED state slopes | ✅ Mostly exact; ⚠️ F3 (Guanajuato LA p) |
+| Sect 4.6 | CED state slopes | ✅ Mostly exact; ❌ F3 (Guanajuato LA p<0.001 unsupported) |
 | Sect 4.6 | Jalisco collapse | ❌ F4 — trivial snapshot diff |
 | Appendix A.1 | Spearman ρ range | ✅ 0.227–0.607 exact |
 | Sect 3.7/5.5 | VAWRI rank-biserial range | ✅ 0.81–0.89, in manuscript range |
@@ -337,3 +337,86 @@ The manuscript significance stars (*, **, ***) match plain OLS standard errors, 
 
 **GATE 2 VERDICT: CONDITIONAL PASS.**  
 Proceed to WP3/WP4/WP5 in parallel. The mandatory fix (F2) can be executed by re-running `scripts/15_generate_tables.py` with the 29-muni corridor using HAC SEs for the Bajío row. All other quantitative claims are verified and hold.
+
+---
+
+## WP2-FIX Amendment (2026-04-17)
+
+**Script:** `notebooks/audit/wp2_fix_table5.py`  
+**Outputs:** `audit/outputs/WP2_FIX_*.csv` and `WP2_FIX_diagnosis.md`
+
+Post-Gate-2 deep-dive identified two compounding bugs in WP2 Task 2.6 and revises three findings.
+
+### Bug 1 — Wrong HH data source for Table 5 geographic regions
+
+WP2 Task 2.6 built regional time series from `hh_regional_composition.csv`, which aggregates **all** LISA-classified HH municipalities (no BFS filter). The manuscript Section 3.3 specifies BFS-filtered clusters (≥3 contiguous HH municipalities). The correct source is `hh_clusters_monthly.parquet` (confirmed min cluster_size = 3).
+
+Jan 2015 overcounting (raw vs BFS): Sur +10, Norte-Occidente +3, Centro-Norte +4, Norte +3, Centro +4.
+
+### Bug 2 — Missing zero-fill for months with 0 HH municipalities
+
+WP2 regressions ran on non-zero months only for sparse region/status combinations, yielding < 132 observations. This biases slope estimates and can flip signs in near-zero series (Sur LD, Norte-Occidente LD).
+
+### Corrected Table 5 (BFS geographic regions + raw LISA Bajío + HAC SEs)
+
+| Region | Total | NL | LA | LD |
+|--------|-------|----|----|-----|
+| Bajío | −0.307 ns | **+0.501 \*\*\*** | −0.346 ns | +0.148 ns |
+| Centro | +3.398 \*\*\* | +4.941 \*\*\* | +3.489 \*\*\* | +0.955 \*\*\* |
+| Centro-Norte | −0.954 \* | −0.963 \*\* | −0.035 ns | −0.080 ns |
+| Norte | +0.958 \*\*\* | +0.659 \*\*\* | +1.285 \*\*\* | +0.742 \*\*\* |
+| Norte-Occidente | +0.342 \*\* | +0.391 \*\* | +0.334 \*\*\* | +0.009 ns |
+| Sur | +0.026 ns | −0.029 ns | −0.119 ns | +0.017 ns |
+
+Bajío row uses raw LISA (29-muni corridor) — BFS distorts this small corridor. Geographic regions use BFS. **18/24 cells** have slope changes > 0.02 vs WP2; **7/24 cells** have different OLS vs HAC stars.
+
+Cells where OLS and HAC give different significance stars:
+
+| Region | Status | Slope | OLS stars | HAC stars |
+|--------|--------|-------|-----------|-----------|
+| Norte-Occidente | total | +0.342 | \*\*\* | \*\* |
+| Centro-Norte | total | −0.954 | \*\*\* | \* |
+| Bajío | total | −0.307 | \* | ns |
+| Norte-Occidente | nl | +0.391 | \*\*\* | \*\* |
+| Centro-Norte | nl | −0.963 | \*\*\* | \*\* |
+| Bajío | la | −0.346 | \*\* | ns |
+| Bajío | ld | +0.148 | \* | ns |
+
+### Revised Finding F1 — Mann-Whitney (BFS sets)
+
+Using BFS-filtered HH sets (n: Total=89, NL=81, LA=81, LD=24 for June 2025):
+
+| Pair | p-value | p > 0.50? |
+|------|---------|-----------|
+| Total–NL | 0.979 | ✅ |
+| Total–LA | 0.913 | ✅ |
+| **Total–LD** | **0.140** | **❌** |
+| NL–LA | 0.931 | ✅ |
+| **NL–LD** | **0.190** | **❌** |
+| **LA–LD** | **0.179** | **❌** |
+
+All pairs p > 0.05 (scientific conclusion intact). Three of six pairs have 0.14 ≤ p ≤ 0.19 — these involve LD, which has a smaller set (24 munis) leading to lower power. **Corrected wording:** "All pairwise comparisons were non-significant (p > 0.05); three of six yielded p > 0.50."
+
+### Revised Finding F2 — HAC stars extend beyond Bajío row
+
+F2 now covers **7/24 Table 5 cells** (see table above), not only the Bajío row. The Centre-Norte NL star changes from *** (OLS) to ** (HAC); Norte-Occidente NL and Total each drop one star level. HAC is materially more conservative in all affected cells — confirming that the manuscript under-reports uncertainty for autocorrelated monthly series wherever OLS was used.
+
+**Mandatory fix scope:** regenerate all 24 Table 5 cells with HAC SEs from BFS-filtered data; regenerate Table 6 Bajío sub-component rows.
+
+### Revised Finding F3 — Guanajuato LA
+
+OLS p (corrected) = 0.003 (**), not 0.009 as estimated in the original F3. HAC p = 0.40 (ns) confirmed. The manuscript claims p < 0.001 — neither OLS nor HAC supports this. This is a **Serious** error (claim of *** where even OLS gives only **).
+
+Additionally, Guanajuato NL: slope = +0.752, OLS p < 0.001 (***), HAC p = 0.001 (**). Manuscript claims p < 0.001 (***); HAC gives ** (p = 0.0013). This is a borderline case — p is 0.0013, very close to the 0.001 threshold. Recommend reporting as p = 0.001 with a note.
+
+### Revised Gate 2 Summary
+
+| Finding | Severity | Action |
+|---------|----------|--------|
+| F1 Mann-Whitney (revised) | Low | "All p>0.05; three of six p>0.50" |
+| **F2 HAC stars — 7/24 Table 5 cells + Table 6 Bajío** | **Moderate** | **Regenerate both tables with BFS data and HAC SEs** |
+| **F3 Guanajuato LA — p<0.001 unsupported** | **Serious** | **Change to HAC p=0.40 (ns) or OLS p=0.003 (**); revise Section 4.6 narrative** |
+| F4 Jalisco snapshot | Trivial | No action |
+| F5 Chow rounding | Trivial | No action |
+
+**GATE 2 REVISED VERDICT: CONDITIONAL PASS — two mandatory fixes before submission (F2 + F3).**
