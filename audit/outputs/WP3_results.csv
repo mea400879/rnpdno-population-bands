@@ -1,0 +1,26 @@
+task,check,observed,expected,verdict,note
+3.1,poisson_centro_nl_irr_yr,1.2637,,N/A,manuscript OLS +4.94/yr BFS
+3.1,poisson_centro_nl_hac_p,0.0,,N/A,HAC p
+3.1,poisson_centro_nl_holm_p,0.0,,N/A,Holm-corrected p
+3.1,poisson_centro_nl_converged,True,True,PASS,
+3.1,n_sign_changes_pois_vs_ols,0,0,PASS,
+3.1,n_star_changes_pois_vs_ols,3,,N/A,
+3.1,n_star_changes_holm_vs_pois,9,,N/A,
+3.2,centro_nl_slope_alpha001,2.596,,N/A,"stars: ***, mean_hh: 8.05"
+3.2,centro_nl_survives_alpha001,True,True,PASS,headline must survive stricter threshold
+3.3,supF_plan_grid,79.04,,N/A,break at 2016-03
+3.3,supF_trimmed_grid,78.12,,N/A,break at 2017-01
+3.3,supF_exceeds_andrews_5pct,True,True,PASS,Andrews F-crit (5%) ≈ 6.10
+3.3,break_date_confirmed,2017-01,2017-02,QUAL,WP2 used Feb2017 as break date
+3.4,jaccard_nl_ld_obs,0.143,0.143,PASS,
+3.4,jaccard_nl_ld_null_mean,0.0105,,N/A,expected ≈0.01 random
+3.4,jaccard_nl_ld_perm_p,0.0,,N/A,dir: above
+3.5,status,NOT_RUN,,N/A,Flagged: heavy LISA re-run. Implement separately.
+3.6,status,NOT_RUN,,N/A,Flagged: heavy LISA re-run. Implement separately.
+3.7,status,NOT_RUN,,N/A,Flagged: 9999-perm LISA re-run. Implement separately.
+3.8,centro_nl_slope_full,4.941,4.94,PASS,BFS estimate
+3.8,centro_nl_slope_trunc,4.763,,N/A,2015-06 truncated
+3.8,centro_nl_stars_stable,True,True,PASS,
+3.8,bajio_nl_slope_full,0.501,0.5,PASS,raw LISA
+3.8,n_material_slope_changes,9,,N/A,slope abs diff > 0.10
+3.8,n_stars_changes,3,,N/A,
