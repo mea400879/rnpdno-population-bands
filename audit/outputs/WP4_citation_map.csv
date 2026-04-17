@@ -1,0 +1,58 @@
+cite_key,source_file,line_number,cite_type,context
+ley_general_2017,data.tex,5,citep,The National Registry of Missing and Unlocated Persons (\textit{Registro Nacional de Personas Desaparecidas y No Localiz
+cnb_rnpdno,data.tex,5,citep,The National Registry of Missing and Unlocated Persons (\textit{Registro Nacional de Personas Desaparecidas y No Localiz
+escobar_rnpdno_2026,data.tex,5,citep,The National Registry of Missing and Unlocated Persons (\textit{Registro Nacional de Personas Desaparecidas y No Localiz
+inegi_ageeml,data.tex,12,citep,"We use the INEGI Marco Geoestad\'{i}stico 2025 \citep{inegi_ageeml}, which defines \nmunis{} municipalities in projected"
+mexicoencifras,data.tex,15,citep,"Municipalities are classified into five macro-regions following the CESOP scheme \citep{mexicoencifras}: Norte, Norte-Oc"
+unger_2014,data.tex,17,citet,"\citet{unger_2014} characterized the Baj\'{i}o as a set of economic corridors organized along six highway axes, encompas"
+medina_fernandez_2023,data.tex,18,citet,We adopt a narrower operationalization focused on the urbanized industrial core: the 29 municipalities comprising the 10
+conapo_sun_2018,data.tex,18,citep,We adopt a narrower operationalization focused on the urbanized industrial core: the 29 municipalities comprising the 10
+andresen_2006,discussion.tex,12,citet,\citet{andresen_2006} showed that counts and rates of the same crime type produce different hotspot geographies; \citet{
+braga_law_2017,discussion.tex,12,citet,\citet{andresen_2006} showed that counts and rates of the same crime type produce different hotspot geographies; \citet{
+cadena_garrocho_2019,discussion.tex,21,citep,"Prior literature on Mexico's disappearance crisis has focused on the Norte and Baj\'{i}o axis, where cartel territorial "
+rios_2013,discussion.tex,21,citep,"Prior literature on Mexico's disappearance crisis has focused on the Norte and Baj\'{i}o axis, where cartel territorial "
+vilalta_muggah_2016,discussion.tex,24,citep,"The first is a genuine increase in disappearances across the metropolitan corridor spanning Estado de M\'{e}xico, CDMX, "
+medel_2015,discussion.tex,24,citep,"The first is a genuine increase in disappearances across the metropolitan corridor spanning Estado de M\'{e}xico, CDMX, "
+heredia_gonzalez_2022,discussion.tex,25,citep,The second is a reporting artifact: urban municipalities with stronger prosecutorial capacity and more active civil soci
+dell_2015,discussion.tex,26,citep,The third is geographic displacement: enforcement pressure in Norte and Baj\'{i}o may have pushed criminal operations in
+guerrero_gutierrez_2011,discussion.tex,26,citep,The third is geographic displacement: enforcement pressure in Norte and Baj\'{i}o may have pushed criminal operations in
+bagley_2013,discussion.tex,26,citep,The third is geographic displacement: enforcement pressure in Norte and Baj\'{i}o may have pushed criminal operations in
+atuesta_connection_2025,discussion.tex,30,citep,The coexistence of growing Located Alive and Located Dead HH clusters may reflect a combination of high organized crime 
+reyes_remesas_2023,discussion.tex,31,citep,These border municipalities function not only as sites of local violence but as nodes in transnational trafficking netwo
+cadena_garrocho_2019,discussion.tex,35,citeauthor,"The ``rising Baj\'{i}o'' hypothesis, suggested by \citeauthor{cadena_garrocho_2019}'s (\citeyear{cadena_garrocho_2019}) "
+cadena_garrocho_2019,discussion.tex,35,citeyear,"The ``rising Baj\'{i}o'' hypothesis, suggested by \citeauthor{cadena_garrocho_2019}'s (\citeyear{cadena_garrocho_2019}) "
+le_cour_2020,discussion.tex,39,citep,"This pattern is consistent with the intensification of cartel competition in Guanajuato's industrial municipalities, par"
+CED_MEX_art34_2026,discussion.tex,45,citep,Our analysis provides the first national-scale quantitative evidence bearing on the CED's characterization of disappeara
+CED_MEX_visit_2022,discussion.tex,49,citep,The Mexican government has argued that many registered cases reflect private-actor violence \citep{CED_MEX_visit_2022}; 
+frias_2023,discussion.tex,62,citep,"Two mechanisms are plausible: gender-specific disappearance types with different recovery profiles, such as domestic vio"
+schwartz_marin_2016,discussion.tex,62,citep,"Two mechanisms are plausible: gender-specific disappearance types with different recovery profiles, such as domestic vio"
+guercke_2021,discussion.tex,89,citep,"More generally, disappearances in municipalities with weak state presence or low civil society activity may be systemati"
+guercke_2025,introduction.tex,5,citep,"The \textit{Registro Nacional de Personas Desaparecidas y No Localizadas} (RNPDNO) documents over 132,000 persons whose "
+CED_MEX_art34_2026,introduction.tex,6,citep,"In April 2026, the UN Committee on Enforced Disappearances (CED) issued its first referral to the General Assembly under"
+cruz-santiago_lists_2020,introduction.tex,8,cite,"The RNPDNO distinguishes three outcomes (Not Located, Located Alive, Located Dead) that reflect fundamentally different "
+vilalta_muggah_2016,introduction.tex,13,citet,"\citet{vilalta_muggah_2016, vilalta_2021} modeled homicide clustering in Mexico City at the neighborhood level."
+vilalta_2021,introduction.tex,13,citet,"\citet{vilalta_muggah_2016, vilalta_2021} modeled homicide clustering in Mexico City at the neighborhood level."
+rios_2013,introduction.tex,14,citet,\citet{rios_2013} linked cartel territorial competition to homicide surges nationally.
+prieto_curiel_2023,introduction.tex,15,citet,\citet{prieto_curiel_2023} modeled cartel population dynamics and
+cadena_garrocho_2019,introduction.tex,17,citet,sustained by recruiting 350 to 370 persons per week. \citet{cadena_garrocho_2019} produced the first national-scale muni
+baptista_davila_2026,introduction.tex,23,citet,"\citet{baptista_davila_2026} applied spatial zero-inflated Poisson models to municipal homicide mortality, confronting t"
+das_2025,introduction.tex,24,citet,"\citet{das_2025} demonstrated spatial spillover of organized crime violence into public health outcomes, and \citet{atue"
+atuesta_2024,introduction.tex,24,citet,"\citet{das_2025} demonstrated spatial spillover of organized crime violence into public health outcomes, and \citet{atue"
+aguilar_velazquez_2025,introduction.tex,25,citet,"At the single-city scale, \citet{aguilar_velazquez_2025} applied data-driven methods to disappearances in Mexico City."
+escobar_vawri_2026,introduction.tex,26,citet,"At the subnational measurement level, \citet{escobar_vawri_2026}"
+garcia_castillo_2024,introduction.tex,38,citep,"The institutional dimension underscores the concern: between 2006 and 2017, only 19 of 732 disappearance investigations "
+guevara_bermudez_2018,introduction.tex,38,citep,"The institutional dimension underscores the concern: between 2006 and 2017, only 19 of 732 disappearance investigations "
+cohen_felson_1979,introduction.tex,39,citep,"From a routine activities perspective \citep{cohen_felson_1979}, the opportunity structures generating disappearances ne"
+anselin_1995,methods.tex,28,citep,Local Moran's $I_i$ decomposes the global statistic into municipality-level contributions \citep{anselin_1995}:
+weisburd_2015,methods.tex,71,citet,"We benchmark our concentration estimates against \citet{weisburd_2015}'s ``law of crime concentration,'' which posits th"
+mexicoencifras,methods.tex,77,citep,"Five regions follow the CESOP classification \citep{mexicoencifras}: Norte, Norte-Occidente, Centro-Norte, Centro, and S"
+newey_west_1987,methods.tex,79,citet,"Because monthly HH counts exhibit serial correlation, standard errors are computed using the \citet{newey_west_1987} het"
+escobar_vawri_2026,methods.tex,100,citep,"As a plausibility check on the HH classification, we compare Violence Against Women Risk Index (VAWRI) scores \citep{esc"
+kerby_2014,methods.tex,102,citep,"Differences are tested using the Mann-Whitney $U$ test with rank-biserial correlation as effect size \citep{kerby_2014},"
+CED_MEX_art34_2026,methods.tex,107,citep,"To situate our spatial findings within the policy landscape, we extract HH dynamics for eight states explicitly named in"
+CED_MEX_art34_2026,results_ced.tex,4,citep,Figure~\ref{fig:ced_states} presents HH dynamics for the eight states named in the CED Article~34 decision \citep{CED_ME
+weisburd_2015,results_concentration.tex,11,citet,\citet{weisburd_2015}'s ``law of crime concentration'' posits that approximately 50\% of crime concentrates in 4 to 6\% 
+cadena_garrocho_2019,results_temporal.tex,20,citep,This pattern was not documented in prior annual analyses focused on the Norte--Baj\'{i}o axis \citep{cadena_garrocho_201
+cadena_garrocho_2019,results_temporal.tex,40,citep,Earlier annual analyses \citep{cadena_garrocho_2019} suggested a rising Baj\'{i}o pattern driven by cartel territorial e
+reyes_robo_2022,results_temporal.tex,53,citep,territorial control \citep{reyes_robo_2022}. It also aligns with security analyses from
+cadena_garrocho_2019,results_temporal.tex,54,citet,"the same period and complements the evidence reported by \citet{cadena_garrocho_2019},"

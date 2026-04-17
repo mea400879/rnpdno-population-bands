@@ -1,0 +1,91 @@
+key,status,used_in,author,title,year
+le_cour_2020,MISSING_FROM_BIB,discussion.tex,,,
+CED_MEX_art34_2026,cited,"discussion.tex, introduction.tex, methods.tex, results_ced.tex",{Committee on Enforced Disappearances,Decision under article~34 of the {Convention,2026
+CED_MEX_visit_2022,cited,discussion.tex,{Committee on Enforced Disappearances,Report on the visit to {Mexico,2022
+aguilar_velazquez_2025,cited,introduction.tex,{Aguilar-Vel{\'a,Understanding Disappearances in {{Mexico City,2025
+andresen_2006,cited,discussion.tex,"Andresen, Martin A.",Crime {{Measures,2006
+anselin_1995,cited,methods.tex,"Anselin, Luc",Local {{Indicators,1995
+atuesta_2024,cited,introduction.tex,"Atuesta, Laura H. and Gonz{\'a",Organized Crime-Related Disappearances in {{Mexico,2024
+atuesta_connection_2025,cited,discussion.tex,"Atuesta, Laura H.",The {{Connection Between Drug-Related Detentions,2025
+bagley_2013,cited,discussion.tex,"Bagley, Bruce",The Evolution of Drug Trafficking and Organized Crime in {{Latin America,2013
+baptista_davila_2026,cited,introduction.tex,"Baptista, Emerson Augusto and Dávila Cervantes, Claudio Alberto","Spatial zero-inflated poisson analysis of homicide mortality in Mexican municipalities, 2020",
+braga_law_2017,cited,discussion.tex,"Braga, Anthony A. and Andresen, Martin A. and Lawton, Brian",The {{Law,2017
+cadena_garrocho_2019,cited,"discussion.tex, introduction.tex, results_temporal.tex","Cadena Vargas, Edel and Garrocho, Carlos",{Geograf\'ia del terror: homicidios y desapariciones forzadas en los municipios de M\'exico 2006-2017,2019
+cnb_rnpdno,cited,data.tex,{Comisi\'on Nacional de B\'usqueda,Registro {{Nacional,2026
+cohen_felson_1979,cited,introduction.tex,"Cohen, Lawrence E and Felson, Marcus",Social Change and Crime Rate Trends: A Routine Activity Approach,1979
+conapo_sun_2018,cited,data.tex,{CONAPO,Cat{\'a,2018
+cruz-santiago_lists_2020,cited,introduction.tex,"Cruz-Santiago, Arely","Lists, Maps, and Bones: The Untold Journeys of Citizen-led Forensics in Mexico",
+das_2025,cited,introduction.tex,"Das, Abhery and Lee, Eileen and Ganguli, Devoja and Bruckner, Tim A.",The {{Mexican,2025
+dell_2015,cited,discussion.tex,"Dell, Melissa",Trafficking {{Networks,2015
+escobar_rnpdno_2026,cited,data.tex,"Escobar, Marco A. and Reyes-Guzman, Gerardo and Sanchez Ruiz, Abraham","A municipality-level, monthly dataset of disappearance cases and outcomes in {Mexico",2026
+escobar_vawri_2026,cited,"introduction.tex, methods.tex","Escobar, Marco A. and Reyes-Guzman, Gerardo and Sanchez Ruiz, Abraham and Cuevas",The violence against women risk index: Design and application of a synthetic measure for subnational surveillance in {Me,2026
+frias_2023,cited,discussion.tex,Fr{\'\i,Femicide and Feminicide in {Mexico,2023
+garcia_castillo_2024,cited,introduction.tex,"García-Castillo, Zoraida and Rodríguez González, Anahy and Vázquez Barrera, Karl",Desaparición de personas en México. Una perspectiva desde las sentencias judiciales,
+guercke_2021,cited,discussion.tex,"Guercke, Lene",State {{Responsibility,2021
+guercke_2025,cited,introduction.tex,"Guercke, Lene",The Situation of Disappearances in Mexico,2025
+guerrero_gutierrez_2011,cited,discussion.tex,Guerrero-Guti{\'e,"Security, Drugs, and Violence in {Mexico",2011
+guevara_bermudez_2018,cited,introduction.tex,"Guevara Bermúdez, José Antonio and Chávez Vargas, Lucía Guadalupe",La impunidad en el contexto de la desaparición forzada en México = Impunity in the context of enforced disappearance in ,
+heredia_gonzalez_2022,cited,discussion.tex,Heredia-Gonz{\'a,Crime Reporting and Institutional Reputation of the Police in Mexico,2022
+inegi_ageeml,cited,data.tex,{Instituto Nacional de Estad\'istica y Geograf\'ia,"Cat\'alogo \'Unico de Claves de \'Areas Geoestad\'isticas Estatales, Municipales y Localidades ({AGEEML",2023
+kerby_2014,cited,methods.tex,"Kerby, Dave S.",The {Simple,2014
+ley_general_2017,cited,data.tex,,Ley General en Materia de Desaparici{\'o,2017
+medel_2015,cited,discussion.tex,"Medel, Monica and Lu, Yongmei and Chow, Edwin",Mexico's Drug Networks: Modeling the Smuggling Routes towards the United States,2015
+medina_fernandez_2023,cited,data.tex,Medina-Fern{\'a,Surface Urban Heat Island and Thermal Profiles Using Digital Image Analysis of Cities in the {El Baj,2023
+mexicoencifras,cited,"data.tex, methods.tex",{Centro de Estudios Sociales y de Opini\'on P\'ublica,Mexico En Cifras: Conociendo Sus Regiones,2022
+newey_west_1987,cited,methods.tex,"Newey, Whitney K. and West, Kenneth D.",A {{Simple,1987
+prieto_curiel_2023,cited,introduction.tex,"Prieto-Curiel, Rafael and Campedelli, Gian Maria and Hope, Alejandro",Reducing cartel recruitment is the only way to lower violence in Mexico,
+reyes_remesas_2023,cited,discussion.tex,Reyes Guzm{\'a,"Mexico: Remittances, Organized Crime and {US",2023
+reyes_robo_2022,cited,results_temporal.tex,Reyes Guzm{\'a,Robo de combustible y violencia en {Guanajuato,2022
+rios_2013,cited,"discussion.tex, introduction.tex","Rios, Viridiana",Why Did {{Mexico,2013
+schwartz_marin_2016,cited,discussion.tex,"Schwartz-Marin, Ernesto and Cruz-Santiago, Arely","Forensic Civism: Articulating Science, {DNA",2016
+unger_2014,cited,data.tex,"Unger, K. and Gardu{\~n",Especializaciones reveladas y ventajas competitivas en el {Baj,2014
+vilalta_2021,cited,introduction.tex,"Vilalta, Carlos and {Lopez-Ramirez",The Spatial Diffusion of Homicide in {{Mexico City,2021
+vilalta_muggah_2016,cited,"discussion.tex, introduction.tex","Vilalta, Carlos and Muggah, Robert",What {{Explains Criminal Violence,2016
+weisburd_2015,cited,"methods.tex, results_concentration.tex","Weisburd, David",The Law of Crime Concentration and the Criminology of Place,2015
+acharya_2016,unused,,"Acharya, Arun Kumar",Trafficking of Women for Sexual Exploitation in {{Mexico,2016
+aleinzi_2025,unused,,"Aleinzi, Mohammed and Sharkey, Patrick and Pryce, Gwilym and Hughes, Nathan",Spatial {{Networks,2025
+anaya-munoz_2023,unused,,{Anaya-Mu{\~n,Willingness: {{Human Rights Crises,2023
+andresen_advances_2021,unused,,"Andresen, Martin A. and Haberman, Cory P. and Johnson, Shane D. and Steenbeek, W",Advances in {{Place-Based Methods,2021
+atuesta_2019,unused,,"Atuesta, Laura H. and Siordia, Oscar S. and Lajous, Alejandro Madrazo",The ``{{War,2019
+baptista_2026,unused,,"Baptista, Emerson Augusto and D{\'a",Spatial Zero-Inflated Poisson Analysis of Homicide Mortality in {{Mexican,2026
+berliner_2021,unused,,"Berliner, Daniel and Bagozzi, Benjamin E. and {Palmer-Rubin",The {{Political Logic,2021
+braga_hotspots_2014,unused,,"Braga, Anthony A. and Papachristos, Andrew V. and Hureau, David M.",The {{Effects,2014
+code_repo,unused,,"Escobar, Marco A.",{RNPDNO,2026
+crane_2021,unused,,"Crane, Nicholas J. and Lara, Oliver Hern{\'a",Place-{{Based Politics,2021
+curman_2015,unused,,"Curman, Andrea S. N. and Andresen, Martin A. and Brantingham, Paul J.",Crime and {{Place,2015
+davila-cervantes_2025,unused,,{D{\'a,Geographies of {{Violence,2025
+estevez_2020,unused,,Est{\'e,Mexican {{Necropolitical Governmentality,2020
+estevez_2021,unused,,,Necropower in {{North America,2021
+fazekas_2024,unused,,"Fazekas, Mih{\'a",Global {{Contract-level Public Procurement Dataset,2024
+fuentes_2015,unused,,"Fuentes, Claudio",Shifting the {{Status Quo,2015
+getis_ord_1992,unused,,"Getis, Arthur and Ord, J. K.",The {{Analysis,1992
+gobiernodemexico_2026,unused,,{Gobierno de M\'exico,Mexico {{Rejects UN Committee,2026
+herrera_2022,unused,,"Herrera, Joel Salvador and {Martinez-Alvarez",Diversifying Violence: {{Mining,2022
+izcarapalacios_2024,unused,,"Izcara Palacios, Sim{\'o",El {{Tr\'afico,2024
+mandolessi_2022,unused,,"Mandolessi, Silvana",Introduction---{{Disappearances,2022
+mendozagarcia_2016,unused,,Mendoza Garc{\'i,Reconstructing the {{Collective Memory,2016
+moreno_codina_2015,unused,,"Moreno-Codina, T.",Plan maestro del corredor log{\'i,2015
+ord_1995,unused,,"Ord, J. K. and Getis, Arthur",Local {{Spatial Autocorrelation Statistics,1995
+palma_2025,unused,,"Palma, Mario",The {{Story,2025
+pereda_2022,unused,,"Pereda, Valentin",Why {{Global North,2022
+perez_calderon_2015,unused,,P{\'e,Ambientes innovadores en {M,2015
+prieto_curiel_2018,unused,,"Prieto Curiel, Rafael and Collignon Delmar, Sof{\'i",Measuring the {{Distribution,2018
+prieto_curiel_cartels_2023,unused,,{Prieto-Curiel,Reducing Cartel Recruitment Is the Only Way to Lower Violence in {{Mexico,2023
+prietocuriel_2023,unused,,"Prieto Curiel, Rafael",Weekly {{Crime Concentration,2023
+rangel_romero_2023,unused,,"Rangel Romero, Xochithl Guadalupe","{Alertas de b\'usqueda para Ni\~nos, ni\~nas y adolescentes (NnyA) en las Comisiones locales de b\'usqueda en M\'exico",2023
+rey_pysal_2010,unused,,"Rey, Sergio J. and Anselin, Luc",{{PySAL,2007
+reyes_2025,unused,,"Reyes, Jorge Ruiz and Congram, Derek and Sirbu, Ren{\'e",Where Are They? {{A,2025
+riveracabrieles_2021,unused,,"Rivera Cabrieles, Leticia",{De los da\~nos colaterales a las desapariciones forzadas y ejecuciones arbitrarias,2021
+robledo-silvestre_2020,unused,,{Robledo-Silvestre,{Desaparici\'on de personas en el mundo globalizado: desaf\'ios desde Am\'erica Latina,2020
+sanchez_salamanca_2024,unused,,S{\'a,Servicio de atenci{\'o,2024
+schnell_braga_piza_2017,unused,,"Schnell, Cory and Braga, Anthony A. and Piza, Eric L.",The {{Influence,2017
+sherman_1989,unused,,"Sherman, Lawrence W. and Gartin, Patrick R. and Buerger, Michael E.",{{HOT SPOTS OF PREDATORY CRIME,1989
+shirk_wallman_2015,unused,,"Shirk, David and Wallman, Joel",Understanding {{Mexico,2015
+solar_2021,unused,,"Solar, Carlos",Forced {{Disappearances,2021
+steenbeek_weisburd_2016,unused,,"Steenbeek, Wouter and Weisburd, David",Where the {{Action,2016
+tobler_1970,unused,,"Tobler, W. R.",A {{Computer Movie Simulating Urban Growth,1970
+torres_2025,unused,,"Torres, Guill{\'e",Institutional Resistance to Transparency: The Quest for {{Public Sector Information,2025
+velasquez_2020,unused,,Vel{\'a,The {{Economic Burden,2020
+weisburd_2004,unused,,"Weisburd, David and Bushway, Shawn and Lum, Cynthia and Yang, Sue-Ming",{{TRAJECTORIES OF CRIME AT PLACES,2004
+welsh_2012,unused,,,The {{Oxford,2012
+wright_2011,unused,,"Wright, Melissa W.","Necropolitics, {{Narcopolitics",2011

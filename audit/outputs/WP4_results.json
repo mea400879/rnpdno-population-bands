@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-04-17 11:06:16",
+  "n_citations_total": 57,
+  "n_unique_cited_keys": 43,
+  "n_bib_entries": 89,
+  "n_missing_from_bib": 1,
+  "missing_from_bib": [
+    "le_cour_2020"
+  ],
+  "n_unused_in_bib": 47,
+  "unused_in_bib": [
+    "acharya_2016",
+    "aleinzi_2025",
+    "anaya-munoz_2023",
+    "andresen_advances_2021",
+    "atuesta_2019",
+    "baptista_2026",
+    "berliner_2021",
+    "braga_hotspots_2014",
+    "code_repo",
+    "crane_2021",
+    "curman_2015",
+    "davila-cervantes_2025",
+    "estevez_2020",
+    "estevez_2021",
+    "fazekas_2024",
+    "fuentes_2015",
+    "getis_ord_1992",
+    "gobiernodemexico_2026",
+    "herrera_2022",
+    "izcarapalacios_2024",
+    "mandolessi_2022",
+    "mendozagarcia_2016",
+    "moreno_codina_2015",
+    "ord_1995",
+    "palma_2025",
+    "pereda_2022",
+    "perez_calderon_2015",
+    "prieto_curiel_2018",
+    "prieto_curiel_cartels_2023",
+    "prietocuriel_2023",
+    "rangel_romero_2023",
+    "rey_pysal_2010",
+    "reyes_2025",
+    "riveracabrieles_2021",
+    "robledo-silvestre_2020",
+    "sanchez_salamanca_2024",
+    "schnell_braga_piza_2017",
+    "sherman_1989",
+    "shirk_wallman_2015",
+    "solar_2021",
+    "steenbeek_weisburd_2016",
+    "tobler_1970",
+    "torres_2025",
+    "velasquez_2020",
+    "weisburd_2004",
+    "welsh_2012",
+    "wright_2011"
+  ],
+  "duplicate_baptista": {
+    "keys": [
+      "baptista_2026",
+      "baptista_davila_2026"
+    ],
+    "same_doi": "10.1016/j.puhe.2025.106107",
+    "note": "Same paper — duplicate bib entries with different keys",
+    "cited_keys": [
+      "baptista_davila_2026"
+    ],
+    "uncited_keys": [
+      "baptista_2026"
+    ]
+  },
+  "duplicate_prieto_curiel": {
+    "keys": [
+      "prieto_curiel_cartels_2023",
+      "prieto_curiel_2023"
+    ],
+    "same_doi": "10.1126/science.adh2888",
+    "note": "Same paper — duplicate bib entries with different keys (prieto_curiel_2023 has full abstract)",
+    "cited_keys": [
+      "prieto_curiel_2023"
+    ],
+    "uncited_keys": [
+      "prieto_curiel_cartels_2023"
+    ]
+  },
+  "le_cour_2020_locations": [
+    {
+      "source_file": "discussion.tex",
+      "line_number": 39,
+      "context": "This pattern is consistent with the intensification of cartel competition in Guanajuato's industrial municipalities, par"
+    }
+  ],
+  "ced_bib_entry": {
+    "entry_type": "misc",
+    "author": "{Committee on Enforced Disappearances",
+    "title": "Decision under article~34 of the {Convention",
+    "year": "2026"
+  }
+}

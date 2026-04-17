@@ -1,0 +1,49 @@
+{
+  "task": "WP5",
+  "timestamp": "2026-04-17T11:25:43.220393",
+  "claims_total": 57,
+  "by_type": {
+    "empirical": 48,
+    "hypothesis": 7,
+    "literature": 2
+  },
+  "by_status": {
+    "qualified": 19,
+    "unverified": 16,
+    "incorrect": 12,
+    "verified": 10
+  },
+  "by_severity": {
+    "trivial": 27,
+    "serious": 18,
+    "moderate": 12
+  },
+  "serious_count": 18,
+  "fatal_count": 0,
+  "incorrect_count": 12,
+  "verified_count": 10,
+  "mann_whitney_pairs": {
+    "Total-NL": 0.9788,
+    "Total-LA": 0.9129,
+    "Total-LD": 0.1396,
+    "NL-LA": 0.9305,
+    "NL-LD": 0.1899,
+    "LA-LD": 0.1786
+  },
+  "gto_la_hac_p": 0.3999,
+  "gto_la_ols_p": 0.0028,
+  "bajio_post_hac_p": 0.0539,
+  "bajio_post_ols_p": 0.0001,
+  "gate5_verdict": "CONDITIONAL PASS \u2014 corrections required before submission",
+  "blocking_issues": [
+    "Mann-Whitney claim 'all pairwise p>0.50' is wrong for 3/6 pairs (abstract and results_clustering)",
+    "Guanajuato LA p<0.001 is wrong: HAC p=0.40 (ns), OLS p=0.003 \u2014 NEITHER is p<0.001",
+    "Table 6 stars are OLS but caption says Newey-West HAC: 7 cells affected",
+    "Bajio post-2017 expansion p=0.046 is OLS; HAC p=0.054 (ns)",
+    "Bajio LA and Total sub-component stars: ** and * from OLS, ns under HAC",
+    "Centro-Norte Total and NL in table show *** but correct value is * or **",
+    "Norte-Occidente Total and NL show *** but correct value is **",
+    "Chow break date: manuscript says February 2017 but Supremum Wald peak is January 2017 (F=78.125 at break_idx=24, month=1)",
+    "Typo: 'Fourth competing hypotheses' should be 'Four competing hypotheses' (discussion.tex:23)"
+  ]
+}
