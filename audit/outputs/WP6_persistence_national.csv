@@ -1,0 +1,240 @@
+cvegeo,municipality,state,region,status_id,status,n_months_hh,persistence
+15058,nezahualcoyotl,mexico,Centro,0,total,120,0.9090909090909091
+15104,tlalnepantla de baz,mexico,Centro,0,total,116,0.8787878787878788
+15033,ecatepec de morelos,mexico,Centro,0,total,114,0.8636363636363636
+19026,guadalupe,nuevo leon,Norte,0,total,114,0.8636363636363636
+15070,la paz,mexico,Centro,0,total,112,0.8484848484848485
+19046,san nicolas de los garza,nuevo leon,Norte,0,total,112,0.8484848484848485
+19031,juarez,nuevo leon,Norte,0,total,111,0.8409090909090909
+15099,texcoco,mexico,Centro,0,total,107,0.8106060606060606
+15109,tultitlan,mexico,Centro,0,total,106,0.803030303030303
+15031,chimalhuacan,mexico,Centro,0,total,105,0.7954545454545454
+09007,iztapalapa,ciudad de mexico,Centro,0,total,104,0.7878787878787878
+15020,coacalco de berriozabal,mexico,Centro,0,total,102,0.7727272727272727
+09005,gustavo a madero,ciudad de mexico,Centro,0,total,101,0.7651515151515151
+15122,valle de chalco solidaridad,mexico,Centro,0,total,101,0.7651515151515151
+19021,general escobedo,nuevo leon,Norte,0,total,101,0.7651515151515151
+15029,chicoloapan,mexico,Centro,0,total,100,0.7575757575757576
+19018,garcia,nuevo leon,Norte,0,total,100,0.7575757575757576
+19039,monterrey,nuevo leon,Norte,0,total,100,0.7575757575757576
+09017,venustiano carranza,ciudad de mexico,Centro,0,total,99,0.75
+15121,cuautitlan izcalli,mexico,Centro,0,total,99,0.75
+15013,atizapan de zaragoza,mexico,Centro,0,total,98,0.7424242424242424
+15039,ixtapaluca,mexico,Centro,0,total,94,0.7121212121212122
+19006,apodaca,nuevo leon,Norte,0,total,94,0.7121212121212122
+19048,santa catarina,nuevo leon,Norte,0,total,93,0.7045454545454546
+09002,azcapotzalco,ciudad de mexico,Centro,0,total,90,0.6818181818181818
+09006,iztacalco,ciudad de mexico,Centro,0,total,89,0.6742424242424242
+15051,lerma,mexico,Centro,0,total,89,0.6742424242424242
+14039,guadalajara,jalisco,Centro-Norte,0,total,88,0.6666666666666666
+14098,san pedro tlaquepaque,jalisco,Centro-Norte,0,total,88,0.6666666666666666
+15081,tecamac,mexico,Centro,0,total,88,0.6666666666666666
+19009,cadereyta jimenez,nuevo leon,Norte,0,total,88,0.6666666666666666
+14101,tonala,jalisco,Centro-Norte,0,total,87,0.6590909090909091
+19019,san pedro garza garcia,nuevo leon,Norte,0,total,86,0.6515151515151515
+09011,tlahuac,ciudad de mexico,Centro,0,total,84,0.6363636363636364
+09014,benito juarez,ciudad de mexico,Centro,0,total,84,0.6363636363636364
+09015,cuauhtemoc,ciudad de mexico,Centro,0,total,84,0.6363636363636364
+09016,miguel hidalgo,ciudad de mexico,Centro,0,total,84,0.6363636363636364
+14120,zapopan,jalisco,Centro-Norte,0,total,84,0.6363636363636364
+09003,coyoacan,ciudad de mexico,Centro,0,total,83,0.6287878787878788
+14070,el salto,jalisco,Centro-Norte,0,total,83,0.6287878787878788
+15057,naucalpan de juarez,mexico,Centro,0,total,83,0.6287878787878788
+09013,xochimilco,ciudad de mexico,Centro,0,total,82,0.6212121212121212
+15054,metepec,mexico,Centro,0,total,82,0.6212121212121212
+14097,tlajomulco de zuniga,jalisco,Centro-Norte,0,total,81,0.6136363636363636
+15076,san mateo atenco,mexico,Centro,0,total,77,0.5833333333333334
+19041,pesqueria,nuevo leon,Norte,0,total,77,0.5833333333333334
+15002,acolman,mexico,Centro,0,total,76,0.5757575757575758
+15037,huixquilucan,mexico,Centro,0,total,72,0.5454545454545454
+15067,otzolotepec,mexico,Centro,0,total,72,0.5454545454545454
+09010,alvaro obregon,ciudad de mexico,Centro,0,total,71,0.5378787878787878
+15024,cuautitlan,mexico,Centro,0,total,69,0.5227272727272727
+19025,general zuazua,nuevo leon,Norte,0,total,66,0.5
+14083,tala,jalisco,Centro-Norte,0,total,65,0.49242424242424243
+15005,almoloya de juarez,mexico,Centro,0,total,63,0.4772727272727273
+15011,atenco,mexico,Centro,0,total,63,0.4772727272727273
+09004,cuajimalpa de morelos,ciudad de mexico,Centro,0,total,61,0.4621212121212121
+15118,zinacantepec,mexico,Centro,0,total,60,0.45454545454545453
+15060,nicolas romero,mexico,Centro,0,total,59,0.44696969696969696
+09008,la magdalena contreras,ciudad de mexico,Centro,0,total,58,0.4393939393939394
+15087,temoaya,mexico,Centro,0,total,56,0.42424242424242425
+19045,salinas victoria,nuevo leon,Norte,0,total,56,0.42424242424242425
+09012,tlalpan,ciudad de mexico,Centro,0,total,54,0.4090909090909091
+19049,santiago,nuevo leon,Norte,0,total,54,0.4090909090909091
+15115,xonacatlan,mexico,Centro,0,total,53,0.4015151515151515
+14044,ixtlahuacan de los membrillos,jalisco,Centro-Norte,0,total,52,0.3939393939393939
+15095,tepotzotlan,mexico,Centro,0,total,52,0.3939393939393939
+21041,cuautlancingo,puebla,Centro,0,total,52,0.3939393939393939
+21119,san andres cholula,puebla,Centro,0,total,52,0.3939393939393939
+21140,san pedro cholula,puebla,Centro,0,total,52,0.3939393939393939
+15090,tenango del valle,mexico,Centro,0,total,47,0.3560606060606061
+15018,calimaya,mexico,Centro,0,total,45,0.3409090909090909
+15062,ocoyoacac,mexico,Centro,0,total,45,0.3409090909090909
+14124,zapotlanejo,jalisco,Centro-Norte,0,total,44,0.3333333333333333
+17011,jiutepec,morelos,Centro,0,total,44,0.3333333333333333
+15059,nextlalpan,mexico,Centro,0,total,43,0.32575757575757575
+17008,emiliano zapata,morelos,Centro,0,total,43,0.32575757575757575
+15108,tultepec,mexico,Centro,0,total,42,0.3181818181818182
+09009,milpa alta,ciudad de mexico,Centro,0,total,41,0.3106060606060606
+13069,tizayuca,hidalgo,Centro,0,total,41,0.3106060606060606
+11044,villagran,guanajuato,Centro,0,total,40,0.30303030303030304
+14051,juanacatlan,jalisco,Centro-Norte,0,total,39,0.29545454545454547
+14053,lagos de moreno,jalisco,Centro-Norte,0,total,39,0.29545454545454547
+11011,cortazar,guanajuato,Centro,0,total,36,0.2727272727272727
+11035,santa cruz de juventino rosas,guanajuato,Centro,0,total,36,0.2727272727272727
+17018,temixco,morelos,Centro,0,total,36,0.2727272727272727
+11037,silao de la victoria,guanajuato,Centro,0,total,34,0.25757575757575757
+15033,ecatepec de morelos,mexico,Centro,2,la,115,0.8712121212121212
+15058,nezahualcoyotl,mexico,Centro,2,la,114,0.8636363636363636
+15104,tlalnepantla de baz,mexico,Centro,2,la,114,0.8636363636363636
+15070,la paz,mexico,Centro,2,la,108,0.8181818181818182
+15109,tultitlan,mexico,Centro,2,la,108,0.8181818181818182
+15122,valle de chalco solidaridad,mexico,Centro,2,la,107,0.8106060606060606
+15031,chimalhuacan,mexico,Centro,2,la,105,0.7954545454545454
+15099,texcoco,mexico,Centro,2,la,105,0.7954545454545454
+19046,san nicolas de los garza,nuevo leon,Norte,2,la,100,0.7575757575757576
+09007,iztapalapa,ciudad de mexico,Centro,2,la,99,0.75
+19026,guadalupe,nuevo leon,Norte,2,la,99,0.75
+15039,ixtapaluca,mexico,Centro,2,la,98,0.7424242424242424
+15121,cuautitlan izcalli,mexico,Centro,2,la,98,0.7424242424242424
+15013,atizapan de zaragoza,mexico,Centro,2,la,97,0.7348484848484849
+19031,juarez,nuevo leon,Norte,2,la,96,0.7272727272727273
+15020,coacalco de berriozabal,mexico,Centro,2,la,95,0.7196969696969697
+19006,apodaca,nuevo leon,Norte,2,la,95,0.7196969696969697
+19039,monterrey,nuevo leon,Norte,2,la,95,0.7196969696969697
+19018,garcia,nuevo leon,Norte,2,la,93,0.7045454545454546
+19021,general escobedo,nuevo leon,Norte,2,la,93,0.7045454545454546
+15029,chicoloapan,mexico,Centro,2,la,92,0.696969696969697
+15081,tecamac,mexico,Centro,2,la,91,0.6893939393939394
+09005,gustavo a madero,ciudad de mexico,Centro,2,la,89,0.6742424242424242
+15057,naucalpan de juarez,mexico,Centro,2,la,88,0.6666666666666666
+15051,lerma,mexico,Centro,2,la,87,0.6590909090909091
+19048,santa catarina,nuevo leon,Norte,2,la,87,0.6590909090909091
+09017,venustiano carranza,ciudad de mexico,Centro,2,la,86,0.6515151515151515
+09002,azcapotzalco,ciudad de mexico,Centro,2,la,85,0.6439393939393939
+15054,metepec,mexico,Centro,2,la,84,0.6363636363636364
+09003,coyoacan,ciudad de mexico,Centro,2,la,83,0.6287878787878788
+09015,cuauhtemoc,ciudad de mexico,Centro,2,la,83,0.6287878787878788
+09016,miguel hidalgo,ciudad de mexico,Centro,2,la,82,0.6212121212121212
+09006,iztacalco,ciudad de mexico,Centro,2,la,81,0.6136363636363636
+09013,xochimilco,ciudad de mexico,Centro,2,la,81,0.6136363636363636
+19009,cadereyta jimenez,nuevo leon,Norte,2,la,81,0.6136363636363636
+19041,pesqueria,nuevo leon,Norte,2,la,81,0.6136363636363636
+09014,benito juarez,ciudad de mexico,Centro,2,la,80,0.6060606060606061
+09011,tlahuac,ciudad de mexico,Centro,2,la,79,0.5984848484848485
+19019,san pedro garza garcia,nuevo leon,Norte,2,la,77,0.5833333333333334
+15076,san mateo atenco,mexico,Centro,2,la,76,0.5757575757575758
+15037,huixquilucan,mexico,Centro,2,la,73,0.553030303030303
+15118,zinacantepec,mexico,Centro,2,la,73,0.553030303030303
+09010,alvaro obregon,ciudad de mexico,Centro,2,la,71,0.5378787878787878
+15002,acolman,mexico,Centro,2,la,71,0.5378787878787878
+15005,almoloya de juarez,mexico,Centro,2,la,70,0.5303030303030303
+15024,cuautitlan,mexico,Centro,2,la,70,0.5303030303030303
+15067,otzolotepec,mexico,Centro,2,la,68,0.5151515151515151
+15011,atenco,mexico,Centro,2,la,67,0.5075757575757576
+15060,nicolas romero,mexico,Centro,2,la,66,0.5
+19045,salinas victoria,nuevo leon,Norte,2,la,61,0.4621212121212121
+19025,general zuazua,nuevo leon,Norte,2,la,60,0.45454545454545453
+09004,cuajimalpa de morelos,ciudad de mexico,Centro,2,la,59,0.44696969696969696
+15087,temoaya,mexico,Centro,2,la,58,0.4393939393939394
+14098,san pedro tlaquepaque,jalisco,Centro-Norte,2,la,55,0.4166666666666667
+14039,guadalajara,jalisco,Centro-Norte,2,la,54,0.4090909090909091
+14101,tonala,jalisco,Centro-Norte,2,la,54,0.4090909090909091
+21041,cuautlancingo,puebla,Centro,2,la,53,0.4015151515151515
+14120,zapopan,jalisco,Centro-Norte,2,la,52,0.3939393939393939
+09012,tlalpan,ciudad de mexico,Centro,2,la,51,0.38636363636363635
+15095,tepotzotlan,mexico,Centro,2,la,51,0.38636363636363635
+15115,xonacatlan,mexico,Centro,2,la,51,0.38636363636363635
+19049,santiago,nuevo leon,Norte,2,la,51,0.38636363636363635
+21140,san pedro cholula,puebla,Centro,2,la,51,0.38636363636363635
+09008,la magdalena contreras,ciudad de mexico,Centro,2,la,50,0.3787878787878788
+14097,tlajomulco de zuniga,jalisco,Centro-Norte,2,la,50,0.3787878787878788
+15108,tultepec,mexico,Centro,2,la,50,0.3787878787878788
+14070,el salto,jalisco,Centro-Norte,2,la,49,0.3712121212121212
+21119,san andres cholula,puebla,Centro,2,la,49,0.3712121212121212
+15106,toluca,mexico,Centro,2,la,48,0.36363636363636365
+15090,tenango del valle,mexico,Centro,2,la,47,0.3560606060606061
+15025,chalco,mexico,Centro,2,la,44,0.3333333333333333
+15059,nextlalpan,mexico,Centro,2,la,43,0.32575757575757575
+15018,calimaya,mexico,Centro,2,la,41,0.3106060606060606
+15062,ocoyoacac,mexico,Centro,2,la,41,0.3106060606060606
+13069,tizayuca,hidalgo,Centro,2,la,40,0.30303030303030304
+17011,jiutepec,morelos,Centro,2,la,37,0.2803030303030303
+01005,jesus maria,aguascalientes,Centro-Norte,2,la,36,0.2727272727272727
+14083,tala,jalisco,Centro-Norte,2,la,35,0.26515151515151514
+17008,emiliano zapata,morelos,Centro,2,la,34,0.25757575757575757
+19039,monterrey,nuevo leon,Norte,3,ld,67,0.5075757575757576
+14039,guadalajara,jalisco,Centro-Norte,3,ld,53,0.4015151515151515
+14120,zapopan,jalisco,Centro-Norte,3,ld,48,0.36363636363636365
+14098,san pedro tlaquepaque,jalisco,Centro-Norte,3,ld,47,0.3560606060606061
+14097,tlajomulco de zuniga,jalisco,Centro-Norte,3,ld,46,0.3484848484848485
+19021,general escobedo,nuevo leon,Norte,3,ld,45,0.3409090909090909
+19026,guadalupe,nuevo leon,Norte,3,ld,45,0.3409090909090909
+19031,juarez,nuevo leon,Norte,3,ld,43,0.32575757575757575
+14101,tonala,jalisco,Centro-Norte,3,ld,42,0.3181818181818182
+19046,san nicolas de los garza,nuevo leon,Norte,3,ld,42,0.3181818181818182
+15033,ecatepec de morelos,mexico,Centro,3,ld,41,0.3106060606060606
+19018,garcia,nuevo leon,Norte,3,ld,40,0.30303030303030304
+19006,apodaca,nuevo leon,Norte,3,ld,38,0.2878787878787879
+14070,el salto,jalisco,Centro-Norte,3,ld,36,0.2727272727272727
+09005,gustavo a madero,ciudad de mexico,Centro,3,ld,34,0.25757575757575757
+15058,nezahualcoyotl,mexico,Centro,3,ld,34,0.25757575757575757
+19026,guadalupe,nuevo leon,Norte,7,nl,99,0.75
+15058,nezahualcoyotl,mexico,Centro,7,nl,97,0.7348484848484849
+14039,guadalajara,jalisco,Centro-Norte,7,nl,93,0.7045454545454546
+14098,san pedro tlaquepaque,jalisco,Centro-Norte,7,nl,93,0.7045454545454546
+14120,zapopan,jalisco,Centro-Norte,7,nl,91,0.6893939393939394
+14097,tlajomulco de zuniga,jalisco,Centro-Norte,7,nl,90,0.6818181818181818
+19039,monterrey,nuevo leon,Norte,7,nl,90,0.6818181818181818
+15033,ecatepec de morelos,mexico,Centro,7,nl,87,0.6590909090909091
+19021,general escobedo,nuevo leon,Norte,7,nl,87,0.6590909090909091
+09005,gustavo a madero,ciudad de mexico,Centro,7,nl,86,0.6515151515151515
+14101,tonala,jalisco,Centro-Norte,7,nl,86,0.6515151515151515
+19031,juarez,nuevo leon,Norte,7,nl,86,0.6515151515151515
+09017,venustiano carranza,ciudad de mexico,Centro,7,nl,81,0.6136363636363636
+14070,el salto,jalisco,Centro-Norte,7,nl,81,0.6136363636363636
+19018,garcia,nuevo leon,Norte,7,nl,79,0.5984848484848485
+19046,san nicolas de los garza,nuevo leon,Norte,7,nl,79,0.5984848484848485
+09015,cuauhtemoc,ciudad de mexico,Centro,7,nl,76,0.5757575757575758
+15104,tlalnepantla de baz,mexico,Centro,7,nl,75,0.5681818181818182
+09007,iztapalapa,ciudad de mexico,Centro,7,nl,71,0.5378787878787878
+15109,tultitlan,mexico,Centro,7,nl,70,0.5303030303030303
+19006,apodaca,nuevo leon,Norte,7,nl,70,0.5303030303030303
+09003,coyoacan,ciudad de mexico,Centro,7,nl,68,0.5151515151515151
+09014,benito juarez,ciudad de mexico,Centro,7,nl,68,0.5151515151515151
+09002,azcapotzalco,ciudad de mexico,Centro,7,nl,67,0.5075757575757576
+09006,iztacalco,ciudad de mexico,Centro,7,nl,67,0.5075757575757576
+14083,tala,jalisco,Centro-Norte,7,nl,67,0.5075757575757576
+15070,la paz,mexico,Centro,7,nl,67,0.5075757575757576
+09016,miguel hidalgo,ciudad de mexico,Centro,7,nl,65,0.49242424242424243
+09013,xochimilco,ciudad de mexico,Centro,7,nl,63,0.4772727272727273
+15031,chimalhuacan,mexico,Centro,7,nl,63,0.4772727272727273
+15122,valle de chalco solidaridad,mexico,Centro,7,nl,62,0.4696969696969697
+11044,villagran,guanajuato,Centro,7,nl,61,0.4621212121212121
+11035,santa cruz de juventino rosas,guanajuato,Centro,7,nl,59,0.44696969696969696
+19048,santa catarina,nuevo leon,Norte,7,nl,59,0.44696969696969696
+09011,tlahuac,ciudad de mexico,Centro,7,nl,55,0.4166666666666667
+15020,coacalco de berriozabal,mexico,Centro,7,nl,55,0.4166666666666667
+15081,tecamac,mexico,Centro,7,nl,55,0.4166666666666667
+15121,cuautitlan izcalli,mexico,Centro,7,nl,54,0.4090909090909091
+19009,cadereyta jimenez,nuevo leon,Norte,7,nl,54,0.4090909090909091
+11027,salamanca,guanajuato,Centro,7,nl,53,0.4015151515151515
+15099,texcoco,mexico,Centro,7,nl,52,0.3939393939393939
+09010,alvaro obregon,ciudad de mexico,Centro,7,nl,51,0.38636363636363635
+15013,atizapan de zaragoza,mexico,Centro,7,nl,50,0.3787878787878788
+02001,ensenada,baja california,Norte,7,nl,48,0.36363636363636365
+15057,naucalpan de juarez,mexico,Centro,7,nl,48,0.36363636363636365
+11011,cortazar,guanajuato,Centro,7,nl,46,0.3484848484848485
+15029,chicoloapan,mexico,Centro,7,nl,46,0.3484848484848485
+19019,san pedro garza garcia,nuevo leon,Norte,7,nl,45,0.3409090909090909
+14044,ixtlahuacan de los membrillos,jalisco,Centro-Norte,7,nl,44,0.3333333333333333
+15002,acolman,mexico,Centro,7,nl,42,0.3181818181818182
+11007,celaya,guanajuato,Centro,7,nl,41,0.3106060606060606
+15039,ixtapaluca,mexico,Centro,7,nl,40,0.30303030303030304
+02003,tecate,baja california,Norte,7,nl,39,0.29545454545454547
+02004,tijuana,baja california,Norte,7,nl,39,0.29545454545454547
+02005,playas de rosarito,baja california,Norte,7,nl,39,0.29545454545454547
+09012,tlalpan,ciudad de mexico,Centro,7,nl,36,0.2727272727272727
+11037,silao de la victoria,guanajuato,Centro,7,nl,36,0.2727272727272727
+15051,lerma,mexico,Centro,7,nl,34,0.25757575757575757
