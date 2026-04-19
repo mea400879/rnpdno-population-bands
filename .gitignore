@@ -22,3 +22,5 @@ data/raw/*
 *.log
 *.out
 *.synctex.gz
+data/raw/
+logs/pipeline.log
