@@ -6,7 +6,7 @@ Outputs (PDF + PNG) in manuscript/figures/:
   fig3_morans_i_time_series    — Global Moran's I over time, 4 statuses
   fig4_lisa_maps_latest        — LISA maps Jun 2025, 2×2 grid by status
   fig5_hh_trend_norte_bajio    — HH municipalities over time, Norte vs Bajío vs Centro, 4-panel
-  fig6_lisa_maps_2015_vs_2025  — LISA maps Jun 2015 vs Jun 2025, Located Alive + Dead
+  fig6_lisa_maps_2015_2019_2025 — LISA maps Jun 2015 vs Jun 2019 vs Jun 2025, Located Alive + Dead
   fig7_sex_disaggregation_maps — Male vs female LISA maps Jun 2025, Not Located + Located Dead
   fig8_regional_hh_heatmap     — Regional HH heatmap, 11 June snapshots × 4 statuses
 
@@ -307,14 +307,18 @@ def make_fig4(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
 # FIGURE 5: HH trend Norte vs Bajío vs Centro, 4-panel by status
 # ---------------------------------------------------------------------------
 def make_fig5(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
-    log.info("Fig 5: HH trend Norte vs Bajío vs Centro...")
+    log.info("Fig 5: HH trend Norte vs Centro (proportional)...")
 
-    # Load new 29-municipality Bajío corridor (Medina-Fernández et al. 2023)
-    bajio_csv = pl.read_csv(
-        DATA_EXT / "bajio_corridor_municipalities.csv",
-        schema_overrides={"cvegeo": pl.Utf8},
+    # Proportional slopes and HAC p-values from WP6_table5_proportions.csv
+    PROP_ANNOT = pd.read_csv(
+        ROOT / "audit" / "outputs" / "WP6_table5_proportions.csv"
     )
-    bajio_cvs = set(bajio_csv["cvegeo"].str.zfill(5).to_list())
+
+    REGION_SPECS = [
+        ("Norte",  "region", "Norte",  "#c0392b", "-",  278),
+        ("Centro", "region", "Centro", "#2ca02c", "-",  602),
+    ]
+    STATUS_MAP = {0: "total", 7: "nl", 2: "la", 3: "ld"}
 
     hh_total = (
         lisa.filter(
@@ -323,32 +327,23 @@ def make_fig5(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
         )
         .select(["status_id", "year", "month", "cvegeo"])
         .join(muni_meta, on="cvegeo", how="left")
-        .with_columns(
-            pl.col("cvegeo").is_in(list(bajio_cvs)).alias("is_bajio_corridor")
-        )
     )
 
-    REGION_SPECS = [
-        ("Norte",  "region",            "Norte",  "#c0392b", "-"),
-        ("Bajío",  "is_bajio_corridor", True,     "#f39c12", "--"),
-        ("Centro", "region",            "Centro", "#2ca02c", "-"),
-    ]
-
-    fig, axes = plt.subplots(2, 2, figsize=(14, 10), sharex=True)
+    fig, axes = plt.subplots(2, 2, figsize=(16, 11), sharex=True)
     axes = axes.flatten()
+
+    # Full month grid for consistent OLS (include zero-count months)
+    all_ym = pd.DataFrame(
+        [(y, m) for y in range(2015, 2026) for m in range(1, 13)],
+        columns=["year", "month"],
+    )
 
     for i, sid in enumerate(STATUS_IDS):
         ax = axes[i]
         sub = hh_total.filter(pl.col("status_id") == sid)
         annotations = []
 
-        # Full month grid for consistent OLS (include zero-count months)
-        all_ym = pd.DataFrame(
-            [(y, m) for y in range(2015, 2026) for m in range(1, 13)],
-            columns=["year", "month"],
-        )
-
-        for label, col, val, color, ls in REGION_SPECS:
+        for label, col, val, color, ls, denom in REGION_SPECS:
             df_reg = (
                 sub.filter(pl.col(col) == val)
                 .group_by(["year", "month"])
@@ -356,32 +351,43 @@ def make_fig5(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
                 .sort(["year", "month"])
                 .to_pandas()
             )
-            # Join with full grid so zero-count months are included in OLS
             df_full = all_ym.merge(df_reg, on=["year", "month"], how="left").fillna(0)
             df_full["n"] = df_full["n"].astype(int)
+            df_full["pct"] = df_full["n"] / denom * 100
             dates_full = ym_to_date(df_full["year"], df_full["month"])
-            y_full = df_full["n"].values
-            ax.plot(dates_full, y_full, color=color, linestyle=ls, linewidth=1.8, label=label, alpha=0.9)
-            # OLS trend line + annotation (on full grid)
+            ax.plot(dates_full, df_full["pct"], color=color, linestyle=ls,
+                    linewidth=2.0, label=label, alpha=0.9)
+
+            # OLS trend line (on proportions)
+            y_full = df_full["pct"].values
             if len(y_full) >= 6:
                 sl = ols_trend(y_full)
                 x_num = np.arange(len(y_full))
                 trend = sl.intercept + sl.slope * x_num
                 ax.plot(dates_full, trend, color=color, linestyle=":", linewidth=1.0, alpha=0.6)
-                slope_yr = sl.slope * 12
-                p_str = "p<0.001" if sl.pvalue < 0.001 else f"p={sl.pvalue:.3f}"
-                sig = "*" if sl.pvalue < 0.05 else ""
-                annotations.append(f"{label}: {slope_yr:+.2f} munis/yr {sig}({p_str})")
 
-        # Place OLS annotations in top-right of panel
+            # Annotation from WP6 table (HAC slope + HAC p-value)
+            status_key = STATUS_MAP[sid]
+            row = PROP_ANNOT[
+                (PROP_ANNOT["region"] == label) & (PROP_ANNOT["status"] == status_key)
+            ]
+            if len(row) == 1:
+                slope_pct = row["slope_pct_yr"].values[0]
+                hac_p = row["hac_p"].values[0]
+                hac_stars = row["hac_stars"].values[0]
+                p_str = "p<0.001" if hac_p < 0.001 else f"p={hac_p:.3f}"
+                annotations.append(
+                    f"{label}: {slope_pct:+.3f} pp/yr {hac_stars}({p_str}, HAC)"
+                )
+
         if annotations:
             txt = "\n".join(annotations)
-            ax.text(0.97, 0.97, txt, transform=ax.transAxes, fontsize=7,
+            ax.text(0.97, 0.97, txt, transform=ax.transAxes, fontsize=11,
                     va="top", ha="right", family="monospace",
                     bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.8))
 
         ax.set_title(STATUS_LABELS[sid], color=STATUS_COLORS[sid], fontweight="bold")
-        ax.set_ylabel("HH municipalities")
+        ax.set_ylabel("HH municipalities (% of region)")
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
         ax.xaxis.set_major_locator(mdates.YearLocator(2))
         ax.tick_params(axis="x", rotation=45)
@@ -390,24 +396,24 @@ def make_fig5(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
         if i == 0:
             ax.legend(loc="upper left")
 
-    fig.suptitle("High-High Cluster Municipalities Over Time: Norte vs. Bajío vs. Centro\n"
-                 "(dotted lines = OLS trend)",
+    fig.suptitle("Proportion of Regional Municipalities Classified High-High: Norte vs. Centro\n"
+                 "(dotted lines = OLS trend; annotations = HAC-robust slopes)",
                  fontsize=13)
     plt.tight_layout()
     save_fig(fig, "fig5_hh_trend_norte_bajio", is_map=False)
 
 
 # ---------------------------------------------------------------------------
-# FIGURE 6: LISA maps Jun 2015 vs Jun 2025 — Located Alive + Located Dead
+# FIGURE 6: LISA maps Jun 2015 vs Jun 2019 vs Jun 2025 — Located Alive + Located Dead
 # ---------------------------------------------------------------------------
 def make_fig6(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
-    log.info("Fig 6: LISA maps Jun 2015 vs Jun 2025...")
+    log.info("Fig 6: LISA maps Jun 2015 vs Jun 2019 vs Jun 2025...")
 
-    PERIODS  = [(2015, 6, "Jun 2015"), (2025, 6, "Jun 2025")]
+    PERIODS  = [(2015, 6, "Jun 2015"), (2019, 6, "Jun 2019"), (2025, 6, "Jun 2025")]
     STATUSES = [2, 3]   # located_alive, located_dead
     # Layout: rows = status, cols = year
 
-    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+    fig, axes = plt.subplots(2, 3, figsize=(18, 10))
 
     for row, sid in enumerate(STATUSES):
         for col, (y, m, period_label) in enumerate(PERIODS):
@@ -428,12 +434,12 @@ def make_fig6(lisa: pl.DataFrame, gdf: gpd.GeoDataFrame):
             title = f"{STATUS_LABELS[sid]}\n{period_label}"
             plot_lisa_map(ax, gdf_m, title)
 
-    make_lisa_legend(axes[1][1], loc="lower left")
+    make_lisa_legend(axes[1][2], loc="lower left")
 
-    fig.suptitle("LISA Cluster Maps: Located Alive vs. Located Dead\nJune 2015 vs. June 2025 (total sex, α = 0.05)",
+    fig.suptitle("LISA Cluster Maps: Located Alive vs. Located Dead\nJune 2015 vs. June 2019 vs. June 2025 (total sex, α = 0.05)",
                  fontsize=13, y=1.00)
     plt.tight_layout()
-    save_fig(fig, "fig6_lisa_maps_2015_vs_2025", is_map=True)
+    save_fig(fig, "fig6_lisa_maps_2015_2019_2025", is_map=True)
 
 
 # ---------------------------------------------------------------------------
@@ -560,6 +566,91 @@ def make_fig8(lisa: pl.DataFrame, muni_meta: pl.DataFrame):
 
 
 # ---------------------------------------------------------------------------
+# FIGURE 9: CED state-level HH small-multiples (8 panels, 3 status lines)
+# ---------------------------------------------------------------------------
+def make_fig9_ced_states():
+    log.info("Fig 9: CED state-level HH trajectories...")
+
+    ced = pd.read_csv(DATA_PROC / "ced_state_hh_timeseries.csv")
+
+    # 8 CED states in display order (2×4 grid)
+    CED_STATES = [
+        "Jalisco", "Guanajuato", "Coahuila", "Veracruz",
+        "Nayarit", "Tabasco", "Nuevo Leon", "Estado de Mexico",
+    ]
+
+    # Shaded CED claim periods (clipped to data start Jan 2015)
+    CED_WINDOWS = {
+        "Jalisco":          (2015, 1, 2025, 6),
+        "Guanajuato":       (2017, 1, 2025, 6),
+        "Coahuila":         (2015, 1, 2016, 12),
+        "Veracruz":         (2015, 1, 2016, 12),
+        "Nayarit":          (2015, 1, 2017, 12),
+        "Tabasco":          (2024, 1, 2025, 6),
+        "Nuevo Leon":       (2015, 1, 2025, 6),
+        "Estado de Mexico": (2015, 1, 2025, 6),
+    }
+
+    # Three statuses only — no Total (0)
+    PLOT_SIDS = [7, 2, 3]
+
+    # Full monthly grid 2015-01 to 2025-06
+    all_ym = pd.DataFrame(
+        [(y, m) for y in range(2015, 2026) for m in range(1, 13)
+         if not (y == 2025 and m > 6)],
+        columns=["year", "month"],
+    )
+
+    fig, axes = plt.subplots(2, 4, figsize=(18, 8), sharex=True)
+    axes = axes.flatten()
+
+    for i, state in enumerate(CED_STATES):
+        ax = axes[i]
+
+        # Shade CED temporal window
+        if state in CED_WINDOWS:
+            y0, m0, y1, m1 = CED_WINDOWS[state]
+            ax.axvspan(
+                pd.Timestamp(y0, m0, 1),
+                pd.Timestamp(y1, m1, 1),
+                color="#f0e68c", alpha=0.3, zorder=0,
+            )
+
+        for sid in PLOT_SIDS:
+            sub = ced[(ced["state"] == state) & (ced["status_id"] == sid)][
+                ["year", "month", "n_hh_munis"]
+            ]
+            merged = all_ym.merge(sub, on=["year", "month"], how="left").fillna(0)
+            merged["n_hh_munis"] = merged["n_hh_munis"].astype(int)
+            dates = ym_to_date(merged["year"], merged["month"])
+            ax.plot(
+                dates, merged["n_hh_munis"],
+                color=STATUS_COLORS[sid],
+                linewidth=1.4,
+                label=STATUS_LABELS[sid],
+                alpha=0.9,
+            )
+
+        ax.set_title(state, fontweight="bold", fontsize=11)
+        ax.set_ylabel("HH municipalities" if i % 4 == 0 else "")
+        ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+        ax.xaxis.set_major_locator(mdates.YearLocator(2))
+        ax.tick_params(axis="x", rotation=45)
+        ax.grid(True, alpha=0.3, linestyle="--")
+        ax.spines[["top", "right"]].set_visible(False)
+        if i == 0:
+            ax.legend(loc="upper left", fontsize=7)
+
+    fig.suptitle(
+        "High-High Cluster Municipalities: CED-Named States\n"
+        "(shaded = CED claim period; total sex, \u03b1 = 0.05)",
+        fontsize=13,
+    )
+    plt.tight_layout()
+    save_fig(fig, "fig9_ced_states", is_map=False)
+
+
+# ---------------------------------------------------------------------------
 # MAIN
 # ---------------------------------------------------------------------------
 def main():
@@ -613,8 +704,9 @@ def main():
     make_fig6(lisa, gdf_map)
     make_fig7(lisa, gdf_map)
     make_fig8(lisa, muni_meta)
+    make_fig9_ced_states()
 
-    log.info("=== Phase 3 complete. All 8 figures saved to manuscript/figures/ ===")
+    log.info("=== Phase 3 complete. All 9 figures saved to manuscript/figures/ ===")
 
     # List outputs
     for f in sorted(OUT_DIR.glob("fig*.pdf")):
