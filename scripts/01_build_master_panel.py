@@ -7,10 +7,10 @@ def build_master():
     print("🚀 Starting Master Panel Construction...")
 
     # Paths
-    pop_path = Path("data/external/conapo_poblacion_1990_2070.parquet")
+    pop_path = Path("../data/external/conapo_poblacion_1990_2070.parquet")
 
-    local_csv = Path("data/raw/rnpdno_total.csv")
-    output_path = Path("data/processed/master_panel.parquet")
+    local_csv = Path("../data/raw/rnpdno_total.csv")
+    output_path = Path("../data/processed/master_panel.parquet")
 
     # 1. LOAD RNPDNO
     # rnpdno_total.csv has 'cvegeo' (e.g., 01001)
