@@ -24,3 +24,9 @@ data/raw/*
 *.synctex.gz
 data/raw/
 logs/pipeline.log
+manuscript_alpha/*.aux
+manuscript_alpha/*.bbl
+manuscript_alpha/*.blg
+manuscript_alpha/*.log
+manuscript_alpha/*.out
+
