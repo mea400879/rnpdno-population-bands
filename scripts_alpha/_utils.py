@@ -92,3 +92,54 @@ TRAJECTORY_CLASSES: list[str] = [
     "Accelerating", "Peak-decline", "Moderate", "Low-baseline",
 ]
 # "Female-anomalous" is an orthogonal Boolean flag, NOT a mutually-exclusive class.
+
+
+# --- RQ3 additions ---
+# Authoritative CESOP region mapping, verified against JQC scripts/07_bajio_regional_clusters.py
+# All 32 states, 5 regions, complete partition (2,478 munis total).
+CESOP_REGION_BY_CVE_ENT: dict[int, str] = {
+    1: "Centro-Norte", 2: "Norte", 3: "Norte-Occidente", 4: "Sur",
+    5: "Norte", 6: "Centro-Norte", 7: "Sur", 8: "Norte",
+    9: "Centro", 10: "Norte-Occidente", 11: "Centro", 12: "Sur",
+    13: "Centro", 14: "Centro-Norte", 15: "Centro", 16: "Centro-Norte",
+    17: "Centro", 18: "Norte-Occidente", 19: "Norte", 20: "Sur",
+    21: "Centro", 22: "Centro", 23: "Sur", 24: "Centro-Norte",
+    25: "Norte-Occidente", 26: "Norte", 27: "Sur", 28: "Norte",
+    29: "Centro", 30: "Sur", 31: "Sur", 32: "Norte-Occidente",
+}
+
+CESOP_REGIONS: list[str] = [
+    "Norte", "Norte-Occidente", "Centro-Norte", "Centro", "Sur",
+]
+
+# Year pairs for RQ3 tests: primary 2015-vs-2025, supplementary 2015-vs-2019 and 2019-vs-2025.
+RQ3_YEAR_PAIRS: list[tuple[int, int]] = [(2015, 2025), (2015, 2019), (2019, 2025)]
+RQ3_PRIMARY_YEAR_PAIR: tuple[int, int] = (2015, 2025)
+
+# Minimum expected-cell-count threshold below which Fisher-Freeman-Halton is preferred over chi-squared
+FFH_MIN_EXPECTED: float = 5.0
+
+
+# --- RQ3 monthly rate constants ---
+RATE_SCALE: int = 100_000  # rates expressed per 100k population
+
+# Small-denominator flagging: any (region × band) cell with fewer than this many
+# munis is flagged for transparency in rate-ratio and monthly-rate outputs.
+SMALL_DENOM_N_MUNIS: int = 3
+
+
+# Bajio-corridor 29-muni SUN-based list (Medina-Fernandez et al. 2023; SUN 2018).
+# Source: data/external/bajio_corridor_municipalities.csv — 10 ZM metropolitanas +
+# 4 conurbaciones = 14 urban entities across 5 states (Ags, Gto, Mich, Qro, SLP).
+# This is the paper-α canonical "narrow" Bajio definition; the 200-muni `is_bajio`
+# flag in JQC's municipality_classification_v2.csv is the "broad" state-level
+# corridor used for JQC's spatial-cluster contiguity work.
+BAJIO_29_CVEGEOS: list[str] = [
+    "01001", "01005", "01011",  # Aguascalientes (3)
+    "11003", "11005", "11007", "11009", "11011", "11015", "11017",
+    "11020", "11021", "11023", "11025", "11027", "11031", "11037",
+    "11041", "11044",           # Guanajuato (16)
+    "16069",                    # Michoacan (1)
+    "22006", "22008", "22011", "22014", "22016",  # Queretaro (5)
+    "24011", "24024", "24028", "24035",           # San Luis Potosi (4)
+]
