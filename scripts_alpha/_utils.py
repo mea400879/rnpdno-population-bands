@@ -143,3 +143,32 @@ BAJIO_29_CVEGEOS: list[str] = [
     "22006", "22008", "22011", "22014", "22016",  # Queretaro (5)
     "24011", "24024", "24028", "24035",           # San Luis Potosi (4)
 ]
+
+
+# --- Figure aesthetics constants ---
+# Outcome colors (colorblind-safe, distinguishable in grayscale).
+OUTCOME_COLOR: dict[str, str] = {
+    "not_located":   "#1f77b4",  # blue
+    "located_alive": "#ff7f0e",  # orange
+    "located_dead":  "#2ca02c",  # green
+}
+
+OUTCOME_DISPLAY: dict[str, str] = {
+    "not_located":   "Not located",
+    "located_alive": "Located alive",
+    "located_dead":  "Located dead",
+}
+
+BAND_DISPLAY: dict[str, str] = {
+    "community":   "Community (<2.5k)",
+    "rural":       "Rural (2.5-15k)",
+    "semi_urban":  "Semi-urban (15-50k)",
+    "small_city":  "Small city (50-150k)",
+    "medium_city": "Medium city (150-500k)",
+    "city":        "City (500k-1M)",
+    "large_city":  "Large city (>1M)",
+}
+
+# Academic palette defaults for matplotlib
+FIGURE_DPI: int = 300
+FIGURE_FONT_FAMILY: str = "serif"
