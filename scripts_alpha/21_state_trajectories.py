@@ -20,8 +20,10 @@ Not written until Step 3
 """
 from __future__ import annotations
 
+import math
 import sys
 import traceback
+from itertools import combinations
 from pathlib import Path
 
 import numpy as np
@@ -54,10 +56,10 @@ MONTHS = list(range(1, 13))           # 1..12
 N_MONTHS = len(YEARS) * len(MONTHS)   # 132
 EXPECTED_MONTHLY_ROWS = len(CED_STATES) * N_MONTHS * len(STATUS_ORDER)  # 3168
 
-BOOT_B = 2000
-BOOT_SEED = 20_260_422
-BOOT_BLOCK_L = 12
-BOOT_N_BLOCKS = int(np.ceil(N_MONTHS / BOOT_BLOCK_L))  # 11
+# Sen slope 95% CI computed analytically via Gilbert (1987) §17.3.3 — no
+# bootstrap. The prior moving-block bootstrap destroyed the trend structure
+# and produced null-distribution-like CIs that did not bracket the point
+# estimate. Closed form is deterministic: no seed, no Monte Carlo.
 
 CLASSIFICATION_OUT = INTERIM_ALPHA / "rq2_state_classification.parquet"
 LOG_OUT = REPO / "reports" / "alpha" / "21_state_trajectories.log"
@@ -97,6 +99,41 @@ def rolling_trailing_sum(arr: np.ndarray, window: int) -> np.ndarray:
         lo = max(0, i - window + 1)
         out[i] = cum[i + 1] - cum[lo]
     return out
+
+
+def sens_slope_ci(series: np.ndarray, alpha: float = 0.05
+                  ) -> tuple[float, float, float]:
+    """Theil-Sen slope with Gilbert (1987) closed-form 95% CI.
+
+    For n observations, the number of pairwise slopes is N = n(n-1)/2.
+    The CI indices into the sorted pairwise-slope array are
+        lower_idx = (N - z * sqrt(var_S)) / 2
+        upper_idx = (N + z * sqrt(var_S)) / 2
+    where var_S is the Mann-Kendall S variance (no-ties formula). Tie
+    correction is omitted — with N_MONTHS=132 observations on integer
+    counts, ties exist but the correction is a small downward nudge on
+    var_S that narrows the CI; leaving it off gives a conservative CI.
+    """
+    n = len(series)
+    pairwise = np.array([
+        (series[j] - series[i]) / (j - i)
+        for i, j in combinations(range(n), 2)
+    ])
+    pairwise.sort()
+    N = len(pairwise)
+    slope = float(np.median(pairwise))
+
+    var_s = n * (n - 1) * (2 * n + 5) / 18.0
+    z = 1.959963984540054  # Normal(1 - alpha/2) for alpha=0.05
+    if alpha != 0.05:
+        from scipy.stats import norm
+        z = norm.ppf(1 - alpha / 2)
+    c = z * math.sqrt(var_s)
+    lower_idx = int(math.floor((N - c) / 2))
+    upper_idx = int(math.ceil((N + c) / 2))
+    lower_idx = max(0, lower_idx)
+    upper_idx = min(N - 1, upper_idx)
+    return slope, float(pairwise[lower_idx]), float(pairwise[upper_idx])
 
 
 def main() -> None:
@@ -159,8 +196,6 @@ def main() -> None:
     monthly.write_parquet(MONTHLY_OUT)
 
     # --- per-(state, status) metrics ------------------------------------
-    rng = np.random.default_rng(BOOT_SEED)
-
     metric_rows: list[dict] = []
     for (cve_ent, nom_ent, region) in CED_STATES:
         for status in STATUS_ORDER:
@@ -179,25 +214,10 @@ def main() -> None:
             series = sub["total"].to_numpy().astype(np.float64)
 
             mk_res = mk.original_test(series)
-            sen_res = mk.sens_slope(series)
-            sen_m = float(sen_res.slope)
+            sen_m, ci_lo_m, ci_hi_m = sens_slope_ci(series, alpha=0.05)
             sen_y = sen_m * 12.0
-
-            # Moving-block bootstrap (L=12 months, preserves 12-month
-            # temporal structure — avoids collapsing to ~0 that an IID
-            # value-resample produces).
-            boot = np.empty(BOOT_B, dtype=np.float64)
-            for b in range(BOOT_B):
-                starts = rng.integers(0, N_MONTHS - BOOT_BLOCK_L,
-                                      size=BOOT_N_BLOCKS)
-                blocks = np.concatenate(
-                    [series[s:s + BOOT_BLOCK_L] for s in starts]
-                )
-                trimmed = blocks[:N_MONTHS]
-                boot[b] = mk.sens_slope(trimmed).slope
-            ci_lo_m, ci_hi_m = np.percentile(boot, [2.5, 97.5])
-            ci_lo_yr = float(ci_lo_m) * 12.0
-            ci_hi_yr = float(ci_hi_m) * 12.0
+            ci_lo_yr = ci_lo_m * 12.0
+            ci_hi_yr = ci_hi_m * 12.0
 
             roll12 = rolling_trailing_sum(series, 12)
             peak_idx = int(np.argmax(roll12))
@@ -244,6 +264,21 @@ def main() -> None:
     metrics = pl.DataFrame(metric_rows).select(metric_cols)
     if metrics.height != 24:
         raise ValueError(f"metrics row count: expected 24, got {metrics.height}")
+
+    # Hard invariant: Gilbert (1987) closed-form CI must bracket the point
+    # estimate for every row. A violation means the CI construction is
+    # broken (not just conservative — mathematically wrong).
+    violations = metrics.filter(
+        (pl.col("sen_ci_lo_yr") > pl.col("sen_slope_per_year"))
+        | (pl.col("sen_ci_hi_yr") < pl.col("sen_slope_per_year"))
+    )
+    if violations.height:
+        raise ValueError(
+            "Sen CI invariant failure: "
+            f"{violations.height}/24 rows have slope outside [ci_lo, ci_hi]:\n"
+            f"{violations}"
+        )
+
     metrics.write_parquet(METRICS_OUT)
 
     # --- FSoS-in-LA annual ----------------------------------------------
@@ -383,7 +418,8 @@ def main() -> None:
     log(f"    THRESHOLD_FEMALE_ANOM_MEAN           = {THRESHOLD_FEMALE_ANOM_MEAN}")
 
     log("")
-    log("(b) rq2_state_metrics.parquet (24 rows, moving-block-bootstrap CIs, per-year units):")
+    log("(b) rq2_state_metrics.parquet (24 rows, per-year units).")
+    log("    Sen slope CI method: Gilbert (1987) closed-form via MK S variance. No bootstrap.")
     with pl.Config(
         tbl_rows=30, tbl_cols=-1, float_precision=4,
         fmt_str_lengths=30, tbl_hide_dataframe_shape=True,

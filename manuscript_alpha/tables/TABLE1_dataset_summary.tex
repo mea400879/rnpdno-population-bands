@@ -1,0 +1,19 @@
+\begin{tabular}{lrrrrrrr}
+\toprule
+Stratum & ID & Raw rows & Raw persons & Sentinel rows & Sentinel persons & Analytical rows & Analytical persons \\
+\midrule
+Not located & 7 & 34,617 & 92,486 & 1,258 & 2,855 & 33,359 & 89,631 \\
+Located alive & 2 & 37,379 & 160,901 & 838 & 2,911 & 36,541 & 157,990 \\
+Located dead & 3 & 9,936 & 15,777 & 240 & 339 & 9,696 & 15,438 \\
+\midrule
+Grand total (ID 0) & 0 & 57,373 & 269,507 & -- & -- & -- & -- \\
+All three outcomes combined & -- & 81,932 & 269,164 & 2,336 & 6,105 & 79,596 & 263,059 \\
+\bottomrule
+\end{tabular}
+%
+% Note: Grand total (ID 0) is DiB's pre-split aggregate. The three outcome
+% strata sum to 269,164 persons, within 0.13\%
+% of the grand total (documented timing noise from non-atomic scrape).
+% Analytical universe: 2,478 munis (INEGI MGN via AGEEML 2025-12-12).
+% Effective sample: 2,475 munis after excluding 3 post-2020 splits without
+% CONAPO projections (24059 Villa de Pozos, 25019 Eldorado, 25020 Juan Jose Rios).
